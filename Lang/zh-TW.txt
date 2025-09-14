@@ -2,193 +2,193 @@
 
 // Command Data
 
-COMMAND_RANDOM_NAME=random
-COMMAND_RANDOM_DESC=Select a random song.
+COMMAND_RANDOM_NAME=隨機
+COMMAND_RANDOM_DESC=隨機選擇歌曲。
 
-COMMAND_SONG_NAME=song
-COMMAND_SONG_DESC=Get info about a song.
+COMMAND_SONG_NAME=歌曲
+COMMAND_SONG_DESC=取得特定歌曲的資訊。
 
-COMMAND_CAMPAIGN_NAME=campaign
-COMMAND_CAMPAIGN_DESC=Get the current list of active campaigns.
+COMMAND_CAMPAIGN_NAME=活動
+COMMAND_CAMPAIGN_DESC=取得目前舉辦的活動。
 
-COMMAND_SHOP_NAME=shop
-COMMAND_SHOP_DESC=Get the current active Don Medal shop.
+COMMAND_SHOP_NAME=商店
+COMMAND_SHOP_DESC=取得目前咚幣商店的資訊。
 
-COMMAND_REGION_NAME=region
-COMMAND_REGION_DESC=Get the URL for all region locked songs.
+COMMAND_REGION_NAME=地區
+COMMAND_REGION_DESC=取得所有地區限定歌曲清單的鏈結。
 
-COMMAND_ABOUT_NAME=about
-COMMAND_ABOUT_DESC=Information about the bot and its resources.
+COMMAND_ABOUT_NAME=關於
+COMMAND_ABOUT_DESC=有關本機器人與資料來源的資訊。
 
-COMMAND_STATS_NAME=stats
-COMMAND_STATS_DESC=Get statistics about the bot and its song database.
+COMMAND_STATS_NAME=統計
+COMMAND_STATS_DESC=取得本機器人與歌曲資料的統計數據。
 
-COMMAND_DAN_NAME=dan
-COMMAND_DAN_DESC=Get the current Dan Dojo courses.
+COMMAND_DAN_NAME=段位
+COMMAND_DAN_DESC=取得目前的段位道場資訊。
 
-COMMAND_MISSING_NAME=missing
-COMMAND_MISSING_DESC=Lists all songs with missing note counts and region status.
+COMMAND_MISSING_NAME=待補
+COMMAND_MISSING_DESC=列出所有缺少音符數與地區限定資訊的歌曲。
 
-COMMAND_INVITE_NAME=invite
-COMMAND_INVITE_DESC=Add me to your server, or add me as an app!
+COMMAND_INVITE_NAME=邀請
+COMMAND_INVITE_DESC=將本機器人加入你的伺服器，也可當作應用程式加入！
 
-COMMAND_HIROBA_NAME=hiroba
-COMMAND_HIROBA_DESC=Get information about using Donder Hiroba. (English Only・僅限英語)
+COMMAND_HIROBA_NAME=廣場
+COMMAND_HIROBA_DESC=取得如何使用鼓眾廣場的解說。（僅支援英語）
 
 // Command Options
 
-OPTION_TITLE_NAME=title
-OPTION_TITLE_DESC=The title of the song.
+OPTION_TITLE_NAME=曲名
+OPTION_TITLE_DESC=歌曲的名稱。
 
-OPTION_DIFFICULTY_NAME=difficulty
-OPTION_DIFFICULTY_DESC=The specific difficulty of a song.
+OPTION_DIFFICULTY_NAME=難度
+OPTION_DIFFICULTY_DESC=歌曲的難度。
 
-OPTION_LEVEL_NAME=level
-OPTION_LEVEL_DESC=The difficulty level.
+OPTION_LEVEL_NAME=星等
+OPTION_LEVEL_DESC=難度的星等。
 
-OPTION_GENRE_NAME=genre
-OPTION_GENRE_DESC=The specific genre that a song belongs in.
+OPTION_GENRE_NAME=分類
+OPTION_GENRE_DESC=歌曲的分類。
 
-OPTION_CAMPAIGNNAME_NAME=name
-OPTION_CAMPAIGNNAME_DESC=The name of a currently active campaign.
+OPTION_CAMPAIGNNAME_NAME=活動名
+OPTION_CAMPAIGNNAME_DESC=活動的名稱。
 
-OPTION_DANTITLE_NAME=title
-OPTION_DANTITLE_DESC=The title of the dan.
+OPTION_DANTITLE_NAME=段位名
+OPTION_DANTITLE_DESC=段位的名稱。
 
-OPTION_GUIDE_NAME=guide
-OPTION_GUIDE_DESC=Select a specific area of Donder Hiroba to read about.
+OPTION_GUIDE_NAME=指南
+OPTION_GUIDE_DESC=選擇需要解說的鼓眾廣場介面。
 
 // Everything else
 
-REGION_JAPAN=日本
-REGION_ASIA=亚洲
-REGION_OCEANIA=其他亚洲+大洋洲
-REGION_USA=北美
-REGION_CHINA=中国
+REGION_JAPAN=日本版
+REGION_ASIA=亞洲版
+REGION_OCEANIA=其他亞洲+大洋洲
+REGION_USA=北美版
+REGION_CHINA=中國內地版
 
 // {0}: Region name
 // {1}: Status as emoji
 // {2}: Status as text
 AVAILABLE_REGION={0}：{1} {2}
 
-AVAILABLE_TITLE=可用性
+AVAILABLE_TITLE=獲得方式
 
-AVAILABLE_NO=不是
-AVAILABLE_YES=可用的
-AVAILABLE_CAMPAIGN=活动
-AVAILABLE_CAMPAIGNNO=商店／活动（不可用）
-AVAILABLE_AIBATTLE=AI對戰
+AVAILABLE_NO=現不可獲得
+AVAILABLE_YES=可獲得
+AVAILABLE_CAMPAIGN=活動
+AVAILABLE_CAMPAIGNNO=商店／活動（現不可獲得）
+AVAILABLE_AIBATTLE=AI 對戰
 AVAILABLE_SHOP=咚幣商店
-AVAILABLE_QRCODE=QR
+AVAILABLE_QRCODE=專用二維碼
 // Regarding AVAILABLE_TRANSFER:
 // In the United States, the QR code for 彁 is blocked. But, you can still obtain the song
 // by playing with a second player who already has the song unlocked. However, it is
 // impossible to unlock the Oni-Ura difficulty this way, regardless if you play the
 // Oni-Ura or not. A QR code scan is mandatory to obtain the Oni-Ura difficulty.
-AVAILABLE_TRANSFER=从合作伙伴处获得
-AVAILABLE_UNKNOWN=未知
+AVAILABLE_TRANSFER=兩人模式遊玩另一玩家已獲得歌曲
+AVAILABLE_UNKNOWN=不明
 
-DIFFICULTY_TITLE=困难
+DIFFICULTY_TITLE=難度
 
 DIFFICULTY_EASY=簡單
 DIFFICULTY_NORMAL=普通
 DIFFICULTY_HARD=困難
 DIFFICULTY_EX=魔王
-DIFFICULTY_HIDDEN=魔王(里)
-DIFFICULTY_BOTH=魔王(Both)
+DIFFICULTY_HIDDEN=魔王（裏）
+DIFFICULTY_BOTH=魔王（表/裏）
 
 GENRE_POP=流行音樂
 GENRE_KIDS=兒童音樂
-GENRE_ANIME=卡通動晝音樂
-GENRE_GAME=遊戯音樂
+GENRE_ANIME=卡通動畫音樂
+GENRE_GAME=遊戲音樂
 GENRE_VOCALOID=VOCALOID™ Music
-GENRE_VARIETY=综合音樂
+GENRE_VARIETY=綜合音樂
 GENRE_CLASSICAL=古典音樂
 GENRE_NAMCO=NAMCO原創音樂
-GENRE_UNKNOWN=未知
+GENRE_UNKNOWN=不明
 
 // {0} : Miss icon as emote
-URL_MISSING=(Unavailable {0})
+URL_MISSING=（無資料 {0}）
 
 // {0} : Time remaining (as int timestamp)
-CAMPAIGN_AVAILABLE=Available until <t:{0}:F> (<t:{0}:R>)
+CAMPAIGN_AVAILABLE=<t:{0}:F> 前可獲得（<t:{0}:R>）
 // {0} : Season
 // {1} : Year
-CAMPAIGN_SEASON_OUTFIT_NAME=Oodles of Outfits Campaign {0} {1}
+CAMPAIGN_SEASON_OUTFIT_NAME=換裝道具滿滿活動{1}{0}
 
 // {0} : # of Wins
 // {1} : ITEM_INFO value
-CAMPAIGN_AIBATTLE_DESC={0} Wins: {1}
+CAMPAIGN_AIBATTLE_DESC=取得 {0} 次勝利：{1}
 
 // {0} : Season
 // {1} : Year
-SHOP_MEDAL_NAME=Don Medal Shop {0} {1}
+SHOP_MEDAL_NAME=咚幣商店{0} {1}
 // {0} : Title
 // {1} : Cost
-SHOP_MEDAL_DESC={0} - {1}咚幣
+SHOP_MEDAL_DESC={0} —— {1} 咚幣
 // {0} : Title
 // {1} : Hidden difficulty as emote
 // {2} : Cost
-SHOP_MEDALHIDDEN_DESC={0} {1} - {2}咚幣
+SHOP_MEDALHIDDEN_DESC={0} {1} —— {2} 咚幣
 // {0} : Language (in native text)
 // {1} : URL
-SHOP_MEDAL_URL=All Purchasables ({0}): {1}
+SHOP_MEDAL_URL=可獲得清單（{0}）：{1}
 
 // {0} : Item name
 // {1} : Item type
-ITEM_INFO={0} ({1})
+ITEM_INFO={0}（{1}）
 
-ITEM_SONG=Song
+ITEM_SONG=歌曲
 ITEM_TITLE=稱號
-ITEM_PUCHI=Q版角色
+ITEM_PUCHI=小角色
 ITEM_FULLBODY=布偶裝
 ITEM_HEAD=頭部
 ITEM_BODY=身體
-ITEM_FACE=妝容
+ITEM_FACE=臉部
 
-SEASON_SPRING=Spring
-SEASON_SUMMER=Summer
-SEASON_AUTUMN=Autumn
-SEASON_WINTER=Winter
+SEASON_SPRING=春
+SEASON_SUMMER=夏
+SEASON_AUTUMN=秋
+SEASON_WINTER=冬
 
 // {0}: Passing amount
 // {1}: Gold amount
-DAN_CONDITION_MORE={0} or more ({1} or more for Gold)
-DAN_CONDITION_LESS=Less than {0} (Less than {1} for Gold)
+DAN_CONDITION_MORE={0} 以上（金合格需 {1} 以上）
+DAN_CONDITION_LESS=未達 {0}（金合格需未達 {1}）
 
 // {0}: Combined note count of all 3 songs
-DAN_NOTECOUNT=Note Count: {0}
+DAN_NOTECOUNT=音符數：{0}
 
-DAN_SONGS=Songs
-DAN_CONDITION_GAUGE=Soul Gauge
-DAN_CONDITION_TOTALHIT=Total Hits
-DAN_CONDITION_BAD=Bad Count
-DAN_CONDITION_OK=Ok Count
-DAN_CONDITION_GOOD=Good Count
-DAN_CONDITION_DRUMROLL=Drumroll Count
-DAN_CONDITION_SCORE=Score
-DAN_CONDITION_COMBO=Max Combo
+DAN_SONGS=歌曲
+DAN_CONDITION_GAUGE=魂量條
+DAN_CONDITION_TOTALHIT=打擊數
+DAN_CONDITION_BAD=不可數
+DAN_CONDITION_OK=可數
+DAN_CONDITION_GOOD=良數
+DAN_CONDITION_DRUMROLL=連打數
+DAN_CONDITION_SCORE=分數
+DAN_CONDITION_COMBO=最大連段數
 
-DAN_UNAVAILABLE=Information on this dan is not yet available. Please come back later.
+DAN_UNAVAILABLE=目前沒有該段位挑戰的資料。請之後再查詢。
 // {0}: Year
-DAN_CLOSED_TITLE=Dan-i Dojo {0} Closed
-DAN_CLOSED=Dan-i Dojo {0} has officially concluded. Check back later when the dojo re-opens!
+DAN_CLOSED_TITLE=段位道場 {0} 已關閉
+DAN_CLOSED=段位道場 {0} 已正式結束。請在段位道場再開放時再查詢！
 
-MISSING_NOTES=Songs with missing Note Counts
-MISSING_REGION=Songs with missing Region Status
-MISSING_EVERYWHERE=Songs unavailable everywhere
+MISSING_NOTES=缺少音符數資料的歌曲
+MISSING_REGION=缺少地區限定資料的歌曲
+MISSING_EVERYWHERE=所有地區皆不可獲得
 
-DISCLAIMER_USERONLY=這個指令只有您能看見，因為我沒有權限傳送訊息到這個頻道。
+DISCLAIMER_USERONLY=這個訊息只有您能看見。本機器人沒有權限傳送訊息到這個頻道。
 DISCLAIMER_WIP=部分資料可能遺漏或不正確。
-DISCLAIMER_STATS=這些統計數據可能無法反映官方數據。
-DISCLAIMER_MISSING=標題「{0}」不是遺失，就是拼寫錯誤。
+DISCLAIMER_STATS=這些統計數據可能與官方數據有所出入。
+DISCLAIMER_MISSING=「{0}」可能不存在或有拼寫錯誤。
 // {0} : Miss icon as emote
-DISCLAIMER_ERROR=:warning: 在處理您的要求時出錯了。此錯誤已轉送至機器人維護者。 {0}
+DISCLAIMER_ERROR=:warning: 在處理您的要求時出錯了。此錯誤已轉送給本機器人維護者。{0}
 
 // Do not use "*" for this.
-DISCLAIMER_NOUSA=＊ Available in every region except North America.
-DISCLAIMER_ONLYUSA=＊ Available only in North America.
-DISCLAIMER_ONLYJAPAN=＊ Available only in Japan.
+DISCLAIMER_NOUSA=※北美版除外。
+DISCLAIMER_ONLYUSA=※僅北美版。
+DISCLAIMER_ONLYJAPAN=※僅日本版。
 
 // {0}: Discord app invite URL
-INVITE_DESC=You can add me to your own server, or add me as an app that you can call at any time!\nClick this URL to invite me: {0}
+INVITE_DESC=你可以把本機器人加進你的伺服器，也可以當作應用程式加入來隨時呼叫！\n點按這個鏈結來邀請我：{0}
