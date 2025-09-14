@@ -848,7 +848,8 @@ namespace DonderHelper
                             "- [Taiko Time's Region Checklist](https://docs.google.com/spreadsheets/d/e/2PACX-1vQYGQxV5Azuid7cnnNAG5EZyRkFI2YAJCARHS1AAgH0uo7OPgbaWODWbAbmk3o4M4h44hENCitbndKP/pubhtml?gid=0&single=true)\n" +
                             "- [Korean Taiko Wiki](https://taiko.wiki/)\n" +
                             "- [Missing English Data Spreadsheet](https://docs.google.com/spreadsheets/d/1N9OBdkbwj51swS4jqhL6rTKv4looTQqLPWjAvD0lWog/edit?usp=sharing)\n\n" +
-                            "Help me translate Donder Helper! https://github.com/Donder-Helper/Lang"
+                            "Help me translate Donder Helper! https://github.com/Donder-Helper/Lang",
+                            ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/.github/refs/heads/main/profile/banner.png"
                         };
                         await command.RespondAsync(null, [about.Build()], false, false);
                         break;
@@ -970,7 +971,7 @@ namespace DonderHelper
                             {
                                 Title = "",
                                 Description = LocaleData.GetString("DAN_UNAVAILABLE", locale),
-                                ImageUrl = "https://i.imgur.com/7c4ICTg.png"
+                                ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/DonderHelper/refs/heads/main/Images/dan-closed.png"
                             };
                             await command.RespondAsync(null, [embed.Build()], false, false);
                         }
@@ -979,7 +980,7 @@ namespace DonderHelper
                         //{
                         //    Title = LocaleData.GetString("DAN_CLOSED_TITLE", locale, 2025),
                         //    Description = LocaleData.GetString("DAN_CLOSED", locale, 2025),
-                        //    ImageUrl = "https://i.imgur.com/7c4ICTg.png"
+                        //    ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/DonderHelper/refs/heads/main/Images/dan-closed.png"
                         //};
 
                         //await command.RespondAsync(null, [embed.Build()], false, false);
