@@ -1,0 +1,194 @@
+// DO NOT RENAME THE VARIABLES! Only change its values to the right of the '=' symbol.
+
+// Command Data
+
+COMMAND_RANDOM_NAME=random
+COMMAND_RANDOM_DESC=Select a random song.
+
+COMMAND_SONG_NAME=song
+COMMAND_SONG_DESC=Get info about a song.
+
+COMMAND_CAMPAIGN_NAME=campaign
+COMMAND_CAMPAIGN_DESC=Get the current list of active campaigns.
+
+COMMAND_SHOP_NAME=shop
+COMMAND_SHOP_DESC=Get the current active Don Medal shop.
+
+COMMAND_REGION_NAME=region
+COMMAND_REGION_DESC=Get the URL for all region locked songs.
+
+COMMAND_ABOUT_NAME=about
+COMMAND_ABOUT_DESC=Information about the bot and its resources.
+
+COMMAND_STATS_NAME=stats
+COMMAND_STATS_DESC=Get statistics about the bot and its song database.
+
+COMMAND_DAN_NAME=dan
+COMMAND_DAN_DESC=Get the current Dan Dojo courses.
+
+COMMAND_MISSING_NAME=missing
+COMMAND_MISSING_DESC=Lists all songs with missing note counts and region status.
+
+COMMAND_INVITE_NAME=invite
+COMMAND_INVITE_DESC=Add me to your server, or add me as an app!
+
+COMMAND_HIROBA_NAME=hiroba
+COMMAND_HIROBA_DESC=Get information about using Donder Hiroba.
+
+// Command Options
+
+OPTION_TITLE_NAME=title
+OPTION_TITLE_DESC=The title of the song.
+
+OPTION_DIFFICULTY_NAME=difficulty
+OPTION_DIFFICULTY_DESC=The specific difficulty of a song.
+
+OPTION_LEVEL_NAME=level
+OPTION_LEVEL_DESC=The difficulty level.
+
+OPTION_GENRE_NAME=genre
+OPTION_GENRE_DESC=The specific genre that a song belongs in.
+
+OPTION_CAMPAIGNNAME_NAME=name
+OPTION_CAMPAIGNNAME_DESC=The name of a currently active campaign.
+
+OPTION_DANTITLE_NAME=title
+OPTION_DANTITLE_DESC=The title of the dan.
+
+OPTION_GUIDE_NAME=guide
+OPTION_GUIDE_DESC=Select a specific area of Donder Hiroba to read about.
+
+// Everything else
+
+REGION_JAPAN=Japan
+REGION_ASIA=Core Asia
+REGION_OCEANIA=Other Asia/Oceania
+REGION_USA=North America
+REGION_CHINA=China
+
+// {0}: Region name
+// {1}: Status as emoji
+// {2}: Status as text
+AVAILABLE_REGION={0}: {1} {2}
+
+AVAILABLE_TITLE=Availability
+
+AVAILABLE_NO=No
+AVAILABLE_YES=Yes
+AVAILABLE_CAMPAIGN=Campaign
+AVAILABLE_CAMPAIGNNO=Shop/Campaign (Unavailable)
+AVAILABLE_AIBATTLE=AI Battle
+AVAILABLE_SHOP=Shop
+AVAILABLE_QRCODE=QR Code
+// Regarding AVAILABLE_TRANSFER:
+// In the United States, the QR code for 彁 is blocked. But, you can still obtain the song
+// by playing with a second player who already has the song unlocked. However, it is
+// impossible to unlock the Oni-Ura difficulty this way, regardless if you play the
+// Oni-Ura or not. A QR code scan is mandatory to obtain the Oni-Ura difficulty.
+AVAILABLE_TRANSFER=Obtained from Partner
+AVAILABLE_UNKNOWN=Unknown
+
+DIFFICULTY_TITLE=Difficulty
+
+DIFFICULTY_EASY=Easy
+DIFFICULTY_NORMAL=Normal
+DIFFICULTY_HARD=Hard
+DIFFICULTY_EX=Extreme
+DIFFICULTY_HIDDEN=Hidden
+DIFFICULTY_BOTH=Extreme/Hidden
+
+GENRE_POP=Pop
+GENRE_KIDS=Kids
+GENRE_ANIME=Anime
+GENRE_GAME=Game Music
+GENRE_VOCALOID=Vocaloid
+GENRE_VARIETY=Variety
+GENRE_CLASSICAL=Classical
+GENRE_NAMCO=Namco Original
+GENRE_UNKNOWN=Unknown
+
+// {0} : Miss icon as emote
+URL_MISSING=(Unavailable {0})
+
+// {0} : Time remaining (as int timestamp)
+CAMPAIGN_AVAILABLE=Available until <t:{0}:F> (<t:{0}:R>)
+// {0} : Season
+// {1} : Year
+CAMPAIGN_SEASON_OUTFIT_NAME=Oodles of Outfits Campaign {0} {1}
+
+// {0} : # of Wins
+// {1} : ITEM_INFO value
+CAMPAIGN_AIBATTLE_DESC={0} Wins: {1}
+
+// {0} : Season
+// {1} : Year
+SHOP_MEDAL_NAME=Don Medal Shop {0} {1}
+// {0} : Title
+// {1} : Cost
+SHOP_MEDAL_DESC={0} - {1} Medals
+// {0} : Title
+// {1} : Hidden difficulty as emote
+// {2} : Cost
+SHOP_MEDALHIDDEN_DESC={0} {1} - {2} Medals
+// {0} : Language (in native text)
+// {1} : URL
+SHOP_MEDAL_URL=All Purchasables ({0}): {1}
+
+// {0} : Item name
+// {1} : Item type
+ITEM_INFO={0} ({1})
+
+ITEM_SONG=Song
+ITEM_TITLE=Title
+ITEM_PUCHI=Mini Character
+ITEM_FULLBODY=Mascot
+ITEM_HEAD=Head
+ITEM_BODY=Body
+ITEM_FACE=Face
+
+SEASON_SPRING=Spring
+SEASON_SUMMER=Summer
+SEASON_AUTUMN=Autumn
+SEASON_WINTER=Winter
+
+// {0}: Passing amount
+// {1}: Gold amount
+DAN_CONDITION_MORE={0} or more ({1} or more for Gold)
+DAN_CONDITION_LESS=Less than {0} (Less than {1} for Gold)
+
+// {0}: Combined note count of all 3 songs
+DAN_NOTECOUNT=Note Count: {0}
+
+DAN_SONGS=Songs
+DAN_CONDITION_GAUGE=Soul Gauge
+DAN_CONDITION_TOTALHIT=Total Hits
+DAN_CONDITION_BAD=Bad Count
+DAN_CONDITION_OK=Ok Count
+DAN_CONDITION_GOOD=Good Count
+DAN_CONDITION_DRUMROLL=Drumroll Count
+DAN_CONDITION_SCORE=Score
+DAN_CONDITION_COMBO=Max Combo
+
+DAN_UNAVAILABLE=Information on this dan is not yet available. Please come back later.
+// {0}: Year
+DAN_CLOSED_TITLE=Dan-i Dojo {0} Closed
+DAN_CLOSED=Dan-i Dojo {0} has officially concluded. Check back later when the dojo re-opens!
+
+MISSING_NOTES=Songs with missing Note Counts
+MISSING_REGION=Songs with missing Region Status
+MISSING_EVERYWHERE=Songs unavailable everywhere
+
+DISCLAIMER_USERONLY=This command is visible only to you because I lack permission to send messages to this channel.
+DISCLAIMER_WIP=Some data may be missing or incorrect.
+DISCLAIMER_STATS=The bot's statistics might not reflect the official data.
+DISCLAIMER_MISSING=The title "{0}" is either missing, or spelled incorrectly.
+// {0} : Miss icon as emote
+DISCLAIMER_ERROR=:warning: Something went wrong while processing your request. This error has been forwarded to the bot maintainer. {0}
+
+// Do not use "*" for this.
+DISCLAIMER_NOUSA=＊ Available in every region except North America.
+DISCLAIMER_ONLYUSA=＊ Available only in North America.
+DISCLAIMER_ONLYJAPAN=＊ Available only in Japan.
+
+// {0}: Discord app invite URL
+INVITE_DESC=You can add me to your own server, or add me as an app that you can call at any time!\nClick this URL to invite me: {0}
