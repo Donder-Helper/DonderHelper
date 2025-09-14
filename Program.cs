@@ -162,9 +162,9 @@ namespace DonderHelper
 #if DEBUG
             await _client.LoginAsync(TokenType.Bot, __key);
 #else
-            if (!string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("THE_SECRET_THING")))
+            if (!string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("DONDERHELPER_SECRET_KEY")))
             {
-                await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("THE_SECRET_THING"));
+                await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("DONDERHELPER_SECRET_KEY"));
             }
             else if (!string.IsNullOrWhiteSpace(__key))
             {
