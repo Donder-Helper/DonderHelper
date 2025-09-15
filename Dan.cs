@@ -535,6 +535,7 @@ namespace DonderHelper
             Title = "玄人",
             TitleEN = "Kuroto",
             Color = Jin,
+            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E7%8E%84%E4%BA%BA",
 
             Song1 = new() { Title = "Doppelgangers", Difficulty = Song.SongDifficulty.Hidden },
             Song2 = new() { Title = "ex寅 Trap!!", Difficulty = Song.SongDifficulty.Extreme },
@@ -554,6 +555,7 @@ namespace DonderHelper
             Title = "名人",
             TitleEN = "Meijin",
             Color = Jin,
+            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%90%8D%E4%BA%BA",
 
             Song1 = new() { Title = "電脳幻夜の星言詠", Difficulty = Song.SongDifficulty.Extreme },
             Song2 = new() { Title = "弧", Difficulty = Song.SongDifficulty.Extreme },
@@ -573,6 +575,7 @@ namespace DonderHelper
             Title = "超人",
             TitleEN = "Chojin",
             Color = Jin,
+            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E8%B6%85%E4%BA%BA",
 
             Song1 = new() { Title = "LECIEL GLISSANDO", Difficulty = Song.SongDifficulty.Extreme },
             Song2 = new() { Title = "プチポチ", Difficulty = Song.SongDifficulty.Extreme },
@@ -592,6 +595,7 @@ namespace DonderHelper
             Title = "達人",
             TitleEN = "Tatsujin",
             Color = Gold,
+            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E9%81%94%E4%BA%BA",
 
             Song1 = new() { Title = "POLARiSNAUT", Difficulty = Song.SongDifficulty.Extreme },
             Song2 = new() { Title = "Emma", Difficulty = Song.SongDifficulty.Hidden },
