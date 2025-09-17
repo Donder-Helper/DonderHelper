@@ -59,7 +59,7 @@ namespace DonderHelper
                 {
                     song = new Song();
                     song.SetTitle(split[2].Substring(5).Trim());
-                    song.SetGenre(GetGenre(split[2].Substring(1, 2)));
+                    song.SetPriorityGenre(GetGenre(split[2].Substring(1, 2)));
                     song.Region = new() { Japan = Availability.No, Asia = Availability.No, Oceania = Availability.No, UnitedStates = Availability.No, China = Availability.Yes };
                     break;
                 }
@@ -69,7 +69,7 @@ namespace DonderHelper
                     // Genre
                     case 1:
                     {
-                        song.SetGenre(GetGenre(result));
+                        song.AddGenre(GetGenre(result));
                         break;
                     }
                     // Title

@@ -315,7 +315,19 @@ namespace DonderHelper
         #endregion
 
         #region Genre
-        public void SetGenre(params SongGenre[] genre) => GenreList = genre.ToList();
+        public void SetPriorityGenre(SongGenre genre)
+        {
+            int genresort(SongGenre maingenre, SongGenre item)
+            {
+                return item == maingenre ? -1 : (int)item;
+            }
+
+            if (GenreList.Contains(genre))
+                GenreList = GenreList.OrderBy(item => genresort(genre, item)).ToList();
+            else
+                GenreList = GenreList.Prepend(genre).ToList();
+        }
+        public void AddGenre(SongGenre genre) { if (genre != SongGenre.Unknown && !GenreList.Contains(genre)) GenreList.Add(genre); }
         public List<SongGenre> GetAllGenres() => GenreList;
         #endregion
 

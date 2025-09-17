@@ -131,13 +131,17 @@ namespace DonderHelper
             SongDatabase.Update(__songs.Values.ToList());
 
             string tsv = "";
+            string title_prepend(string title)
+            {
+                return title.StartsWith('"') ? ("\"\"\"" + title) : title;
+            }
             foreach (var song in __songs.Values)
             {
-                tsv += song.Title + "\t" + song.Subtitle;
+                tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
                 foreach (string lang in new string[] {"en-US", "ko", "zh-TW", "zh-CN" })
                 {
                     tsv += "\t";
-                    tsv += (song.TryGetTitle(lang, out string? title) ? title : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? subtitle : "");
+                    tsv += (song.TryGetTitle(lang, out string? title) ? title_prepend(title ?? "") : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? title_prepend(subtitle ?? "") : "");
                 }
                 tsv += "\n";
             }
@@ -354,7 +358,12 @@ namespace DonderHelper
                                 if (item_title.Descendants("strong").Count() == 0) continue;
 
                                 string title = System.Net.WebUtility.HtmlDecode(item_title.Descendants("strong").First().InnerText).Trim();
-                                if (__songs.ContainsKey(FixReplace(title))) continue;
+                                string titlekey = FixReplace(title);
+                                if (__songs.ContainsKey(titlekey))
+                                {
+                                    __songs[titlekey].AddGenre(genre);
+                                    continue;
+                                }
 
                                 Song song = new Song();
                                 song.SetTitle(title);
@@ -387,7 +396,7 @@ namespace DonderHelper
                                     song.Region.China = Song.Availability.No;
                                 }
                                 
-                                song.SetGenre(genre);
+                                song.AddGenre(genre);
 
                                 __songs.TryAdd(FixReplace(title), song);
                                 __songNames.TryAdd(title, FixReplace(title));
@@ -731,7 +740,7 @@ namespace DonderHelper
                             var name = info_finder[3].InnerText.Trim();
                             if (__songNames.TryGetValue(name, out var song_title)) {
                                 string song_info = entry.Descendants("div").First().Attributes[1].Value;
-                                __songs[song_title].SetGenre(genre(song_info));
+                                __songs[song_title].SetPriorityGenre(genre(song_info));
                             }
                         }
                     }
