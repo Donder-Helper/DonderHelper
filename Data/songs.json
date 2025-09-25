@@ -1,11 +1,11 @@
 {
   "怪獣": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -137,11 +137,11 @@
   },
   "Love Love Love Love Loveばきゅーんっ!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -272,11 +272,11 @@
   },
   "倍倍FIGHT!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -545,11 +545,11 @@
   },
   "愛♡スクリ~ム!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -681,11 +681,11 @@
   },
   "On-Party!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -25478,11 +25478,11 @@
   },
   "WINNER!ゴジュウジャー!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -43890,11 +43890,11 @@
   },
   "★楽園☆CASINO GALAXY!": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -44027,11 +44027,11 @@
   },
   "アイドル戦士(feat. 初音ミク)": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -54645,13 +54645,283 @@
       7
     ]
   },
+  "Oshama Scramble!": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 201,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Oshama%20Scramble%21",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 323,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Oshama%20Scramble%21",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 429,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Oshama%20Scramble%21",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 677,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Oshama%20Scramble%21",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 865,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Oshama%20Scramble%21%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Oshama Scramble!"
+    },
+    "SubtitleList": {
+      "ja": "t+pazolite 「maimai でらっくす」より"
+    },
+    "GenreList": [
+      2
+    ]
+  },
+  "Valsqotch": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 254,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Valsqotch",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 375,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Valsqotch",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 633,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Valsqotch",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 1057,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Valsqotch",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Valsqotch"
+    },
+    "SubtitleList": {
+      "ja": "owl＊tree feat.chi＊tree 「maimai でらっくす」より"
+    },
+    "GenreList": [
+      2
+    ]
+  },
   "初": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -54783,8 +55053,8 @@
   "Radiant": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
+      "Asia": 1,
+      "Oceania": 1,
       "UnitedStates": 0,
       "China": 1
     },
@@ -54918,8 +55188,8 @@
   "Break Through the Dome": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
+      "Asia": 1,
+      "Oceania": 1,
       "UnitedStates": 0,
       "China": 1
     },
