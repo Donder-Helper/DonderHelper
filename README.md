@@ -4,8 +4,6 @@
 
 You can add the bot to your server or your apps here: https://discord.com/oauth2/authorize?client_id=1345203265838776431
 
-For information on how Donder Helper uses certain data, please [read here](https://github.com/Donder-Helper/.github/blob/main/about/Privacy.md).
-
 ## Using the Bot
 
 If you want to run the bot on your own system, you can use the Dockerfile provided or run `build.bat` to build from source. The executable will be found in `/bin/Release/net8.0/win-x64/publish/`.
