@@ -1,5 +1,3 @@
-![](https://github.com/Donder-Helper/.github/blob/main/profile/banner.png)
-
 # Donder Helper
 
 **Donder Helper** is a Nijiiro database Discord bot. Information about songs, dans, campaigns, events, etc. can be accessed through Slash Commands.
