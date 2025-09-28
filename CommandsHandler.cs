@@ -298,16 +298,6 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
-                    Name = "「カラフルピーチ × 太鼓の達人」コラボキャンペーン",
-                    Value = "colorfulpeach"
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
-                    Name = "『ガンダム45周年×初音ミク』× 太鼓の達人コラボ",
-                    Value = "gundammiku"
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
                     Name = "『Got Boost?』キャンペーン",
                     Value = "kamen2025"
                 },
@@ -698,43 +688,6 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
-                            case "gundammiku":
-                            {
-                                var peach = new EmbedBuilder()
-                                {
-                                    Title = "『ガンダム45周年×初音ミク』× 太鼓の達人コラボ",
-                                    Color = new(0x6e67ab),
-                                    Url = "https://www.gundam.info/feature/g45th-hatsunemiku-collab/#game",
-                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/06/543be319af3b4f56d81163330bc6f2ff.png",
-                                    Description = $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-                                var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "アイドル戦士(feat. 初音ミク)"));
-
-                                await command.RespondAsync(null, [peach.Build()], false, false, null, component.Build());
-                                break;
-                            }
-                            case "colorfulpeach":
-                            {
-                                var peach = new EmbedBuilder()
-                                {
-                                    Title = "「カラフルピーチ × 太鼓の達人」コラボキャンペーン",
-                                    Color = new(0xe01488),
-                                    Url = "https://taiko.namco-ch.net/taiko/special/colorful-peach/",
-                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/06/eed508a207c1e1a03c37d7dfa423ba5b.png",
-                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1759078799) + "\n\n" +
-                                    $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-                                var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "On-Party!"));
-
-                                await command.RespondAsync(null, [peach.Build()], false, false, null, component.Build());
-                                break;
-                            }
                             case "kamen2025":
                             {
                                 var kamen2025 = new EmbedBuilder()
