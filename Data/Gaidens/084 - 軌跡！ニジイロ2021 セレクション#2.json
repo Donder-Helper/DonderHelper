@@ -1,0 +1,44 @@
+{
+  "subtitle": {
+    "ja": "軌跡！ニジイロ2021 セレクション#2",
+    "en-US": "Tracing the Past! Niji-iro 2021 Selection #2",
+    "ko": "궤적! Niji-iro 2021 셀렉션 #2",
+    "zh-TW": "軌跡！Niji-iro2021 精選#2"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_84.png?250125095912",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E8%BB%8C%E8%B7%A1%EF%BC%81%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2021%20%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%832",
+  
+  "song1": {
+    "title": "punk bastards",
+    "diff": 3
+  },
+  "song2": {
+    "title": "ex寅 Trap!!",
+    "diff": 3
+  },
+  "song3": {
+    "title": "平等院鳳凰ドン vs 鳥獣戯カッ",
+    "diff": 4,
+    "spoiler": true
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 1,
+      "is_less": false,
+      "clear": [2900],
+      "gold": [2950]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2975000],
+      "gold": [2990000]
+    }
+  ]
+}

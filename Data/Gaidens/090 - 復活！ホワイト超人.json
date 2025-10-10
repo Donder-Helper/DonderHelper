@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！ホワイト超人",
+    "en-US": "Back in Action! White Chojin",
+    "ko": "부활! White 초인",
+    "zh-TW": "復活！White超人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_90.png?250801104032",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88/%E8%B6%85%E4%BA%BA",
+  
+  "song1": {
+    "title": "スーハー2000",
+    "diff": 3
+  },
+  "song2": {
+    "title": "〆ドレー2000",
+    "diff": 3
+  },
+  "song3": {
+    "title": "万戈イム-一ノ十",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [15],
+      "gold": [5]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [5],
+      "gold": [2]
+    }
+  ]
+}

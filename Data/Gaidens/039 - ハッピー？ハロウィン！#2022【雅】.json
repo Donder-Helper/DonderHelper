@@ -1,0 +1,49 @@
+{
+  "subtitle": {
+    "ja": "ハッピー？ハロウィン！#2022【雅】",
+    "en-US": "Happy(?) Halloween! 2022 (Miyabi)",
+    "ko": "해피(?) 할로윈! #2022 [미야비]",
+    "zh-TW": "萬聖節！快樂……？#2022【雅（miyabi）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_39.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%EF%BC%9F%E3%83%8F%E3%83%AD%E3%82%A6%E3%82%A3%E3%83%B3%EF%BC%81#2022%E3%80%90%E9%9B%85%E3%80%91",
+  
+  "song1": {
+    "title": "ハロー! ハロウィン",
+    "diff": 3
+  },
+  "song2": {
+    "title": "ミーナのおやしき",
+    "diff": 3
+  },
+  "song3": {
+    "title": "Doppelgangers",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [363],
+      "gold": [-1]
+    },
+    {
+      "condition": 7,
+      "is_less": false,
+      "clear": [789],
+      "gold": [907]
+    },
+    {
+      "condition": 5,
+      "is_less": false,
+      "clear": [127,103,159],
+      "gold": [135,112,173]
+    }
+  ]
+}

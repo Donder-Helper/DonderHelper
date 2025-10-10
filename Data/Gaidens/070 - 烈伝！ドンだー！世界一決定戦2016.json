@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "烈伝！ドンだー！世界一決定戦2016",
+    "en-US": "Taiko Saga! Donder WORLD CHAMPIONSHIP 2016",
+    "ko": "열전! 동더! 세계 제일 결정전 2016",
+    "zh-TW": "烈傳！鼓眾！世界冠軍賽 2016"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_70.png?240323100026",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E7%83%88%E4%BC%9D%EF%BC%81%E3%83%89%E3%83%B3%E3%81%A0%E3%83%BC%EF%BC%81%E4%B8%96%E7%95%8C%E4%B8%80%E6%B1%BA%E5%AE%9A%E6%88%A62016",
+  
+  "song1": {
+    "title": "Choco Chiptune.",
+    "diff": 3
+  },
+  "song2": {
+    "title": "凛",
+    "diff": 3
+  },
+  "song3": {
+    "title": "SstTAarR*",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 1,
+      "is_less": false,
+      "clear": [2016],
+      "gold": [2408]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [970000,960000,950000],
+      "gold": [990000,980000,970000]
+    }
+  ]
+}

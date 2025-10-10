@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！グリーン名人",
+    "en-US": "Back in Action! Green Meijin",
+    "ko": "부활! Green 명인",
+    "zh-TW": "復活！Green名人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_36.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3/%E5%90%8D%E4%BA%BA",
+  
+  "song1": {
+    "title": "弩蚊怒夏",
+    "diff": 3
+  },
+  "song2": {
+    "title": "愛と浄罪の森",
+    "diff": 3
+  },
+  "song3": {
+    "title": "コネクトカラーズ",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [28],
+      "gold": [14]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [5],
+      "gold": [2]
+    }
+  ]
+}

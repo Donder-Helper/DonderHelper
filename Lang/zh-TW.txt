@@ -26,6 +26,9 @@ COMMAND_STATS_DESC=取得本機器人與歌曲資料的統計數據。
 COMMAND_DAN_NAME=段位
 COMMAND_DAN_DESC=取得目前的段位道場資訊。
 
+COMMAND_GAIDEN_NAME=gaiden
+COMMAND_GAIDEN_DESC=Search for Gaidens and their corresponding QR codes.
+
 COMMAND_MISSING_NAME=待補
 COMMAND_MISSING_DESC=列出所有缺少音符數與地區限定資訊的歌曲。
 
@@ -54,6 +57,9 @@ OPTION_CAMPAIGNNAME_DESC=活動的名稱。
 
 OPTION_DANTITLE_NAME=段位名
 OPTION_DANTITLE_DESC=段位的名稱。
+
+OPTION_GAIDENTITLE_NAME=title
+OPTION_GAIDENTITLE_DESC=The title of the gaiden.
 
 OPTION_GUIDE_NAME=指南
 OPTION_GUIDE_DESC=選擇需要解說的鼓眾廣場介面。

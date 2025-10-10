@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "目指せ！280万点突破！【粋】",
+    "en-US": "Score Over 2.8 Million Pts! (Iki)",
+    "ko": "목표는! 280만 점 돌파! [이키]",
+    "zh-TW": "目標是突破280萬分！【粋（iki）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_43.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E7%9B%AE%E6%8C%87%E3%81%9B%EF%BC%81280%E4%B8%87%E7%82%B9%E7%AA%81%E7%A0%B4%EF%BC%81%E3%80%90%E7%B2%8B%E3%80%91",
+  
+  "song1": {
+    "title": "カルメン 組曲一番終曲",
+    "diff": 3
+  },
+  "song2": {
+    "title": "怪物",
+    "diff": 3
+  },
+  "song3": {
+    "title": "+♂(プラス男子)",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [98],
+      "gold": [-1]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [920000,920000,920000],
+      "gold": [960000,960000,960000]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2800000],
+      "gold": [2900000]
+    }
+  ]
+}

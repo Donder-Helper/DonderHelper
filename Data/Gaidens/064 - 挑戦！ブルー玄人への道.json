@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "挑戦！ブルー玄人への道",
+    "en-US": "Become a Blue Kuroto!",
+    "ko": "도전! Blue 현인으로의 길",
+    "zh-TW": "挑戰！邁向Blue玄人之路"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_65.png?231117153959",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%96%E3%83%AB%E3%83%BC/%E7%8E%84%E4%BA%BA",
+  
+  "song1": {
+    "title": "SstTAarR*",
+    "diff": 3
+  },
+  "song2": {
+    "title": "God Ray",
+    "diff": 3
+  },
+  "song3": {
+    "title": "Toon Town's Toys' Tune",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [100],
+      "gold": [-1]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [10],
+      "gold": [-1]
+    }
+  ]
+}

@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DonderHelper
 {
@@ -11,9 +6,9 @@ namespace DonderHelper
     {
         // Updates songlist during Debug mode
 #if DEBUG
-        public static string jsonpath = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}songs.json";
+        private static string jsonpath = $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}Data{Path.DirectorySeparatorChar}songs.json";
 #else
-        public static string jsonpath = $"Data{Path.DirectorySeparatorChar}songs.json";
+        private static string jsonpath = $"Data{Path.DirectorySeparatorChar}songs.json";
 #endif
 
         public static bool Update(List<Song> songs)
@@ -24,6 +19,15 @@ namespace DonderHelper
             {
                 serializer.Serialize(file_stream, Program.__songs);
             }
+            foreach (string path in Directory.GetFiles($"Data{Path.DirectorySeparatorChar}Gaidens", "*.json"))
+            {
+                var gaiden = JsonConvert.DeserializeObject<Gaiden>(File.ReadAllText(path));
+                if (gaiden != null) { 
+                    GaidenSonglist.Gaidens.TryAdd(gaiden.Subtitle, gaiden);
+                    foreach (var titles in gaiden.SubtitleList) GaidenSonglist.GaidenNames.TryAdd(titles.Value, gaiden.Subtitle);
+                }
+            }
+            GaidenSonglist.Gaidens = GaidenSonglist.Gaidens.Reverse().ToDictionary();
 
             return true;
         }

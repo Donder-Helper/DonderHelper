@@ -93,37 +93,64 @@ namespace DonderHelper
         private async Task AutocompleteExecuted(SocketAutocompleteInteraction interaction)
         {
             DateTimeOffset offset = DateTimeOffset.UtcNow;
+            string locale = GetLocale(interaction);
+            string name = (string)interaction.Data.Current.Value;
 
+            int Priority(string str1, string str2)
+            {
+                if (str1.Equals(str2, StringComparison.InvariantCultureIgnoreCase)) return -999;
+                if (str1.StartsWith(str2, StringComparison.InvariantCultureIgnoreCase)) return -998;
+                return string.Compare(str1, str2, true);
+            }
+            List<AutocompleteResult> result = [];
+
+            #region Song Title
             if (interaction.Data.CommandName == "song" && interaction.Data.Current.Name == "title")
             {
                 if (string.IsNullOrEmpty((string)interaction.Data.Current.Value))
                 {
-                    await interaction.RespondAsync();
-                    return;
+                    Random rand = new();
+                    List<Song> songlist = [];
+                    for (int i = 0; i < 10; i++)
+                        songlist.Add(Program.__songs.ElementAt(rand.Next(Program.__songs.Count)).Value);
+                    var autocomp = songlist.Select(song => new AutocompleteResult(song.GetTitle(locale), song.Title));
+
+                    await interaction.RespondAsync(autocomp, null);
+                    goto end;
                 }
 
-                string name = (string)interaction.Data.Current.Value;
-                List<AutocompleteResult> result = [];
+                result = Program.__songNames.
+                    Where(song => song.Key.Contains(name, StringComparison.OrdinalIgnoreCase)).
+                    OrderBy(song => Priority(song.Key, name)).Take(25).
+                    Select(song => new AutocompleteResult(song.Key, song.Value)).ToList();
 
-                result.AddRange(
-                    Program.__songNames
-                    .Where(song => song.Key.Contains(name, StringComparison.InvariantCultureIgnoreCase))
-                    .Select(song => new AutocompleteResult(song.Key, song.Value))
-                    );
-
-                int Priority(AutocompleteResult auto)
-                {
-                    if (auto.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase)) return -2;
-                    if (auto.Name.StartsWith(name, StringComparison.InvariantCultureIgnoreCase)) return -1;
-                    return 0;
-                }
-
-                result = result.OrderBy(song => Priority(song)).ToList();
-
-                await interaction.RespondAsync(result.Take(25), null);
+                await interaction.RespondAsync(result, null);
             }
+            #endregion
+            #region Gaiden Title
+            else if (interaction.Data.CommandName == "gaiden" && interaction.Data.Current.Name == "title")
+            {
+                if (string.IsNullOrEmpty((string)interaction.Data.Current.Value))
+                {
+                    Random rand = new();
+                    var autocomp = GaidenSonglist.Gaidens.Values.Take(20).
+                        Select(gaiden => new AutocompleteResult(gaiden.GetSubtitle(locale), gaiden.Subtitle));
+
+                    await interaction.RespondAsync(autocomp, null);
+                    goto end;
+                }
+
+                result = GaidenSonglist.GaidenNames.
+                    Where(song => song.Key.Contains(name, StringComparison.OrdinalIgnoreCase)).
+                    OrderBy(song => Priority(song.Key, name)).Take(25).
+                    Select(song => new AutocompleteResult(song.Key, song.Value)).ToList();
+
+                await interaction.RespondAsync(result, null);
+            }
+            #endregion
+            end:
             Console.WriteLine($"AutocompleteExecuted (Finished in {(DateTimeOffset.UtcNow - offset).TotalSeconds}s)");
-            Console.WriteLine($"Data: {Regex.Replace((string)interaction.Data.Current.Value, @"[^\w\.@-]", "")}");
+            Console.WriteLine($"Data: {Regex.Replace(name, @"[^\w\.@-]", "")}");
         }
 
         private async Task Client_Ready()
@@ -298,6 +325,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025",
+                    Value = "tournament2025",
+                    NameLocalizations =
+                    {
+                        { "ja", "太鼓の達人 ワールドスコアアタック@オンライン 2025" },
+                        { "ko", "태고의 달인 월드 스코어 어택@온라인 2025" },
+                        { "zh-TW", "太鼓之達人 全球高分挑戰@線上大賽 2025" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "『Got Boost?』キャンペーン",
                     Value = "kamen2025"
                 },
@@ -344,6 +382,15 @@ namespace DonderHelper
                 );
                 command_dan.WithContextTypes(context_types);
                 command_dan.WithIntegrationTypes(integration_types);
+
+                var command_gaiden = new SlashCommandBuilder();
+                command_gaiden.WithName("gaiden");
+                command_gaiden.WithDescription("Search for Gaidens and their corresponding QR codes.");
+                command_gaiden.WithNameLocalizations(LocaleData.GetStrings("COMMAND_GAIDEN_NAME"));
+                command_gaiden.WithDescriptionLocalizations(LocaleData.GetStrings("COMMAND_GAIDEN_DESC"));
+                command_gaiden.AddOption("title", ApplicationCommandOptionType.String, "The title of the gaiden.", true, null, true, null, null, null, null, LocaleData.GetStrings("OPTION_GAIDENTITLE_NAME"), LocaleData.GetStrings("OPTION_GAIDENTITLE_DESC"), null, null);
+                command_gaiden.WithContextTypes(context_types);
+                command_gaiden.WithIntegrationTypes(integration_types);
 
                 var command_hiroba = new SlashCommandBuilder();
                 command_hiroba.WithName("hiroba");
@@ -411,7 +458,7 @@ namespace DonderHelper
                 command_invite.WithContextTypes(context_types);
                 command_invite.WithIntegrationTypes(integration_types);
 
-                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_hiroba.Build(), command_missing.Build(), command_invite.Build()]);
+                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_gaiden.Build(), command_hiroba.Build(), command_missing.Build(), command_invite.Build()]);
 
                 var command_list = await _client.GetGlobalApplicationCommandsAsync();
 
@@ -569,7 +616,8 @@ namespace DonderHelper
                 Console.WriteLine($"Command's locale is {locale}");
                 Console.WriteLine($"Message can be sent: {canSendMessage}");
 
-                switch (command.Data.Name)
+                string command_name = command.Data.Name;
+                switch (command_name)
                 {
                     case "random":
                     {
@@ -688,6 +736,33 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "tournament2025":
+                            {
+                                var tournament2025 = new EmbedBuilder()
+                                {
+                                    Title = locale switch
+                                    {
+                                        "en-US" => "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025",
+                                        "ko" => "태고의 달인 월드 스코어 어택@온라인 2025",
+                                        "zh-TW" => "太鼓之達人 全球高分挑戰@線上大賽 2025",
+                                        _ => "太鼓の達人 ワールドスコアアタック@オンライン 2025"
+                                    },
+                                    Color = new(0x2da5ff),
+                                    Url = locale switch
+                                    {
+                                        "ja" => "https://taiko.namco-ch.net/taiko/twso2025/index.php",
+                                        "ko" => "https://taiko.namco-ch.net/taiko/kr/twso2025/index.php",
+                                        "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/twso2025/index.php",
+                                        _ => "https://taiko.namco-ch.net/taiko/en/twso2025/index.php"
+                                    },
+                                    ImageUrl = "https://pbs.twimg.com/media/G2j_dotagAAoLvQ?format=jpg&name=large",
+                                    Description = "(Coming Soon)",
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+                                await command.RespondAsync(null, [tournament2025.Build()], false, false);
+                                break;
+                            }
                             case "kamen2025":
                             {
                                 var kamen2025 = new EmbedBuilder()
@@ -709,6 +784,7 @@ namespace DonderHelper
                             }
                             case "ka":
                             {
+                                var qr = EmoteData.GetEmote("QR");
                                 var ka = new EmbedBuilder()
                                 {
                                     Title = "彁",
@@ -716,13 +792,13 @@ namespace DonderHelper
                                     Url = "https://x.com/taiko_team/status/1509697054313881600",
                                     ImageUrl = "https://pbs.twimg.com/media/FPD5JqzagAQEFl5?format=png&name=medium",
                                     Description = $"{Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 253402268399)))}\n\n" +
-                                    $"-# {LocaleData.GetString("DISCLAIMER_NOUSA", locale)}",
+                                    $"{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
 
                                 var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "彁").WithLabel("「こ、これは。。。」").WithEmote(Emoji.Parse(":question:")));
+                                component.WithButton(CreateSongButton(command, "彁").WithLabel(locale == "en-US" ? "\"This... this is...\"" : "「こ、これは。。。」").WithEmote(Emoji.Parse(":question:")));
 
                                 await command.RespondAsync(null, [ka.Build()], false, false, null, component.Build());
                                 break;
@@ -880,31 +956,21 @@ namespace DonderHelper
                         break;
                     }
                     case "dan":
+                    case "gaiden":
                     {
                         var dan_title = command.Data.Options.Where(option => option.Name == "title");
                         string title = dan_title.Count() > 0 ? (string)dan_title.First().Value : "";
 
-                        if (DanSonglist.Dans.TryGetValue(title, out Dan? dan) && dan.DanIsValid())
+                        if (command_name == "dan" && DanSonglist.Dans.TryGetValue(title, out Dan? dan) && dan.DanIsValid())
                         {
                             var dan_embed = new EmbedBuilder()
                             {
                                 Title = title + "・" + dan.TitleEN,
                                 Description = "-# " + LocaleData.GetString("DISCLAIMER_NOUSA", locale),
-                                Color = dan.Color,
+                                Color = dan.DiscordColor,
                                 Url = dan.Url,
 
-                                Fields =
-                                {
-                                    new()
-                                    {
-                                        Name = LocaleData.GetString("DAN_SONGS", locale),
-                                        Value = $"{EmoteData.GetEmote("DAN_FIRST")} {Program.GetLocalizedSongTitle(dan.Song1.Title, locale)} {EmoteData.GetDifficulty(dan.Song1.Difficulty)} {dan.Song1.Chart.Level}★ {dan.Song1.Chart.NoteCount}\n" +
-                                        $"{EmoteData.GetEmote("DAN_SECOND")} {Program.GetLocalizedSongTitle(dan.Song2.Title, locale)} {EmoteData.GetDifficulty(dan.Song2.Difficulty)} {dan.Song2.Chart.Level}★ {dan.Song2.Chart.NoteCount}\n" +
-                                        $"{EmoteData.GetEmote("DAN_THIRD")} {Program.GetLocalizedSongTitle(dan.Song3.Title, locale)} {EmoteData.GetDifficulty(dan.Song3.Difficulty)} {dan.Song3.Chart.Level}★ {dan.Song3.Chart.NoteCount}\n" +
-                                        $"-# **{LocaleData.GetString("DAN_NOTECOUNT", locale, dan.GetNoteCount() > -1 ? dan.GetNoteCount() : "???")}**",
-                                        IsInline = false
-                                    }
-                                },
+                                Fields = [dan.SongsToField(locale)],
 
                                 Timestamp = DateTime.UtcNow,
                                 Footer = GetFooter(command)
@@ -912,9 +978,34 @@ namespace DonderHelper
                             dan_embed.Fields.AddRange(dan.ExamsToFields(locale));
 
                             var component_builder = new ComponentBuilder();
-                            component_builder.WithButton(CreateSongButton(command, dan.Song1.Title, dan.Song1.Difficulty, true));
-                            component_builder.WithButton(CreateSongButton(command, dan.Song2.Title, dan.Song2.Difficulty, true));
-                            component_builder.WithButton(CreateSongButton(command, dan.Song3.Title, dan.Song3.Difficulty, true));
+                            if (!dan.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song1.Title, dan.Song1.Difficulty, true));
+                            if (!dan.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song2.Title, dan.Song2.Difficulty, true));
+                            if (!dan.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song3.Title, dan.Song3.Difficulty, true));
+
+                            await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
+                        }
+                        else if (command_name == "gaiden" && GaidenSonglist.Gaidens.TryGetValue(title, out Gaiden? gaiden) && gaiden.DanIsValid())
+                        {
+                            var dan_embed = new EmbedBuilder()
+                            {
+                                Title = gaiden.GetSubtitle(locale),
+                                Color = gaiden.DiscordColor,
+                                Url = gaiden.Url,
+                                ImageUrl = gaiden.QRUrl,
+
+                                Description = EmoteData.GetEmote("QR") + " " + gaiden.QRUrl,
+
+                                Fields = [gaiden.SongsToField(locale)],
+
+                                Timestamp = DateTime.UtcNow,
+                                Footer = GetFooter(command)
+                            };
+                            dan_embed.Fields.AddRange(gaiden.ExamsToFields(locale));
+
+                            var component_builder = new ComponentBuilder();
+                            if (!gaiden.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song1.Title, gaiden.Song1.Difficulty, true));
+                            if (!gaiden.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song2.Title, gaiden.Song2.Difficulty, true));
+                            if (!gaiden.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song3.Title, gaiden.Song3.Difficulty, true));
 
                             await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
                         }

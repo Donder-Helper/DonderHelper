@@ -26,6 +26,9 @@ COMMAND_STATS_DESC=Get statistics about the bot and its song database.
 COMMAND_DAN_NAME=dan
 COMMAND_DAN_DESC=Get the current Dan Dojo courses.
 
+COMMAND_GAIDEN_NAME=gaiden
+COMMAND_GAIDEN_DESC=Search for Gaidens and their corresponding QR codes.
+
 COMMAND_MISSING_NAME=missing
 COMMAND_MISSING_DESC=Lists all songs with missing note counts and region status.
 
@@ -54,6 +57,9 @@ OPTION_CAMPAIGNNAME_DESC=The name of a currently active campaign.
 
 OPTION_DANTITLE_NAME=title
 OPTION_DANTITLE_DESC=The title of the dan.
+
+OPTION_GAIDENTITLE_NAME=title
+OPTION_GAIDENTITLE_DESC=The title of the gaiden.
 
 OPTION_GUIDE_NAME=guide
 OPTION_GUIDE_DESC=Select a specific area of Donder Hiroba to read about.

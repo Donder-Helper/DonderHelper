@@ -28,6 +28,8 @@ namespace DonderHelper
                     return Program.__songs.TryGetValue(Title, out var song) ? song : new();
                 }
             }
+
+            public DanSong() { Title = ""; Difficulty = Song.SongDifficulty.Extreme; Spoiler = false; }
         }
 
         public struct Exam
@@ -43,7 +45,9 @@ namespace DonderHelper
             public int[] Gold;
 
             [JsonIgnore]
-            public bool IsGlobal { get { return Clear.Length <= 1; } }
+            public bool IsGlobal { get { return Clear.Length == 1; } }
+
+            public Exam() { Condition = Condition.Gauge; IsLess = false; Clear = [-1]; Gold = [-1]; }
         }
 
         public enum Condition
@@ -56,6 +60,17 @@ namespace DonderHelper
             Drumroll,
             Score,
             Combo
+        }
+
+        private struct DanColor
+        {
+            [JsonProperty("R")]
+            byte R;
+            [JsonProperty("G")]
+            byte G;
+            [JsonProperty("B")]
+            byte B;
+            DanColor(byte r, byte g, byte b) { R = r; G = g; B = b; }
         }
 
         public static string GetConditionAsString(Condition condition, string locale)
@@ -80,16 +95,29 @@ namespace DonderHelper
         public string Title = "??";
         [JsonProperty("title_en")]
         public string TitleEN = "Unknown Dan";
-        [JsonIgnore]
-        public string Subtitle => d_Subtitle.TryGetValue("ja", out string? subtitle) ? (subtitle ?? "") : "";
-        [JsonProperty("subtitle")]
-        public Dictionary<string, string> d_Subtitle = new() {
-            { "ja", "" }
-        };
-        public string GetSubtitle(string locale) { return d_Subtitle.TryGetValue(locale, out var subtitle) ? subtitle : Subtitle; }
 
         [JsonProperty("color")]
-        public Discord.Color Color = new();
+        public string Color = "#FFFFFF";
+        [JsonIgnore]
+        public Discord.Color DiscordColor
+        {
+            get {
+                switch (Color.ToLower())
+                {
+                    case "kyu": return new(0xffcf75);
+                    case "blue": return new(0x4aaaba);
+                    case "red": return new(0xf55336);
+                    case "jin": return new(0xced6de);
+                    case "gold": return new(0xffd700);
+                    case "gaiden": return new(0x107b5c);
+                    default: if (!Color.StartsWith('#') || Color.Length != 7) return new(0xFFFFFF); break;
+                }
+
+                int fromHex(string input) => int.Parse(input, System.Globalization.NumberStyles.HexNumber);
+                string color = Color.Remove(0, 1);
+                return new(fromHex(color.Substring(0, 2)), fromHex(color.Substring(2, 2)), fromHex(color.Substring(4, 2)));
+            }
+        }
 
         [JsonProperty("url")]
         public string Url = "";
@@ -100,15 +128,37 @@ namespace DonderHelper
         public DanSong Song2 { get; set; } = new();
         [JsonProperty("song3")]
         public DanSong Song3 { get; set; } = new();
+        [JsonIgnore]
+        public bool AnySpoiler => Song1.Spoiler || Song2.Spoiler || Song3.Spoiler;
+        [JsonIgnore]
+        public bool AllSpoiler => Song1.Spoiler && Song2.Spoiler && Song3.Spoiler;
 
         [JsonProperty("exams")]
         public List<Exam> Exams { get; set; } = [];
 
+        public EmbedFieldBuilder SongsToField(string locale)
+        {
+            string spoilerany = AnySpoiler ? "||" : "";
+            string spoiler1 = Song1.Spoiler ? "||" : "";
+            string spoiler2 = Song2.Spoiler ? "||" : "";
+            string spoiler3 = Song3.Spoiler ? "||" : "";
+
+            return new()
+            {
+                Name = LocaleData.GetString("DAN_SONGS", locale),
+                Value = $"{EmoteData.GetEmote("DAN_FIRST")} {spoiler1}{Program.GetLocalizedSongTitle(Song1.Title, locale)} {EmoteData.GetDifficulty(Song1.Difficulty)} {Song1.Chart.Level}★ {Song1.Chart.NoteCount}{spoiler1}\n" +
+                $"{EmoteData.GetEmote("DAN_SECOND")} {spoiler2}{Program.GetLocalizedSongTitle(Song2.Title, locale)} {EmoteData.GetDifficulty(Song2.Difficulty)} {Song2.Chart.Level}★ {Song2.Chart.NoteCount}{spoiler2}\n" +
+                $"{EmoteData.GetEmote("DAN_THIRD")} {spoiler3}{Program.GetLocalizedSongTitle(Song3.Title, locale)} {EmoteData.GetDifficulty(Song3.Difficulty)} {Song3.Chart.Level}★ {Song3.Chart.NoteCount}{spoiler3}\n" +
+                $"-# {spoilerany}**{LocaleData.GetString("DAN_NOTECOUNT", locale, GetNoteCount() > -1 ? GetNoteCount() : "???")}**{spoilerany}",
+                IsInline = false
+            };
+        }
         public List<EmbedFieldBuilder> ExamsToFields(string locale)
         {
             List<EmbedFieldBuilder> fields = new();
-            foreach (var exam in Exams)
+            for (int i = 0; i < Exams.Count; i++)
             {
+                var exam = Exams[i];
                 if (exam.IsGlobal)
                 {
                     fields.Add(
@@ -127,79 +177,22 @@ namespace DonderHelper
                         {
                             Name = GetConditionAsString(exam.Condition, locale),
                             IsInline = false,
-                            Value = $"{EmoteData.GetEmote("DAN_FIRST")} " + LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
+                            Value =
+                            $"{EmoteData.GetEmote("DAN_FIRST")} {LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
                             (exam.Clear[0] > -1 ? exam.Clear[0] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""),
-                            (exam.Gold[0] > -1 ? exam.Gold[0] : "???") + (exam.Condition == Condition.Gauge ? "%" : "")) + "\n" +
+                            (exam.Gold[0] > -1 ? exam.Gold[0] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""))}\n" +
 
-                            $"{EmoteData.GetEmote("DAN_SECOND")} " + LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
+                            $"{EmoteData.GetEmote("DAN_SECOND")} {LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
                             (exam.Clear[1] > -1 ? exam.Clear[1] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""),
-                            (exam.Gold[1] > -1 ? exam.Gold[1] : "???") + (exam.Condition == Condition.Gauge ? "%" : "")) + "\n" +
+                            (exam.Gold[1] > -1 ? exam.Gold[1] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""))}\n" +
 
-                            $"{EmoteData.GetEmote("DAN_THIRD")} " + LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
+                            $"{EmoteData.GetEmote("DAN_THIRD")} {LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE", locale,
                             (exam.Clear[2] > -1 ? exam.Clear[2] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""),
-                            (exam.Gold[2] > -1 ? exam.Gold[2] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""))
+                            (exam.Gold[2] > -1 ? exam.Gold[2] : "???") + (exam.Condition == Condition.Gauge ? "%" : ""))}"
                         });
                 }
             }
             return fields;
-        }
-
-        public List<EmbedBuilder> ExamsToEmbedBuilders(string locale)
-        {
-            List<EmbedBuilder> builder = new();
-
-            foreach (var exam in Exams)
-            {
-                if (exam.IsGlobal)
-                {
-                    builder.Add(new()
-                    {
-                        Color = Color,
-                        Fields = new()
-                        {
-                            new() {
-                            Name = GetConditionAsString(exam.Condition, locale),
-                            IsInline = false,
-                            Value = LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE",
-                            locale, exam.Clear[0] + (exam.Condition == Condition.Gauge ? "%" : ""),
-                            exam.Gold[0] + (exam.Condition == Condition.Gauge ? "%" : ""))
-                            }
-                        }
-                    });
-                }
-                else
-                {
-                    builder.Add(new()
-                    {
-                        Color = Color,
-                        Fields = new()
-                        {
-                            new() {
-                            Name = exam.Condition.ToString(),
-                            IsInline = true,
-                            Value = LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE",
-                            locale, exam.Clear[0] + (exam.Condition == Condition.Gauge ? "%" : ""),
-                            exam.Gold[0] + (exam.Condition == Condition.Gauge ? "%" : ""))
-                            },
-                            new() {
-                                Name = exam.Condition.ToString(),
-                                IsInline = true,
-                                Value = LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE",
-                                locale, exam.Clear[1] + (exam.Condition == Condition.Gauge ? "%" : ""),
-                                exam.Gold[1] + (exam.Condition == Condition.Gauge ? "%" : ""))
-                            },
-                            new() {
-                                Name = exam.Condition.ToString(),
-                                IsInline = true,
-                                Value = LocaleData.GetString(exam.IsLess ? "DAN_CONDITION_LESS" : "DAN_CONDITION_MORE",
-                                locale, exam.Clear[2] + (exam.Condition == Condition.Gauge ? "%" : ""),
-                                exam.Gold[2] + (exam.Condition == Condition.Gauge ? "%" : ""))
-                            }
-                        }
-                    });
-                }
-            }
-            return builder;
         }
 
         public ApplicationCommandOptionChoiceProperties AsChoice()
@@ -230,17 +223,11 @@ namespace DonderHelper
 
     public static class DanSonglist
     {
-        private static readonly Discord.Color Kyu = new(0xffcf75);
-        private static readonly Discord.Color Blue = new(0x4aaaba);
-        private static readonly Discord.Color Red = new(0xf55336);
-        private static readonly Discord.Color Jin = new(0xced6de);
-        private static readonly Discord.Color Gold = new(0xffd700);
-
-        public static Dan FifthKyu = new()
+        private static Dan FifthKyu = new()
         {
             Title = "五級",
             TitleEN = "Fifth Kyu",
-            Color = Kyu,
+            Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%94%E7%B4%9A",
 
             Song1 = new() { Title = "はいよろこんで", Difficulty = Song.SongDifficulty.Normal },
@@ -254,11 +241,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan FourthKyu = new()
+        private static Dan FourthKyu = new()
         {
             Title = "四級",
             TitleEN = "Fourth Kyu",
-            Color = Kyu,
+            Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%9B%9B%E7%B4%9A",
 
             Song1 = new() { Title = "Help me, ERINNNNNN!!", Difficulty = Song.SongDifficulty.Normal },
@@ -273,11 +260,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan ThirdKyu = new()
+        private static Dan ThirdKyu = new()
         {
             Title = "三級",
             TitleEN = "Third Kyu",
-            Color = Kyu,
+            Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%89%E7%B4%9A",
 
             Song1 = new() { Title = "最高到達点", Difficulty = Song.SongDifficulty.Hard },
@@ -292,11 +279,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan SecondKyu = new()
+        private static Dan SecondKyu = new()
         {
             Title = "二級",
             TitleEN = "Second Kyu",
-            Color = Kyu,
+            Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%8C%E7%B4%9A",
 
             Song1 = new() { Title = "強風オールバック(feat.歌愛ユキ)", Difficulty = Song.SongDifficulty.Hard },
@@ -311,11 +298,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan FirstKyu = new()
+        private static Dan FirstKyu = new()
         {
             Title = "一級",
             TitleEN = "First Kyu",
-            Color = Kyu,
+            Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%80%E7%B4%9A",
 
             Song1 = new() { Title = "唱", Difficulty = Song.SongDifficulty.Hard },
@@ -330,11 +317,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan FirstDan = new()
+        private static Dan FirstDan = new()
         {
             Title = "初段",
             TitleEN = "Shodan / First Dan",
-            Color = Blue,
+            Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%88%9D%E6%AE%B5",
 
             Song1 = new() { Title = "ハロー!どんちゃん", Difficulty = Song.SongDifficulty.Extreme },
@@ -350,11 +337,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan SecondDan = new()
+        private static Dan SecondDan = new()
         {
             Title = "二段",
             TitleEN = "Second Dan",
-            Color = Blue,
+            Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%8C%E6%AE%B5",
 
             Song1 = new() { Title = "蝶戀", Difficulty = Song.SongDifficulty.Extreme },
@@ -370,11 +357,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan ThirdDan = new()
+        private static Dan ThirdDan = new()
         {
             Title = "三段",
             TitleEN = "Third Dan",
-            Color = Blue,
+            Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%89%E6%AE%B5",
 
             Song1 = new() { Title = "恋の処方箋", Difficulty = Song.SongDifficulty.Extreme },
@@ -390,11 +377,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan FourthDan = new()
+        private static Dan FourthDan = new()
         {
             Title = "四段",
             TitleEN = "Fourth Dan",
-            Color = Blue,
+            Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%9B%9B%E6%AE%B5",
 
             Song1 = new() { Title = "シューガク トラベラーズ", Difficulty = Song.SongDifficulty.Extreme },
@@ -410,11 +397,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan FifthDan = new()
+        private static Dan FifthDan = new()
         {
             Title = "五段",
             TitleEN = "Fifth Dan",
-            Color = Blue,
+            Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%94%E6%AE%B5",
 
             Song1 = new() { Title = "大多羅捌伍伍壱", Difficulty = Song.SongDifficulty.Extreme },
@@ -430,11 +417,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan SixthDan = new()
+        private static Dan SixthDan = new()
         {
             Title = "六段",
             TitleEN = "Sixth Dan",
-            Color = Red,
+            Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AD%E6%AE%B5",
 
             Song1 = new() { Title = "花漾", Difficulty = Song.SongDifficulty.Hidden },
@@ -450,11 +437,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan SeventhDan = new()
+        private static Dan SeventhDan = new()
         {
             Title = "七段",
             TitleEN = "Seventh Dan",
-            Color = Red,
+            Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AB%E6%AE%B5",
 
             Song1 = new() { Title = "指先からはじまる物語", Difficulty = Song.SongDifficulty.Extreme },
@@ -470,11 +457,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan EigthDan = new()
+        private static Dan EigthDan = new()
         {
             Title = "八段",
             TitleEN = "Eigth Dan",
-            Color = Red,
+            Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AB%E6%AE%B5",
 
             Song1 = new() { Title = "My Muscle Heart", Difficulty = Song.SongDifficulty.Extreme },
@@ -490,11 +477,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan NinthDan = new()
+        private static Dan NinthDan = new()
         {
             Title = "九段",
             TitleEN = "Ninth Dan",
-            Color = Red,
+            Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B9%9D%E6%AE%B5",
 
             Song1 = new() { Title = "GO GET'EM!", Difficulty = Song.SongDifficulty.Hidden },
@@ -510,11 +497,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan TenthDan = new()
+        private static Dan TenthDan = new()
         {
             Title = "十段",
             TitleEN = "Tenth Dan",
-            Color = Red,
+            Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%8D%81%E6%AE%B5",
 
             Song1 = new() { Title = "天狗囃子", Difficulty = Song.SongDifficulty.Extreme },
@@ -530,11 +517,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan Kuroto = new()
+        private static Dan Kuroto = new()
         {
             Title = "玄人",
             TitleEN = "Kuroto",
-            Color = Jin,
+            Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E7%8E%84%E4%BA%BA",
 
             Song1 = new() { Title = "Doppelgangers", Difficulty = Song.SongDifficulty.Hidden },
@@ -550,11 +537,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan Meijin = new()
+        private static Dan Meijin = new()
         {
             Title = "名人",
             TitleEN = "Meijin",
-            Color = Jin,
+            Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%90%8D%E4%BA%BA",
 
             Song1 = new() { Title = "電脳幻夜の星言詠", Difficulty = Song.SongDifficulty.Extreme },
@@ -570,11 +557,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan Chojin = new()
+        private static Dan Chojin = new()
         {
             Title = "超人",
             TitleEN = "Chojin",
-            Color = Jin,
+            Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E8%B6%85%E4%BA%BA",
 
             Song1 = new() { Title = "LECIEL GLISSANDO", Difficulty = Song.SongDifficulty.Extreme },
@@ -590,11 +577,11 @@ namespace DonderHelper
             }
         };
 
-        public static Dan Tatsujin = new()
+        private static Dan Tatsujin = new()
         {
             Title = "達人",
             TitleEN = "Tatsujin",
-            Color = Gold,
+            Color = "gold",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E9%81%94%E4%BA%BA",
 
             Song1 = new() { Title = "POLARiSNAUT", Difficulty = Song.SongDifficulty.Extreme },

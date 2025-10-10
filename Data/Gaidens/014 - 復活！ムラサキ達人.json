@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！ムラサキ達人",
+    "en-US": "Back in action! Murasaki Tatsujin",
+    "ko": "부활! Murasaki 달인",
+    "zh-TW": "復活！Murasaki達人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_08.png?231117153957",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%A0%E3%83%A9%E3%82%B5%E3%82%AD/%E9%81%94%E4%BA%BA",
+  
+  "song1": {
+    "title": "Xa",
+    "diff": 4
+  },
+  "song2": {
+    "title": "双竜ノ乱",
+    "diff": 3
+  },
+  "song3": {
+    "title": "幽玄ノ乱",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [10],
+      "gold": [1]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [3],
+      "gold": [1]
+    }
+  ]
+}

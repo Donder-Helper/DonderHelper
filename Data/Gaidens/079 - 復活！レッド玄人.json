@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！レッド玄人",
+    "en-US": "Back in Action! Red Kuroto",
+    "ko": "부활! Red 현인",
+    "zh-TW": "復活！Red玄人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_79.png?240807184551",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%AC%E3%83%83%E3%83%89/%E7%8E%84%E4%BA%BA",
+  
+  "song1": {
+    "title": "天照",
+    "diff": 3
+  },
+  "song2": {
+    "title": "VERTeX",
+    "diff": 3
+  },
+  "song3": {
+    "title": "ゴーストマスク",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [40],
+      "gold": [15]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [8],
+      "gold": [2]
+    }
+  ]
+}

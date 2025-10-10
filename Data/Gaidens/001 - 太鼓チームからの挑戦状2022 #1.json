@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "太鼓チームからの挑戦状2022 #1",
+    "en-US": "2022 Taiko Team Challenge #1",
+    "ko": "태고 팀의 도전장 2022 #1",
+    "zh-TW": "來自太鼓團隊的挑戰書2022 #1"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_21.png?231117153643",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E5%A4%AA%E9%BC%93%E3%83%81%E3%83%BC%E3%83%A0%E3%81%8B%E3%82%89%E3%81%AE%E6%8C%91%E6%88%A6%E7%8A%B62022%EF%BC%831",
+  
+  "song1": {
+    "title": "画竜点睛",
+    "diff": 3
+  },
+  "song2": {
+    "title": "百花繚乱",
+    "diff": 3
+  },
+  "song3": {
+    "title": "一世風靡",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 4,
+      "is_less": false,
+      "clear": [466,575,525],
+      "gold": [524,647,591]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [16,20,18],
+      "gold": [6,8,6]
+    }
+  ]
+}

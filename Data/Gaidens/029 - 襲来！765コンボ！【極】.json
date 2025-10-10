@@ -1,0 +1,37 @@
+{
+  "subtitle": {
+    "ja": "襲来！765コンボ！【極】",
+    "en-US": "Attack of the 765 Combo! (Kiwami)",
+    "ko": "습격! 765 콤보! [기와미]",
+    "zh-TW": "來襲！765連段！【極（kiwami）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_29.png?231117153957",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E8%A5%B2%E6%9D%A5%EF%BC%81765%E3%82%B3%E3%83%B3%E3%83%9C%EF%BC%81%E3%80%90%E6%A5%B5%E3%80%91",
+  
+  "song1": {
+    "title": "mint tears",
+    "diff": 3
+  },
+  "song2": {
+    "title": "Venomous",
+    "diff": 4
+  },
+  "song3": {
+    "title": "十露盤2000",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 7,
+      "is_less": false,
+      "clear": [650,650,650],
+      "gold": [765,765,765]
+    }
+  ]
+}

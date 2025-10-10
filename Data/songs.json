@@ -49855,9 +49855,9 @@
         "Level": 10,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
+            "Normal": 1001,
+            "Expert": 1001,
+            "Tatsujin": 1001
           },
           "Double1P": {
             "Normal": 0,
@@ -109969,7 +109969,7 @@
         "Level": 10,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 1099,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -110395,7 +110395,7 @@
         "Level": 10,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 1172,
             "Expert": 0,
             "Tatsujin": 0
           },

@@ -49,8 +49,10 @@ namespace DonderHelper
         public static Dictionary<string, string> GetStrings(string input, params object?[] items)
         {
             Dictionary<string, string> strings = [];
-            foreach (var dict in dicts)
+            foreach (var dict in dicts) {
                 strings.Add(dict.Key, GetString(input, dict.Key, items));
+                if (dict.Key == "en-US") strings.Add("en-GB", GetString(input, dict.Key, items));
+            }
             return strings;
         }
         public static string GetAIBattleItemInfo(string name, string type, int wins, string locale)

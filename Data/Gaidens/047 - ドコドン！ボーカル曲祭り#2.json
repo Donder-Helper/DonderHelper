@@ -1,0 +1,37 @@
+{
+  "subtitle": {
+    "ja": "ドコドン！ボーカル曲祭り#2",
+    "en-US": "Dokodon! Vocal Song Festival #2",
+    "ko": "도코동! 보컬 곡 축제#2",
+    "zh-TW": "咚咚響！歌謠祭#2"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_49.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E3%83%89%E3%82%B3%E3%83%89%E3%83%B3%EF%BC%81%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AB%E6%9B%B2%E7%A5%AD%E3%82%8A#2,-%E7%B7%8F%E9%9F%B3%E7%AC%A6%E6%95%B0",
+  
+  "song1": {
+    "title": "ブルちゃんのおや2",
+    "diff": 3
+  },
+  "song2": {
+    "title": "Solitude Star",
+    "diff": 3
+  },
+  "song3": {
+    "title": "EDY -エレクトリカルダンシングヨガ-",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 1,
+      "is_less": false,
+      "clear": [2551],
+      "gold": [2679]
+    }
+  ]
+}

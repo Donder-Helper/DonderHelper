@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！ブルー超人",
+    "en-US": "Back in Action! Blue Chojin",
+    "ko": "부활! Blue 초인",
+    "zh-TW": "復活！Blue超人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_64.png?231117153959",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%96%E3%83%AB%E3%83%BC/%E8%B6%85%E4%BA%BA",
+  
+  "song1": {
+    "title": "束ね糸",
+    "diff": 3
+  },
+  "song2": {
+    "title": "DEBSTEP!",
+    "diff": 3
+  },
+  "song3": {
+    "title": "Coquette",
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [15],
+      "gold": [6]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [4],
+      "gold": [2]
+    }
+  ]
+}
