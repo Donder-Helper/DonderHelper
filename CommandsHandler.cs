@@ -336,6 +336,17 @@ namespace DonderHelper
                 },
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "Touhou Project×Taiko no Tatsujin 2025",
+                    Value = "touhou2025",
+                    NameLocalizations =
+                    {
+                        { "ja", "東方Project×太鼓の達人2025" },
+                        { "ko", "동방 프로젝트×태고의 달인 2025" },
+                        { "zh-TW", "東方Project×太鼓之達人 2025" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "『Got Boost?』キャンペーン",
                     Value = "kamen2025"
                 },
@@ -736,27 +747,70 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "touhou2025":
+                            {
+                                string url = locale switch
+                                {
+                                    "ja" => "https://taiko.namco-ch.net/taiko/special/touhou2025/",
+                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/touhou2025/",
+                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/touhou2025/",
+                                    _ => "https://taiko.namco-ch.net/taiko/en/special/touhou2025/"
+                                };
+
+                                var touhou2025 = new EmbedBuilder()
+                                {
+                                    Title = locale switch
+                                    {
+                                        "ja" => "東方Project×太鼓の達人2025",
+                                        "ko" => "동방 프로젝트×태고의 달인 2025",
+                                        "zh-TW" => "東方Project×太鼓之達人 2025",
+                                        _ => "Touhou Project×Taiko no Tatsujin 2025"
+                                    },
+                                    Color = new(0xA2280C),
+                                    Url = url,
+                                    ImageUrl = locale switch
+                                    {
+                                        "ja" => "https://media.discordapp.net/attachments/967197984393670700/1426340424972242986/558387340_1313039120837519_6987645934930625894_n.jpg",
+                                        "ko" => "https://media.discordapp.net/attachments/967197984393670700/1426340425970487306/G27uF5oWsAEY6XD.jpg",
+                                        "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426340426503426149/G27uFKRXMAAA2Cb.jpg",
+                                        _ => "https://media.discordapp.net/attachments/967197984393670700/1426340425458778245/G27uERRW8AACGrT.jpg"
+                                    },
+                                    Description = url + "\n\n(Coming Soon)",
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+                                await command.RespondAsync(null, [touhou2025.Build()], false, false);
+                                break;
+                            }
                             case "tournament2025":
                             {
+                                string url = locale switch
+                                {
+                                    "ja" => "https://taiko.namco-ch.net/taiko/twso2025/index.php",
+                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/twso2025/index.php",
+                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/twso2025/index.php",
+                                    _ => "https://taiko.namco-ch.net/taiko/en/twso2025/index.php"
+                                };
+
                                 var tournament2025 = new EmbedBuilder()
                                 {
                                     Title = locale switch
                                     {
-                                        "en-US" => "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025",
+                                        "ja" => "太鼓の達人 ワールドスコアアタック@オンライン 2025",
                                         "ko" => "태고의 달인 월드 스코어 어택@온라인 2025",
                                         "zh-TW" => "太鼓之達人 全球高分挑戰@線上大賽 2025",
-                                        _ => "太鼓の達人 ワールドスコアアタック@オンライン 2025"
+                                        _ => "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025"
                                     },
                                     Color = new(0x2da5ff),
-                                    Url = locale switch
+                                    Url = url,
+                                    ImageUrl = locale switch
                                     {
-                                        "ja" => "https://taiko.namco-ch.net/taiko/twso2025/index.php",
-                                        "ko" => "https://taiko.namco-ch.net/taiko/kr/twso2025/index.php",
-                                        "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/twso2025/index.php",
-                                        _ => "https://taiko.namco-ch.net/taiko/en/twso2025/index.php"
+                                        "ja" => "https://media.discordapp.net/attachments/967197984393670700/1426352619236098088/bg_taiko_online_tournament_2025_ja.png",
+                                        "ko" => "https://media.discordapp.net/attachments/967197984393670700/1426352621140049933/bg_taiko_online_tournament_2025_ko.png",
+                                        "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426352621794365450/bg_taiko_online_tournament_2025_zh_tw.png",
+                                        _ => "https://media.discordapp.net/attachments/967197984393670700/1426352620028825671/bg_taiko_online_tournament_2025_en.png"
                                     },
-                                    ImageUrl = "https://pbs.twimg.com/media/G2j_dotagAAoLvQ?format=jpg&name=large",
-                                    Description = "(Coming Soon)",
+                                    Description = url + "\n\n(Coming Soon)",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
@@ -792,7 +846,7 @@ namespace DonderHelper
                                     Url = "https://x.com/taiko_team/status/1509697054313881600",
                                     ImageUrl = "https://pbs.twimg.com/media/FPD5JqzagAQEFl5?format=png&name=medium",
                                     Description = $"{Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 253402268399)))}\n\n" +
-                                    $"{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}",
+                                    $"{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
