@@ -49,8 +49,6 @@ namespace DonderHelper
         private static string __keypath = $"key.txt";
 
         private static string __key = "";
-        public static Dictionary<string, Song> __songs { get; private set; } = [];
-        public static Dictionary<string, string> __songNames { get; private set; } = [];
 
 #pragma warning disable CS8618
         private static DiscordSocketClient _client;
@@ -59,11 +57,6 @@ namespace DonderHelper
         private static LoggingHandler _logginghandler;
         private static CommandsHandler _commandhandler;
 #pragma warning restore CS8618
-
-        public static string GetLocalizedSongTitle(string orig_title, string locale)
-        {
-            return __songs.TryGetValue(orig_title, out Song? song) ? song.GetTitle(locale) : orig_title;
-        }
 
         public static async Task Main()
         {
@@ -83,14 +76,14 @@ namespace DonderHelper
                 return;
             }
 #if DEBUG
-            SongDatabase.Update(__songs.Values.ToList());
+            SongDatabase.WriteSonglistJson(SongDatabase.Songs.Values.ToList());
 
             string tsv = "";
             string title_prepend(string title)
             {
                 return title.StartsWith('"') ? ("\"\"\"" + title) : title;
             }
-            foreach (var song in __songs.Values)
+            foreach (var song in SongDatabase.Songs.Values)
             {
                 tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
                 foreach (string lang in new string[] {"en-US", "ko", "zh-TW", "zh-CN" })
@@ -102,9 +95,9 @@ namespace DonderHelper
             }
             File.WriteAllText($"Resources{Path.DirectorySeparatorChar}result.tsv", tsv);
 #endif
-            Console.WriteLine($"Finished! Loaded {__songs.Count} songs.");
-            Console.WriteLine($"{__songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary().Count} songs do not contain or is missing note counts.");
-            Console.WriteLine($"{__songNames.Count} entries for song names are available.");
+            Console.WriteLine($"Finished! Loaded {SongDatabase.Songs.Count} songs.");
+            Console.WriteLine($"{SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary().Count} songs do not contain or is missing note counts.");
+            Console.WriteLine($"{SongDatabase.SongNames.Count} entries for song names are available.");
 
             Console.WriteLine("Communicating with Discord...");
 
@@ -136,7 +129,7 @@ namespace DonderHelper
 #endif
             __key = "";
             await _client.StartAsync();
-            await _client.SetCustomStatusAsync($"Drumming along to {__songs.Count} songs! ({CommandsHandler.last_Update})");
+            await _client.SetCustomStatusAsync($"Drumming along to {SongDatabase.Songs.Count} songs! ({CommandsHandler.last_Update})");
 
             Console.WriteLine("Logged in successfully!");
 
@@ -154,18 +147,9 @@ namespace DonderHelper
                 if (File.Exists(__keypath))
                     __key = File.ReadAllText(__keypath);
 #if !DEBUG
-            __songs = JsonSerializer.Create(new() { Formatting = Formatting.Indented }).Deserialize<Dictionary<string, Song>>(new JsonTextReader( new StringReader(File.ReadAllText(SongDatabase.jsonpath))));
-            foreach (var song in __songs)
-            {
-                //__songs.TryAdd(song.Title, song);
-                foreach (var title in song.Value.TitleList)
-                {
-                    __songNames.TryAdd(title.Value, song.Key);
-                }
-            }
-            // ^ testing something
+                SongDatabase.FetchSongs();
 #else
-                SongBuilder.BuildSonglist();
+                SongDatabase.BuildSonglist();
 #endif
             }
             catch (Exception ex)

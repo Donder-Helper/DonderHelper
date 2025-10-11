@@ -25,7 +25,7 @@ namespace DonderHelper
             {
                 get
                 {
-                    return Program.__songs.TryGetValue(Title, out var song) ? song : new();
+                    return SongDatabase.Songs.TryGetValue(Title, out var song) ? song : new();
                 }
             }
 
@@ -146,9 +146,9 @@ namespace DonderHelper
             return new()
             {
                 Name = LocaleData.GetString("DAN_SONGS", locale),
-                Value = $"{EmoteData.GetEmote("DAN_FIRST")} {spoiler1}{Program.GetLocalizedSongTitle(Song1.Title, locale)} {EmoteData.GetDifficulty(Song1.Difficulty)} {Song1.Chart.Level}★ {Song1.Chart.NoteCount}{spoiler1}\n" +
-                $"{EmoteData.GetEmote("DAN_SECOND")} {spoiler2}{Program.GetLocalizedSongTitle(Song2.Title, locale)} {EmoteData.GetDifficulty(Song2.Difficulty)} {Song2.Chart.Level}★ {Song2.Chart.NoteCount}{spoiler2}\n" +
-                $"{EmoteData.GetEmote("DAN_THIRD")} {spoiler3}{Program.GetLocalizedSongTitle(Song3.Title, locale)} {EmoteData.GetDifficulty(Song3.Difficulty)} {Song3.Chart.Level}★ {Song3.Chart.NoteCount}{spoiler3}\n" +
+                Value = $"{EmoteData.GetEmote("DAN_FIRST")} {spoiler1}{SongDatabase.GetLocalizedSongTitle(Song1.Title, locale)} {EmoteData.GetDifficulty(Song1.Difficulty)} {Song1.Chart.Level}★ {Song1.Chart.NoteCount}{spoiler1}\n" +
+                $"{EmoteData.GetEmote("DAN_SECOND")} {spoiler2}{SongDatabase.GetLocalizedSongTitle(Song2.Title, locale)} {EmoteData.GetDifficulty(Song2.Difficulty)} {Song2.Chart.Level}★ {Song2.Chart.NoteCount}{spoiler2}\n" +
+                $"{EmoteData.GetEmote("DAN_THIRD")} {spoiler3}{SongDatabase.GetLocalizedSongTitle(Song3.Title, locale)} {EmoteData.GetDifficulty(Song3.Difficulty)} {Song3.Chart.Level}★ {Song3.Chart.NoteCount}{spoiler3}\n" +
                 $"-# {spoilerany}**{LocaleData.GetString("DAN_NOTECOUNT", locale, GetNoteCount() > -1 ? GetNoteCount() : "???")}**{spoilerany}",
                 IsInline = false
             };
