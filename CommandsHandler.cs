@@ -507,6 +507,14 @@ namespace DonderHelper
                     Description = song.SubtitleList.Values.Distinct().Count() > 1 ? song.GetSubtitleList(true, locale) : song.GetSubtitle(locale),
                     Color = Song.GetGenreAsColor(song.Genre),
                     Fields = new() {
+                        new()
+                        {
+                            Name = LocaleData.GetString("GENRE_TITLE", locale),
+                            Value = song.GenreList.Count > 1
+                            ? string.Join("\n", song.GenreList.Select(genre => "- " + LocaleData.GetGenreAsString(genre, locale)))
+                            : LocaleData.GetGenreAsString(song.Genre, locale),
+                            IsInline = false
+                        },
                         new() {
                             Name = LocaleData.GetString("DIFFICULTY_TITLE", locale),
                             Value =
