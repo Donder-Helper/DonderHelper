@@ -8,6 +8,41 @@ using Newtonsoft.Json;
 
 namespace DonderHelper
 {
+    internal class TaikoKoTitle()
+    {
+        [JsonProperty("title")]
+        public string title = "";
+        [JsonProperty("titleKo")]
+        public string? ko_title = null;
+        [JsonProperty("titleEn")]
+        public string? en_title = null;
+        [JsonProperty("songNo")]
+        public string song_no = "";
+
+        public struct Course
+        {
+            public string[]? images;
+            public Course() { images = null; }
+        }
+        public struct Courses
+        {
+            [JsonProperty("easy")]
+            public Course? easy;
+            [JsonProperty("normal")]
+            public Course? normal;
+            [JsonProperty("hard")]
+            public Course? hard;
+            [JsonProperty("oni")]
+            public Course? oni;
+            [JsonProperty("ura")]
+            public Course? ura;
+            public Courses() { easy = null; normal = null; hard = null; oni = null; ura = null; }
+        }
+
+        [JsonProperty("courses")]
+        public Courses courses;
+    }
+
     public static class SongDatabase
     {
         public static Dictionary<string, Song> Songs { get; private set; } = [];
@@ -31,7 +66,7 @@ namespace DonderHelper
                 }
             }
 
-            foreach (string path in Directory.GetFiles(gaidenspath, "*.json"))
+            foreach (string path in Directory.GetFiles(gaidenspath, "*.json").Order())
             {
                 var gaiden = JsonConvert.DeserializeObject<Gaiden>(File.ReadAllText(path));
                 if (gaiden != null) { 
@@ -45,7 +80,7 @@ namespace DonderHelper
         {
             return Songs.TryGetValue(orig_title, out Song? song) ? song.GetTitle(locale) : orig_title;
         }
-#if DEBUG
+
         // TJA path(s)
         private static string __tjapaths = $"Resources{Path.DirectorySeparatorChar}paths.txt";
 
@@ -77,17 +112,9 @@ namespace DonderHelper
         private static string __taikokopath = $"Resources{Path.DirectorySeparatorChar}ko.json";
 
         /*
-        * This god awful method, when in Debug mode, will parse all the information it can find in the Resources folder and compile it into Data/songs.json.
+        * This god awful method will parse all the information it can find in the Resources folder and compile it into Data/songs.json.
         * Not all websites/spreadsheets/jsons are built equal, so a huge amount of code must be dedicated to carefully breaking down each file.
-        * 
-        * On Release builds, this method will instead convert Data/songs.json into a Dictionary and be sent to __songs,
-        * with keys being the song's original title in string format, and their values being the actual Song classes.
-        * Localized titles are added to __songNames, so that they can be used for searching with the /song command.
-        * 
-        * That being said, it would be much better to put all this code into its own executable,
-        * so things can be quickly tested and updated without the need to rebuild the songlist everytime.
         */
-
         public static void BuildSonglist()
         {
             #region Temporary Methods
@@ -912,7 +939,8 @@ namespace DonderHelper
             #endregion
             Console.WriteLine($"Loaded data from {chartcount} charts.");
         }
-        public static bool WriteSonglistJson(List<Song> songs)
+
+        public static void WriteSonglist()
         {
             JsonSerializer serializer = new JsonSerializer() { Formatting = Formatting.Indented };
 
@@ -921,8 +949,22 @@ namespace DonderHelper
                 serializer.Serialize(file_stream, Songs);
             }
 
-            return true;
+            //string tsv = "";
+            //string title_prepend(string title)
+            //{
+            //    return title.StartsWith('"') ? ("\"\"\"" + title) : title;
+            //}
+            //foreach (var song in Songs.Values)
+            //{
+            //    tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
+            //    foreach (string lang in new string[] { "en-US", "ko", "zh-TW", "zh-CN" })
+            //    {
+            //        tsv += "\t";
+            //        tsv += (song.TryGetTitle(lang, out string? title) ? title_prepend(title ?? "") : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? title_prepend(subtitle ?? "") : "");
+            //    }
+            //    tsv += "\n";
+            //}
+            //File.WriteAllText($"Resources{Path.DirectorySeparatorChar}result.tsv", tsv);
         }
-#endif
     }
 }

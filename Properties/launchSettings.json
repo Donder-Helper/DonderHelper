@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DonderHelper": {
+      "commandName": "Project"
+    },
+    "Build Songlist": {
+      "commandName": "Project",
+      "commandLineArgs": "--build-songlist"
+    }
+  }
+}

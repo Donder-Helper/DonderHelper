@@ -9,45 +9,11 @@ using Hnx8.ReadJEnc;
 
 namespace DonderHelper
 {
-    internal class TaikoKoTitle()
-    {
-        [JsonProperty("title")]
-        public string title = "";
-        [JsonProperty("titleKo")]
-        public string? ko_title = null;
-        [JsonProperty("titleEn")]
-        public string? en_title = null;
-        [JsonProperty("songNo")]
-        public string song_no = "";
-
-        public struct Course
-        {
-            public string[]? images;
-            public Course() { images = null; }
-        }
-        public struct Courses
-        {
-            [JsonProperty("easy")]
-            public Course? easy;
-            [JsonProperty("normal")]
-            public Course? normal;
-            [JsonProperty("hard")]
-            public Course? hard;
-            [JsonProperty("oni")]
-            public Course? oni;
-            [JsonProperty("ura")]
-            public Course? ura;
-            public Courses() { easy = null; normal = null; hard = null; oni = null; ura = null; }
-        }
-
-        [JsonProperty("courses")]
-        public Courses courses;
-    }
     public class Program()
     {
         // Discord bot private key
+        private static readonly string __environmentname = "DONDERHELPER_SECRET_KEY";
         private static string __keypath = $"key.txt";
-
         private static string __key = "";
 
 #pragma warning disable CS8618
@@ -58,9 +24,29 @@ namespace DonderHelper
         private static CommandsHandler _commandhandler;
 #pragma warning restore CS8618
 
-        public static async Task Main()
+        public static async Task Main(params string[] args)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+            if (args.Contains("--build-songlist"))
+            {
+                Console.WriteLine("Building songlist...");
+#if DEBUG
+                Console.WriteLine("HEADS UP! You are building the songlist in Debug Mode! The finished songlist will be created in '../../../Data/songs.json'. If you want to output the songlist to 'Data/songs.json', please compile a Release build instead.");
+#endif
+                try
+                {
+                    SongDatabase.BuildSonglist();
+                    SongDatabase.WriteSonglist();
+                }
+                catch
+                {
+                    Console.WriteLine("NOOOOOOOOOOOO SOMETHING BROKE!!!!!!!");
+                    throw;
+                }
+                Console.WriteLine("Songlist successfully built. Please run this executable again, without the '--build-songlist' arg, to run the Donder Helper bot.");
+                return;
+            }
 
 #if !DEBUG
             Console.WriteLine("Starting in 20 seconds...");
@@ -68,33 +54,12 @@ namespace DonderHelper
 #endif
 
             Console.WriteLine("Donhirobotスタート！ Let's starting!");
-            LocaleData.Initialize();
-            EmoteData.Initialize();
 
             if (!Boot()) {
                 Console.WriteLine("Aborting launch & shutting down.");
                 return;
             }
-#if DEBUG
-            SongDatabase.WriteSonglistJson(SongDatabase.Songs.Values.ToList());
 
-            string tsv = "";
-            string title_prepend(string title)
-            {
-                return title.StartsWith('"') ? ("\"\"\"" + title) : title;
-            }
-            foreach (var song in SongDatabase.Songs.Values)
-            {
-                tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
-                foreach (string lang in new string[] {"en-US", "ko", "zh-TW", "zh-CN" })
-                {
-                    tsv += "\t";
-                    tsv += (song.TryGetTitle(lang, out string? title) ? title_prepend(title ?? "") : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? title_prepend(subtitle ?? "") : "");
-                }
-                tsv += "\n";
-            }
-            File.WriteAllText($"Resources{Path.DirectorySeparatorChar}result.tsv", tsv);
-#endif
             Console.WriteLine($"Finished! Loaded {SongDatabase.Songs.Count} songs.");
             Console.WriteLine($"{SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary().Count} songs do not contain or is missing note counts.");
             Console.WriteLine($"{SongDatabase.SongNames.Count} entries for song names are available.");
@@ -111,22 +76,16 @@ namespace DonderHelper
             _logginghandler = new(_client, _commandService);
             _commandhandler = new(_client, _commandService);
 
-#if DEBUG
-            await _client.LoginAsync(TokenType.Bot, __key);
-#else
-            if (!string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("DONDERHELPER_SECRET_KEY")))
-            {
-                await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable("DONDERHELPER_SECRET_KEY"));
-            }
+            if (File.Exists(__keypath))
+                __key = File.ReadAllText(__keypath);
+
+            if (!string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable(__environmentname)))
+                await _client.LoginAsync(TokenType.Bot, Environment.GetEnvironmentVariable(__environmentname));
             else if (!string.IsNullOrWhiteSpace(__key))
-            {
                 await _client.LoginAsync(TokenType.Bot, __key);
-            }
             else
-            {
-                throw new Exception("Discord bot key could not be found in environment or text file.");
-            }
-#endif
+                throw new Exception($"Discord bot key could not be found in environment or text file. Please add your Discord bot's secret key to '{__keypath}' or the environment variable '{__environmentname}'.");
+
             __key = "";
             await _client.StartAsync();
             await _client.SetCustomStatusAsync($"Drumming along to {SongDatabase.Songs.Count} songs! ({CommandsHandler.last_Update})");
@@ -141,16 +100,11 @@ namespace DonderHelper
         }
         private static bool Boot()
         {
-
             try
             {
-                if (File.Exists(__keypath))
-                    __key = File.ReadAllText(__keypath);
-#if !DEBUG
+                LocaleData.Initialize();
+                EmoteData.Initialize();
                 SongDatabase.FetchSongs();
-#else
-                SongDatabase.BuildSonglist();
-#endif
             }
             catch (Exception ex)
             {
