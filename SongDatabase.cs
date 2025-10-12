@@ -1,9 +1,7 @@
-﻿#if DEBUG
-using Hnx8.ReadJEnc;
+﻿using Hnx8.ReadJEnc;
 using HtmlAgilityPack;
 using System.Text;
 using static DonderHelper.Song;
-#endif
 using Newtonsoft.Json;
 
 namespace DonderHelper
