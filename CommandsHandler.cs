@@ -878,7 +878,7 @@ namespace DonderHelper
                     {
                         var autumn2025 = new EmbedBuilder()
                         {
-                            Title = ":globe_with_meridians: " + LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_AUTUMN", locale), 2025),
+                            Title = LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_AUTUMN", locale), 2025),
                             ThumbnailUrl = donShop_Autumn_img,
                             Color = donShop_Autumn_color,
                             Description =
@@ -888,25 +888,7 @@ namespace DonderHelper
                             $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("SORA-III ヘリオポーズ", locale), 50)}\n" +
                             $"\n" +
                             //$"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "English", "https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=731420565#gid=731420565")}\n" +
-                            $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%A9%E3%82%93%E3%83%A1%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}\n\n" +
-                            $"-# {LocaleData.GetString("DISCLAIMER_NOUSA", locale)}",
-                            Timestamp = DateTimeOffset.UtcNow,
-                            Footer = GetFooter(command)
-                        };
-
-                        var autumn2024 = new EmbedBuilder()
-                        {
-                            Title = ":flag_us: " + LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_AUTUMN", locale), 2024),
-                            ThumbnailUrl = donShop_Autumn_img,
-                            Color = donShop_Autumn_color,
-                            Description =
-                            $"- {LocaleData.GetString("SHOP_MEDALHIDDEN_DESC", locale, SongDatabase.GetLocalizedSongTitle("第六天魔王", locale), EmoteData.GetDifficulty(Song.SongDifficulty.Hidden), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("魔導幻想曲", locale), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("女神な世界 III", locale), 50)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("響け!太鼓の達人", locale), 50)}\n" +
-                            $"\n" +
-                            $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://web.archive.org/web/20241009075818/https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%94%E3%81%BB%E3%81%86%E3%81%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}\n\n" +
-                            $"-# {LocaleData.GetString("DISCLAIMER_ONLYUSA", locale)}",
+                            $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%A9%E3%82%93%E3%83%A1%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}",
                             Timestamp = DateTimeOffset.UtcNow,
                             Footer = GetFooter(command)
                         };
@@ -918,12 +900,7 @@ namespace DonderHelper
                         component.WithButton(CreateSongButton(command, "SUDDEN GUST OC"), 0);
                         component.WithButton(CreateSongButton(command, "SORA-III ヘリオポーズ"), 0);
 
-                        component.WithButton(CreateSongButton(command, "第六天魔王", Song.SongDifficulty.Hidden, true), 1);
-                        component.WithButton(CreateSongButton(command, "魔導幻想曲"), 1);
-                        component.WithButton(CreateSongButton(command, "女神な世界 III"), 1);
-                        component.WithButton(CreateSongButton(command, "響け!太鼓の達人"), 1);
-
-                        await command.RespondAsync(null, [autumn2025.Build(), autumn2024.Build()], false, false, null, component.Build());
+                        await command.RespondAsync(null, [autumn2025.Build()], false, false, null, component.Build());
                         break;
                     }
                     case "about":
@@ -1028,7 +1005,6 @@ namespace DonderHelper
                             var dan_embed = new EmbedBuilder()
                             {
                                 Title = title + "・" + dan.TitleEN,
-                                Description = "-# " + LocaleData.GetString("DISCLAIMER_NOUSA", locale),
                                 Color = dan.DiscordColor,
                                 Url = dan.Url,
 
