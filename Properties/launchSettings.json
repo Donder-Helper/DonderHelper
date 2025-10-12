@@ -1,7 +1,8 @@
 {
   "profiles": {
     "DonderHelper": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "--skip-timer"
     },
     "Build Songlist": {
       "commandName": "Project",

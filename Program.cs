@@ -48,10 +48,11 @@ namespace DonderHelper
                 return;
             }
 
-#if !DEBUG
-            Console.WriteLine("Starting in 20 seconds...");
-            Thread.Sleep(20000);
-#endif
+            if (!args.Contains("--skip-timer"))
+            {
+                Console.WriteLine("Starting in 20 seconds...");
+                Thread.Sleep(20000);
+            }
 
             Console.WriteLine("Donhirobotスタート！ Let's starting!");
 
