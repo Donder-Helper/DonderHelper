@@ -891,7 +891,8 @@ namespace DonderHelper
                                     Url = "https://x.com/taiko_team/status/1509697054313881600",
                                     ImageUrl = "https://pbs.twimg.com/media/FPD5JqzagAQEFl5?format=png&name=medium",
                                     Description = $"{Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 253402268399)))}\n\n" +
-                                    $"{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}",
+                                    $"{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}\n{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}{qr}" +
+                                    "\n\n-# " + LocaleData.GetString("DISCLAIMER_NOUSA", locale),
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
