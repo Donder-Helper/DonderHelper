@@ -897,7 +897,7 @@ namespace DonderHelper
                                 };
 
                                 var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "彁").WithLabel(locale == "en-US" ? "\"This... this is...\"" : "「こ、これは。。。」").WithEmote(Emoji.Parse(":question:")));
+                                component.WithButton(CreateSongButton(command, "彁").WithLabel("「こ、これは。。。」").WithEmote(Emote.Parse("<a:questioncorrupt:1429762081711853609>")));
 
                                 await command.RespondAsync(null, [ka.Build()], false, false, null, component.Build());
                                 break;
