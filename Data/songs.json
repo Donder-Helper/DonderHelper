@@ -71457,7 +71457,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-",
         "UrlKo": "https://taiko.wiki/song/359?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/359/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-/::ref/rrsteps_e.png?rev=a8b3112ed7ba25a2b0f3eee69a8ac946&t=20230226215222"
       },
       "Normal": {
         "Level": 6,
@@ -71480,7 +71480,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-",
         "UrlKo": "https://taiko.wiki/song/359?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/359/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-/::ref/rrsteps_n.png?rev=cbfb705d8c38eb5b242e1388c7bbde5f&t=20230226215254"
       },
       "Hard": {
         "Level": 7,
@@ -71503,7 +71503,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-",
         "UrlKo": "https://taiko.wiki/song/359?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/359/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-/::ref/rrsteps_h.png?rev=14fddf2ad6561a80f52d5d6fe9cdb6a0&t=20230226215528"
       },
       "Extreme": {
         "Level": 9,
@@ -71526,7 +71526,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-",
         "UrlKo": "https://taiko.wiki/song/359?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/359/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RIDGE%20RACER%20STEPS%20-%20GMT%20remix%20-/::ref/rrstep1.png?rev=47d12e75be92ed5aa62ec1b0e518f22d&t=20230226215016"
       },
       "Hidden": {
         "Level": -1,
@@ -90045,6 +90045,141 @@
     },
     "GenreList": [
       6
+    ]
+  },
+  "YOU're your HERO": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 255,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/YOU%27re%20your%20HERO",
+        "UrlKo": "https://taiko.wiki/song/1384?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/YOU%27re%20your%20HERO/::ref/YOU%27re%20your%20HERO_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93.png?rev=b8bdd5481a2427d072e294ee6d37a056&t=20251018192419"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 353,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/YOU%27re%20your%20HERO",
+        "UrlKo": "https://taiko.wiki/song/1384?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/YOU%27re%20your%20HERO/::ref/YOU%27re%20your%20HERO_%E3%81%B5%E3%81%A4%E3%81%86.png?rev=2171c9403ddf4771a3e6b8bfa6c678c9&t=20251018192418"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 535,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/YOU%27re%20your%20HERO",
+        "UrlKo": "https://taiko.wiki/song/1384?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/YOU%27re%20your%20HERO/::ref/YOU%27re%20your%20HERO_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=25d9cbc8c12932f51320772251eadcf6&t=20251018192418"
+      },
+      "Extreme": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 888,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/YOU%27re%20your%20HERO",
+        "UrlKo": "https://taiko.wiki/song/1384?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/YOU%27re%20your%20HERO/::ref/YOU%27re%20your%20HERO_2.png?rev=a492bd6ad41062c29656fec5754ca66b&t=20251018080331"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1384?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "YOU're your HERO"
+    },
+    "SubtitleList": {
+      "ja": "for all DONDERS"
+    },
+    "GenreList": [
+      7
     ]
   },
   "vs.VIGVANGS": {
