@@ -124,11 +124,11 @@ namespace DonderHelper
                 {
                     switch (text.ToLower())
                     {
-                        case "yes":
+                        case "✔":
                             return Availability.Yes;
-                        case "no":
+                        case "✘":
                             return Availability.No;
-                        case "campaign":
+                        case "cp":
                             return Availability.Campaign;
                         case "no*":
                             return Availability.CampaignNo;
@@ -142,7 +142,7 @@ namespace DonderHelper
                         case "transfer":
                             return Availability.Transfer;
                         default:
-                            return Availability.Unknown;
+                            return Availability.No;
                     }
                 }
                 SongGenre GetGenre(string text)
@@ -192,31 +192,31 @@ namespace DonderHelper
                             break;
                         }
                         // Japan
-                        case 4:
+                        case 3:
                         {
                             song.Region.Japan = GetAvailability(result);
                             break;
                         }
                         // Core Asia
-                        case 5:
+                        case 4:
                         {
                             song.Region.Asia = GetAvailability(result);
                             break;
                         }
                         // Oceania / Other Asia
-                        case 6:
+                        case 5:
                         {
                             song.Region.Oceania = GetAvailability(result);
                             break;
                         }
                         // North America
-                        case 7:
+                        case 6:
                         {
                             song.Region.UnitedStates = GetAvailability(result);
                             break;
                         }
                         // China
-                        case 8:
+                        case 7:
                         {
                             song.Region.China = GetAvailability(result);
                             break;

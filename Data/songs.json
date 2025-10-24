@@ -410,7 +410,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -1500,8 +1500,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -1913,7 +1913,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2188,7 +2188,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2325,7 +2325,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2603,7 +2603,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2881,7 +2881,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -3018,8 +3018,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -3298,7 +3298,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -3713,8 +3713,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -7880,11 +7880,11 @@
   },
   "恋ゲバ": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -12070,11 +12070,11 @@
   },
   "オドループ": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -13742,11 +13742,11 @@
   },
   "Just Awake": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -23411,11 +23411,11 @@
   },
   "修錬愛情 Practice Love": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
       "UnitedStates": 0,
-      "China": 1
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -25616,8 +25616,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -26030,7 +26030,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -30772,11 +30772,11 @@
   },
   "Smile! Smile! Smile!": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -34211,7 +34211,7 @@
     "Region": {
       "Japan": 1,
       "Asia": 1,
-      "Oceania": 0,
+      "Oceania": 1,
       "UnitedStates": 0,
       "China": 0
     },
@@ -35449,8 +35449,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -35586,8 +35586,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -35723,8 +35723,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -37660,11 +37660,11 @@
   },
   "ALIVE": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -43888,6 +43888,416 @@
       1
     ]
   },
+  "モニタリング": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 2,
+        "NoteCount": {
+          "Single": {
+            "Normal": 77,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0",
+        "UrlKo": "https://taiko.wiki/song/1435?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0/::ref/mikmon_e.png?rev=ec8c1e5b148642b8f2c08d73898e6887&t=20250801204044"
+      },
+      "Normal": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 123,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0",
+        "UrlKo": "https://taiko.wiki/song/1435?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0/::ref/mikmon_n.png?rev=e8d4f4344cf90d380154a2db51c30ae5&t=20250801203923"
+      },
+      "Hard": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 288,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0",
+        "UrlKo": "https://taiko.wiki/song/1435?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0/::ref/mikmon_h.png?rev=f92cca14a37681f9672a70b4e07dbd95&t=20250801203800"
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 422,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0",
+        "UrlKo": "https://taiko.wiki/song/1435?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0/::ref/mikmon_m.png?rev=9644440c91a74308a918777512dfe165&t=20250801183138"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1435?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "モニタリング",
+      "ko": "Monitoring"
+    },
+    "SubtitleList": {
+      "ja": "DECO*27 feat. 初音ミク"
+    },
+    "GenreList": [
+      3
+    ]
+  },
+  "ラビットホール": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 229,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1234?diff=easy",
+        "ImageUrl": "https://file.taiko.wiki/img/71ffc20b-770d-4d6d-a116-69a32bbdf1e7"
+      },
+      "Normal": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 380,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1234?diff=normal",
+        "ImageUrl": "https://file.taiko.wiki/img/3ec21ecf-aa36-4db3-9297-dafdf310a1aa"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 617,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1234?diff=hard",
+        "ImageUrl": "https://file.taiko.wiki/img/6846799d-916f-4852-9287-e6e1cfe32678"
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 916,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1234?diff=oni",
+        "ImageUrl": "https://file.taiko.wiki/img/21609a28-1f20-4355-aad2-a8c77e8fca25"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1234?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "ラビットホール",
+      "en-US": "Rabbit Hole",
+      "ko": "Rabbit Hole"
+    },
+    "SubtitleList": {
+      "ja": "DECO*27 feat. 初音ミク",
+      "en-US": "DECO*27 feat. HATSUNE MIKU"
+    },
+    "GenreList": [
+      3
+    ]
+  },
+  "混沌ブギ": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 226,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE",
+        "UrlKo": "https://taiko.wiki/song/1436?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE/::ref/mikktb_e.png?rev=22117659386e23962a59d00bfeda9184&t=20241003011537"
+      },
+      "Normal": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 366,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE",
+        "UrlKo": "https://taiko.wiki/song/1436?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE/::ref/mikktb_n.png?rev=96429cf1a19be84b500a18da4c4b2723&t=20241003011354"
+      },
+      "Hard": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 561,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE",
+        "UrlKo": "https://taiko.wiki/song/1436?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE/::ref/mikktb_h.png?rev=63e333b287be2150932881b12b0315f4&t=20241003011214"
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 885,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE",
+        "UrlKo": "https://taiko.wiki/song/1436?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E6%B7%B7%E6%B2%8C%E3%83%96%E3%82%AE/::ref/mikktb_m.png?rev=c5cce6496c8edc699593d1484f93a5ad&t=20241003001246"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1436?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "混沌ブギ",
+      "ko": "Konton Boogie"
+    },
+    "SubtitleList": {
+      "ja": "jon-YAKITORY feat. 初音ミク"
+    },
+    "GenreList": [
+      3
+    ]
+  },
   "★楽園☆CASINO GALAXY!": {
     "Region": {
       "Japan": 1,
@@ -44165,7 +44575,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -44445,8 +44855,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -44848,284 +45258,6 @@
     "SubtitleList": {
       "ja": "EasyPop feat. 巡音ルカ・GUMI",
       "en-US": "EasyPop feat. MEGURINE LUKA・GUMI"
-    },
-    "GenreList": [
-      3
-    ]
-  },
-  "ラビットホール": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 4,
-        "NoteCount": {
-          "Single": {
-            "Normal": 229,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
-        "UrlKo": "https://taiko.wiki/song/1234?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/img/71ffc20b-770d-4d6d-a116-69a32bbdf1e7"
-      },
-      "Normal": {
-        "Level": 5,
-        "NoteCount": {
-          "Single": {
-            "Normal": 380,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
-        "UrlKo": "https://taiko.wiki/song/1234?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/img/3ec21ecf-aa36-4db3-9297-dafdf310a1aa"
-      },
-      "Hard": {
-        "Level": 7,
-        "NoteCount": {
-          "Single": {
-            "Normal": 617,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
-        "UrlKo": "https://taiko.wiki/song/1234?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/img/6846799d-916f-4852-9287-e6e1cfe32678"
-      },
-      "Extreme": {
-        "Level": 9,
-        "NoteCount": {
-          "Single": {
-            "Normal": 916,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A9%E3%83%93%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
-        "UrlKo": "https://taiko.wiki/song/1234?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/img/21609a28-1f20-4355-aad2-a8c77e8fca25"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1234?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "ラビットホール",
-      "en-US": "Rabbit Hole",
-      "ko": "Rabbit Hole"
-    },
-    "SubtitleList": {
-      "ja": "DECO*27 feat. 初音ミク",
-      "en-US": "DECO*27 feat. HATSUNE MIKU"
-    },
-    "GenreList": [
-      3
-    ]
-  },
-  "ヴァンパイア": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 3,
-        "NoteCount": {
-          "Single": {
-            "Normal": 150,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
-        "UrlKo": "https://taiko.wiki/song/1030?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/1030/easy"
-      },
-      "Normal": {
-        "Level": 5,
-        "NoteCount": {
-          "Single": {
-            "Normal": 230,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
-        "UrlKo": "https://taiko.wiki/song/1030?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/1030/normal"
-      },
-      "Hard": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 394,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
-        "UrlKo": "https://taiko.wiki/song/1030?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/1030/hard"
-      },
-      "Extreme": {
-        "Level": 8,
-        "NoteCount": {
-          "Single": {
-            "Normal": 641,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
-        "UrlKo": "https://taiko.wiki/song/1030?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/1030/oni"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1030?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "ヴァンパイア",
-      "en-US": "The Vampire",
-      "zh-CN": "The Vampire",
-      "ko": "The Vampire"
-    },
-    "SubtitleList": {
-      "ja": "DECO*27 feat. 初音ミク",
-      "en-US": "DECO*27 feat. HATSUNE MIKU",
-      "zh-CN": "DECO*27 feat. 初音未来"
     },
     "GenreList": [
       3
@@ -47084,6 +47216,146 @@
       "ja": "カンザキイオリ feat.初音ミク",
       "en-US": "Iori Kanzaki",
       "zh-CN": "Iori Kanzaki"
+    },
+    "GenreList": [
+      3
+    ]
+  },
+  "ヴァンパイア": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 150,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
+        "UrlKo": "https://taiko.wiki/song/1030?diff=easy",
+        "ImageUrl": "https://file.taiko.wiki/fumen/1030/easy"
+      },
+      "Normal": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 230,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
+        "UrlKo": "https://taiko.wiki/song/1030?diff=normal",
+        "ImageUrl": "https://file.taiko.wiki/fumen/1030/normal"
+      },
+      "Hard": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 394,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
+        "UrlKo": "https://taiko.wiki/song/1030?diff=hard",
+        "ImageUrl": "https://file.taiko.wiki/fumen/1030/hard"
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 641,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2",
+        "UrlKo": "https://taiko.wiki/song/1030?diff=oni",
+        "ImageUrl": "https://file.taiko.wiki/fumen/1030/oni"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1030?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "ヴァンパイア",
+      "en-US": "The Vampire",
+      "zh-CN": "The Vampire",
+      "ko": "The Vampire"
+    },
+    "SubtitleList": {
+      "ja": "DECO*27 feat. 初音ミク",
+      "en-US": "DECO*27 feat. HATSUNE MIKU",
+      "zh-CN": "DECO*27 feat. 初音未来"
     },
     "GenreList": [
       3
@@ -54650,7 +54922,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -54777,6 +55049,144 @@
     "SubtitleList": {
       "ja": "ミフメイ 「シンクロニカ」より",
       "en-US": "mifumei From \" Synchronica \""
+    },
+    "GenreList": [
+      2
+    ]
+  },
+  "みんなのうた": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 179,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
+        "UrlKo": "https://taiko.wiki/song/1404?diff=easy",
+        "ImageUrl": "https://file.taiko.wiki/img/0238cb57-dc7a-4fc8-ba9a-ef45f18b7b11"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 239,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
+        "UrlKo": "https://taiko.wiki/song/1404?diff=normal",
+        "ImageUrl": "https://file.taiko.wiki/img/726716d1-f5ac-4cc5-a3c2-b61343f5c6a8"
+      },
+      "Hard": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 391,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
+        "UrlKo": "https://taiko.wiki/song/1404?diff=hard",
+        "ImageUrl": "https://file.taiko.wiki/img/aff78267-de3a-4267-a704-97ad7970c77c"
+      },
+      "Extreme": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 681,
+            "Expert": 745,
+            "Tatsujin": 829
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
+        "UrlKo": "https://taiko.wiki/song/1404?diff=oni",
+        "ImageUrl": "https://file.taiko.wiki/img/acdd15dc-bb45-4814-a0a5-ffad9fb7ca1e"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1404?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "みんなのうた",
+      "en-US": "Song for Everyone",
+      "ko": "Minna no Uta"
+    },
+    "SubtitleList": {
+      "ja": "Taku Inoue feat. SaChi (harineko)「シンクロニカ」より",
+      "en-US": "Taku Inoue feat. SaChi (harineko) From \" Synchronica \""
     },
     "GenreList": [
       2
@@ -55452,144 +55862,6 @@
     },
     "SubtitleList": {
       "ja": "「アークナイツ -明日方舟-」より"
-    },
-    "GenreList": [
-      2
-    ]
-  },
-  "みんなのうた": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 0
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 4,
-        "NoteCount": {
-          "Single": {
-            "Normal": 179,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
-        "UrlKo": "https://taiko.wiki/song/1404?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/img/0238cb57-dc7a-4fc8-ba9a-ef45f18b7b11"
-      },
-      "Normal": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 239,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
-        "UrlKo": "https://taiko.wiki/song/1404?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/img/726716d1-f5ac-4cc5-a3c2-b61343f5c6a8"
-      },
-      "Hard": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 391,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
-        "UrlKo": "https://taiko.wiki/song/1404?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/img/aff78267-de3a-4267-a704-97ad7970c77c"
-      },
-      "Extreme": {
-        "Level": 10,
-        "NoteCount": {
-          "Single": {
-            "Normal": 681,
-            "Expert": 745,
-            "Tatsujin": 829
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%81%86%E3%81%9F",
-        "UrlKo": "https://taiko.wiki/song/1404?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/img/acdd15dc-bb45-4814-a0a5-ffad9fb7ca1e"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1404?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "みんなのうた",
-      "en-US": "Song for Everyone",
-      "ko": "Minna no Uta"
-    },
-    "SubtitleList": {
-      "ja": "Taku Inoue feat. SaChi (harineko)「シンクロニカ」より",
-      "en-US": "Taku Inoue feat. SaChi (harineko) From \" Synchronica \""
     },
     "GenreList": [
       2
@@ -57107,8 +57379,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 3,
-      "China": 2
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -57245,7 +57517,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -60007,7 +60279,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -63724,7 +63996,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -65909,7 +66181,7 @@
       "en-US": "戦え！ T3防衛隊 ～GDI mix～"
     },
     "SubtitleList": {
-      "ja": "「TANK！ TANK！ TANK！」より",
+      "ja": "「TANK! TANK! TANK!」より",
       "en-US": "「TANK！ TANK！ TANK！」より"
     },
     "GenreList": [
@@ -67171,7 +67443,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 1
     },
     "Difficulties": {
@@ -67308,7 +67580,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 1
     },
     "Difficulties": {
@@ -74062,7 +74334,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -84025,7 +84297,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -84579,7 +84851,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -85133,8 +85405,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -85273,7 +85545,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 4
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -85691,8 +85963,8 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
-      "China": 0
+      "UnitedStates": 0,
+      "China": 2
     },
     "Difficulties": {
       "Easy": {
@@ -85973,7 +86245,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -86111,7 +86383,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -90323,10 +90595,10 @@
   },
   "vs.VIGVANGS": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
+      "UnitedStates": 4,
       "China": 0
     },
     "Difficulties": {
@@ -90460,10 +90732,10 @@
   },
   "SUDDEN GUST OC": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
+      "UnitedStates": 4,
       "China": 0
     },
     "Difficulties": {
@@ -90597,10 +90869,10 @@
   },
   "今夜はホーミー": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
+      "UnitedStates": 4,
       "China": 0
     },
     "Difficulties": {
@@ -90734,10 +91006,10 @@
   },
   "SORA-III ヘリオポーズ": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
+      "UnitedStates": 4,
       "China": 0
     },
     "Difficulties": {
@@ -90875,7 +91147,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -91010,11 +91282,11 @@
   },
   "【限定】 うなぎのたましいロック": {
     "Region": {
-      "Japan": 0,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
-      "China": 0
+      "Japan": -1,
+      "Asia": -1,
+      "Oceania": -1,
+      "UnitedStates": -1,
+      "China": -1
     },
     "Difficulties": {
       "Easy": {
@@ -91150,7 +91422,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -91288,7 +91560,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -91425,7 +91697,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -91562,7 +91834,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -91700,8 +91972,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -91838,8 +92110,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -91976,8 +92248,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -92113,7 +92385,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92250,7 +92522,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92388,7 +92660,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92526,7 +92798,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92664,7 +92936,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92801,7 +93073,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -92938,7 +93210,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -93075,7 +93347,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -93213,7 +93485,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -93350,7 +93622,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -93488,8 +93760,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -93626,8 +93898,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -93764,8 +94036,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -93901,8 +94173,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94039,7 +94311,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -94176,7 +94448,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -94313,7 +94585,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 0,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -94452,7 +94724,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -94590,7 +94862,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -94726,8 +94998,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94864,8 +95136,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -95002,8 +95274,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -95140,8 +95412,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 0,
-      "China": 0
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -95279,7 +95551,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -99559,11 +99831,11 @@
   },
   "星座わーど": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 4
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -99699,11 +99971,11 @@
   },
   "卓球de脱臼": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 4
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -99837,11 +100109,11 @@
   },
   "風魔モジュール6768": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 4
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -99976,11 +100248,11 @@
   },
   "トンデ・ミテ": {
     "Region": {
-      "Japan": 4,
+      "Japan": 1,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 4
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -100809,8 +101081,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -100949,8 +101221,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -101089,8 +101361,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -101503,8 +101775,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -101643,8 +101915,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -101781,8 +102053,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -102336,7 +102608,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
+      "UnitedStates": 1,
       "China": 1
     },
     "Difficulties": {
@@ -102476,7 +102748,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
+      "UnitedStates": 1,
       "China": 1
     },
     "Difficulties": {
@@ -102614,7 +102886,7 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
+      "UnitedStates": 1,
       "China": 1
     },
     "Difficulties": {
@@ -102753,7 +103025,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -103171,8 +103443,8 @@
       "Japan": 1,
       "Asia": 1,
       "Oceania": 1,
-      "UnitedStates": 4,
-      "China": 4
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -106791,8 +107063,8 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
-      "China": 0
+      "UnitedStates": 0,
+      "China": 2
     },
     "Difficulties": {
       "Easy": {
@@ -106930,8 +107202,8 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
-      "China": 0
+      "UnitedStates": 0,
+      "China": 2
     },
     "Difficulties": {
       "Easy": {
@@ -107068,8 +107340,8 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
-      "China": 0
+      "UnitedStates": 0,
+      "China": 2
     },
     "Difficulties": {
       "Easy": {
@@ -112943,7 +113215,7 @@
       "Japan": 6,
       "Asia": 6,
       "Oceania": 6,
-      "UnitedStates": 7,
+      "UnitedStates": 0,
       "China": 6
     },
     "Difficulties": {
@@ -118237,7 +118509,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -118375,8 +118647,8 @@
       "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
-      "UnitedStates": 3,
-      "China": 2
+      "UnitedStates": 4,
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -118512,7 +118784,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -118650,7 +118922,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -118788,7 +119060,7 @@
       "Japan": 2,
       "Asia": 2,
       "Oceania": 2,
-      "UnitedStates": 3,
+      "UnitedStates": 0,
       "China": 2
     },
     "Difficulties": {
@@ -162119,11 +162391,11 @@
   },
   "【限定】 Nesin Amatias": {
     "Region": {
-      "Japan": 0,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
-      "China": 0
+      "Japan": -1,
+      "Asia": -1,
+      "Oceania": -1,
+      "UnitedStates": -1,
+      "China": -1
     },
     "Difficulties": {
       "Easy": {
@@ -162816,11 +163088,11 @@
   },
   "【限定】 よくでる15300": {
     "Region": {
-      "Japan": 0,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
-      "China": 0
+      "Japan": -1,
+      "Asia": -1,
+      "Oceania": -1,
+      "UnitedStates": -1,
+      "China": -1
     },
     "Difficulties": {
       "Easy": {
@@ -163930,11 +164202,11 @@
   },
   "【限定】 黄ダルマ2000": {
     "Region": {
-      "Japan": 0,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
-      "China": 0
+      "Japan": -1,
+      "Asia": -1,
+      "Oceania": -1,
+      "UnitedStates": -1,
+      "China": -1
     },
     "Difficulties": {
       "Easy": {
@@ -165181,7 +165453,7 @@
       7
     ]
   },
-  "小毛驢": {
+  "永不失聯的愛": {
     "Region": {
       "Japan": 0,
       "Asia": 0,
@@ -165191,7 +165463,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 1,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -165209,12 +165481,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -165232,12 +165504,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": 3,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -165255,15 +165527,15 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 7,
+        "Level": -1,
         "NoteCount": {
           "Single": {
-            "Normal": 322,
+            "Normal": 0,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165278,7 +165550,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -165307,8 +165579,547 @@
       }
     },
     "TitleList": {
-      "ja": "小毛驢",
-      "zh-CN": "小毛驴"
+      "ja": "永不失聯的愛"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      0
+    ]
+  },
+  "隱形的翅膀": {
+    "Region": {
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 53,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 81,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 148,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 190,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "隱形的翅膀"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      0
+    ]
+  },
+  "那些年": {
+    "Region": {
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 62,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 92,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 164,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 275,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "那些年"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      0
+    ]
+  },
+  "千年之戀": {
+    "Region": {
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "千年之戀"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      0
+    ]
+  },
+  "拔蘿蔔": {
+    "Region": {
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 71,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 81,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 171,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 223,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "拔蘿蔔"
     },
     "SubtitleList": {
       "ja": ""
@@ -165453,7 +166264,7 @@
       5
     ]
   },
-  "拔蘿蔔": {
+  "兩隻老虎": {
     "Region": {
       "Japan": 0,
       "Asia": 0,
@@ -165463,10 +166274,10 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": -1,
+        "Level": 2,
         "NoteCount": {
           "Single": {
-            "Normal": 71,
+            "Normal": 0,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165481,15 +166292,15 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": -1,
+        "Level": 2,
         "NoteCount": {
           "Single": {
-            "Normal": 81,
+            "Normal": 0,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165504,15 +166315,15 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": -1,
+        "Level": 3,
         "NoteCount": {
           "Single": {
-            "Normal": 171,
+            "Normal": 0,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165527,15 +166338,15 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": -1,
+        "Level": 6,
         "NoteCount": {
           "Single": {
-            "Normal": 223,
+            "Normal": 349,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165550,7 +166361,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -165579,7 +166390,8 @@
       }
     },
     "TitleList": {
-      "ja": "拔蘿蔔"
+      "ja": "兩隻老虎",
+      "zh-CN": "两只老虎"
     },
     "SubtitleList": {
       "ja": ""
@@ -165724,7 +166536,7 @@
       5
     ]
   },
-  "兩隻老虎": {
+  "小毛驢": {
     "Region": {
       "Japan": 0,
       "Asia": 0,
@@ -165734,7 +166546,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 2,
+        "Level": 1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -165752,7 +166564,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -165775,7 +166587,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -165798,15 +166610,15 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 6,
+        "Level": 7,
         "NoteCount": {
           "Single": {
-            "Normal": 349,
+            "Normal": 322,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -165821,7 +166633,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -165850,8 +166662,143 @@
       }
     },
     "TitleList": {
-      "ja": "兩隻老虎",
-      "zh-CN": "两只老虎"
+      "ja": "小毛驢",
+      "zh-CN": "小毛驴"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      5
+    ]
+  },
+  "王老先生有塊地": {
+    "Region": {
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 290,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "王老先生有塊地"
     },
     "SubtitleList": {
       "ja": ""
