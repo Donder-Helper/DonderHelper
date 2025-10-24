@@ -145,11 +145,11 @@ namespace DonderHelper
             public Chart Hard;
             public Chart Extreme;
             public Chart Hidden;
-            public Chart this[int value]
+            public Chart this[int index]
             {
                 get
                 {
-                    switch (value)
+                    switch (index)
                     {
                         case 0: return Easy;
                         case 1: return Normal;
@@ -159,20 +159,44 @@ namespace DonderHelper
                         default: throw new IndexOutOfRangeException();
                     }
                 }
+                set
+                {
+                    switch (index)
+                    {
+                        case 0: Easy = value; break;
+                        case 1: Normal = value; break;
+                        case 2: Hard = value; break;
+                        case 3: Extreme = value; break;
+                        case 4: Hidden = value; break;
+                        default: throw new IndexOutOfRangeException();
+                    }
+                }
             }
 
-            public Chart this[string value]
+            public Chart this[string name]
             {
                 get
                 {
-                    switch (value)
+                    switch (name.ToLower())
                     {
                         case "easy": return Easy;
                         case "normal": return Normal;
                         case "hard": return Hard;
                         case "ex": return Extreme;
                         case "hidden": return Hidden;
-                        default: return Extreme;
+                        default: throw new IndexOutOfRangeException();
+                    }
+                }
+                set
+                {
+                    switch (name.ToLower())
+                    {
+                        case "easy": Easy = value; break;
+                        case "normal": Normal = value; break;
+                        case "hard": Hard = value; break;
+                        case "ex": Extreme = value; break;
+                        case "hidden": Hidden = value; break;
+                        default: throw new IndexOutOfRangeException();
                     }
                 }
             }

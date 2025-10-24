@@ -733,9 +733,9 @@ namespace DonderHelper
                     int notes_n_2 = 0;
 
                     bool titleisvalid = false;
-                    foreach (string tit in lines.Where(line => line.StartsWith("TITLE:") || line.StartsWith("TITLEJA:")).ToArray())
+                    foreach (string tit in lines.Where(line => line.StartsWith("TITLE:") || line.StartsWith("TITLEJA:") || line.StartsWith("TITLEZH:")).ToArray())
                     {
-                        if (tit.StartsWith("TITLEJA:"))
+                        if (tit.StartsWith("TITLEJA:") || tit.StartsWith("TITLEZH:"))
                         {
                             //8 for TITLEJA:, 6 for TITLE:
                             if (Songs.TryGetValue(FixReplace(tit.Substring(8)), out Song? song))
@@ -769,33 +769,15 @@ namespace DonderHelper
                     {
                         if (!is_already_processed)
                         {
-                            switch (diff)
+                            if (diff > -1 && diff < 5)
                             {
-                                case 4:
-                                    Songs[title].Difficulties.Hidden.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
-                                    Songs[title].Difficulties.Hidden.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
-                                    Songs[title].Difficulties.Hidden.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
-                                    break;
-                                case 3:
-                                    Songs[title].Difficulties.Extreme.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
-                                    Songs[title].Difficulties.Extreme.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
-                                    Songs[title].Difficulties.Extreme.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
-                                    break;
-                                case 2:
-                                    Songs[title].Difficulties.Hard.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
-                                    Songs[title].Difficulties.Hard.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
-                                    Songs[title].Difficulties.Hard.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
-                                    break;
-                                case 1:
-                                    Songs[title].Difficulties.Normal.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
-                                    Songs[title].Difficulties.Normal.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
-                                    Songs[title].Difficulties.Normal.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
-                                    break;
-                                case 0:
-                                    Songs[title].Difficulties.Easy.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
-                                    Songs[title].Difficulties.Easy.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
-                                    Songs[title].Difficulties.Easy.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
-                                    break;
+                                var chart = Songs[title].Difficulties[diff];
+
+                                chart.NoteCount.Single.Set(notes_n, branched ? notes_e : 0, branched ? notes_m : 0);
+                                chart.NoteCount.Double1P.Set(notes_n_1, branched_1 ? notes_e_1 : 0, branched_1 ? notes_m_1 : 0);
+                                chart.NoteCount.Double2P.Set(notes_n_2, branched_2 ? notes_e_2 : 0, branched_2 ? notes_m_2 : 0);
+
+                                Songs[title].Difficulties[diff] = chart;
                             }
                         }
 
