@@ -783,11 +783,18 @@ namespace DonderHelper
                                         "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426340426503426149/G27uFKRXMAAA2Cb.jpg",
                                         _ => "https://media.discordapp.net/attachments/967197984393670700/1426340425458778245/G27uERRW8AACGrT.jpg"
                                     },
-                                    Description = url + "\n\n(Coming Soon)",
+                                    Description = LocaleData.GetString("CAMPAIGN_URL", locale , url) +
+                                    "\n" + LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=52") +
+                                    "\n\n" + LocaleData.GetString("CAMPAIGN_UNLOCKURL", locale, "[English](https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=1496060441#gid=1496060441) / [日本語](https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3/%E6%9D%B1%E6%96%B9Project%C3%97%E5%A4%AA%E9%BC%93%E3%81%AE%E9%81%94%E4%BA%BA%202025)") +
+                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1768154400),
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
-                                await command.RespondAsync(null, [touhou2025.Build()], false, false);
+
+                                var component = new ComponentBuilder();
+                                component.WithButton(CreateSongButton(command, "神々が恋した幻想郷"));
+
+                                await command.RespondAsync(null, [touhou2025.Build()], false, false, null, component.Build());
                                 break;
                             }
                             case "tournament2025":
@@ -818,7 +825,9 @@ namespace DonderHelper
                                         "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426352621794365450/bg_taiko_online_tournament_2025_zh_tw.png",
                                         _ => "https://media.discordapp.net/attachments/967197984393670700/1426352620028825671/bg_taiko_online_tournament_2025_en.png"
                                     },
-                                    Description = url + "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1765126800),
+                                    Description = LocaleData.GetString("CAMPAIGN_URL", locale, url) +
+                                    "\n" + LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/compe_list.php?is_bng_compe=1") +
+                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1765126800),
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
@@ -925,7 +934,7 @@ namespace DonderHelper
                             $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("SUDDEN GUST OC", locale), 50)}\n" +
                             $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("SORA-III ヘリオポーズ", locale), 50)}\n" +
                             $"\n" +
-                            //$"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "English", "https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=731420565#gid=731420565")}\n" +
+                            $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "English", "https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=731420565#gid=731420565")}\n" +
                             $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%A9%E3%82%93%E3%83%A1%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}",
                             Timestamp = DateTimeOffset.UtcNow,
                             Footer = GetFooter(command)

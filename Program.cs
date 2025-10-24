@@ -61,7 +61,7 @@ namespace DonderHelper
                 return;
             }
 
-            Console.WriteLine($"Finished! Loaded {SongDatabase.Songs.Count} songs.");
+            Console.WriteLine($"Loaded {SongDatabase.Songs.Count} songs.");
             Console.WriteLine($"{SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary().Count} songs do not contain or is missing note counts.");
             Console.WriteLine($"{SongDatabase.SongNames.Count} entries for song names are available.");
 

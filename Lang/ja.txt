@@ -118,6 +118,13 @@ GENRE_UNKNOWN=未知
 // {0} : Miss icon as emote
 URL_MISSING=（利用不可 {0}）
 
+// {0} : URL
+CAMPAIGN_URL=キャンペーンページ：{0}
+// {0} : URL
+CAMPAIGN_HIROBAURL=ドンだーひろばページ：{0}
+// {0} : URL (may sometimes appear as embedded URLs for different languages, i.e. "English / 日本語")
+CAMPAIGN_UNLOCKURL=Unlockables: {0}
+
 // {0} : Time remaining (as int timestamp)
 CAMPAIGN_AVAILABLE=<t:{0}:F>まで利用可能（<t:{0}:R>）
 // {0} : Season

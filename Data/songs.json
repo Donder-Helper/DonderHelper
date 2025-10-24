@@ -73920,6 +73920,143 @@
       2
     ]
   },
+  "神々が恋した幻想郷": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 140,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7",
+        "UrlKo": "https://taiko.wiki/song/1437?diff=easy",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 275,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7",
+        "UrlKo": "https://taiko.wiki/song/1437?diff=normal",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 491,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7",
+        "UrlKo": "https://taiko.wiki/song/1437?diff=hard",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 806,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7",
+        "UrlKo": "https://taiko.wiki/song/1437?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7/::ref/%E7%A5%9E%E3%80%85%E3%81%8C%E6%81%8B%E3%81%97%E3%81%9F%E5%B9%BB%E6%83%B3%E9%83%B7.png?rev=d88ceae6a0078f8ee8aed3a94c2bf8f1&t=20251023072413"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1437?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "神々が恋した幻想郷",
+      "en-US": "The Gensokyo The Gods Loved"
+    },
+    "SubtitleList": {
+      "ja": "東方Projectアレンジ Unlucky Morpheus",
+      "en-US": "Touhou Project Arrange / Unlucky Morpheus"
+    },
+    "GenreList": [
+      4
+    ]
+  },
   "GAME CHANGER": {
     "Region": {
       "Japan": 1,
@@ -74052,282 +74189,6 @@
     "SubtitleList": {
       "ja": "アクア☆マジック 「島根スサノオマジック」応援ソング",
       "en-US": "Aqua☆Magic \"SHIMANE SUSANOO MAGIC\" Cheer song"
-    },
-    "GenreList": [
-      4
-    ]
-  },
-  "Help me, さいたま2000!!": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 0
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 5,
-        "NoteCount": {
-          "Single": {
-            "Normal": 298,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
-        "UrlKo": "https://taiko.wiki/song/1338?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/img/a8c3598d-6ea8-464a-b17b-37a9698eec78"
-      },
-      "Normal": {
-        "Level": 7,
-        "NoteCount": {
-          "Single": {
-            "Normal": 400,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
-        "UrlKo": "https://taiko.wiki/song/1338?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/img/13f472f3-79c1-46e5-81ca-987e05512fd9"
-      },
-      "Hard": {
-        "Level": 8,
-        "NoteCount": {
-          "Single": {
-            "Normal": 694,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
-        "UrlKo": "https://taiko.wiki/song/1338?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/img/0dc35c49-fb5e-40ee-82fc-b7a38edc18e6"
-      },
-      "Extreme": {
-        "Level": 10,
-        "NoteCount": {
-          "Single": {
-            "Normal": 944,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
-        "UrlKo": "https://taiko.wiki/song/1338?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/img/a58c0708-9021-4254-bde5-4663d35ff88c"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1338?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "Help me, さいたま2000!!",
-      "en-US": "Help me, SAITAMA 2000!!",
-      "ko": "Help me, 사이타마 2000!!"
-    },
-    "SubtitleList": {
-      "ja": "東方Projectアレンジ ビートまりお respects LindaAI-CUE",
-      "en-US": "Touhou Project Arrange / beatMARIO respects LindaAI-CUE"
-    },
-    "GenreList": [
-      4,
-      7
-    ]
-  },
-  "Help me, ERINNNNNN!!": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 3,
-        "NoteCount": {
-          "Single": {
-            "Normal": 180,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Help%20me%2C%20ERINNNNNN%21%21",
-        "UrlKo": "https://taiko.wiki/song/416?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/416/easy"
-      },
-      "Normal": {
-        "Level": 4,
-        "NoteCount": {
-          "Single": {
-            "Normal": 234,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Help%20me%2C%20ERINNNNNN%21%21",
-        "UrlKo": "https://taiko.wiki/song/416?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/416/normal"
-      },
-      "Hard": {
-        "Level": 7,
-        "NoteCount": {
-          "Single": {
-            "Normal": 494,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Help%20me%2C%20ERINNNNNN%21%21",
-        "UrlKo": "https://taiko.wiki/song/416?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/416/hard"
-      },
-      "Extreme": {
-        "Level": 8,
-        "NoteCount": {
-          "Single": {
-            "Normal": 542,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Help%20me%2C%20ERINNNNNN%21%21",
-        "UrlKo": "https://taiko.wiki/song/416?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/416/oni"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/416?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "Help me, ERINNNNNN!!",
-      "en-US": "Help me, ERINNNNNN!!"
-    },
-    "SubtitleList": {
-      "ja": "東方Projectアレンジ ビートまりお",
-      "en-US": "Touhou Project Arrange / beatMARIO"
     },
     "GenreList": [
       4
@@ -84158,6 +84019,282 @@
       4
     ]
   },
+  "Help me, さいたま2000!!": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 298,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
+        "UrlKo": "https://taiko.wiki/song/1338?diff=easy",
+        "ImageUrl": "https://file.taiko.wiki/img/a8c3598d-6ea8-464a-b17b-37a9698eec78"
+      },
+      "Normal": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 400,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
+        "UrlKo": "https://taiko.wiki/song/1338?diff=normal",
+        "ImageUrl": "https://file.taiko.wiki/img/13f472f3-79c1-46e5-81ca-987e05512fd9"
+      },
+      "Hard": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 694,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
+        "UrlKo": "https://taiko.wiki/song/1338?diff=hard",
+        "ImageUrl": "https://file.taiko.wiki/img/0dc35c49-fb5e-40ee-82fc-b7a38edc18e6"
+      },
+      "Extreme": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 944,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Help%20me%2C%20%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE2000%21%21",
+        "UrlKo": "https://taiko.wiki/song/1338?diff=oni",
+        "ImageUrl": "https://file.taiko.wiki/img/a58c0708-9021-4254-bde5-4663d35ff88c"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1338?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Help me, さいたま2000!!",
+      "en-US": "Help me, SAITAMA 2000!!",
+      "ko": "Help me, 사이타마 2000!!"
+    },
+    "SubtitleList": {
+      "ja": "東方Projectアレンジ ビートまりお respects LindaAI-CUE",
+      "en-US": "Touhou Project Arrange / beatMARIO respects LindaAI-CUE"
+    },
+    "GenreList": [
+      4,
+      7
+    ]
+  },
+  "Help me, ERINNNNNN!!": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 180,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Help%20me%2C%20ERINNNNNN%21%21",
+        "UrlKo": "https://taiko.wiki/song/416?diff=easy",
+        "ImageUrl": "https://file.taiko.wiki/fumen/416/easy"
+      },
+      "Normal": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 234,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Help%20me%2C%20ERINNNNNN%21%21",
+        "UrlKo": "https://taiko.wiki/song/416?diff=normal",
+        "ImageUrl": "https://file.taiko.wiki/fumen/416/normal"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 494,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Help%20me%2C%20ERINNNNNN%21%21",
+        "UrlKo": "https://taiko.wiki/song/416?diff=hard",
+        "ImageUrl": "https://file.taiko.wiki/fumen/416/hard"
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 542,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Help%20me%2C%20ERINNNNNN%21%21",
+        "UrlKo": "https://taiko.wiki/song/416?diff=oni",
+        "ImageUrl": "https://file.taiko.wiki/fumen/416/oni"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/416?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Help me, ERINNNNNN!!",
+      "en-US": "Help me, ERINNNNNN!!"
+    },
+    "SubtitleList": {
+      "ja": "東方Projectアレンジ ビートまりお",
+      "en-US": "Touhou Project Arrange / beatMARIO"
+    },
+    "GenreList": [
+      4
+    ]
+  },
   "最終鬼畜妹フランドール・S": {
     "Region": {
       "Japan": 1,
@@ -90173,10 +90310,12 @@
       }
     },
     "TitleList": {
-      "ja": "YOU're your HERO"
+      "ja": "YOU're your HERO",
+      "en-US": "YOU're your HERO"
     },
     "SubtitleList": {
-      "ja": "for all DONDERS"
+      "ja": "for all DONDERS",
+      "en-US": "for all DONDERS"
     },
     "GenreList": [
       7

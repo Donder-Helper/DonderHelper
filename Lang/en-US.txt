@@ -118,6 +118,13 @@ GENRE_UNKNOWN=Unknown
 // {0} : Miss icon as emote
 URL_MISSING=(Unavailable {0})
 
+// {0} : URL
+CAMPAIGN_URL=Campaign Page: {0}
+// {0} : URL
+CAMPAIGN_HIROBAURL=Donder Hiroba Page: {0}
+// {0} : URL (may sometimes appear as embedded URLs for different languages, i.e. "English / 日本語")
+CAMPAIGN_UNLOCKURL=Unlockables: {0}
+
 // {0} : Time remaining (as int timestamp)
 CAMPAIGN_AVAILABLE=Available until <t:{0}:F> (<t:{0}:R>)
 // {0} : Season
