@@ -14,6 +14,12 @@ namespace DonderHelper
         public string? ko_title = null;
         [JsonProperty("titleEn")]
         public string? en_title = null;
+        [JsonProperty("aliasEn")]
+        public string? en_alias = null;
+        [JsonProperty("aliasKo")]
+        public string? ko_alias = null;
+        [JsonProperty("romaji")]
+        public string? romaji = null;
         [JsonProperty("songNo")]
         public string song_no = "";
 
@@ -612,6 +618,12 @@ namespace DonderHelper
             Console.WriteLine("Loading Korean data...");
             #region Titles + Links + Images (Korean)
             int ko_count = 0;
+            void addLocalizedTitle(string title, string localtitle, string lang)
+            {
+                Songs[title].SetTitle(localtitle, lang);
+                SongNames.TryAdd(localtitle, title);
+            }
+
             foreach (var song in taiko_ko)
             {
                 song.ko_title = song.ko_title != null ? song.ko_title.Trim() : song.ko_title;
@@ -620,19 +632,15 @@ namespace DonderHelper
 
                 if (Songs.ContainsKey(song.title))
                 {
-                    if (!string.IsNullOrWhiteSpace(song.ko_title))
-                    {
-                        Songs[song.title].SetTitle(song.ko_title, "ko");
-                        SongNames.TryAdd(song.ko_title, song.title);
+                    if (!string.IsNullOrWhiteSpace(song.ko_title)) { addLocalizedTitle(song.title, song.ko_title, "ko"); ko_count++; }
 
-                        ko_count++;
-                    }
+                    if (!string.IsNullOrWhiteSpace(song.en_title)) { addLocalizedTitle(song.title, song.en_title, "en-US"); }
 
-                    if (!string.IsNullOrWhiteSpace(song.en_title))
-                    {
-                        Songs[song.title].SetTitle(song.en_title, "en-US");
-                        SongNames.TryAdd(song.en_title, song.title);
-                    }
+                    if (!string.IsNullOrWhiteSpace(song.ko_alias)) { addLocalizedTitle(song.title, song.ko_alias, "ALIAS-ko"); }
+
+                    if (!string.IsNullOrWhiteSpace(song.en_alias)) { addLocalizedTitle(song.title, song.en_alias, "ALIAS-en"); }
+
+                    if (!string.IsNullOrWhiteSpace(song.romaji)) { addLocalizedTitle(song.title, song.romaji, "ALIAS-romaji"); }
 
                     Songs[song.title].Difficulties.Easy.UrlKo = "https://taiko.wiki/song/" + song.song_no + "?diff=easy";
                     Songs[song.title].Difficulties.Normal.UrlKo = "https://taiko.wiki/song/" + song.song_no + "?diff=normal";
