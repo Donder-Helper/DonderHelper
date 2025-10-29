@@ -91358,7 +91358,7 @@
   },
   "vs.VIGVANGS": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
@@ -91495,7 +91495,7 @@
   },
   "SUDDEN GUST OC": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
@@ -91632,7 +91632,7 @@
   },
   "今夜はホーミー": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
@@ -91770,7 +91770,7 @@
   },
   "SORA-III ヘリオポーズ": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
@@ -100641,11 +100641,11 @@
   },
   "星座わーど": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 1
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -100782,11 +100782,11 @@
   },
   "卓球de脱臼": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 1
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -100921,11 +100921,11 @@
   },
   "風魔モジュール6768": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 1
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -101061,11 +101061,11 @@
   },
   "トンデ・ミテ": {
     "Region": {
-      "Japan": 1,
+      "Japan": 4,
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 1
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -167353,7 +167353,7 @@
         "Level": -1,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 64,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -167376,7 +167376,7 @@
         "Level": -1,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 114,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -167399,7 +167399,7 @@
         "Level": -1,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 196,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -167422,7 +167422,7 @@
         "Level": -1,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 389,
             "Expert": 0,
             "Tatsujin": 0
           },
