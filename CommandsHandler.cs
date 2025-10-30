@@ -1212,7 +1212,7 @@ namespace DonderHelper
                                         $"6. Specify your challenge comment in「挑戦コメントを選ぶドン！」(Select a Challenge Comment da-don!):\n" +
                                         $"  - よろしくお願いいたします！ (I look forward to our battle!)\n" +
                                         $"  - 対戦しませんか！？ (Think you can beat me!?)\n" +
-                                        $"  - 初心者です、がんばります！ (I may be a noob, but i'll do my best!)\n" +
+                                        $"  - 初心者です、がんばります！ (I'm a beginner, but i'll do my best!)\n" +
                                         $"  - 負けないドン！ (I won't lose, don!)\n" +
                                         $"  - 腕に自信あります！ (I'm confident that I'll win!)\n" +
                                         $"7. Click on「挑戦状を送る」(Send Challenge)"
