@@ -961,7 +961,7 @@ namespace DonderHelper
                                     Color = new(0xD9358C),
                                     Url = "https://x.com/taiko_team/status/1904702341053636981",
                                     ImageUrl = "https://pbs.twimg.com/media/GmNSODdaoAAbrzI?format=jpg&name=large",
-                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1772204400) + "\n\n" +
+                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1772211600) + "\n\n" +
                                     $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
