@@ -189,6 +189,37 @@ DAN_UNAVAILABLE=Information on this dan is not yet available. Please come back l
 DAN_CLOSED_TITLE=Dan-i Dojo {0} Closed
 DAN_CLOSED=Dan-i Dojo {0} has officially concluded. Check back later when the dojo re-opens!
 
+// Title
+STATS_TITLE=Donder Helper's Statistics
+STATS_TITLE_REGION=Region Status
+STATS_TITLE_SONG=Song List
+STATS_TITLE_TITLE=Title List
+STATS_TITLE_DISCORD=Discord Stats
+
+// {0}: Name of region
+// {1}: Total songs available for that region
+STATS_REGION_COUNT=Total ({0}): {1}
+// {0}: Total number of songs exclusive to that region
+// {1}: Total number of songs not accessible in that region
+// {2}: Total number of available songs with Sou-Uchi variants available
+STATS_REGION_SPECIAL={0} Exclusive / {1} Unavailable / {2} Sou-Uchi
+STATS_REGION_AVAILABLE=Total Songs Available Everywhere: {0}
+STATS_REGION_UNAVAILABLE=Total Songs Unavailable Everywhere: {0}
+STATS_REGION_UNKNOWN=Total Songs w/ Unknown Status: {0}
+
+STATS_SONG_COUNT=Total Songs: {0}
+STATS_SONG_MISSING=Total w/ Missing Notes: {0}
+
+STATS_TITLE_UNIQUE=Total Unique Titles: {0}
+// {0}: Name of locale
+// {1}: Total titles available for that locale
+STATS_TITLE_COUNT=Total ({0}): {1}
+
+// {0}: Discord bot uptime, written in HH:MM:SS ({0:00}:{1:00}:{2:00})
+STATS_DISCORD_UPTIME=Uptime: {0}
+// {0}: # of servers the bot is in
+STATS_DISCORD_SERVERCOUNT=Server Count: {0}
+
 MISSING_NOTES=Songs with missing Note Counts
 MISSING_REGION=Songs with missing Region Status
 MISSING_EVERYWHERE=Songs unavailable everywhere
@@ -197,8 +228,7 @@ DISCLAIMER_USERONLY=이 채널에 메시지를 보낼 수 있는 권한이 없�
 DISCLAIMER_WIP=일부 데이터가 누락되었거나 부정확할 수 있습니다.
 DISCLAIMER_STATS=이러한 통계는 공식 데이터를 반영하지 않을 수 있습니다.
 DISCLAIMER_MISSING=제목 “{0}”이 누락되었거나 철자가 잘못되었습니다.
-// {0} : Miss icon as emote
-DISCLAIMER_ERROR=:warning: 요청을 처리하는 동안 문제가 발생했습니다. 이 오류는 봇 관리자에게 전달되었습니다. {0}
+DISCLAIMER_ERROR=:warning: 요청을 처리하는 동안 문제가 발생했습니다. 이 오류는 봇 관리자에게 전달되었습니다.
 
 // Do not use "*" for this.
 DISCLAIMER_NOUSA=＊ Available in every region except North America.

@@ -189,6 +189,37 @@ DAN_UNAVAILABLE=目前沒有該段位挑戰的資料。請之後再查詢。
 DAN_CLOSED_TITLE=段位道場 {0} 已關閉
 DAN_CLOSED=段位道場 {0} 已正式結束。請在段位道場再開放時再查詢！
 
+// Title
+STATS_TITLE=Donder Helper's Statistics
+STATS_TITLE_REGION=Region Status
+STATS_TITLE_SONG=Song List
+STATS_TITLE_TITLE=Title List
+STATS_TITLE_DISCORD=Discord Stats
+
+// {0}: Name of region
+// {1}: Total songs available for that region
+STATS_REGION_COUNT=Total ({0}): {1}
+// {0}: Total number of songs exclusive to that region
+// {1}: Total number of songs not accessible in that region
+// {2}: Total number of available songs with Sou-Uchi variants available
+STATS_REGION_SPECIAL={0} Exclusive / {1} Unavailable / {2} Sou-Uchi
+STATS_REGION_AVAILABLE=Total Songs Available Everywhere: {0}
+STATS_REGION_UNAVAILABLE=Total Songs Unavailable Everywhere: {0}
+STATS_REGION_UNKNOWN=Total Songs w/ Unknown Status: {0}
+
+STATS_SONG_COUNT=Total Songs: {0}
+STATS_SONG_MISSING=Total w/ Missing Notes: {0}
+
+STATS_TITLE_UNIQUE=Total Unique Titles: {0}
+// {0}: Name of locale
+// {1}: Total titles available for that locale
+STATS_TITLE_COUNT=Total ({0}): {1}
+
+// {0}: Discord bot uptime, written in HH:MM:SS ({0:00}:{1:00}:{2:00})
+STATS_DISCORD_UPTIME=Uptime: {0}
+// {0}: # of servers the bot is in
+STATS_DISCORD_SERVERCOUNT=Server Count: {0}
+
 MISSING_NOTES=缺少音符數資料的歌曲
 MISSING_REGION=缺少地區限定資料的歌曲
 MISSING_EVERYWHERE=所有地區皆不可獲得
@@ -197,8 +228,7 @@ DISCLAIMER_USERONLY=這個訊息只有您能看見。本機器人沒有權限傳
 DISCLAIMER_WIP=部分資料可能遺漏或不正確。
 DISCLAIMER_STATS=這些統計數據可能與官方數據有所出入。
 DISCLAIMER_MISSING=「{0}」可能不存在或有拼寫錯誤。
-// {0} : Miss icon as emote
-DISCLAIMER_ERROR=:warning: 在處理您的要求時出錯了。此錯誤已轉送給本機器人維護者。{0}
+DISCLAIMER_ERROR=:warning: 在處理您的要求時出錯了。此錯誤已轉送給本機器人維護者。
 
 // Do not use "*" for this.
 DISCLAIMER_NOUSA=※北美版除外。

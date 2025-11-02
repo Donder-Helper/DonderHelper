@@ -36,15 +36,19 @@ namespace DonderHelper
                 dicts.TryAdd(locale, AddKeys(textfile));
             }
         }
+        public static bool HasLanguage(string locale) => dicts.ContainsKey(locale);
 
         public static string GetString(string input, string locale, params object?[] items)
         {
             object?[] items_safe = items != null ? items : [""];
-            if (dicts.TryGetValue(locale, out var dict))
+            var dict = dicts.TryGetValue(locale, out var dictionary) ? dictionary : dicts["en-US"];
+
+            for (int i = 0; i < items_safe.Length; i++)
             {
-                if (dict.TryGetValue(input, out string? output)) return String.Format(output, items_safe);
+                if (dict.TryGetValue(items_safe[i]?.ToString() ?? "", out string? output_key))
+                    items_safe[i] = output_key;
             }
-            return dicts["en-US"].TryGetValue(input, out string? output_en) ? String.Format(output_en, items_safe) : $"INVALID KEY: {input}";
+            return dict.TryGetValue(input, out string? output) ? String.Format(output, items_safe) : $"INVALID KEY: {input}";
         }
         public static Dictionary<string, string> GetStrings(string input, params object?[] items)
         {

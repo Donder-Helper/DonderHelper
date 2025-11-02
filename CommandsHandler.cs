@@ -20,14 +20,43 @@ namespace DonderHelper
         private readonly Color donShop_Autumn_color = new(248, 72, 40);
         private readonly Color donShop_Winter_color = new(186, 202, 255);
 
+        #region Statistics
         public static string last_Update => $"Last update: {Process.GetCurrentProcess().StartTime.ToLocalTime().ToShortDateString()}";
         public static DateTimeOffset readyTime = new();
+
+        private struct RegionStats
+        {
+            public int Available;
+            public int Exclusive;
+            public int SouUchi;
+            public int Unavailable;
+
+            public RegionStats() { Available = 0; Exclusive = 0; SouUchi = 0; Unavailable = 0; }
+            public RegionStats(int available, int exclusive, int souuchi, int unavailable) { Available = available; Exclusive = exclusive; SouUchi = souuchi; Unavailable = unavailable; }
+        }
+
+        // Set these stats once on initialize, as the songlist does not update at any point during uptime, and can be a waste of resources to constantly recalculate.
+        private RegionStats statsJapan = new();
+        private RegionStats statsAsia = new();
+        private RegionStats statsOceania = new();
+        private RegionStats statsAmerica = new();
+        private RegionStats statsChina = new();
+
+        private int statsTitleJa = 0;
+        private int statsTitleEn_US = 0;
+        private int statsTitleKo = 0;
+        private int statsTitleZh_TW = 0;
+        private int statsTitleZh_CN = 0;
+
+        private int statsAvailable = 0;
+        private int statsUnavailable = 0;
+        private int statsUnknown = 0;
+        private int statsMissingNotes = 0;
+        #endregion
 
         private readonly DiscordSocketClient _client;
         private readonly CommandService _commands;
         private readonly Discord.Interactions.InteractionService _interaction;
-
-        private Dictionary<string, Embed> Embeds = [];
 
         public CommandsHandler(DiscordSocketClient client, CommandService commands)
         {
@@ -39,6 +68,59 @@ namespace DonderHelper
             _client.SlashCommandExecuted += SlashCommandExecuted;
             _client.AutocompleteExecuted += AutocompleteExecuted;
             _client.ButtonExecuted += ButtonExecuted;
+
+            #region Statistics
+
+            // Set these stats once on initialize, as the songlist does not update at any point during uptime, and can be a waste of resources to constantly recalculate.
+            statsJapan = new();
+            statsAsia = new();
+            statsOceania = new();
+            statsAmerica = new();
+            statsChina = new();
+
+            var songs = SongDatabase.Songs.Values;
+            statsJapan = new(
+                songs.Where(song => song.Region.Japan.IsAvailable()).Count(),
+                songs.Where(song => song.Region.IsJapanOnly).Count(),
+                songs.Where(song => song.Region.Japan.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
+                songs.Where(song => !song.Region.Japan.IsAvailable()).Count()
+                );
+            statsAsia = new(
+                songs.Where(song => song.Region.Asia.IsAvailable()).Count(),
+                songs.Where(song => song.Region.IsAsiaOnly).Count(),
+                songs.Where(song => song.Region.Asia.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
+                songs.Where(song => !song.Region.Asia.IsAvailable()).Count()
+                );
+            statsOceania = new(
+                songs.Where(song => song.Region.Oceania.IsAvailable()).Count(),
+                songs.Where(song => song.Region.IsOceaniaOnly).Count(),
+                songs.Where(song => song.Region.Oceania.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
+                songs.Where(song => !song.Region.Oceania.IsAvailable()).Count()
+                );
+            statsAmerica = new(
+                songs.Where(song => song.Region.UnitedStates.IsAvailable()).Count(),
+                songs.Where(song => song.Region.IsUnitedStatesOnly).Count(),
+                songs.Where(song => song.Region.UnitedStates.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
+                songs.Where(song => !song.Region.UnitedStates.IsAvailable()).Count()
+                );
+            statsChina = new(
+                songs.Where(song => song.Region.China.IsAvailable()).Count(),
+                songs.Where(song => song.Region.IsChinaOnly).Count(),
+                songs.Where(song => song.Region.China.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
+                songs.Where(song => !song.Region.China.IsAvailable()).Count()
+                );
+
+            statsTitleJa = songs.Where(song => song.TryGetTitle("ja", out string? title)).Count();
+            statsTitleEn_US = songs.Where(song => song.TryGetTitle("en-US", out string? title)).Count();
+            statsTitleKo = songs.Where(song => song.TryGetTitle("ko", out string? title)).Count();
+            statsTitleZh_TW = songs.Where(song => song.TryGetTitle("zh-TW", out string? title)).Count();
+            statsTitleZh_CN = songs.Where(song => song.TryGetTitle("zh-CN", out string? title)).Count();
+
+            statsAvailable = songs.Where(song => song.Region.IsAvailableEverywhere).Count();
+            statsUnavailable = songs.Where(song => song.Region.IsUnavailableEverywhere).Count();
+            statsUnknown = songs.Where(song => song.Region.ContainsUnknown).Count();
+            statsMissingNotes = songs.Where(song => !song.Difficulties.ContainsNotes()).Count();
+            #endregion
         }
 
         private async Task ButtonExecuted(SocketMessageComponent component)
@@ -519,10 +601,10 @@ namespace DonderHelper
                             Name = LocaleData.GetString("DIFFICULTY_TITLE", locale),
                             Value =
                             $"{(song.Difficulties.Hidden.Level > -1 ? ($"{EmoteData.GetDifficulty(Song.SongDifficulty.Hidden)} " + song.Difficulties.Hidden.Level + "★ " + song.Difficulties.Hidden.NoteCount.ToString() + "\n") : "")}" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Extreme)} {(song.Difficulties.Extreme.Level > -1 ? song.Difficulties.Extreme.Level + "★ " + song.Difficulties.Extreme.NoteCount.ToString() : "-")}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Hard)} {(song.Difficulties.Hard.Level > -1 ? song.Difficulties.Hard.Level + "★ " + song.Difficulties.Hard.NoteCount.ToString() : "-")}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Normal)} {(song.Difficulties.Normal.Level > -1 ? song.Difficulties.Normal.Level + "★ " + song.Difficulties.Normal.NoteCount.ToString() : "-")}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Easy)} {(song.Difficulties.Easy.Level > -1 ? song.Difficulties.Easy.Level + "★ " + song.Difficulties.Easy.NoteCount.ToString() : "-")}",
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Extreme)} {(song.Difficulties.Extreme.Level > -1 ? song.Difficulties.Extreme.Level + "★ " : "- ") + song.Difficulties.Extreme.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Hard)} {(song.Difficulties.Hard.Level > -1 ? song.Difficulties.Hard.Level + "★ " : "- ") + song.Difficulties.Hard.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Normal)} {(song.Difficulties.Normal.Level > -1 ? song.Difficulties.Normal.Level + "★ " : "- ") + song.Difficulties.Normal.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Easy)} {(song.Difficulties.Easy.Level > -1 ? song.Difficulties.Easy.Level + "★ " : "- ") + song.Difficulties.Easy.NoteCount.ToString()}",
                             IsInline = true
                         },
                         new()
@@ -543,11 +625,11 @@ namespace DonderHelper
                 };
                 
                 var component_builder = new ComponentBuilder();
-                if (song.Difficulties.Easy.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
-                if (song.Difficulties.Normal.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
-                if (song.Difficulties.Hard.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
-                if (song.Difficulties.Extreme.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
-                if (song.Difficulties.Hidden.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
+                if (song.Difficulties.Easy.Level > 0 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
+                if (song.Difficulties.Normal.Level > 0 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
+                if (song.Difficulties.Hard.Level > 0 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
+                if (song.Difficulties.Extreme.Level > 0 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
+                if (song.Difficulties.Hidden.Level > 0 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
 
                 await interaction.RespondAsync(null, [builder.Build()], false, !CanSendMessage(interaction), null, component_builder.Build());
             }
@@ -567,7 +649,7 @@ namespace DonderHelper
             {
                 Song.Chart chart = song.Difficulties[difficulty];
 
-                if (chart.Level < 1)
+                if (chart.Level < 1 && !chart.NoteCount.ContainsNotes())
                 {
                     await interaction.RespondAsync($"The difficulty selected does not exist for this song, or is missing data. {EmoteData.GetEmote("MISS")}", null, false, true);
                     return;
@@ -577,7 +659,7 @@ namespace DonderHelper
 
                 var builder = new EmbedBuilder()
                 {
-                    Title = song.GetTitle(locale) + $" {EmoteData.GetDifficulty(difficulty)} {chart.Level}★",
+                    Title = song.GetTitle(locale) + $" {EmoteData.GetDifficulty(difficulty)} {(chart.Level > -1 ? chart.Level + "★" : "")}",
                     Description = song.GetSubtitle(locale) + $"{(chart.NoteCount.ContainsNotes() ? "\n" : "")}{chart.NoteCount}\n\n" +
 
                     $"**{LocaleData.GetString("AVAILABLE_TITLE", locale)}**\n" +
@@ -608,11 +690,11 @@ namespace DonderHelper
                 };
 
                 var component_builder = new ComponentBuilder();
-                if (song.Difficulties.Easy.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
-                if (song.Difficulties.Normal.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
-                if (song.Difficulties.Hard.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
-                if (song.Difficulties.Extreme.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
-                if (song.Difficulties.Hidden.Level > 0) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
+                if (song.Difficulties.Easy.Level > -1 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
+                if (song.Difficulties.Normal.Level > -1 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
+                if (song.Difficulties.Hard.Level > -1 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
+                if (song.Difficulties.Extreme.Level > -1 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
+                if (song.Difficulties.Hidden.Level > -1 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
 
                 await interaction.RespondAsync(null, [builder.Build()], false, !CanSendMessage(interaction), null, component_builder.Build());
             }
@@ -786,7 +868,7 @@ namespace DonderHelper
                                     Description = LocaleData.GetString("CAMPAIGN_URL", locale , url) +
                                     "\n" + LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=52") +
                                     "\n\n" + LocaleData.GetString("CAMPAIGN_UNLOCKURL", locale, "[English](https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=1496060441#gid=1496060441) / [日本語](https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3/%E6%9D%B1%E6%96%B9Project%C3%97%E5%A4%AA%E9%BC%93%E3%81%AE%E9%81%94%E4%BA%BA%202025)") +
-                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1768154400),
+                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1768150800),
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
@@ -972,68 +1054,59 @@ namespace DonderHelper
                     case "stats":
                     {
                         var uptime = DateTime.UtcNow - readyTime;
-                        var japan_stats = SongDatabase.Songs.Where(song => song.Value.Region.Japan != Song.Availability.No && song.Value.Region.Japan != Song.Availability.CampaignNo && song.Value.Region.Japan != Song.Availability.Unknown);
-                        var asia_stats = SongDatabase.Songs.Where(song => song.Value.Region.Asia != Song.Availability.No && song.Value.Region.Asia != Song.Availability.CampaignNo && song.Value.Region.Asia != Song.Availability.Unknown);
-                        var oceania_stats = SongDatabase.Songs.Where(song => song.Value.Region.Oceania != Song.Availability.No && song.Value.Region.Oceania != Song.Availability.CampaignNo && song.Value.Region.Oceania != Song.Availability.Unknown);
-                        var usa_stats = SongDatabase.Songs.Where(song => song.Value.Region.UnitedStates != Song.Availability.No && song.Value.Region.UnitedStates != Song.Availability.CampaignNo && song.Value.Region.UnitedStates != Song.Availability.Unknown);
-                        var china_stats = SongDatabase.Songs.Where(song => song.Value.Region.China != Song.Availability.No && song.Value.Region.China != Song.Availability.CampaignNo && song.Value.Region.China != Song.Availability.Unknown);
                         var statistics = new EmbedBuilder()
                         {
-                            Title = "Donder Helper's Statistics",
-                            Description = $"-# {LocaleData.GetString("DISCLAIMER_STATS", locale)}",
+                            Title = LocaleData.GetString("STATS_TITLE", locale),
+                            Description = $"-# {LocaleData.GetString("DISCLAIMER_STATS", locale)}\n" +
+                            $"## {LocaleData.GetString("STATS_TITLE_REGION", locale)}\n" +
+
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_JAPAN", statsJapan.Available)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsJapan.Exclusive, statsJapan.Unavailable, statsJapan.SouUchi)}\n" +
+
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_ASIA", statsAsia.Available)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsAsia.Exclusive, statsAsia.Unavailable, statsAsia.SouUchi)}\n" +
+
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_OCEANIA", statsOceania.Available)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsOceania.Exclusive, statsOceania.Unavailable, statsOceania.SouUchi)}\n" +
+
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_USA", statsAmerica.Available)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsAmerica.Exclusive, statsAmerica.Unavailable, statsAmerica.SouUchi)}\n" +
+
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_CHINA", statsChina.Available)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsChina.Exclusive, statsChina.Unavailable, statsChina.SouUchi)}\n\n" +
+
+                            $"-# {LocaleData.GetString("STATS_REGION_AVAILABLE", locale, statsAvailable)}\n" +
+                            $"-# {LocaleData.GetString("STATS_REGION_UNAVAILABLE", locale, statsUnavailable)}\n" +
+                            $"-# {LocaleData.GetString("STATS_REGION_UNKNOWN", locale, statsUnknown)}",
                             Fields =
                             {
                                 new()
                                 {
-                                    Name = "Songlist",
+                                    Name = LocaleData.GetString("STATS_TITLE_SONG", locale),
                                     IsInline = true,
                                     Value =
-                                    $"Total Songs: {SongDatabase.Songs.Count}\n" +
-                                    $"Total Unique Titles: {SongDatabase.SongNames.Count}\n" +
-                                    $"Total with Missing Notes: {SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).Count()}"
+                                    $"{LocaleData.GetString("STATS_SONG_COUNT", locale, SongDatabase.Songs.Count)}\n" +
+                                    $"{LocaleData.GetString("STATS_SONG_MISSING", locale, statsMissingNotes)}"
                                 },
                                 new()
                                 {
-                                    Name = "Region Status",
+                                    Name = LocaleData.GetString("STATS_TITLE_TITLE", locale),
                                     IsInline = true,
                                     Value =
-                                    $"Total ({LocaleData.GetString("REGION_JAPAN", locale)}): {japan_stats.Count()}" +
-                                    $"\n-# ({japan_stats.Where(song => song.Value.Title.Contains("【双打】 ")).Count()} Sou-Uchi)" + 
-                                    $"\n-# ({japan_stats.Where(song => song.Value.Region.IsJapanOnly).Count()} Exclusive)\n" +
-                                    $"Total ({LocaleData.GetString("REGION_ASIA", locale)}): {asia_stats.Count()}" +
-                                    $"\n-# ({asia_stats.Where(song => song.Value.Title.Contains("【双打】 ")).Count()} Sou-Uchi)" +
-                                    $"\n-# ({asia_stats.Where(song => song.Value.Region.IsAsiaOnly).Count()} Exclusive)\n" +
-                                    $"Total ({LocaleData.GetString("REGION_OCEANIA", locale)}): {oceania_stats.Count()}" +
-                                    $"\n-# ({oceania_stats.Where(song => song.Value.Title.Contains("【双打】 ")).Count()} Sou-Uchi)" +
-                                    $"\n-# ({oceania_stats.Where(song => song.Value.Region.IsOceaniaOnly).Count()} Exclusive)\n" +
-                                    $"Total ({LocaleData.GetString("REGION_USA", locale)}): {usa_stats.Count()}" +
-                                    $"\n-# ({usa_stats.Where(song => song.Value.Title.Contains("【双打】 ")).Count()} Sou-Uchi)" +
-                                    $"\n-# ({usa_stats.Where(song => song.Value.Region.IsUSAOnly).Count()} Exclusive)\n" +
-                                    $"Total ({LocaleData.GetString("REGION_CHINA", locale)}): {china_stats.Count()}" +
-                                    $"\n-# ({china_stats.Where(song => song.Value.Title.Contains("【双打】 ")).Count()} Sou-Uchi)" +
-                                    $"\n-# ({china_stats.Where(song => song.Value.Region.IsChinaOnly).Count()} Exclusive)\n" +
-                                    $"Total Available Everywhere: {SongDatabase.Songs.Values.Where(song => song.Region.IsAvailable).Count()}\n" +
-                                    $"Total Unavailable Everywhere: {SongDatabase.Songs.Values.Where(song => song.Region.IsUnavailable).Count()}\n" +
-                                    $"Total w/ Unknown Status: {SongDatabase.Songs.Values.Where(song => song.Region.ContainsUnknown).Count()}"
+                                    $"{LocaleData.GetString("STATS_TITLE_UNIQUE", locale, SongDatabase.SongNames.Count)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ja", statsTitleJa)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "en-US", statsTitleEn_US)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ko", statsTitleKo)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-TW", statsTitleZh_TW)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-CN", statsTitleZh_CN)}"
                                 },
                                 new()
                                 {
-                                    Name = "Title List",
-                                    IsInline = true,
-                                    Value =
-                                    $"Total (ja): {SongDatabase.Songs.Values.Where(song => song.TryGetTitle("ja", out string? title)).Count()}\n" +
-                                    $"Total (en-US): {SongDatabase.Songs.Values.Where(song => song.TryGetTitle("en-US", out string? title)).Count()}\n" +
-                                    $"Total (zh-TW): {SongDatabase.Songs.Values.Where(song => song.TryGetTitle("zh-TW", out string? title)).Count()}\n" +
-                                    $"Total (ko): {SongDatabase.Songs.Values.Where(song => song.TryGetTitle("ko", out string? title)).Count()}\n" +
-                                    $"Total (zh-CN): {SongDatabase.Songs.Values.Where(song => song.TryGetTitle("zh-CN", out string? title)).Count()}\n"
-                                },
-                                new()
-                                {
-                                    Name = "Discord Stats",
+                                    Name = LocaleData.GetString("STATS_TITLE_DISCORD", locale),
                                     IsInline = true,
                                     Value = 
-                                    $"Uptime: {string.Format("{0:00}:{1:00}:{2:00}", (int)uptime.TotalHours, uptime.Minutes, uptime.Seconds)}\n" +
-                                    $"Server Count: {_client.Guilds.Count()}"
+                                    $"{LocaleData.GetString("STATS_DISCORD_UPTIME", locale, string.Format("{0:00}:{1:00}:{2:00}", (int)uptime.TotalHours, uptime.Minutes, uptime.Seconds))}\n" +
+                                    $"{LocaleData.GetString("STATS_DISCORD_SERVERCOUNT", locale, _client.Guilds.Count())}"
                                 }
                             }
                         };
@@ -1117,7 +1190,7 @@ namespace DonderHelper
                     }
                     case "hiroba":
                     {
-                        string maintenance = "-# ＊ Maintenance Hours: <t:1746464400:t> to <t:1746482400:t>\n" +
+                        string maintenance = "-# ＊ Maintenance Hours: <t:1762102800:t> to <t:1762120800:t>\n" +
                                 $"{(17 <= DateTimeOffset.UtcNow.Hour && DateTimeOffset.UtcNow.Hour < 22 ? "-# :warning: Maintenance is active, you can not edit your profile or use certain features.\n" : "")}\n";
 
                         if (command.Data.Options.Count == 1)
@@ -1367,7 +1440,7 @@ namespace DonderHelper
                     {
                         var noteslist = SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary();
                         var regionlist = SongDatabase.Songs.Where(song => song.Value.Region.ContainsUnknown).ToDictionary();
-                        var unavailist = SongDatabase.Songs.Where(song => song.Value.Region.IsUnavailable).ToDictionary();
+                        var unavailist = SongDatabase.Songs.Where(song => song.Value.Region.IsUnavailableEverywhere).ToDictionary();
                         string missing_songs = "";
                         string missing_regions = "";
                         string missing_available = "";
@@ -1418,7 +1491,7 @@ namespace DonderHelper
             catch (Exception ex)
             {
                 Console.WriteLine($"[General/Error] Something went wrong while executing a command. Command: {command.CommandName} / User: {command.User.Id} / Guild: {command.GuildId?.ToString() ?? "(null)"} / Channel: {command.ChannelId?.ToString() ?? "(none)"} / Details:\n{ex}");
-                await command.RespondAsync(LocaleData.GetString("DISCLAIMER_ERROR", GetLocale(command), EmoteData.GetEmote("MISS")), null, false, true);
+                await command.RespondAsync(LocaleData.GetString("DISCLAIMER_ERROR", GetLocale(command)), null, false, true);
             }
             
         }

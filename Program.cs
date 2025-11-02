@@ -13,7 +13,7 @@ namespace DonderHelper
     {
         // Discord bot private key
         private static readonly string __environmentname = "DONDERHELPER_SECRET_KEY";
-        private static string __keypath = $"key.txt";
+        private static readonly string __keypath = $"key.txt";
         private static string __key = "";
 
 #pragma warning disable CS8618
@@ -28,6 +28,7 @@ namespace DonderHelper
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
+            #region Build Songlist
             if (args.Contains("--build-songlist"))
             {
                 Console.WriteLine("Building songlist...");
@@ -47,12 +48,15 @@ namespace DonderHelper
                 Console.WriteLine("Songlist successfully built. Please run this executable again, without the '--build-songlist' arg, to run the Donder Helper bot.");
                 return;
             }
+            #endregion
 
+            #region Skip Timer
             if (!args.Contains("--skip-timer"))
             {
                 Console.WriteLine("Starting in 20 seconds...");
                 Thread.Sleep(20000);
             }
+            #endregion
 
             Console.WriteLine("Donhirobotスタート！ Let's starting!");
 

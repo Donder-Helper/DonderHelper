@@ -189,6 +189,37 @@ DAN_UNAVAILABLE=この段位に関する情報はまだありません。また�
 DAN_CLOSED_TITLE=段位道場{0}終了
 DAN_CLOSED=段位道場{0}は終了しました。後日、道場が再開しましたら、またお越しください！
 
+// Title
+STATS_TITLE=Donder Helper's Statistics
+STATS_TITLE_REGION=Region Status
+STATS_TITLE_SONG=Song List
+STATS_TITLE_TITLE=Title List
+STATS_TITLE_DISCORD=Discord Stats
+
+// {0}: Name of region
+// {1}: Total songs available for that region
+STATS_REGION_COUNT=Total ({0}): {1}
+// {0}: Total number of songs exclusive to that region
+// {1}: Total number of songs not accessible in that region
+// {2}: Total number of available songs with Sou-Uchi variants available
+STATS_REGION_SPECIAL={0} Exclusive / {1} Unavailable / {2} Sou-Uchi
+STATS_REGION_AVAILABLE=Total Songs Available Everywhere: {0}
+STATS_REGION_UNAVAILABLE=Total Songs Unavailable Everywhere: {0}
+STATS_REGION_UNKNOWN=Total Songs w/ Unknown Status: {0}
+
+STATS_SONG_COUNT=Total Songs: {0}
+STATS_SONG_MISSING=Total w/ Missing Notes: {0}
+
+STATS_TITLE_UNIQUE=Total Unique Titles: {0}
+// {0}: Name of locale
+// {1}: Total titles available for that locale
+STATS_TITLE_COUNT=Total ({0}): {1}
+
+// {0}: Discord bot uptime, written in HH:MM:SS ({0:00}:{1:00}:{2:00})
+STATS_DISCORD_UPTIME=Uptime: {0}
+// {0}: # of servers the bot is in
+STATS_DISCORD_SERVERCOUNT=Server Count: {0}
+
 MISSING_NOTES=Songs with missing Note Counts
 MISSING_REGION=Songs with missing Region Status
 MISSING_EVERYWHERE=Songs unavailable everywhere
@@ -197,8 +228,7 @@ DISCLAIMER_USERONLY=私にはこのチャンネルにメッセージを送る権
 DISCLAIMER_WIP=一部のデータが欠落しているか、間違っている可能性があります。
 DISCLAIMER_STATS=これらの統計は公式データを反映していない可能性があります。
 DISCLAIMER_MISSING=タイトル「{0}」がないか、スペルが間違っている。
-// {0} : Miss icon as emote
-DISCLAIMER_ERROR=:warning: リクエストの処理中に何か問題が発生しました。このエラーはボットのメンテナに転送されました。 {0}
+DISCLAIMER_ERROR=:warning: リクエストの処理中に何か問題が発生しました。このエラーはボットのメンテナに転送されました。
 
 // Do not use "*" for this.
 DISCLAIMER_NOUSA=＊ 北米を除くすべての地域でご利用いただけます。

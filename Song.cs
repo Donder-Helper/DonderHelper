@@ -68,31 +68,25 @@ namespace DonderHelper
             public Availability UnitedStates;
             public Availability China;
 
+            private static bool IsAvailable(Availability region) => region.IsAvailable();
+
             [JsonIgnore]
-            public bool IsAvailable { get
-                {
-                    return
-                        (Japan == Availability.Yes || Japan == Availability.Campaign || Japan == Availability.Shop || Japan == Availability.AIBattle) &&
-                        (Asia == Availability.Yes || Asia == Availability.Campaign || Asia == Availability.Shop || Asia == Availability.AIBattle) &&
-                        (Oceania == Availability.Yes || Oceania == Availability.Campaign || Oceania == Availability.Shop || Oceania == Availability.AIBattle) &&
-                        (UnitedStates == Availability.Yes || UnitedStates == Availability.Campaign || UnitedStates == Availability.Shop || UnitedStates == Availability.AIBattle) &&
-                        (China == Availability.Yes || China == Availability.Campaign || China == Availability.Shop || China == Availability.AIBattle);
-                } 
-            }
+            public readonly bool IsAvailableEverywhere => IsAvailable(Japan) && IsAvailable(Asia) && IsAvailable(Oceania) && IsAvailable(UnitedStates) && IsAvailable(China);
             [JsonIgnore]
-            public bool IsUnavailable => Japan == Availability.No && Asia == Availability.No && Oceania == Availability.No && UnitedStates == Availability.No && China == Availability.No;
+            public readonly bool IsUnavailableEverywhere => !IsAvailable(Japan) && !IsAvailable(Asia) && !IsAvailable(Oceania) && !IsAvailable(UnitedStates) && !IsAvailable(China);
             [JsonIgnore]
-            public bool IsJapanOnly => Japan != Availability.No && Asia == Availability.No && Oceania == Availability.No && UnitedStates == Availability.No && China == Availability.No;
+            public readonly bool ContainsUnknown => Japan == Availability.Unknown || Asia == Availability.Unknown || Oceania == Availability.Unknown || UnitedStates == Availability.Unknown || China == Availability.Unknown;
+
             [JsonIgnore]
-            public bool IsAsiaOnly => Japan == Availability.No && Asia != Availability.No && Oceania == Availability.No && UnitedStates == Availability.No && China == Availability.No;
+            public readonly bool IsJapanOnly => Japan.IsExclusive(Asia, Oceania, UnitedStates, China);
             [JsonIgnore]
-            public bool IsOceaniaOnly => Japan == Availability.No && Asia == Availability.No && Oceania != Availability.No && UnitedStates == Availability.No && China == Availability.No;
+            public readonly bool IsAsiaOnly => Asia.IsExclusive(Japan, Oceania, UnitedStates, China);
             [JsonIgnore]
-            public bool IsUSAOnly => Japan == Availability.No && Asia == Availability.No && Oceania == Availability.No && UnitedStates != Availability.No && China == Availability.No;
+            public readonly bool IsOceaniaOnly => Oceania.IsExclusive(Japan, Asia, UnitedStates, China);
             [JsonIgnore]
-            public bool IsChinaOnly => Japan == Availability.No && Asia == Availability.No && Oceania == Availability.No && UnitedStates == Availability.No && China != Availability.No;
+            public readonly bool IsUnitedStatesOnly => UnitedStates.IsExclusive(Japan, Asia, Oceania, China);
             [JsonIgnore]
-            public bool ContainsUnknown => Japan == Availability.Unknown || Asia == Availability.Unknown || Oceania == Availability.Unknown || UnitedStates == Availability.Unknown || China == Availability.Unknown;
+            public readonly bool IsChinaOnly => China.IsExclusive(Japan, Asia, Oceania, UnitedStates);
         }
         public struct Chart
         {
@@ -101,7 +95,7 @@ namespace DonderHelper
                 public struct Branch
                 {
                     [JsonIgnore]
-                    public bool IsValid => Normal > 0 || Expert > 0 || Tatsujin > 0;
+                    public readonly bool IsValid => Normal > 0 || Expert > 0 || Tatsujin > 0;
                     [JsonIgnore]
                     public readonly bool IsBranching => Expert > 0 || Tatsujin > 0;
                     public override string ToString()
@@ -112,8 +106,8 @@ namespace DonderHelper
                         : "";
                     }
                     public void Set(int normal, int expert, int tatsujin) { Normal = normal; Expert = expert; Tatsujin = tatsujin; }
-                    public int[] Get() { return [Normal, Expert, Tatsujin]; }
-                    public bool ContainsNotes() { return Normal > 0 || Expert > 0 || Tatsujin > 0; }
+                    public readonly int[] Get() => [Normal, Expert, Tatsujin];
+                    public readonly bool ContainsNotes() => Normal > 0 || Expert > 0 || Tatsujin > 0; 
 
                     public int Normal;
                     public int Expert;
@@ -127,7 +121,7 @@ namespace DonderHelper
                         $":one: {Double1P} / :two: {Double2P}" : 
                         Single.ToString();
                 }
-                public bool ContainsNotes() { return Single.ContainsNotes() || Double1P.ContainsNotes() || Double2P.ContainsNotes(); }
+                public readonly bool ContainsNotes() => Single.ContainsNotes() || Double1P.ContainsNotes() || Double2P.ContainsNotes(); 
                 public Branch Single;
                 public Branch Double1P;
                 public Branch Double2P;
