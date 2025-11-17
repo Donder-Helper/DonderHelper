@@ -56245,10 +56245,12 @@
       }
     },
     "TitleList": {
-      "ja": "Radiant"
+      "ja": "Radiant",
+      "en-US": "Radiant"
     },
     "SubtitleList": {
-      "ja": "「アークナイツ -明日方舟-」より"
+      "ja": "「アークナイツ -明日方舟-」より",
+      "en-US": "From \" ARKNIGHTS \""
     },
     "GenreList": [
       2
@@ -56380,10 +56382,12 @@
       }
     },
     "TitleList": {
-      "ja": "Break Through the Dome"
+      "ja": "Break Through the Dome",
+      "en-US": "Break Through the Dome"
     },
     "SubtitleList": {
-      "ja": "「アークナイツ -明日方舟-」より"
+      "ja": "「アークナイツ -明日方舟-」より",
+      "en-US": "From \" ARKNIGHTS \""
     },
     "GenreList": [
       2
@@ -91217,6 +91221,145 @@
     },
     "GenreList": [
       6
+    ]
+  },
+  "SORA-VIII ネビュラトレイル": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 188,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1438?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB/::ref/%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB_e.png?rev=f348c79331f6543418c2bd85ac310c5c&t=20251116090245"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 308,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1438?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB/::ref/%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB_n.png?rev=289c65f0ee05096a476162237c24b17e&t=20251116090155"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 508,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1438?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB/::ref/%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB_h.png?rev=57a87672ef3ea676f69ab76b183bf2e8&t=20251116090050"
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 888,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB",
+        "UrlKo": "https://taiko.wiki/song/1438?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/SORA-VIII%20%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB/::ref/%E3%83%8D%E3%83%93%E3%83%A5%E3%83%A9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%AB.png?rev=7a38db28584ee9adf22ba2ae7d91f39e&t=20251116072626"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1438?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "SORA-VIII ネビュラトレイル",
+      "en-US": "SORA-VIII Nebula Trail",
+      "ko": "SORA-VIII Nebula Trail",
+      "ALIAS-ko": "SORA-VIII 네뷸라 트레일"
+    },
+    "SubtitleList": {
+      "ja": "Shin Sazaki(BNSI)",
+      "en-US": "Shin Sazaki(BNSI)"
+    },
+    "GenreList": [
+      7
     ]
   },
   "YOU're your HERO": {
@@ -131490,7 +131633,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Choco%20Chiptune.",
         "UrlKo": "https://taiko.wiki/song/560?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/560/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Choco%20Chiptune./::ref/c0.png?rev=5e98d83c922298f8e4d97e9a4cc29cd2&t=20230227010031"
       },
       "Normal": {
         "Level": 6,
@@ -131513,7 +131656,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Choco%20Chiptune.",
         "UrlKo": "https://taiko.wiki/song/560?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/560/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Choco%20Chiptune./::ref/c1.png?rev=37ddb22287efef1ac4bf4b7e9188d506&t=20230227010101"
       },
       "Hard": {
         "Level": 7,
@@ -131536,7 +131679,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Choco%20Chiptune.",
         "UrlKo": "https://taiko.wiki/song/560?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/560/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Choco%20Chiptune./::ref/c2.png?rev=c33ac28f97a6c755067df91383a50668&t=20230227010127"
       },
       "Extreme": {
         "Level": 8,
@@ -131559,7 +131702,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Choco%20Chiptune.",
         "UrlKo": "https://taiko.wiki/song/560?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/560/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Choco%20Chiptune./::ref/%E7%99%BB%E5%A0%B4%E3%81%8C%E3%81%A1%E3%82%87%E3%81%93%E3%81%A3%E3%81%A8%E9%81%85%E3%81%8B%E3%81%A3%E3%81%9F_2.png?rev=c077e62ed71f1bbd4659640296b6b746&t=20250821064412"
       },
       "Hidden": {
         "Level": -1,
