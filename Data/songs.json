@@ -74817,6 +74817,144 @@
       2
     ]
   },
+  "【限定】 ジングルベル第765番": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 2,
+        "NoteCount": {
+          "Single": {
+            "Normal": 94,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%B8%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%99%E3%83%AB%E7%AC%AC765%E7%95%AA",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Normal": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 103,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%B8%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%99%E3%83%AB%E7%AC%AC765%E7%95%AA",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hard": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 201,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%B8%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%99%E3%83%AB%E7%AC%AC765%E7%95%AA",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 417,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%B8%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%99%E3%83%AB%E7%AC%AC765%E7%95%AA",
+        "UrlKo": "",
+        "ImageUrl": ""
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "【限定】 ジングルベル第765番",
+      "en-US": "【Limited】 Jingle Bells No.765"
+    },
+    "SubtitleList": {
+      "ja": "期間限定のため、総合成績パネルに反映されません",
+      "en-US": "This song is only available for a limited time. As a result, it will not be reflected in the overall results panel."
+    },
+    "GenreList": [
+      4,
+      7
+    ]
+  },
   "神々が恋した幻想郷": {
     "Region": {
       "Japan": 1,
