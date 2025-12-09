@@ -407,17 +407,6 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
-                    Name = "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025",
-                    Value = "tournament2025",
-                    NameLocalizations =
-                    {
-                        { "ja", "太鼓の達人 ワールドスコアアタック@オンライン 2025" },
-                        { "ko", "태고의 달인 월드 스코어 어택@온라인 2025" },
-                        { "zh-TW", "太鼓之達人 全球高分挑戰@線上大賽 2025" }
-                    }
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
                     Name = "Touhou Project×Taiko no Tatsujin 2025",
                     Value = "touhou2025",
                     NameLocalizations =
@@ -877,80 +866,6 @@ namespace DonderHelper
                                 component.WithButton(CreateSongButton(command, "神々が恋した幻想郷"));
 
                                 await command.RespondAsync(null, [touhou2025.Build()], false, false, null, component.Build());
-                                break;
-                            }
-                            case "tournament2025":
-                            {
-                                string url = locale switch
-                                {
-                                    "ja" => "https://taiko.namco-ch.net/taiko/twso2025/index.php",
-                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/twso2025/index.php",
-                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/twso2025/index.php",
-                                    _ => "https://taiko.namco-ch.net/taiko/en/twso2025/index.php"
-                                };
-
-                                var tournament2025 = new EmbedBuilder()
-                                {
-                                    Title = locale switch
-                                    {
-                                        "ja" => "太鼓の達人 ワールドスコアアタック@オンライン 2025",
-                                        "ko" => "태고의 달인 월드 스코어 어택@온라인 2025",
-                                        "zh-TW" => "太鼓之達人 全球高分挑戰@線上大賽 2025",
-                                        _ => "Taiko no Tatsujin WORLD SCORE ATTACK @ONLINE 2025"
-                                    },
-                                    Color = new(0x2da5ff),
-                                    Url = url,
-                                    ImageUrl = locale switch
-                                    {
-                                        "ja" => "https://media.discordapp.net/attachments/967197984393670700/1426352619236098088/bg_taiko_online_tournament_2025_ja.png",
-                                        "ko" => "https://media.discordapp.net/attachments/967197984393670700/1426352621140049933/bg_taiko_online_tournament_2025_ko.png",
-                                        "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426352621794365450/bg_taiko_online_tournament_2025_zh_tw.png",
-                                        _ => "https://media.discordapp.net/attachments/967197984393670700/1426352620028825671/bg_taiko_online_tournament_2025_en.png"
-                                    },
-                                    Description = LocaleData.GetString("CAMPAIGN_URL", locale, url) +
-                                    "\n" + LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/compe_list.php?is_bng_compe=1") +
-                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1765126800),
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-
-                                var tournyimage = new EmbedBuilder()
-                                {
-                                    Url = url,
-                                    ImageUrl = locale switch
-                                    {
-                                        "ja" => "https://pbs.twimg.com/media/G3qlQjsa0AA6EBp?format=jpg&name=large",
-                                        "ko" => "https://pbs.twimg.com/media/G3qljUybAAA0kNI?format=jpg&name=large",
-                                        "zh-TW" => "https://pbs.twimg.com/media/G3qleeGaYAA_B2Q?format=jpg&name=large",
-                                        _ => "https://pbs.twimg.com/media/G3qlY2TbkAAmyGE?format=jpg&name=large"
-                                    },
-                                };
-
-                                var tournyimage2 = new EmbedBuilder()
-                                {
-                                    Url = url,
-                                    ImageUrl = "https://pbs.twimg.com/media/G3qlY5DbwAAezvB?format=png&name=small"
-                                };
-
-                                var tournyimage3 = new EmbedBuilder()
-                                {
-                                    Url = url,
-                                    ImageUrl = "https://pbs.twimg.com/media/G3qlY5RaIAAxvtZ?format=png&name=360x360"
-                                };
-
-                                var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "YOU're your HERO", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "さいたま2000", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "轟け!太鼓の達人", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "空想打破", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "ナイト・オブ・ナイツ", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "初音ミクの消失-劇場版-", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "Ignis Danse", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "What's in the box?", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "!!!カオスタイム!!!", Song.SongDifficulty.Extreme, true));
-                                component.WithButton(CreateSongButton(command, "幽玄ノ乱", Song.SongDifficulty.Extreme, true));
-
-                                await command.RespondAsync(null, [tournament2025.Build(), tournyimage.Build(), tournyimage2.Build(), tournyimage3.Build()], false, false, null, component.Build());
                                 break;
                             }
                             case "kamen2025":
