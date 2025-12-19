@@ -13,7 +13,7 @@ namespace DonderHelper
         private readonly string donShop_Spring_img = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2018/05/8251a977b1344fff217f31f37cd1e8fe.png";
         private readonly string donShop_Summer_img = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/05/5dd72fe33b6af14311cb975f2a70a065.png";
         private readonly string donShop_Autumn_img = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/08/4f6df8253e818bc82ad0df7c19e5467d.png";
-        private readonly string donShop_Winter_img = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2018/09/04f8358d681100f118e39d88f60bd980.png";
+        private readonly string donShop_Winter_img = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/11/5b376df35c337270e961d9a61c2b9e67.png";
 
         private readonly Color donShop_Spring_color = new(254, 137, 187);
         private readonly Color donShop_Summer_color = new(117, 237, 254);
@@ -816,7 +816,7 @@ namespace DonderHelper
                     }
                     case "region":
                     {
-                        await command.RespondAsync("Information on the region lock status of all songs can be found on this spreadsheet, courtesy of Taiko Time :\n<https://docs.google.com/spreadsheets/d/e/2PACX-1vQYGQxV5Azuid7cnnNAG5EZyRkFI2YAJCARHS1AAgH0uo7OPgbaWODWbAbmk3o4M4h44hENCitbndKP/pubhtml?gid=0&single=true>", null, false, false);
+                        await command.RespondAsync("Information on the region lock status of all songs can be found on this spreadsheet, courtesy of Taiko Time :\n<https://docs.google.com/spreadsheets/d/e/2PACX-1vQYGQxV5Azuid7cnnNAG5EZyRkFI2YAJCARHS1AAgH0uo7OPgbaWODWbAbmk3o4M4h44hENCitbndKP/pubhtml?gid=0&single=true>\nYou can also help Taiko Time by filling out this form when songs are added/updated :\n<https://forms.gle/49VyswkbbBDp1YB89>", null, false, false);
                         break;
                     }
                     case "campaign":
@@ -920,16 +920,17 @@ namespace DonderHelper
                     }
                     case "shop":
                     {
-                        var autumn2025 = new EmbedBuilder()
+                        var winter2025 = new EmbedBuilder()
                         {
-                            Title = LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_AUTUMN", locale), 2025),
-                            ThumbnailUrl = donShop_Autumn_img,
-                            Color = donShop_Autumn_color,
+                            Title = LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_WINTER", locale), 2025),
+                            ThumbnailUrl = donShop_Winter_img,
+                            Color = donShop_Winter_color,
                             Description =
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("vs.VIGVANGS", locale), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("今夜はホーミー", locale), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("SUDDEN GUST OC", locale), 50)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("SORA-III ヘリオポーズ", locale), 50)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("クラシックメドレー(冬休み編)", locale), 60)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("バブル・リップ・レイヴ・マシン", locale), 60)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("ダジャレdeオシャレ", locale), 50)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDALHIDDEN_DESC", locale, SongDatabase.GetLocalizedSongTitle("さよならワーリャ", locale), EmoteData.GetDifficulty(Song.SongDifficulty.Hidden), 50)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("ロボットロケンロー☆", locale), 30)}\n" +
                             $"\n" +
                             $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "English", "https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=731420565#gid=731420565")}\n" +
                             $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%A9%E3%82%93%E3%83%A1%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}",
@@ -939,12 +940,13 @@ namespace DonderHelper
 
                         var component = new ComponentBuilder();
                         
-                        component.WithButton(CreateSongButton(command, "vs.VIGVANGS"), 0);
-                        component.WithButton(CreateSongButton(command, "今夜はホーミー"), 0);
-                        component.WithButton(CreateSongButton(command, "SUDDEN GUST OC"), 0);
-                        component.WithButton(CreateSongButton(command, "SORA-III ヘリオポーズ"), 0);
+                        component.WithButton(CreateSongButton(command, "クラシックメドレー(冬休み編)"), 0);
+                        component.WithButton(CreateSongButton(command, "バブル・リップ・レイヴ・マシン"), 0);
+                        component.WithButton(CreateSongButton(command, "ダジャレdeオシャレ"), 0);
+                        component.WithButton(CreateSongButton(command, "さよならワーリャ", Song.SongDifficulty.Hidden, true), 0);
+                        component.WithButton(CreateSongButton(command, "ロボットロケンロー☆"), 0);
 
-                        await command.RespondAsync(null, [autumn2025.Build()], false, false, null, component.Build());
+                        await command.RespondAsync(null, [winter2025.Build()], false, false, null, component.Build());
                         break;
                     }
                     case "about":

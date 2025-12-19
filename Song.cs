@@ -73,7 +73,7 @@ namespace DonderHelper
             [JsonIgnore]
             public readonly bool IsAvailableEverywhere => IsAvailable(Japan) && IsAvailable(Asia) && IsAvailable(Oceania) && IsAvailable(UnitedStates) && IsAvailable(China);
             [JsonIgnore]
-            public readonly bool IsUnavailableEverywhere => !IsAvailable(Japan) && !IsAvailable(Asia) && !IsAvailable(Oceania) && !IsAvailable(UnitedStates) && !IsAvailable(China);
+            public readonly bool IsUnavailableEverywhere => !IsAvailable(Japan) && !IsAvailable(Asia) && !IsAvailable(Oceania) && !IsAvailable(UnitedStates) && !IsAvailable(China) && Japan != Availability.Unknown;
             [JsonIgnore]
             public readonly bool ContainsUnknown => Japan == Availability.Unknown || Asia == Availability.Unknown || Oceania == Availability.Unknown || UnitedStates == Availability.Unknown || China == Availability.Unknown;
 

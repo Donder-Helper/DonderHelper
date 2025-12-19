@@ -147,6 +147,8 @@ namespace DonderHelper
                             return Availability.QRCode;
                         case "transfer":
                             return Availability.Transfer;
+                        case "?":
+                            return Availability.Unknown;
                         default:
                             return Availability.No;
                     }
