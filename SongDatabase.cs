@@ -930,7 +930,7 @@ namespace DonderHelper
             Console.WriteLine($"Loaded data from {chartcount} charts.");
         }
 
-        public static void WriteSonglist()
+        public static void WriteSonglist(bool write_tsv)
         {
             JsonSerializer serializer = new JsonSerializer() { Formatting = Formatting.Indented };
 
@@ -939,22 +939,27 @@ namespace DonderHelper
                 serializer.Serialize(file_stream, Songs);
             }
 
-            //string tsv = "";
-            //string title_prepend(string title)
-            //{
-            //    return title.StartsWith('"') ? ("\"\"\"" + title) : title;
-            //}
-            //foreach (var song in Songs.Values)
-            //{
-            //    tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
-            //    foreach (string lang in new string[] { "en-US", "ko", "zh-TW", "zh-CN" })
-            //    {
-            //        tsv += "\t";
-            //        tsv += (song.TryGetTitle(lang, out string? title) ? title_prepend(title ?? "") : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? title_prepend(subtitle ?? "") : "");
-            //    }
-            //    tsv += "\n";
-            //}
-            //File.WriteAllText($"Resources{Path.DirectorySeparatorChar}result.tsv", tsv);
+            if (write_tsv)
+            {
+                Console.WriteLine($"Writing current songlist to 'Resources{Path.DirectorySeparatorChar}result.tsv'...");
+                string tsv = "";
+                string title_prepend(string title)
+                {
+                    return title.StartsWith('"') ? ("\"\"\"" + title) : title;
+                }
+                foreach (var song in Songs.Values)
+                {
+                    tsv += song.Genre + "\t" + song.Title + "\t" + song.Subtitle;
+                    foreach (string lang in new string[] { "en-US", "ko", "zh-TW", "zh-CN" })
+                    {
+                        tsv += "\t";
+                        tsv += (song.TryGetTitle(lang, out string? title) ? title_prepend(title ?? "") : "") + "\t" + (song.TryGetSubtitle(lang, out string? subtitle) ? title_prepend(subtitle ?? "") : "");
+                    }
+                    tsv += "\n";
+                }
+                File.WriteAllText($"Resources{Path.DirectorySeparatorChar}result.tsv", tsv);
+                Console.WriteLine("Done!");
+            }
         }
     }
 }

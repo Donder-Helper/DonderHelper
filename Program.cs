@@ -27,6 +27,8 @@ namespace DonderHelper
         public static async Task Main(params string[] args)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            if (args.Length > 0)
+                Console.WriteLine($"Running with args: {string.Join(' ', args)}");
 
             #region Build Songlist
             if (args.Contains("--build-songlist"))
@@ -38,7 +40,7 @@ namespace DonderHelper
                 try
                 {
                     SongDatabase.BuildSonglist();
-                    SongDatabase.WriteSonglist();
+                    SongDatabase.WriteSonglist(args.Contains("--write-tsv"));
                 }
                 catch
                 {
