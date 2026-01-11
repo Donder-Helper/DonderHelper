@@ -407,17 +407,6 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
-                    Name = "Touhou Project×Taiko no Tatsujin 2025",
-                    Value = "touhou2025",
-                    NameLocalizations =
-                    {
-                        { "ja", "東方Project×太鼓の達人2025" },
-                        { "ko", "동방 프로젝트×태고의 달인 2025" },
-                        { "zh-TW", "東方Project×太鼓之達人 2025" }
-                    }
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
                     Name = "『Got Boost?』キャンペーン",
                     Value = "kamen2025"
                 },
@@ -826,48 +815,6 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
-                            case "touhou2025":
-                            {
-                                string url = locale switch
-                                {
-                                    "ja" => "https://taiko.namco-ch.net/taiko/special/touhou2025/",
-                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/touhou2025/",
-                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/touhou2025/",
-                                    _ => "https://taiko.namco-ch.net/taiko/en/special/touhou2025/"
-                                };
-
-                                var touhou2025 = new EmbedBuilder()
-                                {
-                                    Title = locale switch
-                                    {
-                                        "ja" => "東方Project×太鼓の達人2025",
-                                        "ko" => "동방 프로젝트×태고의 달인 2025",
-                                        "zh-TW" => "東方Project×太鼓之達人 2025",
-                                        _ => "Touhou Project×Taiko no Tatsujin 2025"
-                                    },
-                                    Color = new(0xA2280C),
-                                    Url = url,
-                                    ImageUrl = locale switch
-                                    {
-                                        "ja" => "https://media.discordapp.net/attachments/967197984393670700/1426340424972242986/558387340_1313039120837519_6987645934930625894_n.jpg",
-                                        "ko" => "https://media.discordapp.net/attachments/967197984393670700/1426340425970487306/G27uF5oWsAEY6XD.jpg",
-                                        "zh-TW" => "https://media.discordapp.net/attachments/967197984393670700/1426340426503426149/G27uFKRXMAAA2Cb.jpg",
-                                        _ => "https://media.discordapp.net/attachments/967197984393670700/1426340425458778245/G27uERRW8AACGrT.jpg"
-                                    },
-                                    Description = LocaleData.GetString("CAMPAIGN_URL", locale , url) +
-                                    "\n" + LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=52") +
-                                    "\n\n" + LocaleData.GetString("CAMPAIGN_UNLOCKURL", locale, "[English](https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=1496060441#gid=1496060441) / [日本語](https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3/%E6%9D%B1%E6%96%B9Project%C3%97%E5%A4%AA%E9%BC%93%E3%81%AE%E9%81%94%E4%BA%BA%202025)") +
-                                    "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1768150800),
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-
-                                var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "神々が恋した幻想郷"));
-
-                                await command.RespondAsync(null, [touhou2025.Build()], false, false, null, component.Build());
-                                break;
-                            }
                             case "kamen2025":
                             {
                                 var kamen2025 = new EmbedBuilder()
