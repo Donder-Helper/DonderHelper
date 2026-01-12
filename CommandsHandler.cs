@@ -57,6 +57,7 @@ namespace DonderHelper
         private readonly DiscordSocketClient _client;
         private readonly CommandService _commands;
         private readonly Discord.Interactions.InteractionService _interaction;
+        private IReadOnlyCollection<SocketApplicationCommand> command_list = [];
 
         public CommandsHandler(DiscordSocketClient client, CommandService commands)
         {
@@ -243,6 +244,14 @@ namespace DonderHelper
                 InteractionContextType[] context_types = [InteractionContextType.Guild, InteractionContextType.BotDm, InteractionContextType.PrivateChannel];
                 ApplicationIntegrationType[] integration_types = [ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall];
                 Dictionary<string, string> test = new Dictionary<string, string>();
+
+                var command_help = new SlashCommandBuilder();
+                command_help.WithName("help");
+                command_help.WithDescription("Lists all available commands and their uses.");
+                command_help.WithNameLocalizations(LocaleData.GetStrings("COMMAND_HELP_NAME"));
+                command_help.WithDescriptionLocalizations(LocaleData.GetStrings("COMMAND_HELP_DESC"));
+                command_help.WithContextTypes(context_types);
+                command_help.WithIntegrationTypes(integration_types);
 
                 var command_random = new SlashCommandBuilder();
                 command_random.WithName("random");
@@ -529,14 +538,15 @@ namespace DonderHelper
                 command_invite.WithContextTypes(context_types);
                 command_invite.WithIntegrationTypes(integration_types);
 
-                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_gaiden.Build(), command_hiroba.Build(), command_missing.Build(), command_invite.Build()]);
+                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_help.Build(), command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_gaiden.Build(), command_hiroba.Build(), command_missing.Build(), command_invite.Build()]);
 
-                var command_list = await _client.GetGlobalApplicationCommandsAsync();
+                command_list = await _client.GetGlobalApplicationCommandsAsync(true) ?? [];
 
                 Console.WriteLine(command_list.Count + " global commands found.");
-                foreach (var command in command_list)
+                if (command_list.Count == 0) Console.WriteLine("Bruh??? Why are there zero commands???");
+                foreach (SocketApplicationCommand command in command_list)
                 {
-                    Console.WriteLine("Command name: " + command.Name + "\n" +
+                    Console.WriteLine("Command name: " + (command.Name ?? "null") + "\n" +
                         "Integrations: " + (command.IntegrationTypes != null ? string.Join(", ", command.IntegrationTypes) : "null") + "\n" +
                         "Contexts: " + (command.ContextTypes != null ? string.Join(", ", command.ContextTypes) : "null") + "\n");
                 }
@@ -698,6 +708,24 @@ namespace DonderHelper
                 string command_name = command.Data.Name;
                 switch (command_name)
                 {
+                    case "help":
+                    {
+                        var help = new EmbedBuilder() {};
+
+                        foreach (SocketApplicationCommand slashcommand in command_list ?? [])
+                        {
+                            if (string.IsNullOrWhiteSpace(slashcommand.Name)) continue;
+                            if (slashcommand.Name == "help") continue;
+
+                            help.AddField(
+                                "/" + (slashcommand.NameLocalizations.GetValueOrDefault(locale) ?? slashcommand.Name),
+                                slashcommand.DescriptionLocalizations.GetValueOrDefault(locale) ?? slashcommand.Description ?? "",
+                                true);
+                        };
+
+                        await command.RespondAsync(null, [help.Build()], false, false);
+                        break;
+                    }
                     case "random":
                     {
                         Random rand = new Random();

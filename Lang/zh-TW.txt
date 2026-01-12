@@ -2,6 +2,9 @@
 
 // Command Data
 
+COMMAND_HELP_NAME=help
+COMMAND_HELP_DESC=Lists all available commands and their uses.
+
 COMMAND_RANDOM_NAME=隨機
 COMMAND_RANDOM_DESC=隨機選擇歌曲。
 
