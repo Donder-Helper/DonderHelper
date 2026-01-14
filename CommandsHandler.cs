@@ -416,6 +416,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "Oodles of Outfits Campaign Winter 2025",
+                    Value = "winter2025",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "きせかえザクザクキャンペーン2025冬" },
+                        { "zh-TW", "換裝道具滿滿活動2025冬" },
+                        { "ko", "갈아입히기 아이템 듬뿍 캠페인 2025 겨울" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "『Got Boost?』キャンペーン",
                     Value = "kamen2025"
                 },
@@ -843,6 +854,29 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "winter2025":
+                            {
+                                var winter2025 = new EmbedBuilder()
+                                {
+                                    Title = locale switch
+                                    {
+                                        "ja" => "きせかえザクザクキャンペーン2025冬",
+                                        "zh-TW" => "換裝道具滿滿活動2025冬",
+                                        "ko" => "갈아입히기 아이템 듬뿍 캠페인 2025 겨울",
+                                        _ => "Oodles of Outfits Campaign Winter 2025"
+                                    },
+                                    Color = donShop_Winter_color,
+                                    Url = "https://www.facebook.com/photo/?fbid=1396519069156190&set=ecnf.100063943299686",
+                                    ThumbnailUrl = donShop_Winter_img,
+                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/01/d7e9fa9a9aede1e71079379f6575e85d.png",
+                                    Description = LocaleData.GetString("CAMPAIGN_UNLOCKURL", locale, "[English](https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/) / [日本語](https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3#campaign2025win)"
+                                    + "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1773594000)),
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+                                await command.RespondAsync(null, [winter2025.Build()], false, false);
+                                break;
+                            }
                             case "kamen2025":
                             {
                                 var kamen2025 = new EmbedBuilder()
