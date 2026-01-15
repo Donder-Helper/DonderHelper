@@ -844,7 +844,7 @@ namespace DonderHelper
                     }
                     case "region":
                     {
-                        await command.RespondAsync("Information on the region lock status of all songs can be found on this spreadsheet, courtesy of Taiko Time :\n<https://docs.google.com/spreadsheets/d/e/2PACX-1vQYGQxV5Azuid7cnnNAG5EZyRkFI2YAJCARHS1AAgH0uo7OPgbaWODWbAbmk3o4M4h44hENCitbndKP/pubhtml?gid=0&single=true>\nYou can also help Taiko Time by filling out this form when songs are added/updated :\n<https://forms.gle/49VyswkbbBDp1YB89>", null, false, false);
+                        await command.RespondAsync("Information on the region lock status of all songs can be found on this spreadsheet, courtesy of Taiko Time :\n<https://docs.google.com/spreadsheets/d/1Piucd3Wv-QVQJ_yMQjC1xV08Cl2IXGze_8bf8nQZGjs/>\nYou can also help Taiko Time by filling out this form when songs are added/updated :\n<https://forms.gle/49VyswkbbBDp1YB89>", null, false, false);
                         break;
                     }
                     case "campaign":
