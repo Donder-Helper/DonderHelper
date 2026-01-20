@@ -138,6 +138,8 @@ CAMPAIGN_SEASON_OUTFIT_NAME=きせかえザクザクキャンペーン{1}{0}
 // {1} : ITEM_INFO value
 CAMPAIGN_AIBATTLE_DESC=合計{0}勝：{1}
 
+CAMPAIGN_GOODS=グッズ
+
 // {0} : Season
 // {1} : Year
 SHOP_MEDAL_NAME=どんメダルショップ{1}{0}
@@ -234,7 +236,7 @@ DISCLAIMER_MISSING=タイトル「{0}」がないか、スペルが間違って�
 DISCLAIMER_ERROR=:warning: リクエストの処理中に何か問題が発生しました。このエラーはボットのメンテナに転送されました。
 
 // Do not use "*" for this.
-DISCLAIMER_NOUSA=＊ 北米を除くすべての地域でご利用いただけます。
+DISCLAIMER_NOUSA=＊ 北米では利用できません。
 DISCLAIMER_ONLYUSA=＊ 北米でのみ利用可能です。
 DISCLAIMER_ONLYJAPAN=＊ 日本国内のみでの販売となります。
 

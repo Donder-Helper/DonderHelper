@@ -138,6 +138,8 @@ CAMPAIGN_SEASON_OUTFIT_NAME=Oodles of Outfits Campaign {0} {1}
 // {1} : ITEM_INFO value
 CAMPAIGN_AIBATTLE_DESC={0} Wins: {1}
 
+CAMPAIGN_GOODS=Goods
+
 // {0} : Season
 // {1} : Year
 SHOP_MEDAL_NAME=Don Medal Shop {0} {1}
@@ -234,7 +236,7 @@ DISCLAIMER_MISSING=제목 “{0}”이 누락되었거나 철자가 잘못되었
 DISCLAIMER_ERROR=:warning: 요청을 처리하는 동안 문제가 발생했습니다. 이 오류는 봇 관리자에게 전달되었습니다.
 
 // Do not use "*" for this.
-DISCLAIMER_NOUSA=＊ Available in every region except North America.
+DISCLAIMER_NOUSA=＊ Unavailable in North America.
 DISCLAIMER_ONLYUSA=＊ Available only in North America.
 DISCLAIMER_ONLYJAPAN=＊ Available only in Japan.
 

@@ -138,6 +138,8 @@ CAMPAIGN_SEASON_OUTFIT_NAME=換裝道具滿滿活動{1}{0}
 // {1} : ITEM_INFO value
 CAMPAIGN_AIBATTLE_DESC=取得 {0} 次勝利：{1}
 
+CAMPAIGN_GOODS=Goods
+
 // {0} : Season
 // {1} : Year
 SHOP_MEDAL_NAME=咚幣商店{0} {1}

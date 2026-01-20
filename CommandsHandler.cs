@@ -416,6 +416,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "ARKNIGHTS × Taiko no Tatsujin Collaboration Campaign",
+                    Value = "arknights",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "アークナイツ×太鼓の達人 コラボキャンペーン" },
+                        { "zh-TW", "明日方舟×太鼓之達人 合作活動" },
+                        { "ko", "명일방주×태고의 달인 콜라보레이션 캠페인" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "Oodles of Outfits Campaign Winter 2025",
                     Value = "winter2025",
                     NameLocalizations = new Dictionary<string, string>()
@@ -427,8 +438,12 @@ namespace DonderHelper
                 },
                 new ApplicationCommandOptionChoiceProperties()
                 {
-                    Name = "『Got Boost?』キャンペーン",
-                    Value = "kamen2025"
+                    Name = "『Got Boost?』Campaign",
+                    Value = "kamen2025",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "『Got Boost?』キャンペーン" }
+                    }
                 },
                 new ApplicationCommandOptionChoiceProperties()
                 {
@@ -854,6 +869,48 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "arknights":
+                            {
+                                string url = locale switch
+                                {
+                                    "ja" => "https://taiko.namco-ch.net/taiko/special/arknights/",
+                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/arknights/",
+                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/arknights/",
+                                    _ => "https://taiko.namco-ch.net/taiko/en/special/arknights/"
+                                };
+
+                                var arknights = new EmbedBuilder()
+                                {
+                                    Title = locale switch
+                                    {
+                                        "ja" => "アークナイツ×太鼓の達人 コラボキャンペーン",
+                                        "zh-TW" => "明日方舟×太鼓之達人 合作活動",
+                                        "ko" => "명일방주×태고의 달인 콜라보레이션 캠페인",
+                                        _ => "ARKNIGHTS × Taiko no Tatsujin Collaboration Campaign"
+                                    },
+                                    Color = new(0x00ffff),
+                                    Url = url,
+                                    // Use Don or Katsu profile pictures from Arknights, based on user ID :^)
+                                    ThumbnailUrl = ((command.User?.Id ?? 1) % 2 == 1) ?
+                                    "https://arknights.wiki.gg/images/thumb/Enthusiastic_Don_Don_profile.png/120px-Enthusiastic_Don_Don_profile.png?b357de" :
+                                    "https://arknights.wiki.gg/images/thumb/Cheerful_Ka_Ka_profile.png/120px-Cheerful_Ka_Ka_profile.png?9961df",
+                                    ImageUrl = "https://pbs.twimg.com/media/G-xdGg-awAAYbVi?format=jpg&name=large",
+                                    Description =
+                                    $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
+                                    $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=54")}\n\n" +
+                                    $"__{LocaleData.GetString("ITEM_PUCHI", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774198800)}\n-# {LocaleData.GetString("DISCLAIMER_NOUSA", locale)}\n" +
+                                    $"__{LocaleData.GetString("CAMPAIGN_GOODS", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774803600)}\n-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+
+                                var component = new ComponentBuilder();
+                                component.WithButton(CreateSongButton(command, "Radiant"));
+                                component.WithButton(CreateSongButton(command, "Break Through the Dome"));
+
+                                await command.RespondAsync(null, [arknights.Build()], false, false, null, component.Build());
+                                break;
+                            }
                             case "winter2025":
                             {
                                 var winter2025 = new EmbedBuilder()
@@ -881,7 +938,7 @@ namespace DonderHelper
                             {
                                 var kamen2025 = new EmbedBuilder()
                                 {
-                                    Title = "『Got Boost?』キャンペーン",
+                                    Title = $"『Got Boost?』{(locale == "ja" ? "キャンペーン" : "Campaign")}",
                                     Color = new(0xD9358C),
                                     Url = "https://x.com/taiko_team/status/1904702341053636981",
                                     ImageUrl = "https://pbs.twimg.com/media/GmNSODdaoAAbrzI?format=jpg&name=large",
@@ -1448,7 +1505,7 @@ namespace DonderHelper
 
             return new() { 
                 Text = LocaleData.GetString("DISCLAIMER_WIP", locale) + "\n" + last_Update,
-                IconUrl = command.User.GetAvatarUrl()
+                IconUrl = command.User?.GetDisplayAvatarUrl() ?? ""
             };
         }
 
