@@ -894,7 +894,7 @@ namespace DonderHelper
                                     ThumbnailUrl = ((command.User?.Id ?? 1) % 2 == 1) ?
                                     "https://arknights.wiki.gg/images/thumb/Enthusiastic_Don_Don_profile.png/120px-Enthusiastic_Don_Don_profile.png?b357de" :
                                     "https://arknights.wiki.gg/images/thumb/Cheerful_Ka_Ka_profile.png/120px-Cheerful_Ka_Ka_profile.png?9961df",
-                                    ImageUrl = "https://pbs.twimg.com/media/G-xdGg-awAAYbVi?format=jpg&name=large",
+                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/12/cae4027c45f059c7c6d3fbb3cabf1318.png",
                                     Description =
                                     $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
                                     $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=54")}\n\n" +
