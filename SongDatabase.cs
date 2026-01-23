@@ -171,14 +171,14 @@ namespace DonderHelper
 
                 var split = csv.Split('\t');
 
-                for (int i = 1; i < split.Length; i++)
+                for (int i = 0; i < split.Length; i++)
                 {
                     string result = split[i];
-                    if (i == 1 && result == "CN")
+                    if (i == 0 && result == "CN")
                     {
                         song = new Song();
-                        song.SetTitle(split[2].Substring(5).Trim());
-                        song.SetPriorityGenre(GetGenre(split[2].Substring(1, 2)));
+                        song.SetTitle(split[1].Substring(5).Trim());
+                        song.SetPriorityGenre(GetGenre(split[1].Substring(1, 2)));
                         song.Region = new() { Japan = Availability.No, Asia = Availability.No, Oceania = Availability.No, UnitedStates = Availability.No, China = Availability.Yes };
                         break;
                     }
@@ -186,13 +186,13 @@ namespace DonderHelper
                     switch (i)
                     {
                         // Genre
-                        case 1:
+                        case 0:
                         {
                             song.AddGenre(GetGenre(result));
                             break;
                         }
                         // Title
-                        case 2:
+                        case 1:
                         {
                             if (result.StartsWith('"') && result.EndsWith('"'))
                                 result = result.Trim('"');
@@ -200,31 +200,31 @@ namespace DonderHelper
                             break;
                         }
                         // Japan
-                        case 3:
+                        case 2:
                         {
                             song.Region.Japan = GetAvailability(result);
                             break;
                         }
                         // Core Asia
-                        case 4:
+                        case 3:
                         {
                             song.Region.Asia = GetAvailability(result);
                             break;
                         }
                         // Oceania / Other Asia
-                        case 5:
+                        case 4:
                         {
                             song.Region.Oceania = GetAvailability(result);
                             break;
                         }
                         // North America
-                        case 6:
+                        case 5:
                         {
                             song.Region.UnitedStates = GetAvailability(result);
                             break;
                         }
                         // China
-                        case 7:
+                        case 6:
                         {
                             song.Region.China = GetAvailability(result);
                             break;
@@ -497,49 +497,6 @@ namespace DonderHelper
             #endregion
             Console.WriteLine($"Loaded {zh_count} Trad-Chinese titles.");
 
-            Console.WriteLine("Loading region lock data + adding Chinese-exclusive songs...");
-            #region Region Locks
-            if (File.Exists(__regionpath))
-            {
-                string[] songs = File.ReadAllLines(__regionpath);
-                foreach (string song in songs)
-                {
-                    Song _song = CreateSongFromCSVString(song);
-                    _song.SetTitle(FixReplace(_song.Title).Trim());
-
-                    if (Songs.ContainsKey(_song.Title))
-                    {
-                        string title = _song.Title;
-                        Songs[title].Region.Japan = _song.Region.Japan;
-                        Songs[title].Region.Asia = _song.Region.Asia;
-                        Songs[title].Region.Oceania = _song.Region.Oceania;
-                        Songs[title].Region.UnitedStates = _song.Region.UnitedStates;
-                        Songs[title].Region.China = _song.Region.China;
-                    }
-                    // Chinese-exclusive songs are not listed on fumen-toka's main page, so let's add them here
-                    else if (_song.Region.IsChinaOnly)
-                    {
-                        Songs.TryAdd(_song.Title, _song);
-                        SongNames.TryAdd(_song.Title, _song.Title);
-                    }
-
-                    // Sou-uchi check
-                    string souuchi = "【双打】 " + _song.Title;
-                    if (Songs.ContainsKey(souuchi))
-                    {
-                        string title = _song.Title;
-                        Songs[souuchi].Region.Japan = _song.Region.Japan;
-                        Songs[souuchi].Region.Asia = _song.Region.Asia;
-                        Songs[souuchi].Region.Oceania = _song.Region.Oceania;
-                        Songs[souuchi].Region.UnitedStates = _song.Region.UnitedStates;
-                        Songs[souuchi].Region.China = _song.Region.China;
-                    }
-                }
-            }
-            else
-                Console.WriteLine("File containing region locks could not be found.");
-            #endregion
-
             Console.WriteLine("Loading Sim-Chinese data...");
             #region Titles/Subtitles (Simp. Chinese)
             int cn_count = 0;
@@ -659,6 +616,49 @@ namespace DonderHelper
             }
             #endregion
             Console.WriteLine($"Loaded {ko_count} Korean titles.");
+
+            Console.WriteLine("Loading region lock data + adding Chinese-exclusive songs...");
+            #region Region Locks
+            if (File.Exists(__regionpath))
+            {
+                string[] songs = File.ReadAllLines(__regionpath);
+                foreach (string song in songs)
+                {
+                    Song _song = CreateSongFromCSVString(song);
+                    _song.SetTitle(FixReplace(_song.Title).Trim());
+
+                    string title = _song.Title;
+                    if (SongNames.ContainsKey(title)) title = SongNames[title];
+                    if (Songs.ContainsKey(title))
+                    {
+                        Songs[title].Region.Japan = _song.Region.Japan;
+                        Songs[title].Region.Asia = _song.Region.Asia;
+                        Songs[title].Region.Oceania = _song.Region.Oceania;
+                        Songs[title].Region.UnitedStates = _song.Region.UnitedStates;
+                        Songs[title].Region.China = _song.Region.China;
+                    }
+                    // Chinese-exclusive songs are not listed on fumen-toka's main page, so let's add them here
+                    else if (_song.Region.IsChinaOnly)
+                    {
+                        Songs.TryAdd(_song.Title, _song);
+                        SongNames.TryAdd(_song.Title, _song.Title);
+                    }
+
+                    // Sou-uchi check
+                    string souuchi = "【双打】 " + _song.Title;
+                    if (Songs.ContainsKey(souuchi))
+                    {
+                        Songs[souuchi].Region.Japan = _song.Region.Japan;
+                        Songs[souuchi].Region.Asia = _song.Region.Asia;
+                        Songs[souuchi].Region.Oceania = _song.Region.Oceania;
+                        Songs[souuchi].Region.UnitedStates = _song.Region.UnitedStates;
+                        Songs[souuchi].Region.China = _song.Region.China;
+                    }
+                }
+            }
+            else
+                Console.WriteLine("File containing region locks could not be found.");
+            #endregion
 
             // Use fumen-database oni spreadsheet to assign correct (main) genre
             #region Main genre correction

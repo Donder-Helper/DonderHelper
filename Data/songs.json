@@ -1,11 +1,11 @@
 {
   "IRIS OUT": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -137,11 +137,11 @@
   },
   "汚れなきクソ野郎ども": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -273,11 +273,11 @@
   },
   "Daddy's Style -今夜はダディダディ-": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -410,11 +410,11 @@
   },
   "残酷な夜に輝け": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -436,7 +436,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%2F%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91",
         "UrlKo": "https://taiko.wiki/song/1442?diff=easy",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91/::ref/%E8%B5%A4%E5%BA%A7_e.png?rev=0bb49b112848632e206ed8f9d7ef790a&t=20251224220837"
       },
@@ -459,7 +459,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%B5%E3%81%A4%E3%81%86%2F%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91",
         "UrlKo": "https://taiko.wiki/song/1442?diff=normal",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91/::ref/%E8%B5%A4%E5%BA%A7_n.png?rev=ed3e0168758548f37226b5df81a03200&t=20251224220750"
       },
@@ -482,7 +482,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84%2F%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91",
         "UrlKo": "https://taiko.wiki/song/1442?diff=hard",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%AE%8B%E9%85%B7%E3%81%AA%E5%A4%9C%E3%81%AB%E8%BC%9D%E3%81%91/::ref/%E8%B5%A4%E5%BA%A7_h.png?rev=50df36161efbc825c3b6f3e2f302fddd&t=20251224220628"
       },
@@ -692,11 +692,11 @@
   },
   "カーマイン": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -718,7 +718,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%2F%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3",
         "UrlKo": "https://taiko.wiki/song/1443?diff=easy",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3/::ref/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3_e.png?rev=18c62d4281aa0daa00fee29217ca2fe3&t=20251224223956"
       },
@@ -741,7 +741,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%B5%E3%81%A4%E3%81%86%2F%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3",
         "UrlKo": "https://taiko.wiki/song/1443?diff=normal",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3/::ref/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3_n.png?rev=684f8c3dafa2a26a3f870ecc9e3440a6&t=20251224224000"
       },
@@ -764,7 +764,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84%2F%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%9D%E3%83%83%E3%83%97%E3%82%B9",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3",
         "UrlKo": "https://taiko.wiki/song/1443?diff=hard",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3/::ref/%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%83%B3_h.png?rev=32b76536bed847b7218ed93964b1366d&t=20251224224005"
       },
@@ -831,9 +831,9 @@
   "怪獣": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -970,9 +970,9 @@
   "Love Love Love Love Loveばきゅーんっ!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -1108,9 +1108,9 @@
   "倍倍FIGHT!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -1249,7 +1249,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -1385,10 +1385,10 @@
   "愛♡スクリ~ム!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -1524,9 +1524,9 @@
   "On-Party!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -1662,9 +1662,9 @@
   "I wonder": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -1937,9 +1937,9 @@
   "テトリス": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2076,9 +2076,9 @@
   "イガク": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -2215,10 +2215,10 @@
   "ケセラセラ": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -2494,10 +2494,10 @@
   "NEW KAWAII": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -2912,10 +2912,10 @@
   "バブリー革命 ~ばんばんバブル~": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -3054,7 +3054,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -3192,7 +3192,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -3471,7 +3471,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -3751,7 +3751,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -4170,7 +4170,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -23515,11 +23515,11 @@
   },
   "Jun Bride": {
     "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 1,
-      "China": 1
+      "Japan": 0,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -26416,9 +26416,9 @@
   "永不失聯的愛 Unbreakable Love": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
       "China": 1
     },
     "Difficulties": {
@@ -26555,9 +26555,9 @@
   "YIN XING DE CHI BANG": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
       "China": 1
     },
     "Difficulties": {
@@ -26694,9 +26694,9 @@
   "Those Bygone Years": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
       "China": 1
     },
     "Difficulties": {
@@ -26830,13 +26830,150 @@
       0
     ]
   },
+  "千年之恋": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 2,
+        "NoteCount": {
+          "Single": {
+            "Normal": 64,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B",
+        "UrlKo": "https://taiko.wiki/song/1373?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_e.png?rev=3d9e191fdb87d503974350eac0ab1714&t=20260115204455"
+      },
+      "Normal": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 114,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B",
+        "UrlKo": "https://taiko.wiki/song/1373?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_n.png?rev=57f5d759d6be89fab3d54cd2917fb2a5&t=20260115204449"
+      },
+      "Hard": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 196,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B",
+        "UrlKo": "https://taiko.wiki/song/1373?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_h.png?rev=b89e05cbfa5461e29e89598be3544ef7&t=20260115204441"
+      },
+      "Extreme": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 389,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B",
+        "UrlKo": "https://taiko.wiki/song/1373?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_3.png?rev=84a9e5bd3fc507bd145015cb27301bd0&t=20260114183226"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1373?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "千年之恋",
+      "ko": "QIAN NIAN ZHI LIAN",
+      "ALIAS-ko": "천년의 사랑"
+    },
+    "SubtitleList": {
+      "ja": ""
+    },
+    "GenreList": [
+      0
+    ]
+  },
   "GET BACK": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -26858,7 +26995,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%2FGET+BACK&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%82%AD%E3%83%83%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/GET%20BACK",
         "UrlKo": "https://taiko.wiki/song/1444?diff=easy",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/GET%20BACK/::ref/GB_e.png?rev=6ef81185a7ac02c602b3430ce9f907a9&t=20251223202307"
       },
@@ -26881,7 +27018,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%B5%E3%81%A4%E3%81%86%2FGET+BACK&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%82%AD%E3%83%83%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/GET%20BACK",
         "UrlKo": "https://taiko.wiki/song/1444?diff=normal",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/GET%20BACK/::ref/GB_n.png?rev=c6a92daa9cd63a3d212d03f76cec1e55&t=20251223202221"
       },
@@ -26904,7 +27041,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84%2FGET+BACK&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%82%AD%E3%83%83%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/GET%20BACK",
         "UrlKo": "https://taiko.wiki/song/1444?diff=hard",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/GET%20BACK/::ref/GB_h.png?rev=c87cafcf0cd490862bf4fdbc2d1b3264&t=20251223202059"
       },
@@ -27108,11 +27245,11 @@
   },
   "VISIONS": {
     "Region": {
-      "Japan": -1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": -1
+      "Japan": 1,
+      "Asia": 0,
+      "Oceania": 0,
+      "UnitedStates": 0,
+      "China": 0
     },
     "Difficulties": {
       "Easy": {
@@ -27134,7 +27271,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%2FVISIONS&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%82%AD%E3%83%83%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/VISIONS",
         "UrlKo": "https://taiko.wiki/song/1445?diff=easy",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/VISIONS/::ref/%E3%82%BC%E3%83%83%E3%83%84_e.png?rev=e11749f27920266b9a6b7610d949ba43&t=20251218222535"
       },
@@ -27157,7 +27294,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%B5%E3%81%A4%E3%81%86%2FVISIONS&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%82%AD%E3%83%83%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/VISIONS",
         "UrlKo": "https://taiko.wiki/song/1445?diff=normal",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/VISIONS/::ref/%E3%82%BC%E3%83%83%E3%83%84_n.png?rev=ec5058f6494ca4a62961e2a33524c7e5&t=20251218222439"
       },
@@ -27244,10 +27381,10 @@
   "WINNER!ゴジュウジャー!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -27522,9 +27659,9 @@
   "キミとアイドルプリキュア♪ Light Up!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 0,
+      "UnitedStates": 0,
       "China": 0
     },
     "Difficulties": {
@@ -35933,7 +36070,7 @@
     "Region": {
       "Japan": 1,
       "Asia": 1,
-      "Oceania": 1,
+      "Oceania": 0,
       "UnitedStates": 0,
       "China": 0
     },
@@ -36909,10 +37046,10 @@
   "雑踏、僕らの街": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -46098,9 +46235,9 @@
   "★楽園☆CASINO GALAXY!": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
       "China": 0
     },
     "Difficulties": {
@@ -46236,9 +46373,9 @@
   "アイドル戦士(feat. 初音ミク)": {
     "Region": {
       "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
       "China": 0
     },
     "Difficulties": {
@@ -57383,418 +57520,6 @@
       2
     ]
   },
-  "初": {
-    "Region": {
-      "Japan": 1,
-      "Asia": -1,
-      "Oceania": -1,
-      "UnitedStates": -1,
-      "China": 0
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 2,
-        "NoteCount": {
-          "Single": {
-            "Normal": 61,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%88%9D",
-        "UrlKo": "https://taiko.wiki/song/1417?diff=easy",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%88%9D/::ref/%E5%88%9D_e.png?rev=4dafc5bda2bb725b13f49db51ca06c9c&t=20250910225525"
-      },
-      "Normal": {
-        "Level": 3,
-        "NoteCount": {
-          "Single": {
-            "Normal": 112,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%88%9D",
-        "UrlKo": "https://taiko.wiki/song/1417?diff=normal",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%88%9D/::ref/%E5%88%9D_n.png?rev=dfee4d65ac94faf54d90bb247768d5f7&t=20250910225443"
-      },
-      "Hard": {
-        "Level": 5,
-        "NoteCount": {
-          "Single": {
-            "Normal": 251,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%88%9D",
-        "UrlKo": "https://taiko.wiki/song/1417?diff=hard",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%88%9D/::ref/%E5%88%9D_h.png?rev=14825ff8e84a4b0b711ee38a927aefae&t=20250910225348"
-      },
-      "Extreme": {
-        "Level": 7,
-        "NoteCount": {
-          "Single": {
-            "Normal": 416,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%88%9D",
-        "UrlKo": "https://taiko.wiki/song/1417?diff=oni",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%88%9D/::ref/%E5%88%9D.png?rev=59c18e6f665caae85475fea44104e7df&t=20250910083520"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1417?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "初",
-      "en-US": "Hajime",
-      "ALIAS-ko": "처음"
-    },
-    "SubtitleList": {
-      "ja": "「学園アイドルマスター」より",
-      "en-US": "From \" THE IDOLM@STER Gakuen \""
-    },
-    "GenreList": [
-      2
-    ]
-  },
-  "Radiant": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 4,
-        "NoteCount": {
-          "Single": {
-            "Normal": 150,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Radiant",
-        "UrlKo": "https://taiko.wiki/song/1377?diff=easy",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Radiant/::ref/Radiant_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93.png?rev=26cbfe554ba5136ffc46866810329634&t=20250725174031"
-      },
-      "Normal": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 275,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Radiant",
-        "UrlKo": "https://taiko.wiki/song/1377?diff=normal",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Radiant/::ref/Radiant_%E3%81%B5%E3%81%A4%E3%81%86.png?rev=4087b9ec7299134c2dd45932fee31bd0&t=20250725174041"
-      },
-      "Hard": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 384,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Radiant",
-        "UrlKo": "https://taiko.wiki/song/1377?diff=hard",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Radiant/::ref/Radiant_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=7f36269b2b0989931e8e9d317883b7f4&t=20250725174052"
-      },
-      "Extreme": {
-        "Level": 8,
-        "NoteCount": {
-          "Single": {
-            "Normal": 557,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Radiant",
-        "UrlKo": "https://taiko.wiki/song/1377?diff=oni",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Radiant/::ref/Radiant.png?rev=44ce43688991c0b891c10ead2ef03155&t=20250723111820"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1377?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "Radiant",
-      "en-US": "Radiant"
-    },
-    "SubtitleList": {
-      "ja": "「アークナイツ -明日方舟-」より",
-      "en-US": "From \" ARKNIGHTS \""
-    },
-    "GenreList": [
-      2
-    ]
-  },
-  "Break Through the Dome": {
-    "Region": {
-      "Japan": 1,
-      "Asia": 1,
-      "Oceania": 1,
-      "UnitedStates": 0,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": 3,
-        "NoteCount": {
-          "Single": {
-            "Normal": 138,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Break%20Through%20the%20Dome",
-        "UrlKo": "https://taiko.wiki/song/1378?diff=easy",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93_2.png?rev=4967cfea4efacf356e22dd2bb7ea58d3&t=20250725213112"
-      },
-      "Normal": {
-        "Level": 6,
-        "NoteCount": {
-          "Single": {
-            "Normal": 228,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Break%20Through%20the%20Dome",
-        "UrlKo": "https://taiko.wiki/song/1378?diff=normal",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%81%B5%E3%81%A4%E3%81%86_2.png?rev=f52b6ee4e6a1848cc01a61b96524f2fa&t=20250725213122"
-      },
-      "Hard": {
-        "Level": 7,
-        "NoteCount": {
-          "Single": {
-            "Normal": 499,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Break%20Through%20the%20Dome",
-        "UrlKo": "https://taiko.wiki/song/1378?diff=hard",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=78946bde3674046316231199a9c167ba&t=20250725190839"
-      },
-      "Extreme": {
-        "Level": 9,
-        "NoteCount": {
-          "Single": {
-            "Normal": 913,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Break%20Through%20the%20Dome",
-        "UrlKo": "https://taiko.wiki/song/1378?diff=oni",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome.png?rev=e95cffc5372a9b7df39d5bc3b0efb238&t=20250723072152"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1378?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "Break Through the Dome",
-      "en-US": "Break Through the Dome"
-    },
-    "SubtitleList": {
-      "ja": "「アークナイツ -明日方舟-」より",
-      "en-US": "From \" ARKNIGHTS \""
-    },
-    "GenreList": [
-      2
-    ]
-  },
   "ゼルダの伝説 ブレス オブ ザ ワイルド メドレー": {
     "Region": {
       "Japan": 1,
@@ -58484,6 +58209,280 @@
       "ja": "ミツキヨ Remixed by モリモリあつし モバイルゲーム「ブルーアーカイブ」より",
       "en-US": "Miysukiyo Remixed by Morimori Atsushi From Mobile Game \" Blue Archive \"",
       "zh-CN": "Mitsukiyo Remixed by Morimori Atsushi 出自 手机游戏\"蔚蓝档案\""
+    },
+    "GenreList": [
+      2
+    ]
+  },
+  "Radiant": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 150,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Radiant",
+        "UrlKo": "https://taiko.wiki/song/1377?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Radiant/::ref/Radiant_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93.png?rev=26cbfe554ba5136ffc46866810329634&t=20250725174031"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 275,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Radiant",
+        "UrlKo": "https://taiko.wiki/song/1377?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Radiant/::ref/Radiant_%E3%81%B5%E3%81%A4%E3%81%86.png?rev=4087b9ec7299134c2dd45932fee31bd0&t=20250725174041"
+      },
+      "Hard": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 384,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Radiant",
+        "UrlKo": "https://taiko.wiki/song/1377?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Radiant/::ref/Radiant_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=7f36269b2b0989931e8e9d317883b7f4&t=20250725174052"
+      },
+      "Extreme": {
+        "Level": 8,
+        "NoteCount": {
+          "Single": {
+            "Normal": 557,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Radiant",
+        "UrlKo": "https://taiko.wiki/song/1377?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Radiant/::ref/Radiant.png?rev=44ce43688991c0b891c10ead2ef03155&t=20250723111820"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1377?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Radiant",
+      "en-US": "Radiant"
+    },
+    "SubtitleList": {
+      "ja": "「アークナイツ -明日方舟-」より",
+      "en-US": "From \" ARKNIGHTS \""
+    },
+    "GenreList": [
+      2
+    ]
+  },
+  "Break Through the Dome": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 138,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Break%20Through%20the%20Dome",
+        "UrlKo": "https://taiko.wiki/song/1378?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93_2.png?rev=4967cfea4efacf356e22dd2bb7ea58d3&t=20250725213112"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 228,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Break%20Through%20the%20Dome",
+        "UrlKo": "https://taiko.wiki/song/1378?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%81%B5%E3%81%A4%E3%81%86_2.png?rev=f52b6ee4e6a1848cc01a61b96524f2fa&t=20250725213122"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 499,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Break%20Through%20the%20Dome",
+        "UrlKo": "https://taiko.wiki/song/1378?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=78946bde3674046316231199a9c167ba&t=20250725190839"
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 913,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Break%20Through%20the%20Dome",
+        "UrlKo": "https://taiko.wiki/song/1378?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Break%20Through%20the%20Dome/::ref/Break%20Through%20the%20Dome.png?rev=e95cffc5372a9b7df39d5bc3b0efb238&t=20250723072152"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1378?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Break Through the Dome",
+      "en-US": "Break Through the Dome"
+    },
+    "SubtitleList": {
+      "ja": "「アークナイツ -明日方舟-」より",
+      "en-US": "From \" ARKNIGHTS \""
     },
     "GenreList": [
       2
@@ -69431,6 +69430,144 @@
       2
     ]
   },
+  "初": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
+      "China": 0
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 2,
+        "NoteCount": {
+          "Single": {
+            "Normal": 61,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%88%9D",
+        "UrlKo": "https://taiko.wiki/song/1417?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%88%9D/::ref/%E5%88%9D_e.png?rev=4dafc5bda2bb725b13f49db51ca06c9c&t=20250910225525"
+      },
+      "Normal": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 112,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%88%9D",
+        "UrlKo": "https://taiko.wiki/song/1417?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%88%9D/::ref/%E5%88%9D_n.png?rev=dfee4d65ac94faf54d90bb247768d5f7&t=20250910225443"
+      },
+      "Hard": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 251,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%88%9D",
+        "UrlKo": "https://taiko.wiki/song/1417?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%88%9D/::ref/%E5%88%9D_h.png?rev=14825ff8e84a4b0b711ee38a927aefae&t=20250910225348"
+      },
+      "Extreme": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 416,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%88%9D",
+        "UrlKo": "https://taiko.wiki/song/1417?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%88%9D/::ref/%E5%88%9D.png?rev=59c18e6f665caae85475fea44104e7df&t=20250910083520"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1417?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "初",
+      "en-US": "Hajime",
+      "ALIAS-ko": "처음"
+    },
+    "SubtitleList": {
+      "ja": "「学園アイドルマスター」より",
+      "en-US": "From \" THE IDOLM@STER Gakuen \""
+    },
+    "GenreList": [
+      2
+    ]
+  },
   "LUNATiC CiRCUiT": {
     "Region": {
       "Japan": 1,
@@ -76501,7 +76638,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -87237,7 +87374,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -92932,7 +93069,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1414?diff=easy",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%A1%82%E6%9C%88/::ref/%E6%A1%82%E6%9C%88_%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93.png?rev=61fdea31154b9736705771bc810faf94&t=20260121232510"
       },
       "Normal": {
         "Level": 5,
@@ -92955,7 +93092,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1414?diff=normal",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%A1%82%E6%9C%88/::ref/%E6%A1%82%E6%9C%88_%E3%81%B5%E3%81%A4%E3%81%86.png?rev=b5ba3bfc6eee70dd5c421cc9803902ef&t=20260121232509"
       },
       "Hard": {
         "Level": 6,
@@ -92978,7 +93115,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1414?diff=hard",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%A1%82%E6%9C%88/::ref/%E6%A1%82%E6%9C%88_%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=799559779a6d889f4e0400308170d52a&t=20260121232508"
       },
       "Extreme": {
         "Level": 8,
@@ -93069,9 +93206,9 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%2F%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91+%E6%A1%82%E6%9C%88&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%8A%E3%83%A0%E3%82%B3%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91%20%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1430?diff=easy",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91%20%E6%A1%82%E6%9C%88/::ref/%E6%A1%82%E6%9C%88%E5%8F%8C%E6%89%93_e.png?rev=5ddd696584f72f75992bd18b7b9c2303&t=20260122192035"
       },
       "Normal": {
         "Level": 4,
@@ -93092,9 +93229,9 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%81%B5%E3%81%A4%E3%81%86%2F%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91+%E6%A1%82%E6%9C%88&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%8A%E3%83%A0%E3%82%B3%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91%20%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1430?diff=normal",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91%20%E6%A1%82%E6%9C%88/::ref/%E6%A1%82%E6%9C%88%E5%8F%8C%E6%89%93_n.png?rev=185460062f9eeba2c39eb6a17e8049de&t=20260122190920"
       },
       "Hard": {
         "Level": 5,
@@ -93115,7 +93252,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/::cmd/edit?page=%E5%8F%8E%E9%8C%B2%E6%9B%B2%2F%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84%2F%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91+%E6%A1%82%E6%9C%88&refer=%E4%BD%9C%E5%93%81%2F%E6%96%B0AC%2F%E3%83%8A%E3%83%A0%E3%82%B3%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%80%90%E5%8F%8C%E6%89%93%E3%80%91%20%E6%A1%82%E6%9C%88",
         "UrlKo": "https://taiko.wiki/song/1430?diff=hard",
         "ImageUrl": ""
       },
@@ -93603,7 +93740,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -94434,7 +94571,7 @@
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 0
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94571,7 +94708,7 @@
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 0
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94708,7 +94845,7 @@
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 0
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94846,7 +94983,7 @@
       "Asia": 4,
       "Oceania": 4,
       "UnitedStates": 4,
-      "China": 0
+      "China": 4
     },
     "Difficulties": {
       "Easy": {
@@ -94985,7 +95122,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -95261,7 +95398,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -95400,7 +95537,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -97190,7 +97327,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -97328,7 +97465,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -97465,7 +97602,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -98158,7 +98295,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -98295,7 +98432,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -98432,7 +98569,7 @@
       "Asia": 1,
       "Oceania": 1,
       "UnitedStates": 1,
-      "China": 0
+      "China": 1
     },
     "Difficulties": {
       "Easy": {
@@ -117219,7 +117356,7 @@
       "Japan": 6,
       "Asia": 6,
       "Oceania": 6,
-      "UnitedStates": 7,
+      "UnitedStates": 0,
       "China": 6
     },
     "Difficulties": {
@@ -170008,143 +170145,6 @@
       7
     ]
   },
-  "千年之恋": {
-    "Region": {
-      "Japan": 0,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
-      "China": 1
-    },
-    "Difficulties": {
-      "Easy": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 64,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1373?diff=easy",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_e.png?rev=3d9e191fdb87d503974350eac0ab1714&t=20260115204455"
-      },
-      "Normal": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 114,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1373?diff=normal",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_n.png?rev=57f5d759d6be89fab3d54cd2917fb2a5&t=20260115204449"
-      },
-      "Hard": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 196,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1373?diff=hard",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_h.png?rev=b89e05cbfa5461e29e89598be3544ef7&t=20260115204441"
-      },
-      "Extreme": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 389,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1373?diff=oni",
-        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B/::ref/%E5%8D%83%E5%B9%B4%E4%B9%8B%E6%81%8B_3.png?rev=84a9e5bd3fc507bd145015cb27301bd0&t=20260114183226"
-      },
-      "Hidden": {
-        "Level": -1,
-        "NoteCount": {
-          "Single": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double1P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          },
-          "Double2P": {
-            "Normal": 0,
-            "Expert": 0,
-            "Tatsujin": 0
-          }
-        },
-        "Url": "",
-        "UrlKo": "https://taiko.wiki/song/1373?diff=ura",
-        "ImageUrl": ""
-      }
-    },
-    "TitleList": {
-      "ja": "千年之恋",
-      "ko": "QIAN NIAN ZHI LIAN",
-      "ALIAS-ko": "천년의 사랑"
-    },
-    "SubtitleList": {
-      "ja": ""
-    },
-    "GenreList": [
-      0
-    ]
-  },
   "拔蘿蔔": {
     "Region": {
       "Japan": 0,
@@ -170290,7 +170290,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 90,
@@ -170308,12 +170308,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%8D%95%E9%AD%9A%E6%AD%8C",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 120,
@@ -170331,12 +170331,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%8D%95%E9%AD%9A%E6%AD%8C",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": 4,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 256,
@@ -170354,12 +170354,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%8D%95%E9%AD%9A%E6%AD%8C",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 6,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 366,
@@ -170377,7 +170377,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E6%8D%95%E9%AD%9A%E6%AD%8C",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -170406,8 +170406,7 @@
       }
     },
     "TitleList": {
-      "ja": "捕魚歌",
-      "zh-CN": "捕鱼歌"
+      "ja": "捕魚歌"
     },
     "SubtitleList": {
       "ja": ""
@@ -170426,7 +170425,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170444,12 +170443,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170467,12 +170466,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": 3,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170490,12 +170489,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 6,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 349,
@@ -170513,7 +170512,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%85%A9%E9%9A%BB%E8%80%81%E8%99%8E",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -170542,8 +170541,7 @@
       }
     },
     "TitleList": {
-      "ja": "兩隻老虎",
-      "zh-CN": "两只老虎"
+      "ja": "兩隻老虎"
     },
     "SubtitleList": {
       "ja": ""
@@ -170562,7 +170560,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 1,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 76,
@@ -170580,12 +170578,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E9%83%B7%E4%B8%8B%E8%80%81%E9%BC%A0",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": 1,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 85,
@@ -170603,12 +170601,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E9%83%B7%E4%B8%8B%E8%80%81%E9%BC%A0",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 115,
@@ -170626,12 +170624,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E9%83%B7%E4%B8%8B%E8%80%81%E9%BC%A0",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 3,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 192,
@@ -170649,7 +170647,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E9%83%B7%E4%B8%8B%E8%80%81%E9%BC%A0",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -170678,8 +170676,7 @@
       }
     },
     "TitleList": {
-      "ja": "郷下老鼠",
-      "zh-CN": "乡下老鼠"
+      "ja": "郷下老鼠"
     },
     "SubtitleList": {
       "ja": ""
@@ -170698,7 +170695,7 @@
     },
     "Difficulties": {
       "Easy": {
-        "Level": 1,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170716,12 +170713,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Normal": {
-        "Level": 2,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170739,12 +170736,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Hard": {
-        "Level": 3,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -170762,12 +170759,12 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
       "Extreme": {
-        "Level": 7,
+        "Level": -1,
         "NoteCount": {
           "Single": {
             "Normal": 322,
@@ -170785,7 +170782,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E5%B0%8F%E6%AF%9B%E9%A9%A2",
+        "Url": "",
         "UrlKo": "",
         "ImageUrl": ""
       },
@@ -170814,8 +170811,7 @@
       }
     },
     "TitleList": {
-      "ja": "小毛驢",
-      "zh-CN": "小毛驴"
+      "ja": "小毛驢"
     },
     "SubtitleList": {
       "ja": ""
