@@ -57253,9 +57253,9 @@
   "Oshama Scramble!": {
     "Region": {
       "Japan": 1,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -57388,9 +57388,9 @@
   "Valsqotch": {
     "Region": {
       "Japan": 1,
-      "Asia": 0,
-      "Oceania": 0,
-      "UnitedStates": 0,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 1,
       "China": 0
     },
     "Difficulties": {
@@ -95005,7 +95005,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/SORA-III%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
         "UrlKo": "https://taiko.wiki/song/1422?diff=easy",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA/::ref/sora3x.png?rev=51c65a101da0f89540467f3cef1d3371&t=20230225172234"
       },
@@ -95028,7 +95028,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/SORA-III%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
         "UrlKo": "https://taiko.wiki/song/1422?diff=normal",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA/::ref/sora3x.png?rev=a65749fe0d8b82103a066526923dda25&t=20230225172328"
       },
@@ -95051,7 +95051,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/SORA-III%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
         "UrlKo": "https://taiko.wiki/song/1422?diff=hard",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA/::ref/sora3x.png?rev=a74b7d7cb73d402846d1d124a94a4ad9&t=20230225172417"
       },
@@ -95074,7 +95074,7 @@
             "Tatsujin": 0
           }
         },
-        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/SORA-III%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA",
         "UrlKo": "https://taiko.wiki/song/1422?diff=oni",
         "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/SORA%E2%80%90%E2%85%A2%20%E3%83%98%E3%83%AA%E3%82%AA%E3%83%9D%E3%83%BC%E3%82%BA/::ref/sora3xf2.png?rev=419e7cb6dc758e8168784b8c824db9f4&t=20230225172507"
       },
@@ -97012,10 +97012,10 @@
         "ImageUrl": "https://file.taiko.wiki/img/983f2162-92d1-4692-8378-c797b217ee12"
       },
       "Hidden": {
-        "Level": -1,
+        "Level": 10,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 694,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -97030,9 +97030,9 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Ka.Ma.Se%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
         "UrlKo": "https://taiko.wiki/song/1393?diff=ura",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Ka.Ma.Se%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29/::ref/Ka.Ma.Se_EX.png?rev=e22f2912ec662f15d87dbea8ea99f38c&t=20260124072330"
       }
     },
     "TitleList": {
@@ -97561,10 +97561,10 @@
         "ImageUrl": "https://file.taiko.wiki/img/2d83f46d-d722-46fb-a9c2-72a3546cf778"
       },
       "Hidden": {
-        "Level": -1,
+        "Level": 10,
         "NoteCount": {
           "Single": {
-            "Normal": 0,
+            "Normal": 1123,
             "Expert": 0,
             "Tatsujin": 0
           },
@@ -97579,9 +97579,9 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Extreme%20End%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
         "UrlKo": "https://taiko.wiki/song/1370?diff=ura",
-        "ImageUrl": ""
+        "ImageUrl": "https://file.taiko.wiki/img/061db180-c08d-4276-a426-b9ad89ead949"
       }
     },
     "TitleList": {
