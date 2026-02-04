@@ -1,5 +1,10 @@
 // DO NOT RENAME THE VARIABLES! Only change its values to the right of the '=' symbol.
 
+// Intended for locales supported on Discord, but not supported on Nijiiro.
+// Otherwise, match this with the file name.
+// Prioritizes Titles/Subtitles that are ideal for this language.
+PREFERRED_LOCALE=ja
+
 // Command Data
 
 COMMAND_HELP_NAME=help

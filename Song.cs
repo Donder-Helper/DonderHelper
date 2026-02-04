@@ -279,12 +279,14 @@ namespace DonderHelper
                 TitleList.Remove(lang);
             TitleList.Add(lang, title);
         }
-        public string GetTitle(string lang = "ja") => TitleList.TryGetValue(lang, out string? output) ? output : Title;
-        public bool TryGetTitle(string lang, out string? title) => TitleList.TryGetValue(lang, out title);
+        public string GetTitle(string lang = "ja") => TitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out string? output) ? output : Title;
+        public bool TryGetTitle(string lang, out string? title) => TitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out title);
         public string GetTitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> titles = [];
             List<string> locales = [ "ja", "en-US", "ko", "zh-TW", "zh-CN" ];
+            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetString("PREFERRED_LOCALE", priority_locale);
+
             if (TryGetTitle(priority_locale, out string? title))
             {
                 titles.Add((include_emoji ? LocaleData.GetLocaleAsEmoji(priority_locale) + " " : "") + (title ?? ""));
@@ -309,12 +311,14 @@ namespace DonderHelper
                 SubtitleList.Remove(lang);
             SubtitleList.Add(lang, subtitle);
         }
-        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(lang, out string? output) ? output : Subtitle;
-        public bool TryGetSubtitle(string lang, out string? subtitle) => SubtitleList.TryGetValue(lang, out subtitle);
+        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out string? output) ? output : Subtitle;
+        public bool TryGetSubtitle(string lang, out string? subtitle) => SubtitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out subtitle);
         public string GetSubtitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> subtitles = [];
             List<string> locales = ["ja", "en-US", "ko", "zh-TW", "zh-CN"];
+            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetString("PREFERRED_LOCALE", priority_locale);
+
             if (TryGetSubtitle(priority_locale, out string? title))
             {
                 subtitles.Add((include_emoji ? LocaleData.GetLocaleAsEmoji(priority_locale) + " " : "") + (title ?? ""));
