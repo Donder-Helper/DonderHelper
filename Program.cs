@@ -39,6 +39,7 @@ namespace DonderHelper
 #endif
                 try
                 {
+                    LocaleData.Initialize();
                     SongDatabase.BuildSonglist();
                     SongDatabase.WriteSonglist(args.Contains("--write-tsv"));
                 }
