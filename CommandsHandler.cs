@@ -898,7 +898,7 @@ namespace DonderHelper
                                     Description =
                                     $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
                                     $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=54")}\n\n" +
-                                    $"__{LocaleData.GetString("ITEM_PUCHI", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774198800)}\n-# {LocaleData.GetString("DISCLAIMER_NOUSA", locale)}\n" +
+                                    $"__{LocaleData.GetString("ITEM_PUCHI", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774198800)}\n\n" +
                                     $"__{LocaleData.GetString("CAMPAIGN_GOODS", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774803600)}\n-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
