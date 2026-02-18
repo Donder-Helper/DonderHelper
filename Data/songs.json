@@ -262,6 +262,7 @@
     },
     "TitleList": {
       "ja": "汚れなきクソ野郎ども",
+      "ko": "순수한 쓰레기들",
       "ALIAS-ko": "더러움 없는 망할놈들"
     },
     "SubtitleList": {
@@ -398,6 +399,7 @@
     },
     "TitleList": {
       "ja": "Daddy's Style -今夜はダディダディ-",
+      "ko": "Daddy's Style",
       "ALIAS-ko": "Daddy's Style -오늘 밤은 대디대디-"
     },
     "SubtitleList": {
@@ -535,6 +537,7 @@
     },
     "TitleList": {
       "ja": "残酷な夜に輝け",
+      "ko": "Shine in the Cruel Night",
       "ALIAS-ko": "잔혹한 밤에 빛나라"
     },
     "SubtitleList": {
@@ -817,6 +820,7 @@
     },
     "TitleList": {
       "ja": "カーマイン",
+      "ko": "CARMINE",
       "ALIAS-ko": "카민"
     },
     "SubtitleList": {
@@ -54727,7 +54731,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89",
         "UrlKo": "https://taiko.wiki/song/349?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/349/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89/::ref/r.png?rev=8f18bbc71f00fc117664ae52632fc552&t=20230225035321"
       },
       "Normal": {
         "Level": 5,
@@ -54750,7 +54754,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89",
         "UrlKo": "https://taiko.wiki/song/349?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/349/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89/::ref/r_2.png?rev=88cfe062ee0b7d4ddfa98bb790f607b9&t=20230225035347"
       },
       "Hard": {
         "Level": 6,
@@ -54773,7 +54777,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89",
         "UrlKo": "https://taiko.wiki/song/349?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/349/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89/::ref/r_3.png?rev=02ca2a5bd773fc63b96d39ae7a4ae02d&t=20230225035422"
       },
       "Extreme": {
         "Level": 9,
@@ -54796,7 +54800,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89",
         "UrlKo": "https://taiko.wiki/song/349?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/349/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%8F%E3%82%93%E3%81%AB%E3%82%83%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89/::ref/dog%20cat%20word.png?rev=72d25231c11766e698f2b0eda7de0af4&t=20230225035449"
       },
       "Hidden": {
         "Level": -1,
@@ -56972,6 +56976,280 @@
     "GenreList": [
       3,
       7
+    ]
+  },
+  "CHAOTiC BATTLE": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 4,
+        "NoteCount": {
+          "Single": {
+            "Normal": 212,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/CHAOTiC%20BATTLE",
+        "UrlKo": "https://taiko.wiki/song/1432?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/CHAOTiC%20BATTLE/::ref/CHAOTiC%20BATTLE_e.png?rev=4e92d3adbbad8bd3718295e7b7b2e9f6&t=20260213215010"
+      },
+      "Normal": {
+        "Level": 6,
+        "NoteCount": {
+          "Single": {
+            "Normal": 444,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/CHAOTiC%20BATTLE",
+        "UrlKo": "https://taiko.wiki/song/1432?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/CHAOTiC%20BATTLE/::ref/CHAOTiC%20BATTLE_n.png?rev=42673408796c90809182ed6af84ddd65&t=20260213213527"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 718,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/CHAOTiC%20BATTLE",
+        "UrlKo": "https://taiko.wiki/song/1432?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/CHAOTiC%20BATTLE/::ref/CHAOTiC%20BATTLE_h.png?rev=2dee1c4a309fc2ac99c8f279178a3629&t=20260213211940"
+      },
+      "Extreme": {
+        "Level": 10,
+        "NoteCount": {
+          "Single": {
+            "Normal": 1053,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/CHAOTiC%20BATTLE",
+        "UrlKo": "https://taiko.wiki/song/1432?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/CHAOTiC%20BATTLE/::ref/CHAOTiC%20BATTLE_3.png?rev=c7bff9bdaf7a02217ac4e64df8cae844&t=20260213161734"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1432?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "CHAOTiC BATTLE",
+      "en-US": "CHAOTiC BATTLE"
+    },
+    "SubtitleList": {
+      "ja": "YOFUKASHi Sound Team from \"Cosmic Radio 2025\"",
+      "en-US": "YOFUKASHi Sound Team from \"Cosmic Radio 2025\""
+    },
+    "GenreList": [
+      2
+    ]
+  },
+  "Aria": {
+    "Region": {
+      "Japan": 1,
+      "Asia": 1,
+      "Oceania": 1,
+      "UnitedStates": 0,
+      "China": 1
+    },
+    "Difficulties": {
+      "Easy": {
+        "Level": 3,
+        "NoteCount": {
+          "Single": {
+            "Normal": 178,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Aria",
+        "UrlKo": "https://taiko.wiki/song/1431?diff=easy",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Aria/::ref/Aria_e.png?rev=3106c1daa3b82461c3cc148953bbc6ac&t=20260213204323"
+      },
+      "Normal": {
+        "Level": 5,
+        "NoteCount": {
+          "Single": {
+            "Normal": 344,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Aria",
+        "UrlKo": "https://taiko.wiki/song/1431?diff=normal",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Aria/::ref/Aria_n.png?rev=e89c60c9ac2fa1308cbfc5b216779203&t=20260213203333"
+      },
+      "Hard": {
+        "Level": 7,
+        "NoteCount": {
+          "Single": {
+            "Normal": 526,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Aria",
+        "UrlKo": "https://taiko.wiki/song/1431?diff=hard",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Aria/::ref/Aria_h.png?rev=1aa3f8d74e61430adb87438185c50570&t=20260213202122"
+      },
+      "Extreme": {
+        "Level": 9,
+        "NoteCount": {
+          "Single": {
+            "Normal": 825,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Aria",
+        "UrlKo": "https://taiko.wiki/song/1431?diff=oni",
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Aria/::ref/Aria_3.png?rev=6b99917e6120692175a4d7234fcb8a21&t=20260213181016"
+      },
+      "Hidden": {
+        "Level": -1,
+        "NoteCount": {
+          "Single": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double1P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          },
+          "Double2P": {
+            "Normal": 0,
+            "Expert": 0,
+            "Tatsujin": 0
+          }
+        },
+        "Url": "",
+        "UrlKo": "https://taiko.wiki/song/1431?diff=ura",
+        "ImageUrl": ""
+      }
+    },
+    "TitleList": {
+      "ja": "Aria",
+      "en-US": "Aria"
+    },
+    "SubtitleList": {
+      "ja": "Nanatsukaze from \"Cosmic Radio 2025\"",
+      "en-US": "Nanatsukaze from \"Cosmic Radio 2025\""
+    },
+    "GenreList": [
+      2
     ]
   },
   "Sync Your World": {
@@ -62119,7 +62397,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/URBAN%20FRAGMENTS",
         "UrlKo": "https://taiko.wiki/song/343?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/343/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/URBAN%20FRAGMENTS/::ref/r4op.png?rev=3f93357eaf0d0b9f9b2ebe6125a90be7&t=20230225051023"
       },
       "Normal": {
         "Level": 4,
@@ -62142,7 +62420,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/URBAN%20FRAGMENTS",
         "UrlKo": "https://taiko.wiki/song/343?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/343/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/URBAN%20FRAGMENTS/::ref/r4op.png?rev=9e7b6ffdafb07714cf43d8add0c665e0&t=20230225051054"
       },
       "Hard": {
         "Level": 6,
@@ -62165,7 +62443,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/URBAN%20FRAGMENTS",
         "UrlKo": "https://taiko.wiki/song/343?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/343/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/URBAN%20FRAGMENTS/::ref/r4op.png?rev=8500c7f7ad7028d1c46e58c85b481053&t=20230225051128"
       },
       "Extreme": {
         "Level": 8,
@@ -62188,7 +62466,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/URBAN%20FRAGMENTS",
         "UrlKo": "https://taiko.wiki/song/343?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/343/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/URBAN%20FRAGMENTS/::ref/r4opff.png?rev=30420b5a8ab907df372448f4e2270b76&t=20230225050953"
       },
       "Hidden": {
         "Level": -1,
@@ -64188,7 +64466,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Walking%20Through%20The%20Towers",
         "UrlKo": "https://taiko.wiki/song/341?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/341/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Walking%20Through%20The%20Towers/::ref/Walking%20Through%20The%20Towers-easy.png?rev=35326f6766047decb43c1cbf7757c553&t=20230225043002"
       },
       "Normal": {
         "Level": 4,
@@ -64211,7 +64489,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Walking%20Through%20The%20Towers",
         "UrlKo": "https://taiko.wiki/song/341?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/341/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Walking%20Through%20The%20Towers/::ref/puzdra_normal.png?rev=ffea362287125ddc5a5baf1a07425be0&t=20230225043025"
       },
       "Hard": {
         "Level": 5,
@@ -64234,7 +64512,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Walking%20Through%20The%20Towers",
         "UrlKo": "https://taiko.wiki/song/341?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/341/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Walking%20Through%20The%20Towers/::ref/puzdra_h.png?rev=c398a61c5b0d7c97031393f66fdd97d1&t=20230225043051"
       },
       "Extreme": {
         "Level": 7,
@@ -64257,7 +64535,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Walking%20Through%20The%20Towers",
         "UrlKo": "https://taiko.wiki/song/341?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/341/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Walking%20Through%20The%20Towers/::ref/puzdra.png?rev=089062b25d9dbe9bf9f76197ea1210c8&t=20230225042927"
       },
       "Hidden": {
         "Level": -1,
@@ -69872,7 +70150,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Saika",
         "UrlKo": "https://taiko.wiki/song/350?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/350/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Saika/::ref/saika_ea.png?rev=190c33effab44034fe0d58b58f7139d2&t=20230224161946"
       },
       "Normal": {
         "Level": 4,
@@ -69895,7 +70173,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Saika",
         "UrlKo": "https://taiko.wiki/song/350?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/350/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Saika/::ref/saika_no.png?rev=866ac04f998cda790ee95c9d2183250f&t=20230224161912"
       },
       "Hard": {
         "Level": 6,
@@ -69918,7 +70196,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Saika",
         "UrlKo": "https://taiko.wiki/song/350?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/350/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Saika/::ref/saika_ha.png?rev=7a02f1e3a21857272622f3de054166d7&t=20230224161835"
       },
       "Extreme": {
         "Level": 8,
@@ -69941,7 +70219,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Saika",
         "UrlKo": "https://taiko.wiki/song/350?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/350/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Saika/::ref/dem31k_m.png?rev=2a11bb3fbda886802244b758b8ac30e4&t=20230224161752"
       },
       "Hidden": {
         "Level": -1,
@@ -82062,7 +82340,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/RAINMAKER",
         "UrlKo": "https://taiko.wiki/song/344?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/344/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/RAINMAKER/::ref/%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93.png?rev=d4936fb73e4ac50413ba780e3a4fe38b&t=20230226233513"
       },
       "Normal": {
         "Level": 4,
@@ -82085,7 +82363,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/RAINMAKER",
         "UrlKo": "https://taiko.wiki/song/344?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/344/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/RAINMAKER/::ref/%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%B5%E3%81%A4%E3%81%86.png?rev=e87b7fb00095221ca66fd2d0bb67c284&t=20230226233611"
       },
       "Hard": {
         "Level": 5,
@@ -82108,7 +82386,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/RAINMAKER",
         "UrlKo": "https://taiko.wiki/song/344?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/344/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/RAINMAKER/::ref/%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84.png?rev=a9d368b333b9f6590e9147f1877da8ab&t=20230226233659"
       },
       "Extreme": {
         "Level": 8,
@@ -82131,7 +82409,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RAINMAKER",
         "UrlKo": "https://taiko.wiki/song/344?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/344/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RAINMAKER/::ref/%E3%82%AB%E3%83%8D%E3%81%AE%E9%9B%A8%E3%81%8C%E9%99%8D%E3%82%8B%E3%83%89%E3%83%B3%EF%BC%81.png?rev=f6b19b20f9ed313cfbe57fad38dceeed&t=20230226233434"
       },
       "Hidden": {
         "Level": -1,
@@ -97149,7 +97427,7 @@
         "ImageUrl": "https://file.taiko.wiki/img/420f6aca-4ba0-4857-9570-bc492c3cebdf"
       },
       "Hidden": {
-        "Level": -1,
+        "Level": 10,
         "NoteCount": {
           "Single": {
             "Normal": 0,
@@ -97167,9 +97445,9 @@
             "Tatsujin": 0
           }
         },
-        "Url": "",
+        "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RAGING%20FIRE%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
         "UrlKo": "https://taiko.wiki/song/1392?diff=ura",
-        "ImageUrl": ""
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/RAGING%20FIRE%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29/::ref/RAGING%20FIRE_EX5_resized.png?rev=9e0d2f8665812acaac7653667a0bac71&t=20260214074245"
       }
     },
     "TitleList": {
@@ -97306,7 +97584,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/EXRiXiS%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
         "UrlKo": "https://taiko.wiki/song/1391?diff=ura",
-        "ImageUrl": ""
+        "ImageUrl": "https://file.taiko.wiki/img/989f262f-8ea9-4a58-a610-3495bb5a7e73.png"
       }
     },
     "TitleList": {
@@ -145120,7 +145398,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC",
         "UrlKo": "https://taiko.wiki/song/347?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/347/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC/::ref/revive_e.png?rev=aa34eaabe535df24cca54fb8d7c79c4f&t=20230221145325"
       },
       "Normal": {
         "Level": 4,
@@ -145143,7 +145421,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC",
         "UrlKo": "https://taiko.wiki/song/347?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/347/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC/::ref/revive_nor.png?rev=2cfced131f305328ece7742b4d4bb024&t=20230221145357"
       },
       "Hard": {
         "Level": 5,
@@ -145166,7 +145444,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC",
         "UrlKo": "https://taiko.wiki/song/347?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/347/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC/::ref/revive_h.png?rev=671b07409b1f2c5a76c941899f78b36f&t=20230221145426"
       },
       "Extreme": {
         "Level": 8,
@@ -145189,7 +145467,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC",
         "UrlKo": "https://taiko.wiki/song/347?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/347/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%AA%E3%83%90%E3%82%A4%E3%83%90%E3%83%BC/::ref/reviver_2.png?rev=b7b90f67d24cf4ef19db82f344f5041f&t=20230221145449"
       },
       "Hidden": {
         "Level": -1,
@@ -145404,7 +145682,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21",
         "UrlKo": "https://taiko.wiki/song/345?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/345/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21/::ref/ramen_e.png?rev=958d194a63ef05a5ca4b2a4694a9c4a8&t=20230227214901"
       },
       "Normal": {
         "Level": 4,
@@ -145427,7 +145705,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21",
         "UrlKo": "https://taiko.wiki/song/345?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/345/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21/::ref/ramen_n3.png?rev=6d60d625ee0c73a40f1348ce9c276513&t=20230227214923"
       },
       "Hard": {
         "Level": 5,
@@ -145450,7 +145728,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21",
         "UrlKo": "https://taiko.wiki/song/345?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/345/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21/::ref/ramen_h.png?rev=09fa943e403c1c6d5450c05e69825192&t=20230227214948"
       },
       "Extreme": {
         "Level": 7,
@@ -145473,7 +145751,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21",
         "UrlKo": "https://taiko.wiki/song/345?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/345/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20de%20Yo%E2%80%90Men%21%21/::ref/ramen_2.png?rev=0bca26f2e32739d49f44cb4d568e918f&t=20230227215011"
       },
       "Hidden": {
         "Level": -1,
@@ -145688,7 +145966,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6",
         "UrlKo": "https://taiko.wiki/song/342?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/342/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6/::ref/omoiwo%20k.png?rev=85da4debf9967fdc5231856f9ae4febd&t=20230224202422"
       },
       "Normal": {
         "Level": 5,
@@ -145711,7 +145989,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6",
         "UrlKo": "https://taiko.wiki/song/342?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/342/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6/::ref/o%20h.png?rev=75457e1c854611b3046d69e92f1acf5e&t=20230224202442"
       },
       "Hard": {
         "Level": 5,
@@ -145734,7 +146012,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6",
         "UrlKo": "https://taiko.wiki/song/342?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/342/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6/::ref/omoiwo%20h.png?rev=9e6269f6fee5c9a87f1cae04c266836e&t=20230224202502"
       },
       "Extreme": {
         "Level": 7,
@@ -145757,7 +146035,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6",
         "UrlKo": "https://taiko.wiki/song/342?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/342/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E6%83%B3%E3%81%84%E3%82%92%E6%89%8B%E3%81%AB%E9%A1%98%E3%81%84%E3%82%92%E8%BE%BC%E3%82%81%E3%81%A6/::ref/You%20get%20the%20feeling%20the%20hope.png?rev=bbb5b8ca8fa00cf1fe50fb088307a653&t=20230224202357"
       },
       "Hidden": {
         "Level": -1,
@@ -158087,7 +158365,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93",
         "UrlKo": "https://taiko.wiki/song/348?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/348/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93/::ref/rgod_e.png?rev=a28f5a06f9ce4475cda4ae4258c2c594&t=20230227215424"
       },
       "Normal": {
         "Level": 5,
@@ -158110,7 +158388,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93",
         "UrlKo": "https://taiko.wiki/song/348?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/348/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93/::ref/rgod_n.png?rev=7ef2542327941bc89b5af41d86b6cb91&t=20230227215448"
       },
       "Hard": {
         "Level": 6,
@@ -158133,7 +158411,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93",
         "UrlKo": "https://taiko.wiki/song/348?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/348/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93/::ref/rgod_h.png?rev=aa04e6892065b3d8b1bab8859f67c8b4&t=20230227215516"
       },
       "Extreme": {
         "Level": 7,
@@ -158156,7 +158434,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93",
         "UrlKo": "https://taiko.wiki/song/348?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/348/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93/::ref/rgod.png?rev=b6acef5d0ecc9230491048c040ec79ea&t=20230227215537"
       },
       "Hidden": {
         "Level": 9,
@@ -158179,7 +158457,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29",
         "UrlKo": "https://taiko.wiki/song/348?diff=ura",
-        "ImageUrl": "https://file.taiko.wiki/fumen/348/ura"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/%E3%82%89%E3%81%84%E3%81%A8%E3%81%AB%E3%82%93%E3%81%90%20%E3%81%B1%E3%81%A3%E3%81%97%E3%82%87%E3%82%93%28%E8%A3%8F%E8%AD%9C%E9%9D%A2%29/::ref/%E3%82%89%E3%81%84%E3%81%B1.png?rev=405a709de01e21457ae739a36a2b4429&t=20230227215725"
       }
     },
     "TitleList": {
@@ -159209,7 +159487,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Red%20Rose%20Evangel",
         "UrlKo": "https://taiko.wiki/song/346?diff=easy",
-        "ImageUrl": "https://file.taiko.wiki/fumen/346/easy"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93/Red%20Rose%20Evangel/::ref/Red%20Rose%20Evangel%20k.png?rev=2f617bbd8269b492a61629809221c250&t=20230226230253"
       },
       "Normal": {
         "Level": 7,
@@ -159232,7 +159510,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Red%20Rose%20Evangel",
         "UrlKo": "https://taiko.wiki/song/346?diff=normal",
-        "ImageUrl": "https://file.taiko.wiki/fumen/346/normal"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%B5%E3%81%A4%E3%81%86/Red%20Rose%20Evangel/::ref/RRE_N1.png?rev=00b2bff83a6ce6b54b6bd8baadc2a989&t=20230226230332"
       },
       "Hard": {
         "Level": 7,
@@ -159255,7 +159533,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Red%20Rose%20Evangel",
         "UrlKo": "https://taiko.wiki/song/346?diff=hard",
-        "ImageUrl": "https://file.taiko.wiki/fumen/346/hard"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%82%80%E3%81%9A%E3%81%8B%E3%81%97%E3%81%84/Red%20Rose%20Evangel/::ref/RRE_H.png?rev=8520490c43e65fa2bf0760ff05077ff2&t=20230226230412"
       },
       "Extreme": {
         "Level": 9,
@@ -159278,7 +159556,7 @@
         },
         "Url": "https://wikiwiki.jp/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Red%20Rose%20Evangel",
         "UrlKo": "https://taiko.wiki/song/346?diff=oni",
-        "ImageUrl": "https://file.taiko.wiki/fumen/346/oni"
+        "ImageUrl": "https://cdn.wikiwiki.jp/to/w/taiko-fumen/%E5%8F%8E%E9%8C%B2%E6%9B%B2/%E3%81%8A%E3%81%AB/Red%20Rose%20Evangel/::ref/rdrose.png?rev=c5c0b6da5f05d0b3079f60582cd28b37&t=20230226230145"
       },
       "Hidden": {
         "Level": -1,
@@ -164100,7 +164378,7 @@
     },
     "TitleList": {
       "ja": "イオシス秋の肉食祭2014",
-      "en-US": "イオシス秋の肉食祭2015",
+      "en-US": "イオシス秋の肉食祭2014",
       "zh-CN": "IOSYS Autumn Carnivorous Festival 2014",
       "ALIAS-ko": "이오시스 가을의 육식제 2014",
       "ALIAS-romaji": "IOSYS Aki no Nikushoku Matsuri 2014"
