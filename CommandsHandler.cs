@@ -21,7 +21,7 @@ namespace DonderHelper
         private readonly Color donShop_Winter_color = new(186, 202, 255);
 
         #region Statistics
-        public static string last_Update => $"Last update: {Process.GetCurrentProcess().StartTime.ToLocalTime().ToShortDateString()}";
+        public static string last_Update => $"Last update: {Process.GetCurrentProcess().StartTime:yyyy/MM/dd}";
         public static DateTimeOffset readyTime = new();
 
         private struct RegionStats
@@ -1173,8 +1173,12 @@ namespace DonderHelper
                     }
                     case "hiroba":
                     {
-                        string maintenance = "-# ＊ Maintenance Hours: <t:1762102800:t> to <t:1762120800:t>\n" +
-                                $"{(17 <= DateTimeOffset.UtcNow.Hour && DateTimeOffset.UtcNow.Hour < 22 ? "-# :warning: Maintenance is active, you can not edit your profile or use certain features.\n" : "")}\n";
+                        // Fetch current day + hour offsets instead of hardcoded timestamp, to account for Daylight Savings for Americans
+                        TimeSpan time_start = DateTime.Today.ToUniversalTime().AddHours(12) - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                        TimeSpan time_end = DateTime.Today.ToUniversalTime().AddHours(17) - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+                        string maintenance = $"-# ＊ Maintenance Hours: <t:{(long)time_start.TotalSeconds}:t> to <t:{(long)time_end.TotalSeconds}:t>\n" +
+                                $"{(17 <= DateTime.UtcNow.Hour && DateTime.UtcNow.Hour < 22 ? "-# :warning: Maintenance is active, you can not edit your profile or use certain features.\n" : "")}\n";
 
                         if (command.Data.Options.Count == 1)
                         {
