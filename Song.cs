@@ -279,8 +279,8 @@ namespace DonderHelper
                 TitleList.Remove(lang);
             TitleList.Add(lang, title);
         }
-        public string GetTitle(string lang = "ja") => TitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out string? output) ? output : Title;
-        public bool TryGetTitle(string lang, out string? title) => TitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out title);
+        public string GetTitle(string lang = "ja") => TitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out string? output) ? output : Title;
+        public bool TryGetTitle(string lang, out string? title) => TitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out title);
         public string GetTitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> titles = [];
@@ -311,8 +311,8 @@ namespace DonderHelper
                 SubtitleList.Remove(lang);
             SubtitleList.Add(lang, subtitle);
         }
-        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out string? output) ? output : Subtitle;
-        public bool TryGetSubtitle(string lang, out string? subtitle) => SubtitleList.TryGetValue(LocaleData.GetString("PREFERRED_LOCALE", lang), out subtitle);
+        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out string? output) ? output : Subtitle;
+        public bool TryGetSubtitle(string lang, out string? subtitle) => SubtitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out subtitle);
         public string GetSubtitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> subtitles = [];

@@ -38,6 +38,17 @@ namespace DonderHelper
         }
         public static bool HasLanguage(string locale) => dicts.ContainsKey(locale);
 
+        public static bool HasKey(string key, string locale)
+        {
+            return TryGetString(key, locale, out _);
+        }
+
+        public static bool TryGetString(string input, string locale, out string? result)
+        {
+            result = null;
+            return dicts.TryGetValue(locale, out var dict) && dict.TryGetValue(input, out result);
+        }
+
         public static string GetString(string input, string locale, params object?[] items)
         {
             object?[] items_safe = items != null ? items : [""];

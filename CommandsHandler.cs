@@ -416,6 +416,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "HATSUNE MIKU: COLORFUL STAGE! x Taiko no Tatsujin Collaboration Campaign",
+                    Value = "project_sekai",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "プロジェクトセカイ カラフルステージ！ feat. 初音ミク × 太鼓の達人 コラボキャンペーン" },
+                        { "zh-TW", "世界計畫 繽紛舞台！ feat. 初音未來 × 太鼓之達人 合作活動" },
+                        { "ko", "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠 × 태고의 달인 콜라보레이션 캠페인" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "ARKNIGHTS × Taiko no Tatsujin Collaboration Campaign",
                     Value = "arknights",
                     NameLocalizations = new Dictionary<string, string>()
@@ -869,6 +880,56 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "project_sekai":
+                            {
+                                string title = locale switch
+                                {
+                                    "ja" => "プロジェクトセカイ カラフルステージ！ feat. 初音ミク × 太鼓の達人 コラボキャンペーン",
+                                    "zh-TW" => "世界計畫 繽紛舞台！ feat. 初音未來 × 太鼓之達人 合作活動",
+                                    "ko" => "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠 × 태고의 달인 콜라보레이션 캠페인",
+                                    _ => "HATSUNE MIKU: COLORFUL STAGE! x Taiko no Tatsujin Collaboration Campaign"
+                                };
+                                string url = locale switch
+                                {
+                                    "ja" => "https://taiko.namco-ch.net/taiko/special/pjsekai/",
+                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/pjsekai/",
+                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/pjsekai/",
+                                    _ => "https://taiko.namco-ch.net/taiko/en/special/pjsekai/"
+                                };
+                                string image_url = locale switch
+                                {
+                                    "ja" => "https://media.discordapp.net/attachments/1345259022684524544/1476378835963609238/634910926_1429624629178967_2506341827598295343_n.png",
+                                    "zh-TW" => "https://media.discordapp.net/attachments/1345259022684524544/1476378836366266528/637707403_1429888152485948_9083978382669198856_n.png",
+                                    "ko" => "https://media.discordapp.net/attachments/1345259022684524544/1476378836777173024/636849544_1429888412485922_5908332965979990529_n.png",
+                                    _ => "https://media.discordapp.net/attachments/1345259022684524544/1476378837284815020/639680609_1429888079152622_844361099815887236_n.png"
+                                };
+
+                                var project_sekai = new EmbedBuilder()
+                                {
+                                    Title = title,
+                                    Color = new(0x00ccbb),
+                                    Url = url,
+                                    ImageUrl = image_url,
+
+                                    Description =
+                                    $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
+                                    $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=53")}\n\n" +
+                                    $"{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1776618000)}",
+
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+
+                                var component = new ComponentBuilder();
+                                component.WithButton(CreateSongButton(command, "てらてら"));
+                                component.WithButton(CreateSongButton(command, "モア!ジャンプ!モア!"));
+                                component.WithButton(CreateSongButton(command, "CR詠ZY"));
+                                component.WithButton(CreateSongButton(command, "トンデモワンダーズ"));
+                                component.WithButton(CreateSongButton(command, "バグ"));
+
+                                await command.RespondAsync(null, [project_sekai.Build()], false, false, null, component.Build());
+                                break;
+                            }
                             case "arknights":
                             {
                                 string url = locale switch
