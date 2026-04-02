@@ -8,68 +8,68 @@ PREFERRED_LOCALE=zh-TW
 // Command Data
 
 COMMAND_HELP_NAME=help
-COMMAND_HELP_DESC=Lists all available commands and their uses.
+COMMAND_HELP_DESC=列出所有可用命令與用法。
 
-COMMAND_RANDOM_NAME=隨機
+COMMAND_RANDOM_NAME=random
 COMMAND_RANDOM_DESC=隨機選擇歌曲。
 
-COMMAND_SONG_NAME=歌曲
+COMMAND_SONG_NAME=song
 COMMAND_SONG_DESC=取得特定歌曲的資訊。
 
-COMMAND_CAMPAIGN_NAME=活動
+COMMAND_CAMPAIGN_NAME=campaign
 COMMAND_CAMPAIGN_DESC=取得目前舉辦的活動。
 
-COMMAND_SHOP_NAME=商店
+COMMAND_SHOP_NAME=shop
 COMMAND_SHOP_DESC=取得目前咚幣商店的資訊。
 
-COMMAND_REGION_NAME=地區
+COMMAND_REGION_NAME=region
 COMMAND_REGION_DESC=取得所有地區限定歌曲清單的鏈結。
 
-COMMAND_ABOUT_NAME=關於
+COMMAND_ABOUT_NAME=about
 COMMAND_ABOUT_DESC=有關本機器人與資料來源的資訊。
 
-COMMAND_STATS_NAME=統計
+COMMAND_STATS_NAME=stats
 COMMAND_STATS_DESC=取得本機器人與歌曲資料的統計數據。
 
-COMMAND_DAN_NAME=段位
+COMMAND_DAN_NAME=dan
 COMMAND_DAN_DESC=取得目前的段位道場資訊。
 
 COMMAND_GAIDEN_NAME=gaiden
-COMMAND_GAIDEN_DESC=Search for Gaidens and their corresponding QR codes.
+COMMAND_GAIDEN_DESC=搜尋外傳段位與專用二維碼。
 
-COMMAND_MISSING_NAME=待補
+COMMAND_MISSING_NAME=missing
 COMMAND_MISSING_DESC=列出所有缺少音符數與地區限定資訊的歌曲。
 
-COMMAND_INVITE_NAME=邀請
+COMMAND_INVITE_NAME=invite
 COMMAND_INVITE_DESC=將本機器人加入你的伺服器，也可當作應用程式加入！
 
-COMMAND_HIROBA_NAME=廣場
+COMMAND_HIROBA_NAME=hiroba
 COMMAND_HIROBA_DESC=取得如何使用鼓眾廣場的解說。（僅支援英語）
 
 // Command Options
 
-OPTION_TITLE_NAME=曲名
+OPTION_TITLE_NAME=title
 OPTION_TITLE_DESC=歌曲的名稱。
 
-OPTION_DIFFICULTY_NAME=難度
+OPTION_DIFFICULTY_NAME=difficulty
 OPTION_DIFFICULTY_DESC=歌曲的難度。
 
-OPTION_LEVEL_NAME=星等
+OPTION_LEVEL_NAME=level
 OPTION_LEVEL_DESC=難度的星等。
 
-OPTION_GENRE_NAME=分類
+OPTION_GENRE_NAME=genre
 OPTION_GENRE_DESC=歌曲的分類。
 
-OPTION_CAMPAIGNNAME_NAME=活動名
+OPTION_CAMPAIGNNAME_NAME=name
 OPTION_CAMPAIGNNAME_DESC=活動的名稱。
 
-OPTION_DANTITLE_NAME=段位名
+OPTION_DANTITLE_NAME=title
 OPTION_DANTITLE_DESC=段位的名稱。
 
 OPTION_GAIDENTITLE_NAME=title
-OPTION_GAIDENTITLE_DESC=The title of the gaiden.
+OPTION_GAIDENTITLE_DESC=外傳的名稱
 
-OPTION_GUIDE_NAME=指南
+OPTION_GUIDE_NAME=guide
 OPTION_GUIDE_DESC=選擇需要解說的鼓眾廣場介面。
 
 // Everything else
@@ -111,7 +111,7 @@ DIFFICULTY_EX=魔王
 DIFFICULTY_HIDDEN=魔王（裏）
 DIFFICULTY_BOTH=魔王（表/裏）
 
-GENRE_TITLE=Genre
+GENRE_TITLE=歌曲分類
 
 GENRE_POP=流行音樂
 GENRE_KIDS=兒童音樂
@@ -127,11 +127,11 @@ GENRE_UNKNOWN=不明
 URL_MISSING=（無資料 {0}）
 
 // {0} : URL
-CAMPAIGN_URL=Campaign Page: {0}
+CAMPAIGN_URL=活動鏈結：{0}
 // {0} : URL
-CAMPAIGN_HIROBAURL=Donder Hiroba Page: {0}
+CAMPAIGN_HIROBAURL=鼓眾廣場鏈結：{0}
 // {0} : URL (may sometimes appear as embedded URLs for different languages, i.e. "English / 日本語")
-CAMPAIGN_UNLOCKURL=Unlockables: {0}
+CAMPAIGN_UNLOCKURL=解鎖鏈結：{0}
 
 // {0} : Time remaining (as int timestamp)
 CAMPAIGN_AVAILABLE=<t:{0}:F> 前可獲得（<t:{0}:R>）
@@ -150,11 +150,11 @@ CAMPAIGN_GOODS=Goods
 SHOP_MEDAL_NAME=咚幣商店{0} {1}
 // {0} : Title
 // {1} : Cost
-SHOP_MEDAL_DESC={0} —— {1} 咚幣
+SHOP_MEDAL_DESC={0} —— {1} 枚咚幣
 // {0} : Title
 // {1} : Hidden difficulty as emote
 // {2} : Cost
-SHOP_MEDALHIDDEN_DESC={0} {1} —— {2} 咚幣
+SHOP_MEDALHIDDEN_DESC={0} {1} —— {2} 枚咚幣
 // {0} : Language (in native text)
 // {1} : URL
 SHOP_MEDAL_URL=可獲得清單（{0}）：{1}
@@ -200,35 +200,35 @@ DAN_CLOSED_TITLE=段位道場 {0} 已關閉
 DAN_CLOSED=段位道場 {0} 已正式結束。請在段位道場再開放時再查詢！
 
 // Title
-STATS_TITLE=Donder Helper's Statistics
-STATS_TITLE_REGION=Region Status
-STATS_TITLE_SONG=Song List
-STATS_TITLE_TITLE=Title List
-STATS_TITLE_DISCORD=Discord Stats
+STATS_TITLE=Donder Helper 的統計數據
+STATS_TITLE_REGION=地區統計
+STATS_TITLE_SONG=歌曲統計
+STATS_TITLE_TITLE=曲名統計
+STATS_TITLE_DISCORD=Discord 統計
 
 // {0}: Name of region
 // {1}: Total songs available for that region
-STATS_REGION_COUNT=Total ({0}): {1}
+STATS_REGION_COUNT=可遊玩歌曲數（{0}）：{1} 首
 // {0}: Total number of songs exclusive to that region
 // {1}: Total number of songs not accessible in that region
 // {2}: Total number of available songs with Sou-Uchi variants available
-STATS_REGION_SPECIAL={0} Exclusive / {1} Unavailable / {2} Sou-Uchi
-STATS_REGION_AVAILABLE=Total Songs Available Everywhere: {0}
-STATS_REGION_UNAVAILABLE=Total Songs Unavailable Everywhere: {0}
-STATS_REGION_UNKNOWN=Total Songs w/ Unknown Status: {0}
+STATS_REGION_SPECIAL={0} 首地區限定 / {1} 首不可遊玩 / {2} 首雙人譜面
+STATS_REGION_AVAILABLE=所有地區皆可遊玩：{0} 首
+STATS_REGION_UNAVAILABLE=所有地區皆不可遊玩：{0} 首
+STATS_REGION_UNKNOWN=不明：{0} 首
 
-STATS_SONG_COUNT=Total Songs: {0}
-STATS_SONG_MISSING=Total w/ Missing Notes: {0}
+STATS_SONG_COUNT=總歌曲數：{0} 首
+STATS_SONG_MISSING=缺少音符數資料：{0} 首
 
-STATS_TITLE_UNIQUE=Total Unique Titles: {0}
+STATS_TITLE_UNIQUE=不重覆曲名：{0}
 // {0}: Name of locale
 // {1}: Total titles available for that locale
-STATS_TITLE_COUNT=Total ({0}): {1}
+STATS_TITLE_COUNT=在地化曲名（{0}）：{1}
 
 // {0}: Discord bot uptime, written in HH:MM:SS ({0:00}:{1:00}:{2:00})
-STATS_DISCORD_UPTIME=Uptime: {0}
+STATS_DISCORD_UPTIME=上線期間：{0}
 // {0}: # of servers the bot is in
-STATS_DISCORD_SERVERCOUNT=Server Count: {0}
+STATS_DISCORD_SERVERCOUNT=伺服器數：{0}
 
 MISSING_NOTES=缺少音符數資料的歌曲
 MISSING_REGION=缺少地區限定資料的歌曲
