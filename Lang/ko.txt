@@ -218,9 +218,8 @@ STATS_REGION_UNAVAILABLE=Total Songs Unavailable Everywhere: {0}
 STATS_REGION_UNKNOWN=Total Songs w/ Unknown Status: {0}
 
 STATS_SONG_COUNT=Total Songs: {0}
-STATS_SONG_MISSING=Total w/ Missing Notes: {0}
 
-STATS_TITLE_UNIQUE=Total Unique Titles: {0}
+STATS_TITLE_COMPLETE=Total Completed: {0}
 // {0}: Name of locale
 // {1}: Total titles available for that locale
 STATS_TITLE_COUNT=Total ({0}): {1}
@@ -244,6 +243,7 @@ DISCLAIMER_ERROR=:warning: 요청을 처리하는 동안 문제가 발생했습�
 DISCLAIMER_NOUSA=＊ Unavailable in North America.
 DISCLAIMER_ONLYUSA=＊ Available only in North America.
 DISCLAIMER_ONLYJAPAN=＊ Available only in Japan.
+DISCLAIMER_NOJAPAN=＊ Unavailable in Japan.
 
 // {0}: Discord app invite URL
 INVITE_DESC=You can add me to your own server, or add me as an app that you can call at any time!\nClick this URL to invite me: {0}

@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！レッド名人",
+    "en-US": "Back in Action! Red Meijin",
+    "ko": "부활! Red 명인",
+    "zh-TW": "復活！Red名人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_78.png?240807184551",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%AC%E3%83%83%E3%83%89/%E5%90%8D%E4%BA%BA",
+  
+  "song1": {
+    "id": 164,
+    "diff": 4
+  },
+  "song2": {
+    "id": 519,
+    "diff": 4
+  },
+  "song3": {
+    "id": 218,
+    "diff": 4
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [20],
+      "gold": [7]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [7],
+      "gold": [2]
+    }
+  ]
+}

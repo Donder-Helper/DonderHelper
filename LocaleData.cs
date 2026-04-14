@@ -1,9 +1,4 @@
-﻿using Discord;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace DonderHelper
 {
@@ -43,7 +38,7 @@ namespace DonderHelper
             return TryGetString(key, locale, out _);
         }
 
-        public static bool TryGetString(string input, string locale, out string? result)
+        public static bool TryGetString(string input, string locale, [MaybeNullWhen(false)] out string result)
         {
             result = null;
             return dicts.TryGetValue(locale, out var dict) && dict.TryGetValue(input, out result);
@@ -175,6 +170,10 @@ namespace DonderHelper
                 "zh-CN" => ":flag_cn:",
                 _ => ""
             };
+        }
+        public static string GetPreferredLocale(string lang)
+        {
+            return TryGetString("PREFERRED_LOCALE", lang, out string? locale) ? locale : lang;
         }
     }
 }

@@ -1,0 +1,49 @@
+{
+  "subtitle": {
+    "ja": "マスブ・チュジー生誕記念#2022【極】",
+    "en-US": "MASUBU CHUZIE's Birthday 2022 (Kiwami)",
+    "ko": "MASUBU CHUZIE 탄생 기념 #2022 [기와미]",
+    "zh-TW": "MASUBU CHUZIE生日紀念#2022【極（kiwami）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_26.png?231117153957",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E3%83%9E%E3%82%B9%E3%83%96%E3%83%BB%E3%83%81%E3%83%A5%E3%82%B8%E3%83%BC%E7%94%9F%E8%AA%95%E8%A8%98%E5%BF%B5%EF%BC%832022",
+  
+  "song1": {
+    "id": 32,
+    "diff": 3
+  },
+  "song2": {
+    "id": 1067,
+    "diff": 4
+  },
+  "song3": {
+    "id": 31,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [98],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [70],
+      "gold": [26]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [26],
+      "gold": [7]
+    },
+    {
+      "condition": 5,
+      "is_less": false,
+      "clear": [70,20,60],
+      "gold": [-1,-1,-1]
+    }
+  ]
+}

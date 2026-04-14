@@ -1,0 +1,49 @@
+{
+  "subtitle": {
+    "ja": "軌跡！グリーンVer. セレクション",
+    "en-US": "Tracing the Past! Green Ver. Selection",
+    "ko": "궤적! Green Ver. 셀렉션",
+    "zh-TW": "軌跡！Green Ver. 精選"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_68.png?240210095920",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E8%BB%8C%E8%B7%A1%EF%BC%81%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3Ver.%20%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3",
+  
+  "song1": {
+    "id": 819,
+    "diff": 3
+  },
+  "song2": {
+    "id": 798,
+    "diff": 3
+  },
+  "song3": {
+    "id": 879,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [170],
+      "gold": [-1]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [15],
+      "gold": [7]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2019],
+      "gold": [2876]
+    }
+  ]
+}

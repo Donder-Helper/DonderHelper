@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "エトウからの挑戦状#1",
+    "en-US": "ETO's Challenge #1",
+    "ko": "ETO의 도전장 #1",
+    "zh-TW": "來自ETO的挑戰書#1"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_86.png?250801104032",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E3%82%A8%E3%83%88%E3%82%A6%E3%81%8B%E3%82%89%E3%81%AE%E6%8C%91%E6%88%A6%E7%8A%B6%EF%BC%831",
+  
+  "song1": {
+    "id": 191,
+    "diff": 3
+  },
+  "song2": {
+    "id": 346,
+    "diff": 3
+  },
+  "song3": {
+    "id": 1170,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 4,
+      "is_less": false,
+      "clear": [428,568,389],
+      "gold": [465,646,470]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2404000],
+      "gold": [2594000]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！ブルー玄人",
+    "en-US": "Back in Action! Blue Kuroto",
+    "ko": "부활! Blue 현인",
+    "zh-TW": "復活！Blue玄人"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_62.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%96%E3%83%AB%E3%83%BC/%E7%8E%84%E4%BA%BA",
+  
+  "song1": {
+    "id": 574,
+    "diff": 3
+  },
+  "song2": {
+    "id": 427,
+    "diff": 3
+  },
+  "song3": {
+    "id": 762,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [50],
+      "gold": [28]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [6],
+      "gold": [4]
+    }
+  ]
+}

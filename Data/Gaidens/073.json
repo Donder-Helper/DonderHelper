@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "烈伝！日本一決定戦2010",
+    "en-US": "Taiko Saga! JAPAN CHAMPIONSHIP 2010",
+    "ko": "열전! 일본 제일 결정전 2010",
+    "zh-TW": "烈傳！日本冠軍賽 2010"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_73.png?240323100026",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E7%83%88%E4%BC%9D%EF%BC%81%E6%97%A5%E6%9C%AC%E4%B8%80%E6%B1%BA%E5%AE%9A%E6%88%A62010",
+  
+  "song1": {
+    "id": 403,
+    "diff": 3
+  },
+  "song2": {
+    "id": 31,
+    "diff": 3
+  },
+  "song3": {
+    "id": 196,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 1,
+      "is_less": false,
+      "clear": [2010],
+      "gold": [2389]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [900000,910000,940000],
+      "gold": [930000,940000,970000]
+    }
+  ]
+}

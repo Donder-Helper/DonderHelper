@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "目指せ！290万点突破！【極】",
+    "en-US": "Score Over 2.9 Million Pts! (Kiwami)",
+    "ko": "목표는! 290만 점 돌파! [기와미]",
+    "zh-TW": "目標是突破290萬分！【極（kiwami）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_41.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E7%9B%AE%E6%8C%87%E3%81%9B%EF%BC%81290%E4%B8%87%E7%82%B9%E7%AA%81%E7%A0%B4%EF%BC%81%E3%80%90%E6%A5%B5%E3%80%91",
+  
+  "song1": {
+    "id": 368,
+    "diff": 4
+  },
+  "song2": {
+    "id": 100,
+    "diff": 4
+  },
+  "song3": {
+    "id": 248,
+    "diff": 4
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [960000,960000,960000],
+      "gold": [980000,980000,980000]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2900000],
+      "gold": [2950000]
+    }
+  ]
+}

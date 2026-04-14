@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "どんちゃん学園の課外授業！【雅】",
+    "en-US": "DON-chan's After-School Workshop (Miyabi)",
+    "ko": "동이학원의 과외 수업! [미야비]",
+    "zh-TW": "小咚學院的課外教學！【雅（miyabi）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_53.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E3%81%A9%E3%82%93%E3%81%A1%E3%82%83%E3%82%93%E5%AD%A6%E5%9C%92%E3%81%AE%E8%AA%B2%E5%A4%96%E6%8E%88%E6%A5%AD%EF%BC%81%E3%80%90%E9%9B%85%E3%80%91",
+  
+  "song1": {
+    "id": 989,
+    "diff": 3
+  },
+  "song2": {
+    "id": 565,
+    "diff": 3
+  },
+  "song3": {
+    "id": 488,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [24],
+      "gold": [-1]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [2550000],
+      "gold": [2700000]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！イエロー十段",
+    "en-US": "Back in action! Yellow Tenth Dan",
+    "ko": "부활! Yellow 10단",
+    "zh-TW": "復活！Yellow十段"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_13.png?231117153957",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%82%A4%E3%82%A8%E3%83%AD%E3%83%BC/%E5%8D%81%E6%AE%B5",
+  
+  "song1": {
+    "id": 128,
+    "diff": 3
+  },
+  "song2": {
+    "id": 673,
+    "diff": 3
+  },
+  "song3": {
+    "id": 677,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [50],
+      "gold": [25]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [7],
+      "gold": [5]
+    }
+  ]
+}

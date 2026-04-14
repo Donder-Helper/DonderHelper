@@ -7,29 +7,14 @@ namespace DonderHelper
     {
         public struct DanSong
         {
-            [JsonProperty("title")]
-            public string Title;
+            [JsonProperty("id")]
+            public int Id;
             [JsonProperty("diff")]
             public Song.SongDifficulty Difficulty;
             [JsonProperty("spoiler")]
             public bool Spoiler;
 
-            [JsonIgnore]
-            public Song.Chart Chart { 
-                get { 
-                    return Song.Difficulties[Difficulty];
-                } 
-            }
-            [JsonIgnore]
-            public Song Song
-            {
-                get
-                {
-                    return SongDatabase.Songs.TryGetValue(Title, out var song) ? song : new();
-                }
-            }
-
-            public DanSong() { Title = ""; Difficulty = Song.SongDifficulty.Extreme; Spoiler = false; }
+            public DanSong() { Id = -1; Difficulty = Song.SongDifficulty.Extreme; Spoiler = false; }
         }
 
         public struct Exam
@@ -136,20 +121,32 @@ namespace DonderHelper
         [JsonProperty("exams")]
         public List<Exam> Exams { get; set; } = [];
 
-        public EmbedFieldBuilder SongsToField(string locale)
+        public async Task<EmbedFieldBuilder> SongsToField(string locale)
         {
             string spoilerany = AnySpoiler ? "||" : "";
             string spoiler1 = Song1.Spoiler ? "||" : "";
             string spoiler2 = Song2.Spoiler ? "||" : "";
             string spoiler3 = Song3.Spoiler ? "||" : "";
 
+            var songlist = await SongDatabase.GetSongs(Song1.Id, Song2.Id, Song3.Id);
+            Song song1 = songlist[Song1.Id];
+            Song song2 = songlist[Song2.Id];
+            Song song3 = songlist[Song3.Id];
+            Song.Chart chart1 = song1.Difficulties[Song1.Difficulty];
+            Song.Chart chart2 = song2.Difficulties[Song2.Difficulty];
+            Song.Chart chart3 = song3.Difficulties[Song3.Difficulty];
+            int notecount =
+                Math.Max(chart1.NoteCount.Single.Normal, chart1.NoteCount.Single.Tatsujin) +
+                Math.Max(chart2.NoteCount.Single.Normal, chart2.NoteCount.Single.Tatsujin) +
+                Math.Max(chart3.NoteCount.Single.Normal, chart3.NoteCount.Single.Tatsujin);
+
             return new()
             {
                 Name = LocaleData.GetString("DAN_SONGS", locale),
-                Value = $"{EmoteData.GetEmote("DAN_FIRST")} {spoiler1}{SongDatabase.GetLocalizedSongTitle(Song1.Title, locale)} {EmoteData.GetDifficulty(Song1.Difficulty)} {Song1.Chart.Level}★ {Song1.Chart.NoteCount}{spoiler1}\n" +
-                $"{EmoteData.GetEmote("DAN_SECOND")} {spoiler2}{SongDatabase.GetLocalizedSongTitle(Song2.Title, locale)} {EmoteData.GetDifficulty(Song2.Difficulty)} {Song2.Chart.Level}★ {Song2.Chart.NoteCount}{spoiler2}\n" +
-                $"{EmoteData.GetEmote("DAN_THIRD")} {spoiler3}{SongDatabase.GetLocalizedSongTitle(Song3.Title, locale)} {EmoteData.GetDifficulty(Song3.Difficulty)} {Song3.Chart.Level}★ {Song3.Chart.NoteCount}{spoiler3}\n" +
-                $"-# {spoilerany}**{LocaleData.GetString("DAN_NOTECOUNT", locale, GetNoteCount() > -1 ? GetNoteCount() : "???")}**{spoilerany}",
+                Value = $"{EmoteData.GetEmote("DAN_FIRST")} {spoiler1}{song1.GetTitle(locale)} {EmoteData.GetDifficulty(Song1.Difficulty)} {chart1.Level}★ {chart1.NoteCount}{spoiler1}\n" +
+                $"{EmoteData.GetEmote("DAN_SECOND")} {spoiler2}{song2.GetTitle(locale)} {EmoteData.GetDifficulty(Song2.Difficulty)} {chart2.Level}★ {chart2.NoteCount}{spoiler2}\n" +
+                $"{EmoteData.GetEmote("DAN_THIRD")} {spoiler3}{song3.GetTitle(locale)} {EmoteData.GetDifficulty(Song3.Difficulty)} {chart3.Level}★ {chart3.NoteCount}{spoiler3}\n" +
+                $"-# {spoilerany}**{LocaleData.GetString("DAN_NOTECOUNT", locale, notecount > -1 ? notecount : "???")}**{spoilerany}",
                 IsInline = false
             };
         }
@@ -203,19 +200,9 @@ namespace DonderHelper
             };
         }
 
-        public int GetNoteCount()
-        {
-            return Song1.Chart.NoteCount.ContainsNotes() && Song2.Chart.NoteCount.ContainsNotes() && Song3.Chart.NoteCount.ContainsNotes()
-                ?
-                Math.Max(Song1.Chart.NoteCount.Single.Normal, Song1.Chart.NoteCount.Single.Tatsujin) +
-                Math.Max(Song2.Chart.NoteCount.Single.Normal, Song2.Chart.NoteCount.Single.Tatsujin) +
-                Math.Max(Song3.Chart.NoteCount.Single.Normal, Song3.Chart.NoteCount.Single.Tatsujin)
-                : -1;
-        }
-
         public bool DanIsValid()
         {
-            return !string.IsNullOrWhiteSpace(Song1.Title);
+            return Song1.Id > -1;
         }
 
         public Dan() { }
@@ -230,9 +217,9 @@ namespace DonderHelper
             Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%94%E7%B4%9A",
 
-            Song1 = new() { Title = "はいよろこんで", Difficulty = Song.SongDifficulty.Normal },
-            Song2 = new() { Title = "シカ色デイズ", Difficulty = Song.SongDifficulty.Normal },
-            Song3 = new() { Title = "ライラック", Difficulty = Song.SongDifficulty.Normal },
+            Song1 = new() { Id = 1327, Difficulty = Song.SongDifficulty.Normal },
+            Song2 = new() { Id = 1336, Difficulty = Song.SongDifficulty.Normal },
+            Song3 = new() { Id = 1339, Difficulty = Song.SongDifficulty.Normal },
 
             Exams = new()
             {
@@ -248,9 +235,9 @@ namespace DonderHelper
             Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%9B%9B%E7%B4%9A",
 
-            Song1 = new() { Title = "Help me, ERINNNNNN!!", Difficulty = Song.SongDifficulty.Normal },
-            Song2 = new() { Title = "ココドコ?多分ドッカ島!", Difficulty = Song.SongDifficulty.Normal },
-            Song3 = new() { Title = "Bling-Bang-Bang-Born", Difficulty = Song.SongDifficulty.Normal },
+            Song1 = new() { Id = 416, Difficulty = Song.SongDifficulty.Normal },
+            Song2 = new() { Id = 1309, Difficulty = Song.SongDifficulty.Normal },
+            Song3 = new() { Id = 1313, Difficulty = Song.SongDifficulty.Normal },
 
             Exams = new()
             {
@@ -267,9 +254,9 @@ namespace DonderHelper
             Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%89%E7%B4%9A",
 
-            Song1 = new() { Title = "最高到達点", Difficulty = Song.SongDifficulty.Hard },
-            Song2 = new() { Title = "空想打破", Difficulty = Song.SongDifficulty.Hard },
-            Song3 = new() { Title = "ファタール", Difficulty = Song.SongDifficulty.Hard },
+            Song1 = new() { Id = 1293, Difficulty = Song.SongDifficulty.Hard },
+            Song2 = new() { Id = 1277, Difficulty = Song.SongDifficulty.Hard },
+            Song3 = new() { Id = 1353, Difficulty = Song.SongDifficulty.Hard },
 
             Exams = new()
             {
@@ -286,9 +273,9 @@ namespace DonderHelper
             Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%8C%E7%B4%9A",
 
-            Song1 = new() { Title = "強風オールバック(feat.歌愛ユキ)", Difficulty = Song.SongDifficulty.Hard },
-            Song2 = new() { Title = "なんどでも笑おう", Difficulty = Song.SongDifficulty.Hard },
-            Song3 = new() { Title = "who are you? who are you?", Difficulty = Song.SongDifficulty.Hard },
+            Song1 = new() { Id = 1228, Difficulty = Song.SongDifficulty.Hard },
+            Song2 = new() { Id = 1001, Difficulty = Song.SongDifficulty.Hard },
+            Song3 = new() { Id = 1304, Difficulty = Song.SongDifficulty.Hard },
 
             Exams = new()
             {
@@ -305,9 +292,9 @@ namespace DonderHelper
             Color = "kyu",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%80%E7%B4%9A",
 
-            Song1 = new() { Title = "唱", Difficulty = Song.SongDifficulty.Hard },
-            Song2 = new() { Title = "輝きを求めて", Difficulty = Song.SongDifficulty.Hard },
-            Song3 = new() { Title = "轟け!太鼓の達人", Difficulty = Song.SongDifficulty.Hard },
+            Song1 = new() { Id = 1267, Difficulty = Song.SongDifficulty.Hard },
+            Song2 = new() { Id = 561, Difficulty = Song.SongDifficulty.Hard },
+            Song3 = new() { Id = 979, Difficulty = Song.SongDifficulty.Hard },
 
             Exams = new()
             {
@@ -324,9 +311,9 @@ namespace DonderHelper
             Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%88%9D%E6%AE%B5",
 
-            Song1 = new() { Title = "ハロー!どんちゃん", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "さよならワーリャ", Difficulty = Song.SongDifficulty.Hard },
-            Song3 = new() { Title = "願いはエスペラント", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 886, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 43, Difficulty = Song.SongDifficulty.Hard },
+            Song3 = new() { Id = 3, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -344,9 +331,9 @@ namespace DonderHelper
             Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%8C%E6%AE%B5",
 
-            Song1 = new() { Title = "蝶戀", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "うちゅうひこうし冒険譚", Difficulty = Song.SongDifficulty.Hard },
-            Song3 = new() { Title = "アイドル狂戦士(feat.佐藤貴文)", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 551, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 867, Difficulty = Song.SongDifficulty.Hard },
+            Song3 = new() { Id = 951, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -364,9 +351,9 @@ namespace DonderHelper
             Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%89%E6%AE%B5",
 
-            Song1 = new() { Title = "恋の処方箋", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "オフ♨ロック", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "Connected World", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 377, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 61, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 998, Difficulty = Song.SongDifficulty.Extreme },
             
             Exams = new()
             {
@@ -384,9 +371,9 @@ namespace DonderHelper
             Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%9B%9B%E6%AE%B5",
 
-            Song1 = new() { Title = "シューガク トラベラーズ", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "トータル・エクリプス 2035", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "転生〈TENSEI〉-喜与志が待つ強者-", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 488, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 219, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1256, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -404,9 +391,9 @@ namespace DonderHelper
             Color = "blue",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%BA%94%E6%AE%B5",
 
-            Song1 = new() { Title = "大多羅捌伍伍壱", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "ネテモネテモ", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "螺旋周回軌道", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 1307, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 591, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 959, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -424,9 +411,9 @@ namespace DonderHelper
             Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AD%E6%AE%B5",
 
-            Song1 = new() { Title = "花漾", Difficulty = Song.SongDifficulty.Hidden },
-            Song2 = new() { Title = "共奏鼓祭", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "SORA-VI 火ノ鳥", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 278, Difficulty = Song.SongDifficulty.Hidden },
+            Song2 = new() { Id = 1171, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 391, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -442,11 +429,11 @@ namespace DonderHelper
             Title = "七段",
             TitleEN = "Seventh Dan",
             Color = "red",
-            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AB%E6%AE%B5",
+            Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B8%83%E6%AE%B5",
 
-            Song1 = new() { Title = "指先からはじまる物語", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "ヘ調の協奏曲 第3楽章", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "The Carnivorous Carnival", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 546, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 85, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 72, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -464,9 +451,9 @@ namespace DonderHelper
             Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%85%AB%E6%AE%B5",
 
-            Song1 = new() { Title = "My Muscle Heart", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "Crystal Hail", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "仮想現実のテレスコープ", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 569, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 1206, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1052, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -484,9 +471,9 @@ namespace DonderHelper
             Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E4%B9%9D%E6%AE%B5",
 
-            Song1 = new() { Title = "GO GET'EM!", Difficulty = Song.SongDifficulty.Hidden },
-            Song2 = new() { Title = "RIDGE RACER STEPS - GMT remix -", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "よーいドン!", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 776, Difficulty = Song.SongDifficulty.Hidden },
+            Song2 = new() { Id = 359, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 724, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -504,9 +491,9 @@ namespace DonderHelper
             Color = "red",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%8D%81%E6%AE%B5",
 
-            Song1 = new() { Title = "天狗囃子", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "Spectral Rider", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "SoulStone -闇喰イサァカス団-", Difficulty = Song.SongDifficulty.Extreme },
+            Song1 = new() { Id = 615, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 1068, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1383, Difficulty = Song.SongDifficulty.Extreme },
 
             Exams = new()
             {
@@ -524,9 +511,9 @@ namespace DonderHelper
             Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E7%8E%84%E4%BA%BA",
 
-            Song1 = new() { Title = "Doppelgangers", Difficulty = Song.SongDifficulty.Hidden },
-            Song2 = new() { Title = "ex寅 Trap!!", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "案山子姫 -Princess Scarecrow-", Difficulty = Song.SongDifficulty.Hidden },
+            Song1 = new() { Id = 1133, Difficulty = Song.SongDifficulty.Hidden },
+            Song2 = new() { Id = 1071, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1412, Difficulty = Song.SongDifficulty.Hidden },
 
             Exams = new()
             {
@@ -544,9 +531,9 @@ namespace DonderHelper
             Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E5%90%8D%E4%BA%BA",
 
-            Song1 = new() { Title = "電脳幻夜の星言詠", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "弧", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "ピッチフェイダ", Difficulty = Song.SongDifficulty.Hidden },
+            Song1 = new() { Id = 1255, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 1085, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1413, Difficulty = Song.SongDifficulty.Hidden },
 
             Exams = new()
             {
@@ -564,9 +551,9 @@ namespace DonderHelper
             Color = "jin",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E8%B6%85%E4%BA%BA",
 
-            Song1 = new() { Title = "LECIEL GLISSANDO", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "プチポチ", Difficulty = Song.SongDifficulty.Extreme },
-            Song3 = new() { Title = "Lightning Boys", Difficulty = Song.SongDifficulty.Hidden },
+            Song1 = new() { Id = 992, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 745, Difficulty = Song.SongDifficulty.Extreme },
+            Song3 = new() { Id = 1411, Difficulty = Song.SongDifficulty.Hidden },
 
             Exams = new()
             {
@@ -584,9 +571,9 @@ namespace DonderHelper
             Color = "gold",
             Url = "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%8B%E3%82%B8%E3%82%A4%E3%83%AD2025/%E9%81%94%E4%BA%BA",
 
-            Song1 = new() { Title = "POLARiSNAUT", Difficulty = Song.SongDifficulty.Extreme },
-            Song2 = new() { Title = "Emma", Difficulty = Song.SongDifficulty.Hidden },
-            Song3 = new() { Title = "vs.VIGVANGS", Difficulty = Song.SongDifficulty.Hidden },
+            Song1 = new() { Id = 1317, Difficulty = Song.SongDifficulty.Extreme },
+            Song2 = new() { Id = 1032, Difficulty = Song.SongDifficulty.Hidden },
+            Song3 = new() { Id = 1419, Difficulty = Song.SongDifficulty.Hidden },
 
             Exams = new()
             {

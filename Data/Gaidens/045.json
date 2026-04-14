@@ -1,0 +1,49 @@
+{
+  "subtitle": {
+    "ja": "えむけぴからの挑戦状#2",
+    "en-US": "EM.KE.PI's Challenge #2",
+    "ko": "EM.KE.PI의 도전장 #2",
+    "zh-TW": "來自EM.KE.PI的挑戰書#2"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_51.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E3%81%88%E3%82%80%E3%81%91%E3%81%B4%E3%81%8B%E3%82%89%E3%81%AE%E6%8C%91%E6%88%A6%E7%8A%B6#2",
+  
+  "song1": {
+    "id": 911,
+    "diff": 4
+  },
+  "song2": {
+    "id": 845,
+    "diff": 3
+  },
+  "song3": {
+    "id": 715,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [250],
+      "gold": [-1]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [13],
+      "gold": [-1]
+    },
+    {
+      "condition": 5,
+      "is_less": false,
+      "clear": [5,265,142],
+      "gold": [6,294,157]
+    }
+  ]
+}

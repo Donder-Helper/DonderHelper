@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "烈伝！ドンだ～！日本一決定戦2011",
+    "en-US": "Taiko Saga! Donder JAPAN CHAMPIONSHIP 2011",
+    "ko": "열전! 동더! 일본 제일 결정전 2011",
+    "zh-TW": "烈傳！鼓眾！日本冠軍賽 2011"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_72.png?240323100026",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D/%E7%83%88%E4%BC%9D%EF%BC%81%E3%83%89%E3%83%B3%E3%81%A0%EF%BD%9E%EF%BC%81%E6%97%A5%E6%9C%AC%E4%B8%80%E6%B1%BA%E5%AE%9A%E6%88%A62011",
+  
+  "song1": {
+    "id": 394,
+    "diff": 3
+  },
+  "song2": {
+    "id": 410,
+    "diff": 3
+  },
+  "song3": {
+    "id": 73,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 1,
+      "is_less": false,
+      "clear": [2011],
+      "gold": [2370]
+    },
+    {
+      "condition": 6,
+      "is_less": false,
+      "clear": [950000,940000,930000],
+      "gold": [980000,970000,960000]
+    }
+  ]
+}

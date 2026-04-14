@@ -23,35 +23,6 @@ namespace DonderHelper
         #region Statistics
         public static string last_Update => $"Last update: {Process.GetCurrentProcess().StartTime:yyyy/MM/dd}";
         public static DateTimeOffset readyTime = new();
-
-        private struct RegionStats
-        {
-            public int Available;
-            public int Exclusive;
-            public int SouUchi;
-            public int Unavailable;
-
-            public RegionStats() { Available = 0; Exclusive = 0; SouUchi = 0; Unavailable = 0; }
-            public RegionStats(int available, int exclusive, int souuchi, int unavailable) { Available = available; Exclusive = exclusive; SouUchi = souuchi; Unavailable = unavailable; }
-        }
-
-        // Set these stats once on initialize, as the songlist does not update at any point during uptime, and can be a waste of resources to constantly recalculate.
-        private RegionStats statsJapan = new();
-        private RegionStats statsAsia = new();
-        private RegionStats statsOceania = new();
-        private RegionStats statsAmerica = new();
-        private RegionStats statsChina = new();
-
-        private int statsTitleJa = 0;
-        private int statsTitleEn_US = 0;
-        private int statsTitleKo = 0;
-        private int statsTitleZh_TW = 0;
-        private int statsTitleZh_CN = 0;
-
-        private int statsAvailable = 0;
-        private int statsUnavailable = 0;
-        private int statsUnknown = 0;
-        private int statsMissingNotes = 0;
         #endregion
 
         private readonly DiscordSocketClient _client;
@@ -69,59 +40,6 @@ namespace DonderHelper
             _client.SlashCommandExecuted += SlashCommandExecuted;
             _client.AutocompleteExecuted += AutocompleteExecuted;
             _client.ButtonExecuted += ButtonExecuted;
-
-            #region Statistics
-
-            // Set these stats once on initialize, as the songlist does not update at any point during uptime, and can be a waste of resources to constantly recalculate.
-            statsJapan = new();
-            statsAsia = new();
-            statsOceania = new();
-            statsAmerica = new();
-            statsChina = new();
-
-            var songs = SongDatabase.Songs.Values;
-            statsJapan = new(
-                songs.Where(song => song.Region.Japan.IsAvailable()).Count(),
-                songs.Where(song => song.Region.IsJapanOnly).Count(),
-                songs.Where(song => song.Region.Japan.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
-                songs.Where(song => !song.Region.Japan.IsAvailable()).Count()
-                );
-            statsAsia = new(
-                songs.Where(song => song.Region.Asia.IsAvailable()).Count(),
-                songs.Where(song => song.Region.IsAsiaOnly).Count(),
-                songs.Where(song => song.Region.Asia.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
-                songs.Where(song => !song.Region.Asia.IsAvailable()).Count()
-                );
-            statsOceania = new(
-                songs.Where(song => song.Region.Oceania.IsAvailable()).Count(),
-                songs.Where(song => song.Region.IsOceaniaOnly).Count(),
-                songs.Where(song => song.Region.Oceania.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
-                songs.Where(song => !song.Region.Oceania.IsAvailable()).Count()
-                );
-            statsAmerica = new(
-                songs.Where(song => song.Region.UnitedStates.IsAvailable()).Count(),
-                songs.Where(song => song.Region.IsUnitedStatesOnly).Count(),
-                songs.Where(song => song.Region.UnitedStates.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
-                songs.Where(song => !song.Region.UnitedStates.IsAvailable()).Count()
-                );
-            statsChina = new(
-                songs.Where(song => song.Region.China.IsAvailable()).Count(),
-                songs.Where(song => song.Region.IsChinaOnly).Count(),
-                songs.Where(song => song.Region.China.IsAvailable()).Where(song => song.Title.Contains("【双打】")).Count(),
-                songs.Where(song => !song.Region.China.IsAvailable()).Count()
-                );
-
-            statsTitleJa = songs.Where(song => song.TryGetTitle("ja", out string? title)).Count();
-            statsTitleEn_US = songs.Where(song => song.TryGetTitle("en-US", out string? title)).Count();
-            statsTitleKo = songs.Where(song => song.TryGetTitle("ko", out string? title)).Count();
-            statsTitleZh_TW = songs.Where(song => song.TryGetTitle("zh-TW", out string? title)).Count();
-            statsTitleZh_CN = songs.Where(song => song.TryGetTitle("zh-CN", out string? title)).Count();
-
-            statsAvailable = songs.Where(song => song.Region.IsAvailableEverywhere).Count();
-            statsUnavailable = songs.Where(song => song.Region.IsUnavailableEverywhere).Count();
-            statsUnknown = songs.Where(song => song.Region.ContainsUnknown).Count();
-            statsMissingNotes = songs.Where(song => !song.Difficulties.ContainsNotes()).Count();
-            #endregion
         }
 
         private async Task ButtonExecuted(SocketMessageComponent component)
@@ -134,29 +52,46 @@ namespace DonderHelper
                 if (id.StartsWith("diff"))
                 {
                     string[] values = id.Split(',', 3);
-                    if (SongDatabase.Songs.TryGetValue(values[2], out Song? song)) {
-                        await PostDiff(component, song, Song.GetDifficultyFromString(values[1]));
+                    if (int.TryParse(values[2], out int id_value))
+                    {
+                        var result = await SongDatabase.GetSong(id_value);
+                        if (result != null)
+                            await PostDiff(component, id_value, result, Song.GetDifficultyFromString(values[1]));
+                        else
+                        {
+                            Console.WriteLine($"Button interaction failed for 'diff' with id '{id_value}' and diff '{values[1]}' (Song is {(result is null ? "null" : "not null")})");
+                            await component.RespondAsync($"This button interaction failed due to an error.", null, false, true);
+                        }
                         return;
                     }
                     else
                     {
-                        Console.WriteLine($"Button interaction failed for 'diff' with title '{values[2]}' and diff '{values[1]}'.");
-                        await component.RespondAsync("This button interaction failed, as the song title was not recognized.", null, false, true);
+                        Console.WriteLine($"Button interaction failed for 'diff' with value '{values[2]}' and diff '{values[1]}'.");
+                        await component.RespondAsync($"This button interaction failed because the bot was recently updated.\n" +
+                            $"Please re-run the song command to create a new response with functional buttons.", null, false, true);
                         return;
                     }
                 }
                 else if (id.StartsWith("song"))
                 {
                     string[] values = id.Split(',', 2);
-                    if (SongDatabase.Songs.TryGetValue(values[1], out Song? song))
+                    if (int.TryParse(values[1], out int id_value))
                     {
-                        await PostSong(component, song);
+                        var result = await SongDatabase.GetSong(id_value);
+                        if (result != null)
+                            await PostSong(component, id_value, result);
+                        else
+                        {
+                            Console.WriteLine($"Button interaction failed for 'diff' with id '{id_value}' (Song is {(result is null ? "null" : "not null")})");
+                            await component.RespondAsync($"This button interaction failed due to an error.", null, false, true);
+                        }
                         return;
                     }
                     else
                     {
                         Console.WriteLine($"Button interaction failed for 'song' with title '{values[1]}'.");
-                        await component.RespondAsync("This button interaction failed, as the song title was not recognized.", null, false, true);
+                        await component.RespondAsync($"This button interaction failed because the bot was recently updated.\n" +
+                            $"Please re-run the song command to create a new response with functional buttons.", null, false, true);
                         return;
                     }
                 }
@@ -178,34 +113,64 @@ namespace DonderHelper
             DateTimeOffset offset = DateTimeOffset.UtcNow;
             string locale = GetLocale(interaction);
             string name = (string)interaction.Data.Current.Value;
+            int? id = int.TryParse(name, out int id_result) ? id_result : null;
 
-            int Priority(string str1, string str2)
-            {
-                if (str1.Equals(str2, StringComparison.InvariantCultureIgnoreCase)) return -999;
-                if (str1.StartsWith(str2, StringComparison.InvariantCultureIgnoreCase)) return -998;
-                return string.Compare(str1, str2, true);
-            }
             List<AutocompleteResult> result = [];
 
             #region Song Title
             if (interaction.Data.CommandName == "song" && interaction.Data.Current.Name == "title")
             {
+                int Priority(KeyValuePair<int, Song> song)
+                {
+                    if (id != null && song.Key == id) return -999;
+                    if (song.Value.TitleList.Values.Any(title => title.Equals(name, StringComparison.InvariantCultureIgnoreCase))) return -999;
+                    if (song.Value.SubtitleList.Values.Any(subtitle => subtitle.Equals(name, StringComparison.InvariantCultureIgnoreCase))) return -999;
+                    if (song.Value.TitleList.Values.Any(title => title.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))) return -998;
+                    if (song.Value.SubtitleList.Values.Any(subtitle => subtitle.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))) return -998;
+
+                    return song.Value.TitleList.Values.Select(title => string.Compare(title, name, StringComparison.InvariantCultureIgnoreCase)).Sum()
+                        + song.Value.SubtitleList.Values.Select(subtitle => string.Compare(subtitle, name, StringComparison.InvariantCultureIgnoreCase)).Sum();
+                }
+                AutocompleteResult GetResult(KeyValuePair<int, Song> song)
+                {
+                    if (song.Value.SubtitleList.TryGetValue(locale, out string? subtitle) && !string.IsNullOrWhiteSpace(subtitle))
+                    {
+                        string full = $"[{song.Key}] {song.Value.GetTitle(locale)} / {subtitle}";
+                        if (full.Length >= 100) full = full.Substring(0, 97) + "...";
+
+                        return new(full, song.Key.ToString());
+                    }
+                    return new($"[{song.Key}] {song.Value.GetTitle(locale)}", song.Key.ToString());
+                }
+
                 if (string.IsNullOrEmpty((string)interaction.Data.Current.Value))
                 {
-                    Random rand = new();
-                    List<Song> songlist = [];
-                    for (int i = 0; i < 10; i++)
-                        songlist.Add(SongDatabase.Songs.ElementAt(rand.Next(SongDatabase.Songs.Count)).Value);
-                    var autocomp = songlist.Select(song => new AutocompleteResult(song.GetTitle(locale), song.Title));
+                    var random = await SongDatabase.GetRandomSongs(10);
+                    random = random.Reverse().ToDictionary();
+                    var autocomp = random.Select(GetResult);
 
                     await interaction.RespondAsync(autocomp, null);
                     goto end;
                 }
 
-                result = SongDatabase.SongNames.
-                    Where(song => song.Key.Contains(name, StringComparison.OrdinalIgnoreCase)).
-                    OrderBy(song => Priority(song.Key, name)).Take(25).
-                    Select(song => new AutocompleteResult(song.Key, song.Value)).ToList();
+                var search = await SongDatabase.GetSongs(name);
+                search = search.Reverse().ToDictionary();
+                if (id != null)
+                {
+                    Song? song = await SongDatabase.GetSong((int)id);
+                    if (song != null) search[(int)id] = song;
+                }
+
+                if (search.Count == 0)
+                {
+                    await interaction.RespondAsync([], null);
+                    goto end;
+                }
+
+                result = search.
+                    OrderBy(Priority).
+                    Select(GetResult).
+                    Take(25).ToList();
 
                 await interaction.RespondAsync(result, null);
             }
@@ -213,6 +178,14 @@ namespace DonderHelper
             #region Gaiden Title
             else if (interaction.Data.CommandName == "gaiden" && interaction.Data.Current.Name == "title")
             {
+                int Priority(KeyValuePair<string, string> gaiden)
+                {
+                    if (gaiden.Key.Equals(name, StringComparison.InvariantCultureIgnoreCase)) return -999;
+                    if (gaiden.Key.StartsWith(name, StringComparison.InvariantCultureIgnoreCase)) return -998;
+
+                    return string.Compare(gaiden.Key, name, StringComparison.InvariantCultureIgnoreCase);
+                }
+
                 if (string.IsNullOrEmpty((string)interaction.Data.Current.Value))
                 {
                     Random rand = new();
@@ -225,7 +198,7 @@ namespace DonderHelper
 
                 result = GaidenSonglist.GaidenNames.
                     Where(song => song.Key.Contains(name, StringComparison.OrdinalIgnoreCase)).
-                    OrderBy(song => Priority(song.Key, name)).Take(25).
+                    OrderBy(Priority).Take(25).
                     Select(song => new AutocompleteResult(song.Key, song.Value)).ToList();
 
                 await interaction.RespondAsync(result, null);
@@ -295,7 +268,7 @@ namespace DonderHelper
                     NameLocalizations = LocaleData.GetStrings("DIFFICULTY_BOTH"),
                     Value = "both"
                 });
-                command_random.AddOption("level", ApplicationCommandOptionType.Integer, "The difficulty level.", false, null, false, 1, 10, null, null, LocaleData.GetStrings("OPTION_LEVEL_NAME"), LocaleData.GetStrings("OPTION_LEVEL_DESC"), null, null,
+                command_random.AddOption("level", ApplicationCommandOptionType.Number, "The difficulty level.", false, null, false, 1, 10, null, null, LocaleData.GetStrings("OPTION_LEVEL_NAME"), LocaleData.GetStrings("OPTION_LEVEL_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties() { Name = "1★", Value = 1 },
                 new ApplicationCommandOptionChoiceProperties() { Name = "2★", Value = 2 },
                 new ApplicationCommandOptionChoiceProperties() { Name = "3★", Value = 3 },
@@ -416,6 +389,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "Don Challenge 2026",
+                    Value = "challenge_2026",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "挑戦！ドンチャレ2026" },
+                        { "zh-TW", "挑戰！鼓眾挑戰2026" },
+                        { "ko", "도전! 쿵 챌린지 2026" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "HATSUNE MIKU: COLORFUL STAGE! x Taiko no Tatsujin Collaboration Campaign",
                     Value = "project_sekai",
                     NameLocalizations = new Dictionary<string, string>()
@@ -427,33 +411,20 @@ namespace DonderHelper
                 },
                 new ApplicationCommandOptionChoiceProperties()
                 {
-                    Name = "ARKNIGHTS × Taiko no Tatsujin Collaboration Campaign",
-                    Value = "arknights",
-                    NameLocalizations = new Dictionary<string, string>()
-                    {
-                        { "ja", "アークナイツ×太鼓の達人 コラボキャンペーン" },
-                        { "zh-TW", "明日方舟×太鼓之達人 合作活動" },
-                        { "ko", "명일방주×태고의 달인 콜라보레이션 캠페인" }
-                    }
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
-                    Name = "Oodles of Outfits Campaign Winter 2025",
-                    Value = "winter2025",
-                    NameLocalizations = new Dictionary<string, string>()
-                    {
-                        { "ja", "きせかえザクザクキャンペーン2025冬" },
-                        { "zh-TW", "換裝道具滿滿活動2025冬" },
-                        { "ko", "갈아입히기 아이템 듬뿍 캠페인 2025 겨울" }
-                    }
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
                     Name = "『Got Boost?』Campaign",
                     Value = "kamen2025",
                     NameLocalizations = new Dictionary<string, string>()
                     {
                         { "ja", "『Got Boost?』キャンペーン" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
+                    Name = "『VISIONS』Campaign",
+                    Value = "kamen2026",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "『VISIONS』キャンペーン" }
                     }
                 },
                 new ApplicationCommandOptionChoiceProperties()
@@ -559,14 +530,6 @@ namespace DonderHelper
                 command_hiroba.WithContextTypes(context_types);
                 command_hiroba.WithIntegrationTypes(integration_types);
 
-                var command_missing = new SlashCommandBuilder();
-                command_missing.WithName("missing");
-                command_missing.WithDescription("Lists all songs with missing note counts and region status.");
-                command_missing.WithNameLocalizations(LocaleData.GetStrings("COMMAND_MISSING_NAME"));
-                command_missing.WithDescriptionLocalizations(LocaleData.GetStrings("COMMAND_MISSING_DESC"));
-                command_missing.WithContextTypes(context_types);
-                command_missing.WithIntegrationTypes(integration_types);
-
                 var command_invite = new SlashCommandBuilder();
                 command_invite.WithName("invite");
                 command_invite.WithDescription("Add me to your server, or add me as an app!");
@@ -575,7 +538,7 @@ namespace DonderHelper
                 command_invite.WithContextTypes(context_types);
                 command_invite.WithIntegrationTypes(integration_types);
 
-                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_help.Build(), command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_gaiden.Build(), command_hiroba.Build(), command_missing.Build(), command_invite.Build()]);
+                await _client.BulkOverwriteGlobalApplicationCommandsAsync([command_help.Build(), command_random.Build(), command_song.Build(), command_region.Build(), command_campaign.Build(), command_shop.Build(), command_about.Build(), command_stats.Build(), command_dan.Build(), command_gaiden.Build(), command_hiroba.Build(), command_invite.Build()]);
 
                 command_list = await _client.GetGlobalApplicationCommandsAsync(true) ?? [];
 
@@ -598,7 +561,7 @@ namespace DonderHelper
             }
         }
 
-        private async Task PostSong(SocketInteraction interaction, Song song)
+        private async Task PostSong(SocketInteraction interaction, int id, Song song)
         {
             Console.WriteLine("PostSong interaction created at " + interaction.CreatedAt);
             Console.WriteLine("Current time is " + DateTimeOffset.UtcNow);
@@ -608,9 +571,15 @@ namespace DonderHelper
             {
                 string locale = GetLocale(interaction);
 
+                string title = song.TitleList.Values.Distinct().Count() > 1 ? song.GetTitleList(true, locale) : song.GetTitle(locale);
+                if (title.Length > 256)
+                {
+                    title = $"{LocaleData.GetLocaleAsEmoji(locale)} {song.GetTitle(locale)}";
+                }
+
                 var builder = new EmbedBuilder()
                 {
-                    Title = song.TitleList.Values.Distinct().Count() > 1 ? song.GetTitleList(true, locale) : song.GetTitle(locale),
+                    Title = title,
                     Description = song.SubtitleList.Values.Distinct().Count() > 1 ? song.GetSubtitleList(true, locale) : song.GetSubtitle(locale),
                     Color = Song.GetGenreAsColor(song.Genre),
                     Fields = new() {
@@ -625,11 +594,11 @@ namespace DonderHelper
                         new() {
                             Name = LocaleData.GetString("DIFFICULTY_TITLE", locale),
                             Value =
-                            $"{(song.Difficulties.Hidden.Level > -1 ? ($"{EmoteData.GetDifficulty(Song.SongDifficulty.Hidden)} " + song.Difficulties.Hidden.Level + "★ " + song.Difficulties.Hidden.NoteCount.ToString() + "\n") : "")}" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Extreme)} {(song.Difficulties.Extreme.Level > -1 ? song.Difficulties.Extreme.Level + "★ " : "- ") + song.Difficulties.Extreme.NoteCount.ToString()}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Hard)} {(song.Difficulties.Hard.Level > -1 ? song.Difficulties.Hard.Level + "★ " : "- ") + song.Difficulties.Hard.NoteCount.ToString()}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Normal)} {(song.Difficulties.Normal.Level > -1 ? song.Difficulties.Normal.Level + "★ " : "- ") + song.Difficulties.Normal.NoteCount.ToString()}\n" +
-                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Easy)} {(song.Difficulties.Easy.Level > -1 ? song.Difficulties.Easy.Level + "★ " : "- ") + song.Difficulties.Easy.NoteCount.ToString()}",
+                            $"{(song.Difficulties.Hidden.Level > 0 ? ($"{EmoteData.GetDifficulty(Song.SongDifficulty.Hidden)} " + song.Difficulties.Hidden.Level + "★ " + song.Difficulties.Hidden.NoteCount.ToString() + "\n") : "")}" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Extreme)} {(song.Difficulties.Extreme.Level > 0 ? song.Difficulties.Extreme.Level + "★ " : "- ") + song.Difficulties.Extreme.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Hard)} {(song.Difficulties.Hard.Level > 0 ? song.Difficulties.Hard.Level + "★ " : "- ") + song.Difficulties.Hard.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Normal)} {(song.Difficulties.Normal.Level > 0 ? song.Difficulties.Normal.Level + "★ " : "- ") + song.Difficulties.Normal.NoteCount.ToString()}\n" +
+                            $"{EmoteData.GetDifficulty(Song.SongDifficulty.Easy)} {(song.Difficulties.Easy.Level > 0 ? song.Difficulties.Easy.Level + "★ " : "- ") + song.Difficulties.Easy.NoteCount.ToString()}",
                             IsInline = true
                         },
                         new()
@@ -650,11 +619,11 @@ namespace DonderHelper
                 };
                 
                 var component_builder = new ComponentBuilder();
-                if (song.Difficulties.Easy.Level > 0 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
-                if (song.Difficulties.Normal.Level > 0 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
-                if (song.Difficulties.Hard.Level > 0 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
-                if (song.Difficulties.Extreme.Level > 0 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
-                if (song.Difficulties.Hidden.Level > 0 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
+                if (song.Difficulties.Easy.Level > 0 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Easy));
+                if (song.Difficulties.Normal.Level > 0 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Normal));
+                if (song.Difficulties.Hard.Level > 0 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Hard));
+                if (song.Difficulties.Extreme.Level > 0 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Extreme));
+                if (song.Difficulties.Hidden.Level > 0 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Hidden));
 
                 await interaction.RespondAsync(null, [builder.Build()], false, !CanSendMessage(interaction), null, component_builder.Build());
             }
@@ -664,7 +633,7 @@ namespace DonderHelper
                 throw;
             }
         }
-        private async Task PostDiff(SocketInteraction interaction, Song song, Song.SongDifficulty difficulty)
+        private async Task PostDiff(SocketInteraction interaction, int id, Song song, Song.SongDifficulty difficulty)
         {
             Console.WriteLine("PostDiff interaction created at " + interaction.CreatedAt);
             Console.WriteLine("Current time is " + DateTimeOffset.UtcNow);
@@ -684,7 +653,7 @@ namespace DonderHelper
 
                 var builder = new EmbedBuilder()
                 {
-                    Title = song.GetTitle(locale) + $" {EmoteData.GetDifficulty(difficulty)} {(chart.Level > -1 ? chart.Level + "★" : "")}",
+                    Title = song.GetTitle(locale) + $" {EmoteData.GetDifficulty(difficulty)} {(chart.Level > 0 ? chart.Level + "★" : "")}",
                     Description = song.GetSubtitle(locale) + $"{(chart.NoteCount.ContainsNotes() ? "\n" : "")}{chart.NoteCount}\n\n" +
 
                     $"**{LocaleData.GetString("AVAILABLE_TITLE", locale)}**\n" +
@@ -701,12 +670,12 @@ namespace DonderHelper
                         new()
                         {
                             Name = "Details (Taiko Fumen Wiki)",
-                            Value = !string.IsNullOrWhiteSpace(chart.Url) ? chart.Url : $"-# {LocaleData.GetString("URL_MISSING", locale, EmoteData.GetEmote("MISS"))}"
+                            Value = chart.SourceUrls.TryGetValue("taiko-fumen", out string? taiko_fumen) ? taiko_fumen : $"-# {LocaleData.GetString("URL_MISSING", locale, EmoteData.GetEmote("MISS"))}"
                         },
                         new()
                         {
                             Name = "Details (taiko.wiki)",
-                            Value = !string.IsNullOrWhiteSpace(chart.UrlKo) ? chart.UrlKo : $"-# {LocaleData.GetString("URL_MISSING", locale, EmoteData.GetEmote("MISS"))}"
+                            Value = chart.SourceUrls.TryGetValue("taiko-wiki", out string? taiko_wiki) ? taiko_wiki : $"-# {LocaleData.GetString("URL_MISSING", locale, EmoteData.GetEmote("MISS"))}"
                         }
                     },
                     Url = chart.ImageUrl,
@@ -715,11 +684,11 @@ namespace DonderHelper
                 };
 
                 var component_builder = new ComponentBuilder();
-                if (song.Difficulties.Easy.Level > -1 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Easy));
-                if (song.Difficulties.Normal.Level > -1 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Normal));
-                if (song.Difficulties.Hard.Level > -1 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hard));
-                if (song.Difficulties.Extreme.Level > -1 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Extreme));
-                if (song.Difficulties.Hidden.Level > -1 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, SongDatabase.SongNames[song.Title], Song.SongDifficulty.Hidden));
+                if (song.Difficulties.Easy.Level > 0 || song.Difficulties.Easy.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Easy));
+                if (song.Difficulties.Normal.Level > 0 || song.Difficulties.Normal.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Normal));
+                if (song.Difficulties.Hard.Level > 0 || song.Difficulties.Hard.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Hard));
+                if (song.Difficulties.Extreme.Level > 0 || song.Difficulties.Extreme.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Extreme));
+                if (song.Difficulties.Hidden.Level > 0 || song.Difficulties.Hidden.NoteCount.ContainsNotes()) component_builder.WithButton(CreateSongButton(interaction, id, difficulty: Song.SongDifficulty.Hidden));
 
                 await interaction.RespondAsync(null, [builder.Build()], false, !CanSendMessage(interaction), null, component_builder.Build());
             }
@@ -733,6 +702,7 @@ namespace DonderHelper
         {
             try
             {
+                //await command.DeferAsync();
                 Console.WriteLine($"User {command.User.Id} executed the '{command.Data.Name}' " +
                     $"command{(command.IsDMInteraction ? " in a DM" : (" in guild " + (command.GuildId?.ToString() ?? "(null)") + " in channel " + (command.ChannelId?.ToString() ?? "(null)") + $" ({command.Channel?.ChannelType.ToString() ?? "null Channel Type"})"))} with the following parameters: {(command.Data.Options.Count > 0 ? string.Join(", ", command.Data.Options.Select(option => $"({option.Name} - {Regex.Replace(option.Value.ToString() ?? "", @"[^\w\.@-]", "")})")) : "(No options)")}");
 
@@ -770,67 +740,28 @@ namespace DonderHelper
                         var diff_option = command.Data.Options.Where(item => item.Name == "difficulty");
                         var genre_option = command.Data.Options.Where(item => item.Name == "genre");
 
-                        int level = (int)(level_option.Count() > 0 ? (long)level_option.First().Value : 0);
-                        string difficulty = diff_option.Count() > 0 ? (string)diff_option.First().Value : "";
-                        string genre = genre_option.Count() > 0 ? (string)genre_option.First().Value : "";
-                        bool uses_diff_or_level = level > 0 || difficulty != "";
+                        int? level = level_option.Count() > 0 ? (int)level_option.First().Value : null;
+                        string? difficulty = diff_option.Count() > 0 ? (string)diff_option.First().Value : null;
+                        string? genre = genre_option.Count() > 0 ? (string)genre_option.First().Value : null;
 
-                        Dictionary<string, Song> songlist = SongDatabase.Songs;
+                        var songlist = await SongDatabase.GetRandomSongs(1,
+                            genre != null ? Song.GetGenreFromString(genre) : null,
+                            difficulty != null ? Song.GetDifficultyFromString(difficulty) : null,
+                            level);
 
-                        if (genre != "") songlist = songlist.Where(song => song.Value.GetAllGenres().Contains(Song.GetGenreFromString(genre))).ToDictionary();
-
-                        if (uses_diff_or_level)
+                        if (songlist.Count > 0)
                         {
-
-                            if (level > 0 && difficulty != "") {
-                                if (difficulty == "both")
-                                    songlist = songlist.Where(song => song.Value.Difficulties["ex"].Level == level || song.Value.Difficulties["hidden"].Level == level).ToDictionary();
-                                else
-                                    songlist = songlist.Where(song => song.Value.Difficulties[difficulty].Level == level).ToDictionary();
-                            }
-                            else if (level > 0) {
-                                songlist = songlist.Where(song => song.Value.Difficulties["ex"].Level == level || song.Value.Difficulties["hidden"].Level == level).ToDictionary();
-                            }
-                            else if (difficulty != "")
-                            {
-                                if (difficulty == "both")
-                                    songlist = songlist.Where(song => song.Value.Difficulties["ex"].Level > 0).ToDictionary();
-                                else
-                                    songlist = songlist.Where(song => song.Value.Difficulties[difficulty].Level > 0).ToDictionary();
-                            }
-
-                            if (songlist.Count > 0)
-                            {
-                                Song.SongDifficulty randomEx(Song song)
-                                {
-                                    if (song.Difficulties["hidden"].Level <= 0) return Song.SongDifficulty.Extreme;
-                                    if ((level <= 0) || (song.Difficulties["ex"].Level == level && song.Difficulties["hidden"].Level == level)) {
-                                        return rand.Next(2) == 1 ? Song.SongDifficulty.Hidden : Song.SongDifficulty.Extreme;
-                                    }
-                                    return song.Difficulties["hidden"].Level == level ? Song.SongDifficulty.Hidden : Song.SongDifficulty.Extreme;
-                                }
-
-                                Song song = songlist.ElementAt(rand.Next(songlist.Count)).Value;
-                                await PostDiff(command, song, difficulty switch
-                                {
-                                    "easy" => Song.SongDifficulty.Easy,
-                                    "normal" => Song.SongDifficulty.Normal,
-                                    "hard" => Song.SongDifficulty.Hard,
-                                    "ex" => Song.SongDifficulty.Extreme,
-                                    "hidden" => Song.SongDifficulty.Hidden,
-                                    "both" => randomEx(song),
-                                    _ => Song.SongDifficulty.Extreme
-                                });
-                            }
+                            var song = songlist.ElementAt(Random.Shared.Next(songlist.Count));
+                            if (difficulty != null)
+                                await PostDiff(command, song.Key, song.Value, Song.GetDifficultyFromString(difficulty));
+                            else if (level != null)
+                                await PostDiff(command, song.Key, song.Value, Song.SongDifficulty.Extreme);
                             else
-                            {
-                                await command.RespondAsync("Could not find any songs with the given parameters.", null, false, true);
-                            }
+                                await PostSong(command, song.Key, song.Value);
                         }
                         else
                         {
-                            Song song = songlist.ElementAt(rand.Next(songlist.Count)).Value;
-                            await PostSong(command, song);
+                            await command.RespondAsync("Could not find any songs with the given parameters.", null, false, true);
                         }
                     
                         break;
@@ -840,23 +771,25 @@ namespace DonderHelper
                         if (command.Data.Options.Count == 1 || command.Data.Options.Count == 2)
                         {
                             string title = (string)command.Data.Options.First(option => option.Name == "title").Value;
-                            string found_title = SongDatabase.SongNames.TryGetValue(title, out string? result) ? result : title;
-                            if (SongDatabase.Songs.TryGetValue(found_title, out Song? song))
+                            int? id = int.TryParse(title, out int result_id) ? result_id : null;
+                            Song? song = id != null ? await SongDatabase.GetSong((int)id) : null;
+                            if (id != null && song != null)
                             {
+                                int song_id = (int)id;
                                 if (command.Data.Options.Any(option => option.Name == "difficulty"))
                                 {
                                     switch ((string)command.Data.Options.First(option => option.Name == "difficulty").Value)
                                     {
-                                        case "easy": await PostDiff(command, song, Song.SongDifficulty.Easy); break;
-                                        case "normal": await PostDiff(command, song, Song.SongDifficulty.Normal); break;
-                                        case "hard": await PostDiff(command, song, Song.SongDifficulty.Hard); break;
-                                        case "ex": await PostDiff(command, song, Song.SongDifficulty.Extreme); break;
-                                        case "hidden": await PostDiff(command, song, Song.SongDifficulty.Hidden); break;
-                                        default: await PostSong(command, song); break;
+                                        case "easy": await PostDiff(command, song_id, song, Song.SongDifficulty.Easy); break;
+                                        case "normal": await PostDiff(command, song_id, song, Song.SongDifficulty.Normal); break;
+                                        case "hard": await PostDiff(command, song_id, song, Song.SongDifficulty.Hard); break;
+                                        case "ex": await PostDiff(command, song_id, song, Song.SongDifficulty.Extreme); break;
+                                        case "hidden": await PostDiff(command, song_id, song, Song.SongDifficulty.Hidden); break;
+                                        default: await PostSong(command, song_id, song); break;
                                     }
                                 }
                                 else
-                                    await PostSong(command, song);
+                                    await PostSong(command, song_id, song);
                             }
                             else
                                 await command.RespondAsync(LocaleData.GetString("DISCLAIMER_MISSING", command.UserLocale ?? "en-US", title), null, false, true);
@@ -880,6 +813,56 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "challenge_2026":
+                            {
+                                string title = locale switch
+                                {
+                                    "ja" => "挑戦！ドンチャレ2026",
+                                    "zh-TW" => "挑戰！鼓眾挑戰2026",
+                                    "ko" => "도전! 쿵 챌린지 2026",
+                                    _ => "Don Challenge 2026"
+                                };
+                                string url = locale switch
+                                {
+                                    "ja" => "https://www.facebook.com/taikoac.asia/posts/pfbid02jmN3qyVf1wB32b87aktVEEq8xwZgpdRcbBun3z8DqHW4HdYokcfgvoKFKgBVmhAzl",
+                                    "zh-TW" => "https://www.facebook.com/taikoac.asia/posts/pfbid02zLkz8pu3Xd4kYYKXRZ9CkQHtndcHbHF8twCMjHMjepMn8uG7AH7ty7LYvunsFcCBl",
+                                    "ko" => "https://www.facebook.com/taikoac.asia/posts/pfbid0phPKSkQU1dqVZrM2cHr3PVPmJbwFgn6tvrbKV52x3XAe2MKRGojGtFmFJXYbH91ul",
+                                    _ => "https://www.facebook.com/taikoac.asia/posts/pfbid02eRyJMpL8wzxaSrPZnoKCLLTqxRj3tZJwJTiVfeFz8sKoEBAqdPpPksqWQd42swnsl"
+                                };
+                                string image_url = locale switch
+                                {
+                                    "ja" => "https://cdn.discordapp.com/attachments/1355004709974446302/1493422850105933898/661444476_1465352202272876_1584635110499325430_n.png",
+                                    "zh-TW" => "https://media.discordapp.net/attachments/1355004709974446302/1493422851808821308/658139763_1465324715608958_748597247809822865_n.png",
+                                    "ko" => "https://media.discordapp.net/attachments/1355004709974446302/1493422851208904805/662013938_1465325938942169_1856873950553760837_n.png",
+                                    _ => "https://media.discordapp.net/attachments/1355004709974446302/1493422850646736907/661604847_1465323655609064_5851573694867461963_n.png"
+                                };
+
+                                var challenge_2026 = new EmbedBuilder()
+                                {
+                                    Title = title,
+                                    Color = new(0xf48c55),
+                                    Url = url,
+                                    ImageUrl = image_url,
+
+                                    Description = "",
+
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+
+                                var qr = new EmbedBuilder()
+                                {
+                                    Url = url,
+                                    ImageUrl = "https://media.discordapp.net/attachments/1355004709974446302/1493422890740224120/656754646_1465352258939537_7399666354091764854_n.png"
+                                };
+
+                                var component = new ComponentBuilder();
+                                var songs = await SongDatabase.GetSongs(1467);
+                                component.WithButton(CreateSongButton(command, songs.First()));
+
+                                await command.RespondAsync(null, [challenge_2026.Build(), qr.Build()], false, false, null, component.Build());
+                                break;
+                            }
                             case "project_sekai":
                             {
                                 string title = locale switch
@@ -921,78 +904,11 @@ namespace DonderHelper
                                 };
 
                                 var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "てらてら"));
-                                component.WithButton(CreateSongButton(command, "モア!ジャンプ!モア!"));
-                                component.WithButton(CreateSongButton(command, "CR詠ZY"));
-                                component.WithButton(CreateSongButton(command, "トンデモワンダーズ"));
-                                component.WithButton(CreateSongButton(command, "バグ"));
+                                var songlist = await SongDatabase.GetSongs(1424, 1425, 1426, 1427, 1428);
+                                foreach (var song in songlist)
+                                    component.WithButton(CreateSongButton(command, song));
 
                                 await command.RespondAsync(null, [project_sekai.Build()], false, false, null, component.Build());
-                                break;
-                            }
-                            case "arknights":
-                            {
-                                string url = locale switch
-                                {
-                                    "ja" => "https://taiko.namco-ch.net/taiko/special/arknights/",
-                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/arknights/",
-                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/arknights/",
-                                    _ => "https://taiko.namco-ch.net/taiko/en/special/arknights/"
-                                };
-
-                                var arknights = new EmbedBuilder()
-                                {
-                                    Title = locale switch
-                                    {
-                                        "ja" => "アークナイツ×太鼓の達人 コラボキャンペーン",
-                                        "zh-TW" => "明日方舟×太鼓之達人 合作活動",
-                                        "ko" => "명일방주×태고의 달인 콜라보레이션 캠페인",
-                                        _ => "ARKNIGHTS × Taiko no Tatsujin Collaboration Campaign"
-                                    },
-                                    Color = new(0x00ffff),
-                                    Url = url,
-                                    // Use Don or Katsu profile pictures from Arknights, based on user ID :^)
-                                    ThumbnailUrl = ((command.User?.Id ?? 1) % 2 == 1) ?
-                                    "https://arknights.wiki.gg/images/thumb/Enthusiastic_Don_Don_profile.png/120px-Enthusiastic_Don_Don_profile.png?b357de" :
-                                    "https://arknights.wiki.gg/images/thumb/Cheerful_Ka_Ka_profile.png/120px-Cheerful_Ka_Ka_profile.png?9961df",
-                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2025/12/cae4027c45f059c7c6d3fbb3cabf1318.png",
-                                    Description =
-                                    $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
-                                    $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=54")}\n\n" +
-                                    $"__{LocaleData.GetString("ITEM_PUCHI", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774198800)}\n\n" +
-                                    $"__{LocaleData.GetString("CAMPAIGN_GOODS", locale)}__\n{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1774803600)}\n-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-
-                                var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "Radiant"));
-                                component.WithButton(CreateSongButton(command, "Break Through the Dome"));
-
-                                await command.RespondAsync(null, [arknights.Build()], false, false, null, component.Build());
-                                break;
-                            }
-                            case "winter2025":
-                            {
-                                var winter2025 = new EmbedBuilder()
-                                {
-                                    Title = locale switch
-                                    {
-                                        "ja" => "きせかえザクザクキャンペーン2025冬",
-                                        "zh-TW" => "換裝道具滿滿活動2025冬",
-                                        "ko" => "갈아입히기 아이템 듬뿍 캠페인 2025 겨울",
-                                        _ => "Oodles of Outfits Campaign Winter 2025"
-                                    },
-                                    Color = donShop_Winter_color,
-                                    Url = "https://www.facebook.com/photo/?fbid=1396519069156190&set=ecnf.100063943299686",
-                                    ThumbnailUrl = donShop_Winter_img,
-                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/01/d7e9fa9a9aede1e71079379f6575e85d.png",
-                                    Description = LocaleData.GetString("CAMPAIGN_UNLOCKURL", locale, "[English](https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/) / [日本語](https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3#campaign2025win)"
-                                    + "\n\n" + LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1773594000)),
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-                                await command.RespondAsync(null, [winter2025.Build()], false, false);
                                 break;
                             }
                             case "kamen2025":
@@ -1003,13 +919,35 @@ namespace DonderHelper
                                     Color = new(0xD9358C),
                                     Url = "https://x.com/taiko_team/status/1904702341053636981",
                                     ImageUrl = "https://pbs.twimg.com/media/GmNSODdaoAAbrzI?format=jpg&name=large",
-                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1772211600) + "\n\n" +
-                                    $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
+                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1803834000) + "\n\n" +
+                                    $"-# {LocaleData.GetString("DISCLAIMER_NOJAPAN", locale)}",
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
                                 };
                                 var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "Got Boost?"));
+
+                                var song = await SongDatabase.GetSongs(1342);
+                                component.WithButton(CreateSongButton(command, song.First()));
+
+                                await command.RespondAsync(null, [kamen2025.Build()], false, false, null, component.Build());
+                                break;
+                            }
+                            case "kamen2026":
+                            {
+                                var kamen2025 = new EmbedBuilder()
+                                {
+                                    Title = $"『VISIONS』{(locale == "ja" ? "キャンペーン" : "Campaign")}",
+                                    Color = new(0x248f7b),
+                                    Url = "https://x.com/taiko_team/status/2036612781504356499",
+                                    ImageUrl = "https://pbs.twimg.com/media/HCEKULyaQAA2XQG?format=jpg&name=large",
+                                    Description = LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1803834000),
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+                                var component = new ComponentBuilder();
+
+                                var song = await SongDatabase.GetSongs(1445);
+                                component.WithButton(CreateSongButton(command, song.First()));
 
                                 await command.RespondAsync(null, [kamen2025.Build()], false, false, null, component.Build());
                                 break;
@@ -1031,7 +969,7 @@ namespace DonderHelper
                                 };
 
                                 var component = new ComponentBuilder();
-                                component.WithButton(CreateSongButton(command, "彁").WithLabel("「こ、これは。。。」").WithEmote(Emote.Parse("<a:questioncorrupt:1429762081711853609>")));
+                                component.WithButton(CreateSongButton(command, 993, "「こ、これは。。。」").WithEmote(Emote.Parse("<a:questioncorrupt:1429762081711853609>")));
 
                                 await command.RespondAsync(null, [ka.Build()], false, false, null, component.Build());
                                 break;
@@ -1047,17 +985,17 @@ namespace DonderHelper
                     }
                     case "shop":
                     {
+                        var songlist = await SongDatabase.GetSongs(1464, 1465, 1098, 318);
                         var winter2025 = new EmbedBuilder()
                         {
-                            Title = LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_WINTER", locale), 2025),
-                            ThumbnailUrl = donShop_Winter_img,
-                            Color = donShop_Winter_color,
+                            Title = LocaleData.GetString("SHOP_MEDAL_NAME", locale, LocaleData.GetString("SEASON_SPRING", locale), 2026),
+                            ThumbnailUrl = donShop_Spring_img,
+                            Color = donShop_Spring_color,
                             Description =
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("クラシックメドレー(冬休み編)", locale), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("バブル・リップ・レイヴ・マシン", locale), 60)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("ダジャレdeオシャレ", locale), 50)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDALHIDDEN_DESC", locale, SongDatabase.GetLocalizedSongTitle("さよならワーリャ", locale), EmoteData.GetDifficulty(Song.SongDifficulty.Hidden), 50)}\n" +
-                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, SongDatabase.GetLocalizedSongTitle("ロボットロケンロー☆", locale), 30)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, songlist[1464].GetTitle(locale), 60)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, songlist[1465].GetTitle(locale), 60)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDAL_DESC", locale, songlist[1098].GetTitle(locale), 50)}\n" +
+                            $"- {LocaleData.GetString("SHOP_MEDALHIDDEN_DESC", locale, songlist[318].GetTitle(locale), EmoteData.GetDifficulty(Song.SongDifficulty.Hidden), 50)}\n" +
                             $"\n" +
                             $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "English", "https://docs.google.com/spreadsheets/d/1rVC1x8jPCvgJ1KK6W0XIxdHwyMsZiasqp-pnt7sAOAA/edit?gid=731420565#gid=731420565")}\n" +
                             $"{LocaleData.GetString("SHOP_MEDAL_URL", locale, "日本語", "https://wikiwiki.jp/taiko-fumen/%E4%BD%9C%E5%93%81/%E6%96%B0AC/%E3%81%A9%E3%82%93%E3%83%A1%E3%83%80%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97")}",
@@ -1067,11 +1005,10 @@ namespace DonderHelper
 
                         var component = new ComponentBuilder();
                         
-                        component.WithButton(CreateSongButton(command, "クラシックメドレー(冬休み編)"), 0);
-                        component.WithButton(CreateSongButton(command, "バブル・リップ・レイヴ・マシン"), 0);
-                        component.WithButton(CreateSongButton(command, "ダジャレdeオシャレ"), 0);
-                        component.WithButton(CreateSongButton(command, "さよならワーリャ", Song.SongDifficulty.Hidden, true), 0);
-                        component.WithButton(CreateSongButton(command, "ロボットロケンロー☆"), 0);
+                        component.WithButton(CreateSongButton(command, 1464, songlist[1464].GetTitle(locale)), 0);
+                        component.WithButton(CreateSongButton(command, 1465, songlist[1465].GetTitle(locale)), 0);
+                        component.WithButton(CreateSongButton(command, 1098, songlist[1098].GetTitle(locale)), 0);
+                        component.WithButton(CreateSongButton(command, 318, songlist[318].GetTitle(locale), Song.SongDifficulty.Hidden), 0);
 
                         await command.RespondAsync(null, [winter2025.Build()], false, false, null, component.Build());
                         break;
@@ -1098,30 +1035,30 @@ namespace DonderHelper
                     case "stats":
                     {
                         var uptime = DateTime.UtcNow - readyTime;
+                        var stats = SongDatabase.Stats;
                         var statistics = new EmbedBuilder()
                         {
                             Title = LocaleData.GetString("STATS_TITLE", locale),
                             Description = $"-# {LocaleData.GetString("DISCLAIMER_STATS", locale)}\n" +
                             $"## {LocaleData.GetString("STATS_TITLE_REGION", locale)}\n" +
 
-                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_JAPAN", statsJapan.Available)}\n" +
-                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsJapan.Exclusive, statsJapan.Unavailable, statsJapan.SouUchi)}\n" +
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_JAPAN", stats.Available.Japan)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, stats.Exclusive.Japan, stats.Excluded.Japan, stats.Unknown.Japan)}\n" +
 
-                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_ASIA", statsAsia.Available)}\n" +
-                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsAsia.Exclusive, statsAsia.Unavailable, statsAsia.SouUchi)}\n" +
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_ASIA", stats.Available.Asia)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, stats.Exclusive.Asia, stats.Excluded.Asia, stats.Unknown.Asia)}\n" +
 
-                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_OCEANIA", statsOceania.Available)}\n" +
-                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsOceania.Exclusive, statsOceania.Unavailable, statsOceania.SouUchi)}\n" +
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_OCEANIA", stats.Available.Oceania)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, stats.Exclusive.Oceania, stats.Excluded.Oceania, stats.Unknown.Oceania)}\n" +
 
-                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_USA", statsAmerica.Available)}\n" +
-                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsAmerica.Exclusive, statsAmerica.Unavailable, statsAmerica.SouUchi)}\n" +
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_USA", stats.Available.UnitedStates)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, stats.Exclusive.UnitedStates, stats.Excluded.UnitedStates, stats.Unknown.UnitedStates)}\n" +
 
-                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_CHINA", statsChina.Available)}\n" +
-                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, statsChina.Exclusive, statsChina.Unavailable, statsChina.SouUchi)}\n\n" +
+                            $"### {LocaleData.GetString("STATS_REGION_COUNT", locale, "REGION_CHINA", stats.Available.China)}\n" +
+                            $"{LocaleData.GetString("STATS_REGION_SPECIAL", locale, stats.Exclusive.China, stats.Excluded.China, stats.Unknown.China)}\n\n" +
 
-                            $"-# {LocaleData.GetString("STATS_REGION_AVAILABLE", locale, statsAvailable)}\n" +
-                            $"-# {LocaleData.GetString("STATS_REGION_UNAVAILABLE", locale, statsUnavailable)}\n" +
-                            $"-# {LocaleData.GetString("STATS_REGION_UNKNOWN", locale, statsUnknown)}",
+                            $"-# {LocaleData.GetString("STATS_REGION_AVAILABLE", locale, stats.AvailableAll)}\n" +
+                            $"-# {LocaleData.GetString("STATS_REGION_UNAVAILABLE", locale, stats.UnavailableAll)}\n",
                             Fields =
                             {
                                 new()
@@ -1129,20 +1066,19 @@ namespace DonderHelper
                                     Name = LocaleData.GetString("STATS_TITLE_SONG", locale),
                                     IsInline = true,
                                     Value =
-                                    $"{LocaleData.GetString("STATS_SONG_COUNT", locale, SongDatabase.Songs.Count)}\n" +
-                                    $"{LocaleData.GetString("STATS_SONG_MISSING", locale, statsMissingNotes)}"
+                                    $"{LocaleData.GetString("STATS_SONG_COUNT", locale, SongDatabase.Stats.TotalSongs)}\n"
                                 },
                                 new()
                                 {
                                     Name = LocaleData.GetString("STATS_TITLE_TITLE", locale),
                                     IsInline = true,
                                     Value =
-                                    $"{LocaleData.GetString("STATS_TITLE_UNIQUE", locale, SongDatabase.SongNames.Count)}\n" +
-                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ja", statsTitleJa)}\n" +
-                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "en-US", statsTitleEn_US)}\n" +
-                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ko", statsTitleKo)}\n" +
-                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-TW", statsTitleZh_TW)}\n" +
-                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-CN", statsTitleZh_CN)}"
+                                    $"{LocaleData.GetString("STATS_TITLE_COMPLETE", locale, stats.CompleteTitleCount)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ja", stats.TitleCount.Japanese)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "en-US", stats.TitleCount.English)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "ko", stats.TitleCount.Korean)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-TW", stats.TitleCount.TradChinese)}\n" +
+                                    $"{LocaleData.GetString("STATS_TITLE_COUNT", locale, "zh-CN", stats.TitleCount.SimpChinese)}"
                                 },
                                 new()
                                 {
@@ -1172,7 +1108,7 @@ namespace DonderHelper
                                 Color = dan.DiscordColor,
                                 Url = dan.Url,
 
-                                Fields = [dan.SongsToField(locale)],
+                                Fields = [await dan.SongsToField(locale)],
 
                                 Timestamp = DateTime.UtcNow,
                                 Footer = GetFooter(command)
@@ -1180,9 +1116,10 @@ namespace DonderHelper
                             dan_embed.Fields.AddRange(dan.ExamsToFields(locale));
 
                             var component_builder = new ComponentBuilder();
-                            if (!dan.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song1.Title, dan.Song1.Difficulty, true));
-                            if (!dan.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song2.Title, dan.Song2.Difficulty, true));
-                            if (!dan.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song3.Title, dan.Song3.Difficulty, true));
+                            var songlist = await SongDatabase.GetSongs(dan.Song1.Id, dan.Song2.Id, dan.Song3.Id);
+                            if (!dan.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song1.Id, songlist[dan.Song1.Id].GetTitle(locale), dan.Song1.Difficulty));
+                            if (!dan.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song2.Id, songlist[dan.Song2.Id].GetTitle(locale), dan.Song2.Difficulty));
+                            if (!dan.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song3.Id, songlist[dan.Song3.Id].GetTitle(locale), dan.Song3.Difficulty));
 
                             await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
                         }
@@ -1197,7 +1134,7 @@ namespace DonderHelper
 
                                 Description = EmoteData.GetEmote("QR") + " " + gaiden.QRUrl,
 
-                                Fields = [gaiden.SongsToField(locale)],
+                                Fields = [await gaiden.SongsToField(locale)],
 
                                 Timestamp = DateTime.UtcNow,
                                 Footer = GetFooter(command)
@@ -1205,9 +1142,10 @@ namespace DonderHelper
                             dan_embed.Fields.AddRange(gaiden.ExamsToFields(locale));
 
                             var component_builder = new ComponentBuilder();
-                            if (!gaiden.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song1.Title, gaiden.Song1.Difficulty, true));
-                            if (!gaiden.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song2.Title, gaiden.Song2.Difficulty, true));
-                            if (!gaiden.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song3.Title, gaiden.Song3.Difficulty, true));
+                            var songlist = await SongDatabase.GetSongs(gaiden.Song1.Id, gaiden.Song2.Id, gaiden.Song3.Id);
+                            if (!gaiden.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song1.Id, songlist[gaiden.Song1.Id].GetTitle(locale), gaiden.Song1.Difficulty));
+                            if (!gaiden.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song2.Id, songlist[gaiden.Song2.Id].GetTitle(locale), gaiden.Song2.Difficulty));
+                            if (!gaiden.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, gaiden.Song3.Id, songlist[gaiden.Song3.Id].GetTitle(locale), gaiden.Song3.Difficulty));
 
                             await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
                         }
@@ -1484,46 +1422,6 @@ namespace DonderHelper
                         }
                         break;
                     }
-                    case "missing":
-                    {
-                        var noteslist = SongDatabase.Songs.Where(song => !song.Value.Difficulties.ContainsNotes()).ToDictionary();
-                        var regionlist = SongDatabase.Songs.Where(song => song.Value.Region.ContainsUnknown).ToDictionary();
-                        var unavailist = SongDatabase.Songs.Where(song => song.Value.Region.IsUnavailableEverywhere).ToDictionary();
-                        string missing_songs = "";
-                        string missing_regions = "";
-                        string missing_available = "";
-                        foreach (string songitem in noteslist.Select(song => song.Value.GetTitle(locale)))
-                        {
-                            missing_songs += "- " + songitem + "\n";
-                        }
-                        foreach (string regionitem in regionlist.Select(song => song.Value.GetTitle(locale)))
-                        {
-                            missing_regions += "- " + regionitem + "\n";
-                        }
-                        foreach (string availitem in unavailist.Select(song => song.Value.GetTitle(locale)))
-                        {
-                            missing_available += "- " + availitem + "\n";
-                        }
-
-                        var songs_embed = new EmbedBuilder()
-                        {
-                            Title = LocaleData.GetString("MISSING_NOTES", locale),
-                            Description = missing_songs
-                        };
-                        var region_embed = new EmbedBuilder()
-                        {
-                            Title = LocaleData.GetString("MISSING_REGION", locale),
-                            Description = missing_regions
-                        };
-                        var avail_embed = new EmbedBuilder()
-                        {
-                            Title = LocaleData.GetString("MISSING_EVERYWHERE", locale),
-                            Description = missing_available
-                        };
-
-                        await command.RespondAsync(null, [songs_embed.Build(), region_embed.Build(), avail_embed.Build()], false, false);
-                        break;
-                    }
                     case "invite":
                     {
                         await command.RespondAsync(LocaleData.GetString("INVITE_DESC", locale, $"https://discord.com/oauth2/authorize?client_id={_client.CurrentUser.Id}"));
@@ -1574,7 +1472,12 @@ namespace DonderHelper
             };
         }
 
-        private ButtonBuilder CreateSongButton(SocketInteraction command, string title, Song.SongDifficulty? difficulty = null, bool use_title = false)
+        private ButtonBuilder CreateSongButton(SocketInteraction command, KeyValuePair<int, Song> song)
+        {
+            return CreateSongButton(command, song.Key, song.Value.GetTitle(GetLocale(command)));
+        }
+
+        private ButtonBuilder CreateSongButton(SocketInteraction command, int id, string? title = null, Song.SongDifficulty? difficulty = null)
         {
             string diff = difficulty != null ? difficulty switch
             {
@@ -1588,9 +1491,9 @@ namespace DonderHelper
 
             return new()
             {
-                Label = difficulty != null && !use_title ? LocaleData.GetDifficulty(difficulty.Value, GetLocale(command)) : SongDatabase.GetLocalizedSongTitle(title, GetLocale(command)),
+                Label = difficulty != null && title == null ? LocaleData.GetDifficulty(difficulty.Value, GetLocale(command)) : title ?? "???",
                 Emote = difficulty != null ? EmoteData.GetDifficulty(difficulty.Value) : EmoteData.GetEmote("SONG"),
-                CustomId = difficulty != null ? $"diff,{diff},{title}" : $"song,{title}",
+                CustomId = difficulty != null ? $"diff,{diff},{id}" : $"song,{id}",
                 Style = ButtonStyle.Secondary
             };
         }

@@ -1,5 +1,6 @@
 ﻿using Discord;
 using Newtonsoft.Json;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DonderHelper
 {
@@ -62,10 +63,15 @@ namespace DonderHelper
         }
         public struct RegionAvailability
         {
+            [JsonProperty("japan")]
             public Availability Japan;
+            [JsonProperty("asia")]
             public Availability Asia;
+            [JsonProperty("oceania")]
             public Availability Oceania;
+            [JsonProperty("united-states")]
             public Availability UnitedStates;
+            [JsonProperty("china")]
             public Availability China;
 
             private static bool IsAvailable(Availability region) => region.IsAvailable();
@@ -107,10 +113,13 @@ namespace DonderHelper
                     }
                     public void Set(int normal, int expert, int tatsujin) { Normal = normal; Expert = expert; Tatsujin = tatsujin; }
                     public readonly int[] Get() => [Normal, Expert, Tatsujin];
-                    public readonly bool ContainsNotes() => Normal > 0 || Expert > 0 || Tatsujin > 0; 
+                    public readonly bool ContainsNotes() => Normal > 0 || Expert > 0 || Tatsujin > 0;
 
+                    [JsonProperty("normal")]
                     public int Normal;
+                    [JsonProperty("expert")]
                     public int Expert;
+                    [JsonProperty("master")]
                     public int Tatsujin;
                 }
                 public override string ToString()
@@ -121,23 +130,34 @@ namespace DonderHelper
                         $":one: {Double1P} / :two: {Double2P}" : 
                         Single.ToString();
                 }
-                public readonly bool ContainsNotes() => Single.ContainsNotes() || Double1P.ContainsNotes() || Double2P.ContainsNotes(); 
+                public readonly bool ContainsNotes() => Single.ContainsNotes() || Double1P.ContainsNotes() || Double2P.ContainsNotes();
+
+                [JsonProperty("0")]
                 public Branch Single;
+                [JsonProperty("1")]
                 public Branch Double1P;
+                [JsonProperty("2")]
                 public Branch Double2P;
             }
+            [JsonProperty("level")]
             public int Level;
+            [JsonProperty("style_list")]
             public Notes NoteCount;
-            public string Url;
-            public string UrlKo;
+            [JsonProperty("source_list")]
+            public Dictionary<string, string> SourceUrls;
             public string ImageUrl;
         }
         public struct Difficulty
         {
+            [JsonProperty("1")]
             public Chart Easy;
+            [JsonProperty("2")]
             public Chart Normal;
+            [JsonProperty("3")]
             public Chart Hard;
+            [JsonProperty("4")]
             public Chart Extreme;
+            [JsonProperty("5")]
             public Chart Hidden;
             public Chart this[int index]
             {
@@ -217,15 +237,15 @@ namespace DonderHelper
         }
         public enum SongGenre
         {
-            Unknown = -1,
+            Unknown = 0,
             Pop,
             Anime,
-            Game,
-            Vocaloid,
-            Variety,
             Kids,
+            Vocaloid,
+            Game,
+            Namco,
             Classical,
-            Namco
+            Variety
         }
         public enum SongDifficulty
         {
@@ -240,22 +260,26 @@ namespace DonderHelper
         /// Default title
         /// </summary>
         [JsonIgnore]
-        public string Title { get { return TitleList.ContainsKey("ja") ? TitleList["ja"] : "???"; } }
+        public string Title { get { return TitleList.ContainsKey("ja") ? TitleList["ja"] : TitleList.Values.FirstOrDefault() ?? "???"; } }
         /// <summary>
         /// Default subtitle
         /// </summary>
         [JsonIgnore]
-        public string Subtitle { get { return SubtitleList.ContainsKey("ja") ? SubtitleList["ja"] : ""; } }
+        public string Subtitle { get { return SubtitleList.ContainsKey("ja") ? SubtitleList["ja"] : SubtitleList.Values.FirstOrDefault() ?? ""; } }
         /// <summary>
         /// Default genre
         /// </summary>
         [JsonIgnore]
         public SongGenre Genre { get { return GenreList.Count > 0 ? GenreList[0] : SongGenre.Unknown; } }
 
+        [JsonProperty("title_list")]
         public Dictionary<string, string> TitleList { get; private set; } = [];
+        [JsonProperty("subtitle_list")]
         public Dictionary<string, string> SubtitleList { get; private set; } = [];
+        [JsonProperty("genre_list")]
         public List<SongGenre> GenreList { get; private set; } = [];
 
+        [JsonProperty("region_list")]
         public RegionAvailability Region = new() { 
             Japan = Availability.Unknown, 
             Asia = Availability.Unknown, 
@@ -264,13 +288,14 @@ namespace DonderHelper
             China = Availability.Unknown
         };
 
+        [JsonProperty("chart_list")]
         public Difficulty Difficulties = new()
         {
-            Easy = new() { Level = -1, Url = "", UrlKo = "", ImageUrl = "" },
-            Normal = new() { Level = -1, Url = "", UrlKo = "", ImageUrl = "" },
-            Hard = new() { Level = -1, Url = "", UrlKo = "", ImageUrl = "" },
-            Extreme = new() { Level = -1, Url = "", UrlKo = "", ImageUrl = "" },
-            Hidden = new() { Level = -1, Url = "", UrlKo = "", ImageUrl = "" }
+            Easy = new() { Level = -1, SourceUrls = [], ImageUrl = "" },
+            Normal = new() { Level = -1, SourceUrls = [], ImageUrl = "" },
+            Hard = new() { Level = -1, SourceUrls = [], ImageUrl = "" },
+            Extreme = new() { Level = -1, SourceUrls = [], ImageUrl = "" },
+            Hidden = new() { Level = -1, SourceUrls = [], ImageUrl = "" }
         };
 
         #region Title
@@ -279,13 +304,13 @@ namespace DonderHelper
                 TitleList.Remove(lang);
             TitleList.Add(lang, title);
         }
-        public string GetTitle(string lang = "ja") => TitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out string? output) ? output : Title;
-        public bool TryGetTitle(string lang, out string? title) => TitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out title);
+        public string GetTitle(string locale = "ja") => TitleList.TryGetValue(LocaleData.GetPreferredLocale(locale), out string? output) ? output : Title;
+        public bool TryGetTitle(string locale, [MaybeNullWhen(false)] out string title) => TitleList.TryGetValue(LocaleData.GetPreferredLocale(locale), out title);
         public string GetTitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> titles = [];
             List<string> locales = [ "ja", "en-US", "ko", "zh-TW", "zh-CN" ];
-            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetString("PREFERRED_LOCALE", priority_locale);
+            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetPreferredLocale(priority_locale);
 
             if (TryGetTitle(priority_locale, out string? title))
             {
@@ -311,13 +336,13 @@ namespace DonderHelper
                 SubtitleList.Remove(lang);
             SubtitleList.Add(lang, subtitle);
         }
-        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out string? output) ? output : Subtitle;
-        public bool TryGetSubtitle(string lang, out string? subtitle) => SubtitleList.TryGetValue(LocaleData.TryGetString("PREFERRED_LOCALE", lang, out var locale) ? locale ?? "" : lang, out subtitle);
+        public string GetSubtitle(string lang = "ja") => SubtitleList.TryGetValue(LocaleData.GetPreferredLocale(lang), out string? output) ? output : Subtitle;
+        public bool TryGetSubtitle(string lang, [MaybeNullWhen(false)] out string subtitle) => SubtitleList.TryGetValue(LocaleData.GetPreferredLocale(lang), out subtitle);
         public string GetSubtitleList(bool include_emoji, string priority_locale = "")
         {
             List<string> subtitles = [];
             List<string> locales = ["ja", "en-US", "ko", "zh-TW", "zh-CN"];
-            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetString("PREFERRED_LOCALE", priority_locale);
+            if (!string.IsNullOrWhiteSpace(priority_locale)) priority_locale = LocaleData.GetPreferredLocale(priority_locale);
 
             if (TryGetSubtitle(priority_locale, out string? title))
             {
@@ -353,10 +378,6 @@ namespace DonderHelper
         public List<SongGenre> GetAllGenres() => GenreList;
         #endregion
 
-        public Song()
-        {
-            SetTitle("???");
-            SetSubtitle("");
-        }
+        public Song() { }
     }
 }

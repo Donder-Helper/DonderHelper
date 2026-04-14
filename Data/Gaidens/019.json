@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！モモイロ十段",
+    "en-US": "Back in action! Momoiro Tenth Dan",
+    "ko": "부활! Momo-iro 10단",
+    "zh-TW": "復活！Momo-iro十段"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_03.png?231117153956",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E3%83%A2%E3%83%A2%E3%82%A4%E3%83%AD/%E5%8D%81%E6%AE%B5",
+  
+  "song1": {
+    "id": 309,
+    "diff": 4
+  },
+  "song2": {
+    "id": 360,
+    "diff": 3
+  },
+  "song3": {
+    "id": 243,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [30],
+      "gold": [10]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [10],
+      "gold": [1]
+    }
+  ]
+}

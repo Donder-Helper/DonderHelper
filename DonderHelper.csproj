@@ -16,9 +16,8 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.5" />
 
     <Content Include="Config/**" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Data/**" CopyToOutputDirectory="PreserveNewest" />
+	<Content Include="Data/**" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Lang/**" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Resources/**" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Resources/')" />
     <Content Include="key.txt" CopyToOutputDirectory="PreserveNewest" Condition="Exists('key.txt')" />
   </ItemGroup>
 

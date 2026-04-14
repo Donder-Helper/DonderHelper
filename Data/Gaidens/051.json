@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "あっぱれ三代目からの挑戦状#1【粋】",
+    "en-US": "Appare Sandaime Challenge #1 (Iki)",
+    "ko": "Appare Sandaime의 도전장 #1 [이키]",
+    "zh-TW": "來自Appare Sandaime的挑戰書#1【粋（iki）】"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_45.png?231117153958",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/%E5%A4%96%E4%BC%9D#:~:text=%E3%81%82%E3%81%A3%E3%81%B1%E3%82%8C%E4%B8%89%E4%BB%A3%E7%9B%AE%E3%81%8B%E3%82%89%E3%81%AE%E6%8C%91%E6%88%A6%E7%8A%B6#1%E3%80%90%E7%B2%8B%E3%80%91",
+  
+  "song1": {
+    "id": 84,
+    "diff": 2
+  },
+  "song2": {
+    "id": 156,
+    "diff": 2
+  },
+  "song3": {
+    "id": 264,
+    "diff": 2
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [99],
+      "gold": [100]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [30],
+      "gold": [-1]
+    },
+    {
+      "condition": 5,
+      "is_less": false,
+      "clear": [43,36,63],
+      "gold": [47,39,70]
+    }
+  ]
+}

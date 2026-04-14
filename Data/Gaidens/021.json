@@ -1,0 +1,43 @@
+{
+  "subtitle": {
+    "ja": "復活！カツドン大将",
+    "en-US": "Back in action! Katsudon Team Anchor",
+    "ko": "부활! 카츠동 대장",
+    "zh-TW": "復活！咔咚主將"
+  },
+  "qr_url": "https://taiko.namco-ch.net/taiko/images/special/dani_dojo_gaiden/theme/qr/qr_01.png?231117153956",
+  "url": "https://wikiwiki.jp/taiko-fumen/%E6%AE%B5%E4%BD%8D%E9%81%93%E5%A0%B4/KATSU-DON/%E5%A4%A7%E5%B0%86",
+  
+  "song1": {
+    "id": 425,
+    "diff": 4
+  },
+  "song2": {
+    "id": 365,
+    "diff": 3
+  },
+  "song3": {
+    "id": 338,
+    "diff": 3
+  },
+  "exams": [
+    {
+      "condition": 0,
+      "is_less": false,
+      "clear": [100],
+      "gold": [100]
+    },
+    {
+      "condition": 3,
+      "is_less": true,
+      "clear": [100],
+      "gold": [30]
+    },
+    {
+      "condition": 2,
+      "is_less": true,
+      "clear": [30],
+      "gold": [1]
+    }
+  ]
+}

@@ -12,5 +12,7 @@ namespace DonderHelper
         {
             return region.IsAvailable() && regions_to_compare.All(check => !check.IsAvailable());
         }
+        public static bool IsWithinRange(this int value, int min, int max) => value >= min && value <= max;
+        public static bool IsSuccessStatusCode(this int value) => value.IsWithinRange(200, 299);
     }
 }
