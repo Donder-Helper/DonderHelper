@@ -3,14 +3,6 @@
     "DonderHelper": {
       "commandName": "Project",
       "commandLineArgs": "--skip-timer"
-    },
-    "Build Songlist": {
-      "commandName": "Project",
-      "commandLineArgs": "--build-songlist"
-    },
-    "Build Songlist + TSV": {
-      "commandName": "Project",
-      "commandLineArgs": "--build-songlist --write-tsv"
     }
   }
 }
