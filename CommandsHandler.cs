@@ -389,6 +389,17 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "Dark Don Challenge",
+                    Value = "darkchallenge_2026",
+                    NameLocalizations = new Dictionary<string, string>()
+                    {
+                        { "ja", "挑戦！闇のドンチャレ" },
+                        { "zh-TW", "挑戰！闇黑鼓眾挑戰" },
+                        { "ko", "도전! 어둠의 쿵 챌린지" }
+                    }
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "Don Challenge 2026",
                     Value = "challenge_2026",
                     NameLocalizations = new Dictionary<string, string>()
@@ -396,17 +407,6 @@ namespace DonderHelper
                         { "ja", "挑戦！ドンチャレ2026" },
                         { "zh-TW", "挑戰！鼓眾挑戰2026" },
                         { "ko", "도전! 쿵 챌린지 2026" }
-                    }
-                },
-                new ApplicationCommandOptionChoiceProperties()
-                {
-                    Name = "HATSUNE MIKU: COLORFUL STAGE! x Taiko no Tatsujin Collaboration Campaign",
-                    Value = "project_sekai",
-                    NameLocalizations = new Dictionary<string, string>()
-                    {
-                        { "ja", "プロジェクトセカイ カラフルステージ！ feat. 初音ミク × 太鼓の達人 コラボキャンペーン" },
-                        { "zh-TW", "世界計畫 繽紛舞台！ feat. 初音未來 × 太鼓之達人 合作活動" },
-                        { "ko", "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠 × 태고의 달인 콜라보레이션 캠페인" }
                     }
                 },
                 new ApplicationCommandOptionChoiceProperties()
@@ -813,6 +813,64 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "darkchallenge_2026":
+                            {
+                                string title = locale switch
+                                {
+                                    "ja" => "挑戦！闇のドンチャレ",
+                                    "zh-TW" => "挑戰！闇黑鼓眾挑戰",
+                                    "ko" => "도전! 어둠의 쿵 챌린지",
+                                    _ => "Dark Don Challenge"
+                                };
+                                string url = locale switch
+                                {
+                                    "ja" => "https://taiko-ch.net/blog/?p=16167",
+                                    "zh-TW" => "https://taiko-ch.net/blog/?p=16189",
+                                    "ko" => "https://taiko-ch.net/blog/?p=16197",
+                                    _ => "https://taiko-ch.net/blog/?p=16182"
+                                };
+                                string story = locale switch
+                                {
+                                    "ja" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/de162d40105e30cd7928ee5b289e6275.png",
+                                    "zh-TW" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/6faa27a4352704e929a8d65753f59e8c.png",
+                                    "ko" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/ef9b87a1d80b01cc7a1c74e252ac7f0a.png",
+                                    _ => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/8aecdd0c70a246b6f9af404d1ee4f84f.png"
+                                };
+                                string rules = locale switch
+                                {
+                                    "ja" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/08d18a914a14b57a099c4d86a0b9f15e.png",
+                                    "zh-TW" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/08448e779ba5aeb4b6d42840885cda83.png",
+                                    "ko" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/ebeec18c9e810197dcdd3781292be2b8.png",
+                                    _ => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/b90c5e8c45950aea384e7d8a185293c8.png"
+                                };
+
+                                var darkchallenge_2026 = new EmbedBuilder()
+                                {
+                                    Title = title,
+                                    Url = url,
+                                    ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/fc31e8cd7fe013376a923b147552c247.png",
+                                    Color = command.User.Id % 2 == 0 ? new Color(0xaa33dd) : new Color(0x0eae6e),
+
+                                    Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n",
+
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+
+                                var story_embed = new EmbedBuilder()
+                                {
+                                    Url = url,
+                                    ImageUrl = story
+                                };
+                                var rules_embed = new EmbedBuilder()
+                                {
+                                    Url = url,
+                                    ImageUrl = rules
+                                };
+
+                                await command.RespondAsync(null, [darkchallenge_2026.Build(), story_embed.Build(), rules_embed.Build()], false, false);
+                                break;
+                            }
                             case "challenge_2026":
                             {
                                 string title = locale switch
@@ -844,7 +902,7 @@ namespace DonderHelper
                                     Url = url,
                                     ImageUrl = image_url,
 
-                                    Description = "",
+                                    Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n",
 
                                     Timestamp = DateTimeOffset.UtcNow,
                                     Footer = GetFooter(command)
@@ -861,54 +919,6 @@ namespace DonderHelper
                                 component.WithButton(CreateSongButton(command, songs.First()));
 
                                 await command.RespondAsync(null, [challenge_2026.Build(), qr.Build()], false, false, null, component.Build());
-                                break;
-                            }
-                            case "project_sekai":
-                            {
-                                string title = locale switch
-                                {
-                                    "ja" => "プロジェクトセカイ カラフルステージ！ feat. 初音ミク × 太鼓の達人 コラボキャンペーン",
-                                    "zh-TW" => "世界計畫 繽紛舞台！ feat. 初音未來 × 太鼓之達人 合作活動",
-                                    "ko" => "프로젝트 세카이 컬러풀 스테이지! feat. 하츠네 미쿠 × 태고의 달인 콜라보레이션 캠페인",
-                                    _ => "HATSUNE MIKU: COLORFUL STAGE! x Taiko no Tatsujin Collaboration Campaign"
-                                };
-                                string url = locale switch
-                                {
-                                    "ja" => "https://taiko.namco-ch.net/taiko/special/pjsekai/",
-                                    "zh-TW" => "https://taiko.namco-ch.net/taiko/tc/special/pjsekai/",
-                                    "ko" => "https://taiko.namco-ch.net/taiko/kr/special/pjsekai/",
-                                    _ => "https://taiko.namco-ch.net/taiko/en/special/pjsekai/"
-                                };
-                                string image_url = locale switch
-                                {
-                                    "ja" => "https://media.discordapp.net/attachments/1345259022684524544/1476378835963609238/634910926_1429624629178967_2506341827598295343_n.png",
-                                    "zh-TW" => "https://media.discordapp.net/attachments/1345259022684524544/1476378836366266528/637707403_1429888152485948_9083978382669198856_n.png",
-                                    "ko" => "https://media.discordapp.net/attachments/1345259022684524544/1476378836777173024/636849544_1429888412485922_5908332965979990529_n.png",
-                                    _ => "https://media.discordapp.net/attachments/1345259022684524544/1476378837284815020/639680609_1429888079152622_844361099815887236_n.png"
-                                };
-
-                                var project_sekai = new EmbedBuilder()
-                                {
-                                    Title = title,
-                                    Color = new(0x00ccbb),
-                                    Url = url,
-                                    ImageUrl = image_url,
-
-                                    Description =
-                                    $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
-                                    $"{LocaleData.GetString("CAMPAIGN_HIROBAURL", locale, "https://donderhiroba.jp/campaign_top.php?campaign_id=53")}\n\n" +
-                                    $"{LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1776618000)}",
-
-                                    Timestamp = DateTimeOffset.UtcNow,
-                                    Footer = GetFooter(command)
-                                };
-
-                                var component = new ComponentBuilder();
-                                var songlist = await SongDatabase.GetSongs(1424, 1425, 1426, 1427, 1428);
-                                foreach (var song in songlist)
-                                    component.WithButton(CreateSongButton(command, song));
-
-                                await command.RespondAsync(null, [project_sekai.Build()], false, false, null, component.Build());
                                 break;
                             }
                             case "kamen2025":
