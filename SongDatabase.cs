@@ -162,17 +162,19 @@ namespace DonderHelper
             }
         }
 
-        private static void RemoveFromSongCache(int id)
+        private static void RemoveFromSongCache(params int[] ids)
         {
             lock (SongCache)
             {
+                foreach (int id in ids)
                 _songCache.Remove(id);
             }
         }
-        private static void RemoveFromSearchCache(string url)
+        private static void RemoveFromSearchCache(params string[] urls)
         {
             lock (SearchCache)
             {
+                foreach (string url in urls)
                 _searchCache.Remove(url);
             }
         }
@@ -234,24 +236,8 @@ namespace DonderHelper
 
         public static void CleanStaleCache()
         {
-            for (int i = SongCache.Count - 1; i >= 0; i--)
-            {
-                if (i >= SongCache.Count) continue;
-                var cache = SongCache.ElementAt(i);
-                if (cache.Value.Expired)
-                {
-                    RemoveFromSongCache(cache.Key);
-                }
-            }
-            for (int i = SearchCache.Count - 1; i >= 0; i--)
-            {
-                if (i >= SearchCache.Count) continue;
-                var cache = SearchCache.ElementAt(i);
-                if (cache.Value.Expired)
-                {
-                    RemoveFromSearchCache(cache.Key);
-                }
-            }
+            RemoveFromSongCache(SongCache.Where(item => item.Value.Expired).Select(item => item.Key).ToArray());
+            RemoveFromSearchCache(SearchCache.Where(item => item.Value.Expired).Select(item => item.Key).ToArray());
         }
         #endregion
 
