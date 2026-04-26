@@ -82,7 +82,7 @@ namespace DonderHelper
 
         public static async Task<Dictionary<int, Song>> GetRandomSongs(int count, Song.SongGenre? genre = null, Song.SongDifficulty? difficulty = null, int? level = null)
         {
-            string url = $"/random?limit={count}&genre={(int?)genre}&diff={(int?)difficulty}&level={level}";
+            string url = $"/random?limit={count}&genre={(int?)genre}&diff={(int?)difficulty}&level={level}&include_sayonara=false";
             HttpResponseMessage response = await _httpClient.GetAsync(url);
             if (!response.IsSuccessStatusCode)
             {
@@ -98,7 +98,7 @@ namespace DonderHelper
         public static async Task<List<int>> SearchIDs(string search)
         {
             search = Uri.EscapeDataString(search);
-            string url = $"/search?title={search}&subtitle={search}&title_comparison=or";
+            string url = $"/search?title={search}&subtitle={search}&title_comparison=or&include_sayonara=true";
 
             if (TryGetStoredSearchCache(url, out List<int> cache))
             {
