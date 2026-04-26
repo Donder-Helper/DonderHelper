@@ -843,13 +843,17 @@ namespace DonderHelper
                                     "ko" => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/ebeec18c9e810197dcdd3781292be2b8.png",
                                     _ => "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/b90c5e8c45950aea384e7d8a185293c8.png"
                                 };
+                                string thumbnail = command.User.Id % 2 == 0 ?
+                                    "https://media.discordapp.net/attachments/1355004709974446302/1497868408241393714/image.png" :
+                                    "https://media.discordapp.net/attachments/1355004709974446302/1497868407931146392/image.png";
 
                                 var darkchallenge_2026 = new EmbedBuilder()
                                 {
                                     Title = title,
                                     Url = url,
                                     ImageUrl = "https://taiko-ch.net/urgybrhm3ukw/blog/wp-content/uploads/2026/04/fc31e8cd7fe013376a923b147552c247.png",
-                                    Color = command.User.Id % 2 == 0 ? new Color(0xaa33dd) : new Color(0x0eae6e),
+                                    ThumbnailUrl = thumbnail,
+                                    Color = new(0xaa33dd),
 
                                     Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n",
 
