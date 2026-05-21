@@ -1187,11 +1187,12 @@ namespace DonderHelper
                     case "hiroba":
                     {
                         // Fetch current day + hour offsets instead of hardcoded timestamp, to account for Daylight Savings for Americans
-                        TimeSpan time_start = DateTime.UtcNow.Date.AddHours(17) - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                        TimeSpan time_start = DateTime.UtcNow.Date.AddHours(20) - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
                         TimeSpan time_end = DateTime.UtcNow.Date.AddHours(22) - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
                         string maintenance = $"-# ＊ Maintenance Hours: <t:{(long)time_start.TotalSeconds}:t> to <t:{(long)time_end.TotalSeconds}:t>\n" +
-                                $"{(17 <= DateTime.UtcNow.Hour && DateTime.UtcNow.Hour < 22 ? "-# :warning: Maintenance is active, you can not edit your profile or use certain features.\n" : "")}\n";
+                            $"-# ＊ Maintenance times may be temporarily extended during software updates.\n" +
+                            $"{(20 <= DateTime.UtcNow.Hour && DateTime.UtcNow.Hour < 22 ? "-# :warning: Maintenance is active, you can not edit your profile or use certain features.\n" : "")}\n";
 
                         if (command.Data.Options.Count == 1)
                         {
