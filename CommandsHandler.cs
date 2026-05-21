@@ -389,6 +389,11 @@ namespace DonderHelper
                 command_campaign.AddOption("name", ApplicationCommandOptionType.String, "The name of a currently active campaign.", true, null, false, null, null, null, null, LocaleData.GetStrings("OPTION_CAMPAIGNNAME_NAME"), LocaleData.GetStrings("OPTION_CAMPAIGNNAME_DESC"), null, null,
                 new ApplicationCommandOptionChoiceProperties()
                 {
+                    Name = "太鼓の達人×転生したらスライムだった件 2026コラボキャンペーン",
+                    Value = "tensura2026"
+                },
+                new ApplicationCommandOptionChoiceProperties()
+                {
                     Name = "Dark Don Challenge",
                     Value = "darkchallenge_2026",
                     NameLocalizations = new Dictionary<string, string>()
@@ -813,6 +818,35 @@ namespace DonderHelper
 
                         switch (campaign_name)
                         {
+                            case "tensura2026":
+                            {
+                                string url = "https://taiko.namco-ch.net/taiko/special/ten-sura2026/";
+                                var tensura2026 = new EmbedBuilder()
+                                {
+                                    Title = "太鼓の達人×転生したらスライムだった件 2026コラボキャンペーン",
+                                    Url = url,
+                                    ImageUrl = "https://media.discordapp.net/attachments/1355004709974446302/1506815369200009376/ten-sura2026.png",
+                                    ThumbnailUrl = command.User.Id % 2 == 0 ?
+                                    "https://media.discordapp.net/attachments/1355004709974446302/1506817023638896671/tensaru-shion.png" :
+                                    "https://media.discordapp.net/attachments/1355004709974446302/1506817023315939368/tensaru-mirimu.png",
+                                    Color = new(0x005cb1),
+
+                                    Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
+                                    LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1784577600) + "\n\n" +
+                                    $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
+
+                                    Timestamp = DateTimeOffset.UtcNow,
+                                    Footer = GetFooter(command)
+                                };
+
+                                var songs = await SongDatabase.GetSongs(1254, 1335, 1334, 1505, 1504);
+                                var component = new ComponentBuilder();
+                                foreach (var song in songs)
+                                    component.WithButton(CreateSongButton(command, song));
+
+                                await command.RespondAsync(null, [tensura2026.Build()], false, false, null, component.Build());
+                                break;
+                            }
                             case "darkchallenge_2026":
                             {
                                 string title = locale switch
