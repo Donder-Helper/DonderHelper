@@ -831,8 +831,11 @@ namespace DonderHelper
                                     "https://media.discordapp.net/attachments/1355004709974446302/1506817023315939368/tensaru-mirimu.png",
                                     Color = new(0x005cb1),
 
-                                    Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n" +
-                                    LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1784577600) + "\n\n" +
+                                    Description = $"{LocaleData.GetString("CAMPAIGN_URL", locale, url)}\n\n" +
+                                    $"__{LocaleData.GetString("ITEM_PUCHI", locale)}__\n" +
+                                    LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1784577600) + "\n" +
+                                    $"__{LocaleData.GetString("CAMPAIGN_GOODS", locale)}__\n" +
+                                    LocaleData.GetString("CAMPAIGN_AVAILABLE", locale, 1785182400) + "\n\n" +
                                     $"-# {LocaleData.GetString("DISCLAIMER_ONLYJAPAN", locale)}",
 
                                     Timestamp = DateTimeOffset.UtcNow,
