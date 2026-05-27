@@ -244,8 +244,8 @@ namespace DonderHelper
             Vocaloid,
             Game,
             Namco,
-            Classical,
-            Variety
+            Variety,
+            Classical
         }
         public enum SongDifficulty
         {
