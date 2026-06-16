@@ -1151,30 +1151,30 @@ namespace DonderHelper
                         var dan_title = command.Data.Options.Where(option => option.Name == "title");
                         string title = dan_title.Count() > 0 ? (string)dan_title.First().Value : "";
 
-                        //if (command_name == "dan" && DanSonglist.Dans.TryGetValue(title, out Dan? dan) && dan.DanIsValid())
-                        //{
-                        //    var dan_embed = new EmbedBuilder()
-                        //    {
-                        //        Title = title + "・" + dan.TitleEN,
-                        //        Color = dan.DiscordColor,
-                        //        Url = dan.Url,
+                        if (command_name == "dan" && DanSonglist.Dans.TryGetValue(title, out Dan? dan) && dan.DanIsValid() && false /* Temporarily block response until dan list is updated */)
+                        {
+                            var dan_embed = new EmbedBuilder()
+                            {
+                                Title = title + "・" + dan.TitleEN,
+                                Color = dan.DiscordColor,
+                                Url = dan.Url,
 
-                        //        Fields = [await dan.SongsToField(locale)],
+                                Fields = [await dan.SongsToField(locale)],
 
-                        //        Timestamp = DateTime.UtcNow,
-                        //        Footer = GetFooter(command)
-                        //    };
-                        //    dan_embed.Fields.AddRange(dan.ExamsToFields(locale));
+                                Timestamp = DateTime.UtcNow,
+                                Footer = GetFooter(command)
+                            };
+                            dan_embed.Fields.AddRange(dan.ExamsToFields(locale));
 
-                        //    var component_builder = new ComponentBuilder();
-                        //    var songlist = await SongDatabase.GetSongs(dan.Song1.Id, dan.Song2.Id, dan.Song3.Id);
-                        //    if (!dan.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song1.Id, songlist[dan.Song1.Id].GetTitle(locale), dan.Song1.Difficulty));
-                        //    if (!dan.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song2.Id, songlist[dan.Song2.Id].GetTitle(locale), dan.Song2.Difficulty));
-                        //    if (!dan.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song3.Id, songlist[dan.Song3.Id].GetTitle(locale), dan.Song3.Difficulty));
+                            var component_builder = new ComponentBuilder();
+                            var songlist = await SongDatabase.GetSongs(dan.Song1.Id, dan.Song2.Id, dan.Song3.Id);
+                            if (!dan.Song1.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song1.Id, songlist[dan.Song1.Id].GetTitle(locale), dan.Song1.Difficulty));
+                            if (!dan.Song2.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song2.Id, songlist[dan.Song2.Id].GetTitle(locale), dan.Song2.Difficulty));
+                            if (!dan.Song3.Spoiler) component_builder.WithButton(CreateSongButton(command, dan.Song3.Id, songlist[dan.Song3.Id].GetTitle(locale), dan.Song3.Difficulty));
 
-                        //    await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
-                        //}
-                        if (command_name == "gaiden" && GaidenSonglist.Gaidens.TryGetValue(title, out Gaiden? gaiden) && gaiden.DanIsValid())
+                            await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
+                        }
+                        else if (command_name == "gaiden" && GaidenSonglist.Gaidens.TryGetValue(title, out Gaiden? gaiden) && gaiden.DanIsValid())
                         {
                             var dan_embed = new EmbedBuilder()
                             {
@@ -1200,25 +1200,17 @@ namespace DonderHelper
 
                             await command.RespondAsync(null, [dan_embed.Build()], false, false, null, component_builder.Build());
                         }
-                        //else
-                        //{
-                        //    var embed = new EmbedBuilder()
-                        //    {
-                        //        Title = "",
-                        //        Description = LocaleData.GetString("DAN_UNAVAILABLE", locale),
-                        //        ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/DonderHelper/refs/heads/main/Images/dan-closed.png"
-                        //    };
-                        //    await command.RespondAsync(null, [embed.Build()], false, false);
-                        //}
-
-                        var embed = new EmbedBuilder()
+                        else
                         {
-                            Title = LocaleData.GetString("DAN_CLOSED_TITLE", locale, 2025),
-                            Description = LocaleData.GetString("DAN_CLOSED", locale, 2025),
-                            ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/DonderHelper/refs/heads/main/Images/dan-closed.png"
-                        };
+                            var embed = new EmbedBuilder()
+                            {
+                                Title = "",
+                                Description = LocaleData.GetString("DAN_UNAVAILABLE", locale),
+                                ImageUrl = "https://raw.githubusercontent.com/Donder-Helper/DonderHelper/refs/heads/main/Images/dan-closed.png"
+                            };
+                            await command.RespondAsync(null, [embed.Build()], false, false);
+                        }
 
-                        await command.RespondAsync(null, [embed.Build()], false, false);
                         break;
                     }
                     case "hiroba":
